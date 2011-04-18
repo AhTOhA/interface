@@ -1,0 +1,12 @@
+MACRO 16777218 "Cleanse" INV_Misc_QuestionMark
+/cast [mod:ctrl] Purge; Cleanse Spirit
+END
+MACRO 16777219 "Shields" INV_Misc_QuestionMark
+/cast [mod:ctrl] Water Shield; Earth Shield
+END
+MACRO 16777220 "Shocks" INV_Misc_QuestionMark
+/cast [mod:ctrl] Frost Shock; Earth Shock
+END
+MACRO 16777217 "Totems" INV_Misc_QuestionMark
+/castsequence Strength of Earth Totem, Flametongue Totem, Earthbind Totem
+END

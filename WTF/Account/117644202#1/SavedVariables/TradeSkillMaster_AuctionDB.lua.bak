@@ -1,0 +1,24 @@
+
+TradeSkillMaster_AuctionDBDB = {
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Tikytaka - Tarren Mill"] = "Default",
+	},
+	["factionrealm"] = {
+		["Horde - Tarren Mill"] = {
+			["playerAuctions"] = {
+				["Tikytaka"] = {
+					[37705] = 10,
+					[63388] = 2,
+					[52329] = 18,
+					["time"] = 1302811096,
+				},
+			},
+			["time"] = 0,
+			["scanData"] = "",
+		},
+	},
+}

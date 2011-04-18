@@ -1,0 +1,30 @@
+## Interface: 40000
+## Title: CLCProt
+## Notes: Protection Rotation helper
+## Author: Salphine of US-Barthilas
+## SavedVariables: clcprotDB
+## X-Curse-Packaged-Version: v0.9
+## X-Curse-Project-Name: Protection FCFS helper (clcprot)
+## X-Curse-Project-ID: clcprot
+## X-Curse-Repository-ID: wow/clcprot/mainline
+## X-Curse-Packaged-Version: v0.95
+## X-Curse-Project-Name: Protection FCFS helper (clcprot)
+## X-Curse-Project-ID: clcprot
+## X-Curse-Repository-ID: wow/clcprot/mainline
+## X-Curse-Packaged-Version: v1.0
+## X-Curse-Project-Name: Protection FCFS helper (clcprot)
+## X-Curse-Project-ID: clcprot
+## X-Curse-Repository-ID: wow/clcprot/mainline
+## X-Curse-Packaged-Version: v.1.4.01.001
+## X-Curse-Project-Name: Protection FCFS helper (clcprot)
+## X-Curse-Project-ID: clcprot
+## X-Curse-Repository-ID: wow/clcprot/mainline
+
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+clcprot.lua
+sov.lua
+swing.lua

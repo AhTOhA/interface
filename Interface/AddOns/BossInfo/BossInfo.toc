@@ -1,0 +1,7 @@
+## Interface: 40000
+## Title: BossInfo
+## Author: Nerino1
+## Version: 1.2
+## Notes: View simple strategy for Instance Bosses. Seperated by Tank, DPS and Healer
+## SavedVariablesPerCharacter: BossInfoData
+BossInfo.xml

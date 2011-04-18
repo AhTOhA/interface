@@ -1,0 +1,40 @@
+BINDINGMODE 0
+bind A STRAFELEFT
+bind D STRAFERIGHT
+bind Q CLICK BT4Button25:LeftButton
+bind E CLICK BT4Button26:LeftButton
+bind PAGEUP CLICK BT4Button8:LeftButton
+bind PAGEDOWN CLICK BT4Button9:LeftButton
+bind R CLICK BT4Button27:LeftButton
+bind 1 CLICK BT4Button1:LeftButton
+bind 2 NONE
+bind 3 CLICK BT4Button33:LeftButton
+bind 4 CLICK BT4Button34:LeftButton
+bind 5 NONE
+bind 6 NONE
+bind 7 NONE
+bind 8 NONE
+bind 9 NONE
+bind 0 NONE
+bind - NONE
+bind = NONE
+bind SHIFT-MOUSEWHEELUP CAMERAZOOMIN
+bind SHIFT-MOUSEWHEELDOWN CAMERAZOOMOUT
+bind F1 RAIDTARGET8
+bind F2 RAIDTARGET7
+bind F3 RAIDTARGET6
+bind F4 RAIDTARGET5
+bind F5 RAIDTARGET4
+bind G CLICK BT4Button30:LeftButton
+bind F CLICK BT4Button29:LeftButton
+bind T CLICK BT4Button28:LeftButton
+bind C CLICK BT4Button36:LeftButton
+bind F8 RAIDTARGET1
+bind MOUSEWHEELUP CLICK BT4Button31:LeftButton
+bind MOUSEWHEELDOWN CLICK BT4Button10:LeftButton
+bind NUMPAD5 CLICK BT4Button12:LeftButton
+bind NUMPAD3 CLICK BT4Button6:LeftButton
+bind CAPSLOCK NONE
+bind NUMPAD4 CLICK BT4Button11:LeftButton
+bind F6 RAIDTARGET3
+bind F7 RAIDTARGET2

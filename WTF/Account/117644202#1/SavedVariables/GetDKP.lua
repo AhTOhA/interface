@@ -1,0 +1,73 @@
+
+GDKP_Live_saveDKP = {
+	["players"] = {
+		["Argwynn"] = {
+			["dkp_current"] = 0,
+			["dkp_spend"] = 0,
+			["dkp_adjust"] = 0,
+			["dkp_earned"] = 0,
+			["rcount"] = 0,
+			["class"] = "Paladin",
+		},
+	},
+}
+GDKP_Live_saveItem = {
+}
+GDKP_LiveChanged_date = "20.02.11 4:18:29"
+GDKP_LiveChanged_timestamp = 1299869953
+GDKP_LiveChanged_status = true
+GDKP_saveItems = nil
+GDKPvar_save = {
+	["LOOTLEVEL"] = 2,
+	["GDA_Countdown"] = 1,
+	["showtooltip"] = "true",
+	["GDA_MinDKP_Rule2"] = 50,
+	["MiniMapButtonPosx"] = 0,
+	["GDA_Chatlook_Rule2"] = 1,
+	["GDA_GreedWord"] = "greed",
+	["GDA_BetWord"] = "bet",
+	["Scaling_GDL"] = 65,
+	["reportowner"] = "true",
+	["GDA_Countdown_Time"] = 60,
+	["Scaling_GDA"] = 60,
+	["GDA_Rule"] = 1,
+	["GDA_Chatlook"] = 1,
+	["GDA_GreedDKP"] = "50",
+	["requestItem"] = "true",
+	["GDA_Chatoutput_Rule3"] = 4,
+	["GDA_OnOff"] = 1,
+	["ignoreValue"] = 0,
+	["TokenItems"] = "true",
+	["konto"] = "dkp",
+	["GDA_Loot_GDA"] = 1,
+	["requestRP"] = "true",
+	["IncomingWhisper"] = "false",
+	["posi_tooltip"] = "top",
+	["GetDKPASK"] = "true",
+	["minmax"] = "true",
+	["HideOutGoingWhisper"] = "true",
+	["dkp"] = "true",
+	["ShowOnlyInRaid"] = "false",
+	["NeedLimit"] = 0,
+	["GDA_Chatoutput"] = 4,
+	["client"] = "false",
+	["BuyersLimit"] = 0,
+	["MRT"] = "true",
+	["listowner"] = "true",
+	["Scaling_GDC"] = 65,
+	["MiniMapButtonPosy"] = 0,
+	["GDA_Chatlook_Rule3"] = 1,
+	["GDA_Chatoutput_Rule2"] = 4,
+	["epgp"] = "false",
+	["GDA_Countdown_Alert"] = 10,
+	["ShowMiniMapButton"] = 1,
+	["reportChannel"] = "lokal",
+	["requestItems"] = "true",
+	["GDA_MinDKP"] = 20,
+	["ShowItems"] = "true",
+	["showtooltipraid"] = "true",
+	["LiveDKP"] = "true",
+	["TierDrop"] = "true",
+	["GDA_MinDKP_Rule3"] = 50,
+}
+GetDKPFuDB = nil

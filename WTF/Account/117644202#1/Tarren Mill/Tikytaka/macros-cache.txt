@@ -1,0 +1,73 @@
+MACRO 16777228 "All" INV_Misc_QuestionMark
+/cast Demoralizing Roar(Bear Form)
+/cast Enrage(Bear Form)
+/cast Faerie Fire (Feral)(Feral)
+/cast Frenzied Regeneration(Bear Form)
+END
+MACRO 16777226 "Charge" INV_Misc_QuestionMark
+/cast [mod:ctrl] Skull Bash(Bear Form); Feral Charge(Bear Form)
+END
+MACRO 16777232 "Cyclone" INV_Misc_QuestionMark
+#showtooltip [target=focus,harm] [] Cyclone
+/stopcasting
+/clearfocus [modifier:shift][target=focus,dead][target=focus,noexists]  
+/focus [target=focus,noexists]  
+/cast [target=focus] Cyclone
+END
+MACRO 16777222 "Enrage" INV_Misc_QuestionMark
+/cast Faerie Fire (Feral)(Feral)
+/cast Tiger's Fury(Cat Form)
+END
+MACRO 16777221 "FB/SB" INV_Misc_QuestionMark
+/cast [modifier:alt] Skull Bash(Cat Form); [mod:ctrl] Rip(Cat Form); Ferocious Bite(Cat Form)
+END
+MACRO 16777220 "FC/Mangle" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Feral Charge(Cat Form); Mangle(Cat Form)
+/cast Ravage
+END
+MACRO 16777218 "Heals" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Regrowth; [modifier:alt] Healing Touch; Rejuvenation
+END
+MACRO 16777225 "Mangle" INV_Misc_QuestionMark
+#showtooltip Mangle(Bear Form)
+/cast Auto Attack
+/cast Mangle(Bear Form)
+/cast Bash(Bear Form)
+END
+MACRO 16777230 "Moon/CC" INV_Misc_QuestionMark
+/cast [mod:ctrl] Entangling Roots; [mod:alt] Cyclone; Moonfire
+END
+MACRO 16777233 "Roots" INV_Misc_QuestionMark
+#showtooltip [target=focus,harm] [] Entangling Roots
+/stopcasting
+/clearfocus [modifier:shift][target=focus,dead][target=focus,noexists]  
+/focus [target=focus,noexists]  
+/cast [target=focus] Entangling Roots
+END
+MACRO 16777229 "Shred/Maim" INV_Misc_QuestionMark
+/cast [mod:ctrl] Shred(Cat Form); Maim(Cat Form)
+END
+MACRO 16777219 "Stances" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Bear Form(Shapeshift); [modifier:alt] Travel Form(Shapeshift); Cat Form(Shapeshift)
+END
+MACRO 16777217 "Stealth/Speed" INV_Misc_QuestionMark
+/cast [modifier:alt] Dash(Cat Form);  [modifier:ctrl] Ravage(Cat Form); Prowl(Cat Form)
+END
+MACRO 16777223 "test" INV_Misc_QuestionMark
+/cast Feral Charge(Cat Form)
+/cast Ravage(Cat Form)
+END
+MACRO 16777224 "TestOK" INV_Misc_QuestionMark
+#showtooltip
+/cast [mod:ctrl] Feral Charge(Cat Form)
+/cast [mod:alt] Dash
+/cast [stealth] Pounce
+/cast [combat] Shred
+/cast [nocombat,nostealth] Prowl
+END
+MACRO 16777227 "Threat" INV_Misc_QuestionMark
+/cast [mod:ctrl] Challenging Roar(Bear Form); Growl(Bear Form)
+END
+MACRO 16777231 "Wrath/Ng" INV_Misc_QuestionMark
+/cast [mod:ctrl] Nature's Grasp; [mod:alt] Typhoon; Insect Swarm
+END

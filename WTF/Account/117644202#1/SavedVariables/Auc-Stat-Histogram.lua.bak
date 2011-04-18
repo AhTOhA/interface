@@ -1,0 +1,10 @@
+
+AucAdvancedStatHistogramData = {
+	["version"] = 2,
+	["Tarren Mill-Horde"] = {
+		[37705] = {
+			[0] = "65;100;150;21;1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19",
+		},
+	},
+}
+AucAdvancedStatHistogramTotalData = ""

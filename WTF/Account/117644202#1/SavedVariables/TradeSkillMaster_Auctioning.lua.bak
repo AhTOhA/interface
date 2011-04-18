@@ -1,0 +1,45 @@
+
+TradeSkillMaster_AuctioningDB = {
+	["global"] = {
+		["hideAdvanced"] = true,
+		["treeGroupStatus"] = {
+			["groups"] = {
+				true, -- [1]
+				["test"] = true,
+				["2~test"] = true,
+				["2~"] = true,
+				["2test"] = true,
+			},
+			["scrollvalue"] = 0,
+			["selected"] = "2~test",
+			["treesizable"] = true,
+			["fullwidth"] = 745.9998595633066,
+		},
+	},
+	["profiles"] = {
+		["Default"] = {
+			["thresholdPercent"] = {
+				["test"] = nil --[[ inf ]],
+			},
+			["fallbackPercent"] = {
+				["test"] = nil --[[ inf ]],
+			},
+			["groups"] = {
+				["test"] = {
+					["item:52329:0:0:0:0:0:0"] = true,
+					["item:59062:0:0:0:0:0:0"] = true,
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Tikytaka - Tarren Mill"] = "Default",
+	},
+	["factionrealm"] = {
+		["Horde - Tarren Mill"] = {
+			["player"] = {
+				["Tikytaka"] = true,
+			},
+		},
+	},
+}

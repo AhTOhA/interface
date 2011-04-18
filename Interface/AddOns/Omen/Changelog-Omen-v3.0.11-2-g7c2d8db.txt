@@ -1,0 +1,3 @@
+Xinhuan:
+	- Update code to check for Frost Presence pre-patch 4.0, but check for Blood Presence post-patch 4.0.
+	- Update English localization.

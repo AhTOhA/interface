@@ -1,0 +1,68 @@
+MACRO 16777260 "Ambush" INV_Misc_QuestionMark
+#showtooltip
+/castsequence reset=target/combat/20 Premeditation, Ambush
+END
+MACRO 16777266 "Backstab" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Shadowstep; Backstab
+END
+MACRO 16777275 "Backstabber" INV_Misc_QuestionMark
+#showtooltip
+/castsequence reset=20 Gouge, Shadowstep, Backstab, Hemorrhage, Kidney Shot
+END
+MACRO 16777277 "ColdB/Vend" INV_Misc_QuestionMark
+#showtooltip
+/cast [modifier:ctrl] Vendetta; [modifier:alt] Combat Readiness; Cold Blood
+END
+MACRO 16777263 "Evenom/Kidney" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Kidney Shot; Envenom
+END
+MACRO 16777273 "Eviscerate" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Kidney Shot; Eviscerate
+END
+MACRO 16777276 "Imobilizare" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Kidney Shot; [modifier:shift] Cheap Shot; [modifier:alt] Blind; Gouge
+END
+MACRO 16777270 "Ks/Gouge" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Kidney Shot; Gouge
+END
+MACRO 16777267 "Mutilate/Eviscer" INV_Misc_QuestionMark
+#showtooltip Mutilate
+/castsequence reset=combat/target Auto Attack [modifier:ctrl] Eviscerate; Mutilate
+END
+MACRO 16777272 "Pocket" INV_Misc_QuestionMark
+#showtooltip Pick Pocket 
+/console targetNearestDistance 5.000000 
+/targetenemy [noharm][dead] 
+/console targetNearestDistance 10.000000 
+/cast [harm,nodead] Sap 
+/script SetAutoLootDefault(1) 
+/cast Pick pocket 
+/in 1 /script SetAutoLootDefault(0) 
+END
+MACRO 16777274 "PvPo" INV_Misc_QuestionMark
+#showtooltip
+/castsequence reset=target/combat/20 Premeditation, Cheap Shot, Eviscerate, Dismantle, Shadow Dance, Shadowstep, Ambush, Ambush, Kidney Shot
+END
+MACRO 16777262 "Rupture/S&D" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Slice and Dice; Rupture
+END
+MACRO 16777271 "Sap/CheapShot" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Cheap Shot; Sap
+END
+MACRO 16777264 "SD/Rupture" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Slice and Dice; Rupture
+END
+MACRO 16777259 "Shadowstep" INV_Misc_QuestionMark
+#showtooltip
+/castsequence reset=target/combat/20 Shadowstep, Sap
+END
+MACRO 16777269 "Ss/Hemo" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Backstab; [modifier:alt] Hemorrhage;  Sinister Strike
+END
+MACRO 16777268 "Trinckets" INV_Misc_QuestionMark
+/use [modifier:ctrl] 14; 13
+END
+MACRO 16777222 "Vanish" INV_Misc_QuestionMark
+#showtooltip
+/cast [modifier:ctrl] Vanish; [modifier:alt] Cloak of Shadows; Stealth
+END

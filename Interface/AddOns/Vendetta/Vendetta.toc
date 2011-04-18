@@ -1,0 +1,10 @@
+## Title: Vendetta
+## Version: 1.4
+## Author: WillWaywell
+## Interface: 40000
+## SavedVariables: VendettaDB
+## Notes: Rogue Assasination rotation suggestion and cooldown tracking.
+
+embeds.xml
+
+Vendetta.lua

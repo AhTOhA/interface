@@ -1,0 +1,813 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<FontString name="LBtexttemplate" font="Fonts\FRIZQT__.TTF" text="" nonspacewrap="true" maxlines="1" justifyH="LEFT" justifyV="MIDDLE" virtual="true">
+	 <FontHeight>
+	   <AbsValue val="6" />
+	 </FontHeight>
+	 <Color r="1" g="1" b="1" />
+	 <Shadow>
+	   <Color r="0" g="0" b="0" />
+	   <Offset>
+	     <AbsDimension x="1" y="-1" />
+	   </Offset>
+	 </Shadow>
+</FontString>
+
+<FontString name="LBtexttemplate7" font="Fonts\FRIZQT__.TTF" text="" nonspacewrap="true" maxlines="1" justifyH="LEFT" justifyV="MIDDLE" virtual="true">
+	 <FontHeight>
+	   <AbsValue val="7" />
+	 </FontHeight>
+	 <Color r="1" g="1" b="1" />
+	 <Shadow>
+	   <Color r="0" g="0" b="0" />
+	   <Offset>
+	     <AbsDimension x="1" y="-1" />
+	   </Offset>
+	 </Shadow>
+</FontString>
+
+<Texture name="CombuBarTemplate" file="Interface\AddOns\CombustionHelper\Images\combubarblack" virtual="true">
+</Texture>
+
+<Texture name="CombuButtonTemplate" file="Interface\AddOns\CombustionHelper\Images\Combustionoff" virtual="true">
+  <Size>
+    <AbsDimension x="9" y="9" />
+  </Size>
+</Texture>
+           
+<Frame name="CombustionFrame" parent="UIParent" enableMouse="true" movable="true">
+    <Size>
+      <AbsDimension x="98" y="56" />
+    </Size>
+	 <Anchors>
+	  <Anchor point="CENTER"/>
+	 </Anchors>
+    <TitleRegion setAllPoints="true" />
+    <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+      <BackgroundInsets>
+        <AbsInset left="5" right="5" top="5" bottom="5" />
+      </BackgroundInsets>
+      <TileSize>
+        <AbsValue val="16" />
+      </TileSize>
+      <EdgeSize>
+        <AbsValue val="16" />
+      </EdgeSize>
+          <Color r="0.25" g="0.25" b="0.25" />
+          <BorderColor r="0.67" g="0.67" b="0.67" />
+    </Backdrop>
+
+        <Layers>
+        
+          <Layer level="ARTWORK" textureSubLevel="1" >
+ 
+            <FontString name="LBLabel" inherits="LBtexttemplate7" text="Living Bomb" justifyH="RIGHT">
+		        <Size>
+		          <AbsDimension x="52" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+		            <Offset>
+		              <AbsDimension x="6" y="-5" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+
+      		 <FontString name="IgniteLabel" inherits="LBtexttemplate7" text="Ignite" justifyH="RIGHT">
+		       <Size>
+		         <AbsDimension x="52" y="9" />
+		       </Size>
+		       <Anchors>
+		          <Anchor point="TOP" relativeTo="LBLabel" relativePoint="BOTTOM">
+		           <Offset>
+		             <AbsDimension x="0" y="0" />
+		           </Offset>
+		         </Anchor>
+		       </Anchors>
+            </FontString>
+
+            <FontString name="PyroLabel" inherits="LBtexttemplate7" text="Pyroblast" justifyH="RIGHT">
+		        <Size>
+		          <AbsDimension x="52" y="9" />
+		        </Size>
+		        <Anchors>
+		          <Anchor point="TOP" relativeTo="IgniteLabel" relativePoint="BOTTOM">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+            
+            <FontString name="FFBLabel" inherits="LBtexttemplate7" text="FrostFire Bolt" justifyH="RIGHT">
+		        <Size>
+		          <AbsDimension x="52" y="9" />
+		        </Size>
+		        <Anchors>
+		          <Anchor point="TOP" relativeTo="PyroLabel" relativePoint="BOTTOM">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+
+          <Texture name="LBButton" inherits="CombuButtonTemplate">
+	        <Anchors>
+		       <Anchor point="LEFT" relativeTo="LBLabel" relativePoint="RIGHT">
+	            <Offset>
+	              <AbsDimension x="1" y="0" />
+	            </Offset>
+	          </Anchor>
+	        </Anchors>
+  	       </Texture>
+  	       
+ 
+          <Texture name="IgniteButton" inherits="CombuButtonTemplate">
+	        <Anchors>
+		       <Anchor point="LEFT" relativeTo="IgniteLabel" relativePoint="RIGHT">
+	            <Offset>
+	              <AbsDimension x="1" y="0" />
+	            </Offset>
+	          </Anchor>
+	        </Anchors>
+	       </Texture>
+	       
+         <Texture name="PyroButton" inherits="CombuButtonTemplate">
+	        <Anchors>
+		       <Anchor point="LEFT" relativeTo="PyroLabel" relativePoint="RIGHT">
+	            <Offset>
+	              <AbsDimension x="1" y="0" />
+	            </Offset>
+	          </Anchor>
+	        </Anchors>
+	       </Texture>
+	       
+	       <Texture name="FFBButton" inherits="CombuButtonTemplate">
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="FFBLabel" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+     	  </Texture>
+ 
+            <FontString name="LBTextFrameLabel" inherits="LBtexttemplate7" text="LB">
+		        <Size>
+		          <AbsDimension x="28" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="LBButton" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+            
+            <FontString name="IgnTextFrameLabel" inherits="LBtexttemplate7" text="IGN">
+		        <Size>
+		          <AbsDimension x="28" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="IgniteButton" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+            
+            <FontString name="PyroTextFrameLabel" inherits="LBtexttemplate7" text="Pyro">
+		        <Size>
+		          <AbsDimension x="28" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="PyroButton" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+
+            <FontString name="FFBTextFrameLabel" inherits="LBtexttemplate7" text="FFB">
+		        <Size>
+		          <AbsDimension x="28" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="FFBButton" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+
+            <FontString name="StatusTextFrameLabel" inherits="LBtexttemplate7" text="">
+		        <Size>
+		          <AbsDimension x="83" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="TOPLEFT" relativeTo="FFBLabel" relativePoint="BOTTOMLEFT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+
+            <FontString name="CritTypeFrameLabel" inherits="LBtexttemplate7" text="">
+		        <Size>
+		          <AbsDimension x="83" y="9" />
+		        </Size>
+		            <Anchors>
+		                <Anchor point="TOPLEFT" relativeTo="StatusTextFrameLabel" relativePoint="BOTTOMLEFT">
+		                    <Offset>
+		                        <AbsDimension x="0" y="0"/>
+		                    </Offset>
+		                </Anchor>
+		            </Anchors>
+            </FontString>
+
+            <FontString name="CritTextFrameLabel" inherits="LBtexttemplate7" text="">
+		        <Size>
+		          <AbsDimension x="83" y="9" />
+		        </Size>
+		            <Anchors>
+		                <Anchor point="TOPLEFT" relativeTo="CritTypeFrameLabel" relativePoint="TOPLEFT">
+		                    <Offset>
+		                        <AbsDimension x="0" y="0"/>
+		                    </Offset>
+		                </Anchor>
+		            </Anchors>
+            </FontString>
+ 
+         </Layer>
+         
+         <Layer level="ARTWORK" textureSubLevel="0" >
+            
+            <Texture name="FFBbar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="44" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="FFBTextFrameLabel" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="0" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+
+            <Texture name="Pyrobar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="44" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="PyroTextFrameLabel" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="0" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+            
+            <Texture name="Ignbar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="44" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="IgnTextFrameLabel" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="0" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+            
+            <Texture name="LBbar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="44" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="LBTextFrameLabel" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="0" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+            
+			<Texture name="Combubar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="83" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="StatusTextFrameLabel" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="0" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+
+    	     <Texture name="Critbar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="83" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="CritTextFrameLabel" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="0" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+
+           </Layer>
+          </Layers>
+           
+		<Scripts>
+			<OnLoad>
+				Combustion_OnLoad(self)
+				self.TimeSinceLastUpdate = 0 
+			</OnLoad>
+			<OnEvent> 
+				Combustion_OnEvent(self, event, ...);
+			</OnEvent>			
+			<OnUpdate function="Combustion_OnUpdate" />     
+   			<OnDragStart>
+				self:StartMoving()
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing()
+			</OnDragStop>
+		</Scripts>
+</Frame>
+
+<Frame name="LBtrackFrame" parent="CombustionFrame">
+   <Size>
+     <AbsDimension x="88" y="39" />
+   </Size>
+     <Anchors>
+		<Anchor point="BOTTOM" relativeTo="CombustionFrame" relativePoint="TOP">
+	      <Offset>
+ 		    <AbsDimension x="0" y="-7" />
+ 		  </Offset>
+       </Anchor>
+     </Anchors>
+   <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="false">
+     <BackgroundInsets>
+       <AbsInset left="5" right="5" top="5" bottom="5" />
+     </BackgroundInsets>
+     <TileSize>
+       <AbsValue val="16" />
+     </TileSize>
+     <EdgeSize>
+       <AbsValue val="16" />
+     </EdgeSize>
+         <Color r="0.25" g="0.25" b="0.25" />
+         <BorderColor r="0.67" g="0.67" b="0.67" />
+   </Backdrop>
+   
+      <Layers>
+	     <Layer level="ARTWORK" textureSubLevel="2" >
+	      <Texture name="LBtrack1Target" file="">
+		        <Size>
+		          <AbsDimension x="5" y="9" />
+		        </Size>
+                <TexCoords left="0" right="0.5" top="0" bottom="1" />
+		        <Anchors>
+		           <Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT">
+		            <Offset>
+		              <AbsDimension x="5" y="6" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+          
+          <FontString name="LBtrack1" inherits="LBtexttemplate">
+		        <Size>
+		          <AbsDimension x="47" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrack1Target" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </FontString>
+          
+          <Texture name="LBtrack1Symbol" file="">
+		        <Size>
+		          <AbsDimension x="9" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrack1" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0"/>
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+	      
+          <FontString name="LBtrack1Timer" inherits="LBtexttemplate" justifyH="RIGHT">
+		        <Size>
+		          <AbsDimension x="16" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="LBtrack1Symbol" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+            
+	      <Texture name="LBtrack2Target" file="">
+		        <Size>
+		          <AbsDimension x="5" y="9" />
+		        </Size>
+                <TexCoords left="0" right="0.5" top="0" bottom="1" />
+		        <Anchors>
+		           <Anchor point="BOTTOMLEFT" relativeTo="LBtrack1Target" relativePoint="TOPLEFT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+                      
+            <FontString name="LBtrack2" inherits="LBtexttemplate">
+		        <Size>
+		          <AbsDimension x="49" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrack2Target" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </FontString>
+          
+          <Texture name="LBtrack2Symbol" file="">
+		        <Size>
+		          <AbsDimension x="9" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrack2" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+	      
+          <FontString name="LBtrack2Timer" inherits="LBtexttemplate" justifyH="RIGHT">
+		        <Size>
+		          <AbsDimension x="16" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="LBtrack2Symbol" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+            
+	      <Texture name="LBtrack3Target" file="">
+		        <Size>
+		          <AbsDimension x="5" y="9" />
+		        </Size>
+                <TexCoords left="0" right="0.5" top="0" bottom="1" />
+		        <Anchors>
+		           <Anchor point="BOTTOMLEFT" relativeTo="LBtrack2Target" relativePoint="TOPLEFT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+                      
+            <FontString name="LBtrack3" inherits="LBtexttemplate">
+		        <Size>
+		          <AbsDimension x="49" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrack3Target" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </FontString>
+          
+          <Texture name="LBtrack3Symbol" file="">
+		        <Size>
+		          <AbsDimension x="9" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrack3" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+
+            <FontString name="LBtrack3Timer" inherits="LBtexttemplate" justifyH="RIGHT">
+		        <Size>
+		          <AbsDimension x="16" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="LBtrack3Symbol" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+
+	   </Layer>
+	      
+	   <Layer level="ARTWORK" textureSubLevel="1" >
+            <Texture name="LBtrack1Bar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="76" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="LBtrack1Target" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="2" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+            
+            <Texture name="LBtrack2Bar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="76" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="LBtrack2Target" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="2" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+            
+            <Texture name="LBtrack3Bar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="76" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="LBtrack3Target" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="2" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+	   </Layer>
+    </Layers>
+</Frame>
+
+<Frame name="LBtrackdownFrame" parent="CombustionFrame">
+  <Size>
+     <AbsDimension x="88" y="39" />
+   </Size>
+     <Anchors>
+		<Anchor point="TOP" relativeTo="CombustionFrame" relativePoint="BOTTOM">
+	      <Offset>
+ 		    <AbsDimension x="0" y="6" />
+ 		  </Offset>
+       </Anchor>
+     </Anchors>
+   <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="false">
+     <BackgroundInsets>
+       <AbsInset left="5" right="5" top="5" bottom="5" />
+     </BackgroundInsets>
+     <TileSize>
+       <AbsValue val="16" />
+     </TileSize>
+     <EdgeSize>
+       <AbsValue val="16" />
+     </EdgeSize>
+         <Color r="0.25" g="0.25" b="0.25" />
+         <BorderColor r="0.67" g="0.67" b="0.67" />
+   </Backdrop>
+   
+      <Layers>
+	     <Layer level="ARTWORK" textureSubLevel="2" >
+	      <Texture name="LBtrackdown1Target" file="">
+		        <Size>
+		          <AbsDimension x="5" y="9" />
+		        </Size>
+                <TexCoords left="0" right="0.5" top="0" bottom="1" />
+		        <Anchors>
+		           <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+		            <Offset>
+		              <AbsDimension x="5" y="-6" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+          
+          <FontString name="LBtrackdown1" inherits="LBtexttemplate">
+		        <Size>
+		          <AbsDimension x="47" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrackdown1Target" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </FontString>
+          
+          <Texture name="LBtrackdown1Symbol" file="">
+		        <Size>
+		          <AbsDimension x="9" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrackdown1" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0"/>
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+	      
+          <FontString name="LBtrackdown1Timer" inherits="LBtexttemplate" justifyH="RIGHT">
+		        <Size>
+		          <AbsDimension x="16" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="LBtrackdown1Symbol" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+            
+	      <Texture name="LBtrackdown2Target" file="">
+		        <Size>
+		          <AbsDimension x="5" y="9" />
+		        </Size>
+                <TexCoords left="0" right="0.5" top="0" bottom="1" />
+		        <Anchors>
+		           <Anchor point="TOPLEFT" relativeTo="LBtrackdown1Target" relativePoint="BOTTOMLEFT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+                      
+            <FontString name="LBtrackdown2" inherits="LBtexttemplate">
+		        <Size>
+		          <AbsDimension x="49" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrackdown2Target" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </FontString>
+          
+          <Texture name="LBtrackdown2Symbol" file="">
+		        <Size>
+		          <AbsDimension x="9" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrackdown2" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+	      
+          <FontString name="LBtrackdown2Timer" inherits="LBtexttemplate" justifyH="RIGHT">
+		        <Size>
+		          <AbsDimension x="16" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="LBtrackdown2Symbol" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+            
+	      <Texture name="LBtrackdown3Target" file="">
+		        <Size>
+		          <AbsDimension x="5" y="9" />
+		        </Size>
+                <TexCoords left="0" right="0.5" top="0" bottom="1" />
+		        <Anchors>
+		           <Anchor point="TOPLEFT" relativeTo="LBtrackdown2Target" relativePoint="BOTTOMLEFT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+                      
+            <FontString name="LBtrackdown3" inherits="LBtexttemplate">
+		        <Size>
+		          <AbsDimension x="49" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrackdown3Target" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="1" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </FontString>
+          
+          <Texture name="LBtrackdown3Symbol" file="">
+		        <Size>
+		          <AbsDimension x="9" y="9" />
+		        </Size>
+		        <Anchors>
+		           <Anchor point="LEFT" relativeTo="LBtrackdown3" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+	      </Texture>
+
+            <FontString name="LBtrackdown3Timer" inherits="LBtexttemplate" justifyH="RIGHT">
+		        <Size>
+		          <AbsDimension x="16" y="9" />
+		        </Size>
+		        <Anchors>
+			       <Anchor point="LEFT" relativeTo="LBtrackdown3Symbol" relativePoint="RIGHT">
+		            <Offset>
+		              <AbsDimension x="0" y="0" />
+		            </Offset>
+		          </Anchor>
+		        </Anchors>
+            </FontString>
+
+	   </Layer>
+	      
+	   <Layer level="ARTWORK" textureSubLevel="1" >
+            <Texture name="LBtrackdown1Bar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="76" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="LBtrackdown1Target" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="2" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+            
+            <Texture name="LBtrackdown2Bar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="76" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="LBtrackdown2Target" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="2" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+            
+            <Texture name="LBtrackdown3Bar" inherits="CombuBarTemplate">
+               <Size>
+       			   <AbsDimension x="76" y="9" />
+  		       </Size>
+              <Anchors>
+				<Anchor point="TOPLEFT" relativeTo="LBtrackdown3Target" relativePoint="TOPLEFT">
+       		      <Offset>
+          		    <AbsDimension x="2" y="0" />
+          		  </Offset>
+     	        </Anchor>
+              </Anchors>
+            </Texture>
+	   </Layer>
+    </Layers>
+</Frame>
+
+</Ui>

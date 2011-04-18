@@ -1,0 +1,28 @@
+MACRO 8 "a quest" INV_Misc_QuestionMark
+/target Twilight Skyterror
+/script SetRaidTarget("target",1)
+END
+MACRO 10 "Decursive" INV_Misc_QuestionMark
+/stopcasting
+/cast [target=mouseover,nomod,exists] Remove Corruption;  [target=mouseover,exists,mod:ctrl] Cyclone; [target=mouseover,exists,mod:shift] Remove Corruption
+END
+MACRO 3 "Guild" INV_Misc_QuestionMark
+/script n=GetNumWhoResults(); i=1; while(i<n+1) do c,g=GetWhoInfo(i); if(g=="") then SendChatMessage("Hi "..c.."! <Eragon> leveling/PVE/PVP guild, is recruiting! Get free item repair cost and instant queue for heroics.","WHISPER","ORCISH",c); GuildInvite(
+END
+MACRO 13 "Hands" INV_Misc_QuestionMark
+/use 10
+END
+MACRO 12 "Parachute" INV_Misc_QuestionMark
+/use 15
+END
+MACRO 11 "RogueSpeed" INV_Misc_QuestionMark
+#showtooltip Sprint
+/use 6
+END
+MACRO 9 "target" INV_Misc_QuestionMark
+/target Thundermar War Gryphon
+/use Barbed Fleshhook
+END
+MACRO 7 "Trinkets" INV_Misc_QuestionMark
+/use [mod:ctrl] 13; 14
+END

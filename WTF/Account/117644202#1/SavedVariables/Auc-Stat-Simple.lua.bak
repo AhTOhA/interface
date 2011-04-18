@@ -1,0 +1,14 @@
+
+AucAdvancedStatSimpleData = {
+	["Version"] = "2.0",
+	["RealmData"] = {
+		["Tarren Mill-Horde"] = {
+			["means"] = {
+			},
+			["daily"] = {
+				["created"] = 1294318910,
+				[37705] = "0:2778468;78;9750",
+			},
+		},
+	},
+}

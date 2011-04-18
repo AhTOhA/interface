@@ -1,0 +1,312 @@
+
+GMLogs = {
+	[1297880267] = {
+		["Argwynn"] = {
+			1080, -- [1]
+			1020, -- [2]
+			0, -- [3]
+			0, -- [4]
+			0, -- [5]
+			0, -- [6]
+			60, -- [7]
+			0, -- [8]
+			0, -- [9]
+			0, -- [10]
+			0, -- [11]
+			0, -- [12]
+			0, -- [13]
+		},
+		["LastRecord"] = 1297881742,
+	},
+}
+GMSettings = {
+	["MOTDinterval"] = 3600,
+	["RankList"] = {
+	},
+	["lastMOTD"] = 1297880266,
+	["LastLogout"] = 1297881760,
+	["Active"] = true,
+	["modules"] = {
+		["GMRecruit"] = {
+		},
+		["GMLocator"] = {
+		},
+		["GMGuildFrame"] = {
+		},
+		["GMEvent"] = {
+		},
+		["GMOTD"] = {
+		},
+		["GMForum"] = {
+		},
+		["GMBGReview"] = {
+		},
+		["GMAntiRankSpam"] = {
+		},
+		["GMAlts"] = {
+		},
+		["GMStats"] = {
+		},
+		["GMSync"] = {
+		},
+	},
+	["GMRecruit"] = {
+		["lastsent"] = 1297880267,
+		["list"] = {
+		},
+		["delay"] = 10,
+		["Active"] = true,
+	},
+	["Version"] = 1.51,
+	["EnableEvent"] = true,
+	["StartTime"] = 1297880267,
+	["lockout"] = false,
+	["GMForum"] = {
+	},
+}
+GMForum = {
+}
+GMRoster = {
+	["Pejo"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 6,
+		["class"] = "WARLOCK",
+		["rank"] = 4,
+	},
+	["Tigerlady"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 2,
+		["class"] = "MAGE",
+		["rank"] = 4,
+	},
+	["Kraisus"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 85,
+		["class"] = "ROGUE",
+		["rank"] = 1,
+	},
+	["Moriarti"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 20,
+		["class"] = "ROGUE",
+		["rank"] = 3,
+	},
+	["Coltor"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 85,
+		["class"] = "WARRIOR",
+		["rank"] = 4,
+	},
+	["Razoula"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 4,
+		["class"] = "WARLOCK",
+		["rank"] = 4,
+	},
+	["Tikytaka"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 70,
+		["class"] = "DRUID",
+		["rank"] = 4,
+	},
+	["Kungun"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 2,
+		["class"] = "WARRIOR",
+		["rank"] = 4,
+	},
+	["Collet"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 80,
+		["class"] = "WARRIOR",
+		["rank"] = 4,
+	},
+	["Lurger"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 2,
+		["class"] = "PRIEST",
+		["rank"] = 4,
+	},
+	["Udopie"] = {
+		["firstseen"] = 1297880269,
+		["online"] = 1,
+		["Alts"] = {
+		},
+		["class"] = "WARRIOR",
+		["level"] = 17,
+		["rank"] = 4,
+	},
+	["Danishelite"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 5,
+		["class"] = "WARRIOR",
+		["rank"] = 4,
+	},
+	["Femirogue"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 81,
+		["class"] = "ROGUE",
+		["rank"] = 4,
+	},
+	["Burble"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 77,
+		["class"] = "DEATHKNIGHT",
+		["rank"] = 4,
+	},
+	["Roksutin"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 2,
+		["class"] = "ROGUE",
+		["rank"] = 4,
+	},
+	["Strumpor"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 2,
+		["class"] = "HUNTER",
+		["rank"] = 4,
+	},
+	["Fauxliage"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 6,
+		["class"] = "SHAMAN",
+		["rank"] = 4,
+	},
+	["Phroff"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 2,
+		["class"] = "MAGE",
+		["rank"] = 4,
+	},
+	["Okokokokok"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 1,
+		["class"] = "WARRIOR",
+		["rank"] = 4,
+	},
+	["Dinkusse"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 8,
+		["class"] = "MAGE",
+		["rank"] = 4,
+	},
+	["Argwynn"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["class"] = "PALADIN",
+		["level"] = 85,
+		["rank"] = 0,
+	},
+	["Zulrea"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 31,
+		["class"] = "PRIEST",
+		["rank"] = 4,
+	},
+	["Steriod"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 7,
+		["class"] = "WARRIOR",
+		["rank"] = 4,
+	},
+	["Grapjurk"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 1,
+		["class"] = "PRIEST",
+		["rank"] = 4,
+	},
+	["Attaker"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 6,
+		["class"] = "WARRIOR",
+		["rank"] = 4,
+	},
+	["Hedie"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 2,
+		["class"] = "WARLOCK",
+		["rank"] = 4,
+	},
+	["Rroz"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 6,
+		["class"] = "PRIEST",
+		["rank"] = 4,
+	},
+	["Cerias"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 5,
+		["class"] = "SHAMAN",
+		["rank"] = 4,
+	},
+	["Gabloino"] = {
+		["firstseen"] = 1297880269,
+		["Alts"] = {
+		},
+		["level"] = 6,
+		["class"] = "HUNTER",
+		["rank"] = 4,
+	},
+	["Xiphos"] = {
+		["firstseen"] = 1297880269,
+		["online"] = 1,
+		["Alts"] = {
+		},
+		["level"] = 80,
+		["class"] = "WARRIOR",
+		["rank"] = 4,
+	},
+}

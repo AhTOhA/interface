@@ -1,0 +1,385 @@
+
+TradeSkillMaster_CraftingDB = {
+	["global"] = {
+		["treeStatus"] = {
+			true, -- [1]
+		},
+	},
+	["profileKeys"] = {
+		["Tikytaka - Tarren Mill"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["Inscription"] = {
+				["mats"] = {
+				},
+				["crafts"] = {
+				},
+			},
+			["Leatherworking"] = {
+				["mats"] = {
+				},
+				["crafts"] = {
+				},
+			},
+			["lastScan"] = {
+				["Jewelcrafting"] = 1302799365,
+			},
+			["Engineering"] = {
+				["mats"] = {
+				},
+				["crafts"] = {
+				},
+			},
+			["Cooking"] = {
+				["mats"] = {
+				},
+				["crafts"] = {
+				},
+			},
+			["Tailoring"] = {
+				["mats"] = {
+				},
+				["crafts"] = {
+				},
+			},
+			["Alchemy"] = {
+				["mats"] = {
+				},
+				["crafts"] = {
+				},
+			},
+			["Blacksmithing"] = {
+				["mats"] = {
+				},
+				["crafts"] = {
+				},
+			},
+			["Jewelcrafting"] = {
+				["mats"] = {
+					[2836] = {
+						["name"] = "Coarse Stone",
+						["cost"] = 5,
+					},
+					[20817] = {
+						["name"] = "Bronze Setting",
+						["cost"] = 5,
+					},
+					[1210] = {
+						["name"] = "Shadowgem",
+						["cost"] = 5,
+					},
+					[1206] = {
+						["name"] = "Moss Agate",
+						["cost"] = 5,
+					},
+					[1705] = {
+						["name"] = "Lesser Moonstone",
+						["cost"] = 5,
+					},
+					[774] = {
+						["name"] = "Malachite",
+						["cost"] = 5,
+					},
+					[20816] = {
+						["name"] = "Delicate Copper Wire",
+						["cost"] = 5,
+					},
+					[2841] = {
+						["name"] = "Bronze Bar",
+						["cost"] = 5,
+					},
+					[818] = {
+						["name"] = "Tigerseye",
+						["cost"] = 5,
+					},
+					[2842] = {
+						["name"] = "Silver Bar",
+						["cost"] = 5,
+					},
+					[2835] = {
+						["name"] = "Rough Stone",
+						["cost"] = 5,
+					},
+					[2840] = {
+						["name"] = "Copper Bar",
+						["cost"] = 5,
+					},
+					[5498] = {
+						["name"] = "Small Lustrous Pearl",
+						["cost"] = 5,
+					},
+				},
+				["crafts"] = {
+					[20827] = {
+						["mats"] = {
+							[2842] = 2,
+						},
+						["numMade"] = 1,
+						["name"] = "Ring of Silver Might",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 25317,
+					},
+					[20906] = {
+						["mats"] = {
+							[20816] = 2,
+						},
+						["numMade"] = 1,
+						["name"] = "Braided Copper Ring",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 25493,
+					},
+					[20907] = {
+						["mats"] = {
+							[2841] = 4,
+						},
+						["numMade"] = 1,
+						["name"] = "Solid Bronze Ring",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 25490,
+					},
+					[21931] = {
+						["mats"] = {
+							[20816] = 2,
+							[2840] = 1,
+						},
+						["numMade"] = 1,
+						["name"] = "Woven Copper Ring",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 26925,
+					},
+					[31154] = {
+						["mats"] = {
+							[1705] = 1,
+							[2841] = 6,
+							[20817] = 1,
+						},
+						["numMade"] = 1,
+						["name"] = "Bronze Torc",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 38175,
+					},
+					[21932] = {
+						["mats"] = {
+							[2840] = 4,
+							[20816] = 2,
+						},
+						["numMade"] = 1,
+						["name"] = "Heavy Copper Ring",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 26926,
+					},
+					[21933] = {
+						["mats"] = {
+							[20816] = 1,
+							[1210] = 1,
+							[2841] = 2,
+						},
+						["numMade"] = 1,
+						["name"] = "Thick Bronze Necklace",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 26927,
+					},
+					[20818] = {
+						["mats"] = {
+							[2842] = 1,
+						},
+						["numMade"] = 1,
+						["name"] = "Elegant Silver Ring",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 25280,
+					},
+					[25438] = {
+						["mats"] = {
+							[774] = 1,
+							[20816] = 1,
+						},
+						["numMade"] = 1,
+						["name"] = "Malachite Pendant",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 32178,
+					},
+					[25439] = {
+						["mats"] = {
+							[818] = 1,
+							[20816] = 1,
+						},
+						["numMade"] = 1,
+						["name"] = "Tigerseye Band",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 32179,
+					},
+					[20821] = {
+						["mats"] = {
+							[774] = 2,
+							[2840] = 2,
+						},
+						["numMade"] = 1,
+						["name"] = "Inlaid Malachite Ring",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 25283,
+					},
+					[20816] = {
+						["mats"] = {
+							[2840] = 2,
+						},
+						["numMade"] = 1,
+						["name"] = "Delicate Copper Wire",
+						["enabled"] = true,
+						["group"] = 10,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 25255,
+					},
+					[30804] = {
+						["mats"] = {
+							[2841] = 2,
+							[774] = 3,
+							[818] = 3,
+							[20817] = 1,
+							[1210] = 2,
+						},
+						["numMade"] = 1,
+						["name"] = "Bronze Band of Force",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 37818,
+					},
+					[20817] = {
+						["mats"] = {
+							[2841] = 2,
+						},
+						["numMade"] = 1,
+						["name"] = "Bronze Setting",
+						["enabled"] = true,
+						["group"] = 10,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 25278,
+					},
+					[20823] = {
+						["mats"] = {
+							[20816] = 2,
+							[20817] = 1,
+							[1210] = 2,
+						},
+						["numMade"] = 1,
+						["name"] = "Gloom Band",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 25287,
+					},
+					[20820] = {
+						["mats"] = {
+							[20817] = 1,
+							[2840] = 2,
+							[5498] = 1,
+						},
+						["numMade"] = 1,
+						["name"] = "Simple Pearl Ring",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 25284,
+					},
+					[21934] = {
+						["mats"] = {
+							[818] = 2,
+							[2840] = 2,
+							[20816] = 1,
+						},
+						["numMade"] = 1,
+						["name"] = "Ornate Tigerseye Necklace",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 26928,
+					},
+					[30419] = {
+						["mats"] = {
+							[1206] = 1,
+							[20817] = 1,
+							[2841] = 4,
+						},
+						["numMade"] = 1,
+						["name"] = "Brilliant Necklace",
+						["enabled"] = true,
+						["group"] = 9,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 36523,
+					},
+					[25880] = {
+						["mats"] = {
+							[2836] = 8,
+						},
+						["numMade"] = 1,
+						["name"] = "Coarse Stone Statue",
+						["enabled"] = true,
+						["group"] = 10,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 32801,
+					},
+					[25498] = {
+						["mats"] = {
+							[2835] = 8,
+						},
+						["numMade"] = 1,
+						["name"] = "Rough Stone Statue",
+						["enabled"] = true,
+						["group"] = 10,
+						["hasCD"] = false,
+						["queued"] = 0,
+						["spellID"] = 32259,
+					},
+				},
+			},
+			["Enchanting"] = {
+				["mats"] = {
+				},
+				["crafts"] = {
+				},
+			},
+		},
+	},
+}

@@ -1,0 +1,39 @@
+MACRO 16777235 "2*SS/AH" INV_Misc_QuestionMark
+/cast [mod:ctrl] Silencing Shot; [mod:alt] Ice Trap; Steady Shot
+END
+MACRO 16777234 "AS/CS" INV_Misc_QuestionMark
+/cast [mod:ctrl] Aimed Shot; Chimera Shot
+END
+MACRO 16777228 "D/D" INV_Misc_QuestionMark
+/cast [mod:ctrl] Disengage; [mod:alt] Silencing Shot; Deterrence
+END
+MACRO 16777232 "ES/BA" INV_Misc_QuestionMark
+/cast [mod:ctrl] Black Arrow; Explosive Shot
+END
+MACRO 16777230 "HM/AS" INV_Misc_QuestionMark
+/cast Hunter's Mark
+/petattack
+END
+MACRO 16777233 "Hm/Ss" INV_Misc_QuestionMark
+/castsequence reset=target/combat Hunter's Mark, Serpent Sting
+END
+MACRO 16777226 "KC/BW" INV_Misc_QuestionMark
+/cast Kill Command
+/cast Bestial Wrath
+/cast Rapid Fire
+/cast Focus Fire
+END
+MACRO 16777223 "SS/AH" INV_Misc_QuestionMark
+/cast [mod:ctrl] Steady Shot; [mod:alt] Scatter Shot; Cobra Shot
+END
+MACRO 16777225 "SS/CS" INV_Misc_QuestionMark
+/cast [mod:ctrl] Scatter Shot; [mod:alt] Snake Trap(Nature); Concussive Shot
+END
+MACRO 16777224 "SS/KS" INV_Misc_QuestionMark
+/cast [mod:ctrl] Kill Shot; [mod:alt] Freezing Trap(Frost); Arcane Shot
+END
+MACRO 16777231 "Traps" INV_Misc_QuestionMark
+/cast Ice Trap(Frost)
+/cast Snake Trap(Nature)
+/cast Explosive Trap(Fire)
+END

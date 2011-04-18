@@ -1,0 +1,6 @@
+MACRO 1 "Decursive" INV_Misc_QuestionMark
+/script Dcr:Println('No spell available')
+END
+MACRO 2 "uNh1T" Ability_Mount_Charger
+/script DEFAULT_CHAT_FRAME:AddMessage("Need 102.4 combat table coverage. Currently at: "..string.format("%.2f", GetDodgeChance()+GetBlockChance()+GetParryChance()+5))
+END

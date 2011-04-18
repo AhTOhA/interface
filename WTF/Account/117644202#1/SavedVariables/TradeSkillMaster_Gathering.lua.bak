@@ -1,0 +1,37 @@
+
+TradeSkillMaster_GatheringDB = {
+	["profileKeys"] = {
+		["Tikytaka - Tarren Mill"] = "Default",
+	},
+	["factionrealm"] = {
+		["Horde - Tarren Mill"] = {
+			["characters"] = {
+				["Tikytaka"] = {
+					["bags"] = {
+						[59062] = 5,
+						[58261] = 12,
+						[5512] = 1,
+						[65613] = 1,
+						[55211] = 1,
+						[57192] = 5,
+						[58257] = 31,
+						[60501] = 1,
+					},
+					["guild"] = "Abesse Ignis",
+					["bank"] = {
+					},
+				},
+			},
+			["guilds"] = {
+				["Abesse Ignis"] = {
+					["items"] = {
+					},
+					["characters"] = {
+						["CURRENT_PLAYER"] = true,
+						["Tikytaka"] = true,
+					},
+				},
+			},
+		},
+	},
+}

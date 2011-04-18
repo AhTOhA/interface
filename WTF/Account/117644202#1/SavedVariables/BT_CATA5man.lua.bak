@@ -1,0 +1,12 @@
+
+BT_CATA5manDB = {
+	["profileKeys"] = {
+		["Argwynn - Tarren Mill"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["initial"] = false,
+			["version"] = 4,
+		},
+	},
+}

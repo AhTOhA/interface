@@ -1,0 +1,86 @@
+
+Omen3DB = {
+	["profileKeys"] = {
+		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",
+	},
+	["profiles"] = {
+		["Argwynn - Tarren Mill"] = {
+			["PositionW"] = 198.8860415275098,
+			["PositionH"] = 196.9849329984127,
+			["VGrip2"] = 155.3166898740382,
+			["PositionY"] = 224.0147437441533,
+			["Locked"] = true,
+			["Background"] = {
+				["BorderTexture"] = "None",
+				["EdgeSize"] = 9,
+				["Color"] = {
+					["a"] = 0,
+					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
+				},
+				["BorderColor"] = {
+					["a"] = 0,
+					["r"] = 0,
+					["g"] = 0,
+				},
+				["Texture"] = "Solid",
+			},
+			["PositionX"] = 428.618218069226,
+			["Shown"] = true,
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
+			["VGrip1"] = 155.3166898740382,
+			["ShowWith"] = {
+				["UseShowWith"] = false,
+				["HideWhileResting"] = false,
+				["Alone"] = true,
+				["Resting"] = true,
+				["PVP"] = true,
+				["HideInPVP"] = false,
+			},
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+				["FontSize"] = 12,
+				["Height"] = 18,
+			},
+			["Warnings"] = {
+				["Sound"] = false,
+			},
+			["Bar"] = {
+				["FontSize"] = 13,
+				["ShowHeadings"] = false,
+				["FontColor"] = {
+					["r"] = 0.7764705882352941,
+					["g"] = 0.7764705882352941,
+					["b"] = 0.7764705882352941,
+				},
+				["ShowValue"] = false,
+				["UseClassColors"] = false,
+				["UseMyBarColor"] = true,
+				["FadeBarColor"] = {
+					["r"] = 0.4666666666666667,
+					["g"] = 0.4666666666666667,
+					["b"] = 0.4666666666666667,
+				},
+				["MyBarColor"] = {
+					["r"] = 0.592156862745098,
+					["g"] = 0.592156862745098,
+					["b"] = 0.592156862745098,
+				},
+				["Texture"] = "Minimalist",
+				["ShowTPS"] = false,
+				["BarColor"] = {
+					["a"] = 0.8900000005960465,
+					["r"] = 0.3686274509803922,
+					["g"] = 0.3686274509803922,
+					["b"] = 0.3686274509803922,
+				},
+				["Font"] = "vibrocen",
+				["Height"] = 25,
+				["Spacing"] = 1,
+			},
+		},
+	},
+}

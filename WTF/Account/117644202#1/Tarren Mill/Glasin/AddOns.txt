@@ -1,0 +1,13 @@
+ArchivmentFaker: disabled
+LUI: enabled
+MikScrollingBattleText: enabled
+GuildMaster: disabled
+BossInfo: disabled
+BigWigs: enabled
+BT_BHold: disabled
+BT_BoT: disabled
+BT_BWD: disabled
+BT_CATA5man: disabled
+BossTactics: disabled
+BT_TofW: disabled
+CombustionHelper: enabled

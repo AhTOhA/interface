@@ -1,0 +1,2865 @@
+
+AUCTIONATOR_SAVEDVARS = {
+	["_10000"] = 1,
+	["_50000"] = 1,
+	["_500"] = 1,
+	["_1000000"] = 2500,
+	["_200000"] = 1,
+	["STARTING_DISCOUNT"] = 5,
+	["_5000000"] = 10000,
+	["_2000"] = 1,
+}
+AUCTIONATOR_PRICING_HISTORY = {
+	["Volatile Life"] = {
+		["is"] = "52329:0",
+		["1421077"] = "20198:18",
+		["1421102"] = "19995:18",
+	},
+	["Crystallized Water"] = {
+		["is"] = "37705:0",
+		["1421102"] = "11399:10",
+	},
+	["Volatile Fire"] = {
+		["is"] = "52325:0",
+		["1421078"] = "49998:4",
+	},
+	["Dust of Disappearance"] = {
+		["is"] = "63388:0",
+		["1421077"] = "179499:2",
+	},
+}
+AUCTIONATOR_SHOPPING_LISTS = {
+	{
+		["items"] = {
+			"Embersilk Cloth", -- [1]
+			"Whiptail", -- [2]
+			"Heartblossom", -- [3]
+			"{ Herbs }", -- [4]
+			"Azshara's Veil", -- [5]
+			"Stormvine", -- [6]
+			"Cinderbloom", -- [7]
+			"{ Enchanting Materials }", -- [8]
+			"Dream Shard", -- [9]
+			"Greater Cosmic Essence", -- [10]
+			"Infinite Dust", -- [11]
+			"Abyss Crystal", -- [12]
+			"Lesser Celestial Essence", -- [13]
+			"Elixir of Impossible Accuracy", -- [14]
+			"Heavenly Shard", -- [15]
+			"Maelstrom Crystal", -- [16]
+			"Greater Celestial Essence", -- [17]
+			"Hypnotic Dust", -- [18]
+			"{ Volatiles }", -- [19]
+			"volatile air", -- [20]
+			"volatile water", -- [21]
+			"volatile life", -- [22]
+			"volatile fire", -- [23]
+			"volatile earth", -- [24]
+			"volatil", -- [25]
+		},
+		["isRecents"] = 1,
+		["name"] = "Recent Searches",
+	}, -- [1]
+	{
+		["items"] = {
+			"Embersilk Cloth", -- [1]
+		},
+		["name"] = "Cloth",
+		["isSorted"] = true,
+	}, -- [2]
+	{
+		["items"] = {
+			"Abyss Crystal", -- [1]
+			"Dream Shard", -- [2]
+			"Elixir of Impossible Accuracy", -- [3]
+			"Greater Celestial Essence", -- [4]
+			"Greater Cosmic Essence", -- [5]
+			"Heavenly Shard", -- [6]
+			"Hypnotic Dust", -- [7]
+			"Infinite Dust", -- [8]
+			"Lesser Celestial Essence", -- [9]
+			"Maelstrom Crystal", -- [10]
+		},
+		["name"] = "Enchanting Materials",
+		["isSorted"] = true,
+	}, -- [3]
+	{
+		["items"] = {
+			"Azshara's Veil", -- [1]
+			"Cinderbloom", -- [2]
+			"Heartblossom", -- [3]
+			"Stormvine", -- [4]
+			"Whiptail", -- [5]
+		},
+		["name"] = "Herbs",
+		["isSorted"] = true,
+	}, -- [4]
+	{
+		["items"] = {
+		},
+		["name"] = "Mining ores/ Bars",
+		["isSorted"] = true,
+	}, -- [5]
+	{
+		["items"] = {
+			"Greater Cosmic Essence", -- [1]
+			"Infinite Dust", -- [2]
+			"Dream Shard", -- [3]
+			"Abyss Crystal", -- [4]
+		},
+		["name"] = "Sample Shopping List #1",
+		["isSorted"] = false,
+	}, -- [6]
+	{
+		["items"] = {
+			"volatile air", -- [1]
+			"volatile earth", -- [2]
+			"volatile fire", -- [3]
+			"volatile life", -- [4]
+			"volatile water", -- [5]
+		},
+		["name"] = "Volatiles",
+		["isSorted"] = true,
+	}, -- [7]
+}
+AUCTIONATOR_PRICE_DATABASE = {
+	["__dbversion"] = 4,
+	["Tarren Mill_Horde"] = {
+		["Rainsong"] = {
+			["H150"] = 550000,
+			["mr"] = 550000,
+		},
+		["Amy's Blanket"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Slippers of Moving Waters"] = {
+			["H150"] = 57900000,
+			["mr"] = 57900000,
+		},
+		["Impetuous Query"] = {
+			["H150"] = 1199900,
+			["mr"] = 1199900,
+		},
+		["Safety Catch Removal Kit"] = {
+			["H150"] = 99999,
+			["mr"] = 99999,
+		},
+		["Hessonite Band of the Undertow"] = {
+			["H150"] = 1997495,
+			["mr"] = 1997495,
+		},
+		["Bulge-Concealing Breastplate"] = {
+			["H150"] = 749577,
+			["mr"] = 749577,
+		},
+		["Twilight Scale Chestguard"] = {
+			["H150"] = 48500000,
+			["mr"] = 48500000,
+		},
+		["Scaled Greaves of the Marksman"] = {
+			["H150"] = 8000000,
+			["mr"] = 8000000,
+		},
+		["Toughened Leather Gloves"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Zoe's Comforting Cape"] = {
+			["mr"] = 450000,
+			["L150"] = 450000,
+			["H150"] = 499999,
+		},
+		["Jaina's Firestarter"] = {
+			["mr"] = 2400000,
+			["L150"] = 2400000,
+			["H150"] = 2490000,
+		},
+		["Volatile Air"] = {
+			["mr"] = 130000,
+			["cc"] = 6,
+			["H150"] = 130000,
+			["id"] = "52328",
+			["sc"] = 1,
+		},
+		["Bloodied Dragonscale Boots"] = {
+			["H150"] = 12340000,
+			["mr"] = 12340000,
+		},
+		["Emberfire Cowl"] = {
+			["H150"] = 5990000,
+			["mr"] = 5990000,
+		},
+		["Tree Bark Jacket"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Bloodied Leather Legs"] = {
+			["H150"] = 6990000,
+			["mr"] = 6990000,
+		},
+		["Nightstone Choker of the Flameblaze"] = {
+			["H150"] = 770000,
+			["mr"] = 770000,
+		},
+		["Bone-Inlaid Sarcophagus Key"] = {
+			["H150"] = 1900000,
+			["mr"] = 1900000,
+		},
+		["Skycaller"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Jasper Ring of the Rockslab"] = {
+			["H150"] = 438999,
+			["mr"] = 438999,
+		},
+		["Righteous Greaves"] = {
+			["H150"] = 837056,
+			["mr"] = 837056,
+		},
+		["Soul Blade"] = {
+			["H150"] = 130000000,
+			["mr"] = 130000000,
+		},
+		["Soul-Sealed Belt of the Soldier"] = {
+			["H150"] = 4000000,
+			["mr"] = 4000000,
+		},
+		["Ornate Pyrium Gauntlets"] = {
+			["H150"] = 3397500,
+			["mr"] = 3397500,
+		},
+		["Earthfury Bracers"] = {
+			["H150"] = 480000,
+			["mr"] = 480000,
+		},
+		["Earthen Leg Armor"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Heavy Clefthoof Boots"] = {
+			["H150"] = 350000,
+			["mr"] = 350000,
+		},
+		["Spiritmend Shoulders"] = {
+			["H150"] = 1247500,
+			["mr"] = 1247500,
+		},
+		["Jasper Ring of the Mountainbed"] = {
+			["H150"] = 440000,
+			["mr"] = 440000,
+		},
+		["Fireweave Gloves"] = {
+			["mr"] = 2327500,
+			["L150"] = 2327500,
+			["H150"] = 2330000,
+		},
+		["The Needler"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Greaves of Sullen Earth"] = {
+			["H150"] = 7000000,
+			["mr"] = 7000000,
+		},
+		["Eidolon Cloak"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Hessonite Band of the Earthbreaker"] = {
+			["H150"] = 492626,
+			["mr"] = 492626,
+		},
+		["Fireweave Cowl"] = {
+			["H150"] = 9490000,
+			["mr"] = 9490000,
+		},
+		["Bloodied Pyrium Bracers"] = {
+			["H150"] = 4365000,
+			["mr"] = 4365000,
+		},
+		["Overpowered Chicken Splitter"] = {
+			["H150"] = 40009999,
+			["mr"] = 40009999,
+		},
+		["Deepfury Bracers"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Artful Ember Topaz"] = {
+			["mr"] = 979000,
+			["L150"] = 979000,
+			["H150"] = 979799,
+		},
+		["Pattern: Truefaith Vestments"] = {
+			["H150"] = 3000000,
+			["mr"] = 3000000,
+		},
+		["Hessonite Band of the Earthshaker"] = {
+			["H150"] = 2899999,
+			["mr"] = 2899999,
+		},
+		["Adept Ember Topaz"] = {
+			["mr"] = 295000,
+			["L150"] = 295000,
+			["H150"] = 299000,
+		},
+		["Bold Cardinal Ruby"] = {
+			["H150"] = 2002500,
+			["mr"] = 2002500,
+		},
+		["Dragonkiller Tunic"] = {
+			["H150"] = 39000000,
+			["mr"] = 39000000,
+		},
+		["Schematic: Wonderheal XT68 Shades"] = {
+			["H150"] = 50002500,
+			["mr"] = 50002500,
+		},
+		["Firebane Cloak"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Gut Ripper"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Delicate Inferno Ruby"] = {
+			["H150"] = 389999,
+			["mr"] = 389999,
+		},
+		["Bloodied Pyrium Legguards"] = {
+			["H150"] = 5490000,
+			["mr"] = 5490000,
+		},
+		["Breastplate of Blade Turning"] = {
+			["H150"] = 202310,
+			["mr"] = 202310,
+		},
+		["Ace of Undeath"] = {
+			["H150"] = 1005378,
+			["mr"] = 1005378,
+		},
+		["Shadowsong Amethyst"] = {
+			["H150"] = 58500,
+			["mr"] = 58500,
+		},
+		["Bloodied Pyrium Belt"] = {
+			["H150"] = 2485000,
+			["mr"] = 2485000,
+		},
+		["Dreamless Belt"] = {
+			["H150"] = 22500000,
+			["mr"] = 22500000,
+		},
+		["Bloodied Dragonscale Legs"] = {
+			["H150"] = 14829750,
+			["mr"] = 14829750,
+		},
+		["Blockade's Lost Shield"] = {
+			["H150"] = 169990000,
+			["mr"] = 169990000,
+		},
+		["Runed Dragonscale"] = {
+			["mr"] = 677000,
+			["L150"] = 677000,
+			["H150"] = 679000,
+		},
+		["Black Duskweave Leggings"] = {
+			["H150"] = 1499999,
+			["mr"] = 1499999,
+		},
+		["Swampchill Fetish"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Double-Barreled Shotgun"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Lifeforce Hammer"] = {
+			["H150"] = 6860000,
+			["mr"] = 6860000,
+		},
+		["Ornate Pyrium Boots"] = {
+			["mr"] = 3680000,
+			["L150"] = 3680000,
+			["H150"] = 3690000,
+		},
+		["Swiftwind"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Jasper Ring of the Earthshaker"] = {
+			["H150"] = 1997426,
+			["mr"] = 1997426,
+		},
+		["Azure Spellthread"] = {
+			["H150"] = 340000,
+			["mr"] = 340000,
+		},
+		["Autumn's Glow"] = {
+			["H150"] = 150000,
+			["mr"] = 150000,
+		},
+		["Ace of Portals"] = {
+			["H150"] = 1797500,
+			["mr"] = 1797500,
+		},
+		["Arcane Loop of Strength"] = {
+			["H150"] = 559454,
+			["mr"] = 559454,
+		},
+		["Burning Shadowspirit Diamond"] = {
+			["H150"] = 1645000,
+			["mr"] = 1645000,
+		},
+		["Lord Rottington's Pressed Wisp Book"] = {
+			["H150"] = 585000,
+			["mr"] = 585000,
+		},
+		["Brazen Elementium Medallion"] = {
+			["H150"] = 20780100,
+			["mr"] = 20780100,
+		},
+		["Heavenly Shard"] = {
+			["mr"] = 170000,
+			["cc"] = 6,
+			["H150"] = 170000,
+			["id"] = "52721",
+			["sc"] = 7,
+		},
+		["Darkbrand Leggings of the Galeburst"] = {
+			["H150"] = 3200000,
+			["mr"] = 3200000,
+		},
+		["Chelley's Staff of Dark Mending"] = {
+			["H150"] = 168000000,
+			["mr"] = 168000000,
+		},
+		["Jasper Ring of the Flameblaze"] = {
+			["H150"] = 438999,
+			["mr"] = 438999,
+		},
+		["Elementium Destroyer's Ring"] = {
+			["H150"] = 29990000,
+			["mr"] = 29990000,
+		},
+		["Goblin Surgeon's Kit"] = {
+			["H150"] = 5000000,
+			["mr"] = 5000000,
+		},
+		["Nightmare Tear"] = {
+			["mr"] = 5080000,
+			["L150"] = 5080000,
+			["H150"] = 5090000,
+		},
+		["Small Heavenly Shard"] = {
+			["mr"] = 89500,
+			["cc"] = 6,
+			["H150"] = 89500,
+			["id"] = "52720",
+			["sc"] = 7,
+		},
+		["Elementium Deathplate"] = {
+			["H150"] = 60000000,
+			["mr"] = 60000000,
+		},
+		["Jasper Ring of the Fireflash"] = {
+			["H150"] = 438999,
+			["mr"] = 438999,
+		},
+		["Tattooed Eyeball"] = {
+			["H150"] = 5100000,
+			["mr"] = 5100000,
+		},
+		["Earthfury Belt"] = {
+			["H150"] = 199500,
+			["mr"] = 199500,
+		},
+		["Nightstone Choker of the Feverflare"] = {
+			["H150"] = 1995000,
+			["mr"] = 1995000,
+		},
+		["Chestguard of the Caring Ursine"] = {
+			["H150"] = 4900000,
+			["mr"] = 4900000,
+		},
+		["Headdress of the Sleeper"] = {
+			["H150"] = 999999,
+			["mr"] = 999999,
+		},
+		["Light Elementium Belt"] = {
+			["H150"] = 43000000,
+			["mr"] = 43000000,
+		},
+		["King's Amber"] = {
+			["H150"] = 999900,
+			["mr"] = 999900,
+		},
+		["Bloodied Dragonscale Bracers"] = {
+			["H150"] = 10000000,
+			["mr"] = 10000000,
+		},
+		["Scarlet Signet"] = {
+			["H150"] = 1272588,
+			["mr"] = 1272588,
+		},
+		["Temple Band"] = {
+			["H150"] = 3330000,
+			["mr"] = 3330000,
+		},
+		["Arcanist Belt"] = {
+			["H150"] = 700000,
+			["mr"] = 700000,
+		},
+		["Torch of Austen"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Darkmoon Executioner"] = {
+			["mr"] = 500000,
+			["L150"] = 500000,
+			["H150"] = 2752499,
+		},
+		["Ghostly Spellthread"] = {
+			["mr"] = 545000,
+			["L150"] = 545000,
+			["H150"] = 550000,
+		},
+		["Skystriker Bow"] = {
+			["H150"] = 5000000,
+			["mr"] = 5000000,
+		},
+		["Nethersteel-Reinforced Gloves of the Owl"] = {
+			["H150"] = 1701680,
+			["mr"] = 1701680,
+		},
+		["Nightstone Choker of the Earthfall"] = {
+			["H150"] = 1209137,
+			["mr"] = 1209137,
+		},
+		["Purified Dreadstone"] = {
+			["H150"] = 549500,
+			["mr"] = 549500,
+		},
+		["Tempered Saronite Shoulders"] = {
+			["H150"] = 300000,
+			["mr"] = 300000,
+		},
+		["Curve-Bladed Ripper"] = {
+			["H150"] = 790000,
+			["mr"] = 790000,
+		},
+		["Bonesnapper"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Lola's Eve"] = {
+			["H150"] = 1500000,
+			["mr"] = 1500000,
+		},
+		["Furen's Boots"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Nexus Crystal"] = {
+			["mr"] = 3411,
+			["L150"] = 3411,
+			["H150"] = 3499,
+		},
+		["Mageflame Cloak"] = {
+			["H150"] = 1507500,
+			["mr"] = 1507500,
+		},
+		["Ace of Warlords"] = {
+			["H150"] = 1399999,
+			["mr"] = 1399999,
+		},
+		["Witchfury"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Girdle of the Mystical Prison"] = {
+			["H150"] = 550000,
+			["mr"] = 550000,
+		},
+		["The Black Knight"] = {
+			["H150"] = 450000,
+			["mr"] = 450000,
+		},
+		["Unheeded Warning"] = {
+			["H150"] = 200000000,
+			["mr"] = 200000000,
+		},
+		["Skeletal Club"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Searing Needle"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Dream Signet of the Elder"] = {
+			["H150"] = 389628,
+			["mr"] = 389628,
+		},
+		["Starfaller"] = {
+			["H150"] = 1653271,
+			["mr"] = 1653271,
+		},
+		["Flying Machine Control"] = {
+			["H150"] = 20999999,
+			["mr"] = 20999999,
+		},
+		["Orphic Bracers"] = {
+			["H150"] = 1510000,
+			["mr"] = 1510000,
+		},
+		["Demonslayer"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Gauntlets of Purification"] = {
+			["H150"] = 350000,
+			["mr"] = 350000,
+		},
+		["Elementium Moebius Band"] = {
+			["H150"] = 17100000,
+			["mr"] = 17100000,
+		},
+		["Sword of the Magistrate"] = {
+			["H150"] = 2302771,
+			["mr"] = 2302771,
+		},
+		["Wristguards of Verdant Recovery"] = {
+			["H150"] = 601505,
+			["mr"] = 601505,
+		},
+		["Bloodied Leather Bracers"] = {
+			["H150"] = 2500000,
+			["mr"] = 2500000,
+		},
+		["Hellslayer Battle Axe"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Twisted Chanter's Staff"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Hessonite Band of the Landslide"] = {
+			["mr"] = 2745000,
+			["L150"] = 2745000,
+			["H150"] = 2747500,
+		},
+		["Leggings of Dubious Charms"] = {
+			["H150"] = 15000000,
+			["mr"] = 15000000,
+		},
+		["Dense Triangle Mace"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Saronite Defender"] = {
+			["H150"] = 999999,
+			["mr"] = 999999,
+		},
+		["Shining Silver Breastplate"] = {
+			["H150"] = 700000,
+			["mr"] = 700000,
+		},
+		["Darkbrand Leggings of the Undertow"] = {
+			["H150"] = 2996250,
+			["mr"] = 2996250,
+		},
+		["Chestguard of Nature's Fury"] = {
+			["H150"] = 28990000,
+			["mr"] = 28990000,
+		},
+		["Stiffened Corpse Shoulderpads"] = {
+			["H150"] = 9600000,
+			["mr"] = 9600000,
+		},
+		["Many-Pocketed Belt"] = {
+			["H150"] = 499999,
+			["mr"] = 499999,
+		},
+		["Looming Gavel"] = {
+			["H150"] = 1700000,
+			["mr"] = 1700000,
+		},
+		["Skein Woven Mantle"] = {
+			["H150"] = 149999,
+			["mr"] = 149999,
+		},
+		["Bloodied Dragonscale Chest"] = {
+			["H150"] = 7890000,
+			["mr"] = 7890000,
+		},
+		["Ornate Pyrium Belt"] = {
+			["mr"] = 3990000,
+			["L150"] = 3990000,
+			["H150"] = 4980000,
+		},
+		["Decapitator's Razor"] = {
+			["H150"] = 4550000,
+			["mr"] = 4550000,
+		},
+		["Azure Dragonleather Helm of the Elder"] = {
+			["H150"] = 1199999,
+			["mr"] = 1199999,
+		},
+		["Curse-Tainted Leggings"] = {
+			["mr"] = 2759999,
+			["L150"] = 2759999,
+			["H150"] = 3000000,
+		},
+		["Hurricane Deck"] = {
+			["mr"] = 48990000,
+			["L150"] = 48990000,
+			["H150"] = 49000099,
+		},
+		["Girdle of Golem Strength"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Giantstalker's Bracers"] = {
+			["mr"] = 999999,
+			["L150"] = 999999,
+			["H150"] = 1490000,
+		},
+		["Fiery War Axe"] = {
+			["H150"] = 20000000,
+			["mr"] = 20000000,
+		},
+		["Stormleather Sash"] = {
+			["H150"] = 44000000,
+			["mr"] = 44000000,
+		},
+		["Stormforged Helm"] = {
+			["H150"] = 1090000,
+			["mr"] = 1090000,
+		},
+		["Cloak of Beasts"] = {
+			["mr"] = 249000,
+			["L150"] = 249000,
+			["H150"] = 250000,
+		},
+		["Mace of Apotheosis"] = {
+			["H150"] = 12000000,
+			["mr"] = 12000000,
+		},
+		["Ring of Warring Elements"] = {
+			["H150"] = 22770000,
+			["mr"] = 22770000,
+		},
+		["Safecracker's Gloves"] = {
+			["H150"] = 4400000,
+			["mr"] = 4400000,
+		},
+		["Ornate Pyrium Shoulders"] = {
+			["mr"] = 4210000,
+			["L150"] = 4210000,
+			["H150"] = 4219900,
+		},
+		["Ancient Spellcloak of the Highborne"] = {
+			["H150"] = 4000000,
+			["mr"] = 4000000,
+		},
+		["Darkmoon Card: Earthquake"] = {
+			["H150"] = 32480000,
+			["mr"] = 32480000,
+		},
+		["Elemental Raiment"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Shroud of Dark Memories"] = {
+			["mr"] = 470000,
+			["L150"] = 470000,
+			["H150"] = 487550,
+		},
+		["Ace of Chaos"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Emberfire Gloves"] = {
+			["H150"] = 1950000,
+			["mr"] = 1950000,
+		},
+		["Obsidium Bladespear"] = {
+			["H150"] = 2477500,
+			["mr"] = 2477500,
+		},
+		["Fireweave Bracers"] = {
+			["H150"] = 1437500,
+			["mr"] = 1437500,
+		},
+		["Obsidium Executioner"] = {
+			["H150"] = 5960000,
+			["mr"] = 5960000,
+		},
+		["Staff of the Friar"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["R19 Threatfinder"] = {
+			["H150"] = 84956,
+			["mr"] = 84956,
+		},
+		["Diamond Hammer"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Skeletalized Shoulderpads"] = {
+			["H150"] = 5000000,
+			["mr"] = 5000000,
+		},
+		["Swampwalker Boots"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Darkmoon Card: Hurricane"] = {
+			["H150"] = 62629999,
+			["mr"] = 62629999,
+		},
+		["Vial of the Sands"] = {
+			["H150"] = 369990000,
+			["mr"] = 369990000,
+		},
+		["Searing Blade"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Ace of Stones"] = {
+			["mr"] = 1777499,
+			["L150"] = 1777499,
+			["H150"] = 1777500,
+		},
+		["Light Elementium Chestguard"] = {
+			["H150"] = 59301000,
+			["mr"] = 59301000,
+		},
+		["Sapphire Signet of the Tiger"] = {
+			["H150"] = 150000,
+			["mr"] = 150000,
+		},
+		["Fireweave Robe"] = {
+			["mr"] = 6660000,
+			["L150"] = 6660000,
+			["H150"] = 6970000,
+		},
+		["Julie's Dagger"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Guttbuster"] = {
+			["H150"] = 500000,
+			["mr"] = 500000,
+		},
+		["Deft Ember Topaz"] = {
+			["H150"] = 318000,
+			["mr"] = 318000,
+		},
+		["Thunderbrow Ring"] = {
+			["H150"] = 1007500,
+			["mr"] = 1007500,
+		},
+		["Illidari Cloak of Fire Protection"] = {
+			["H150"] = 504508,
+			["mr"] = 504508,
+		},
+		["Rock Furrow Boots"] = {
+			["H150"] = 57500000,
+			["mr"] = 57500000,
+		},
+		["Nether Vortex"] = {
+			["H150"] = 47294,
+			["mr"] = 47294,
+		},
+		["Arena Bracers"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Sandals of the Insurgent"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Gnomish X-Ray Scope"] = {
+			["H150"] = 900000,
+			["mr"] = 900000,
+		},
+		["Flame-Ascended Pantaloons"] = {
+			["mr"] = 33990000,
+			["L150"] = 33990000,
+			["H150"] = 34000000,
+		},
+		["Infinite Dust"] = {
+			["mr"] = 30200,
+			["cc"] = 6,
+			["H150"] = 30200,
+			["id"] = "34054",
+			["sc"] = 7,
+		},
+		["Lord Alexander's Battle Axe"] = {
+			["H150"] = 2487500,
+			["mr"] = 2487500,
+		},
+		["Armagedillo's Tail"] = {
+			["H150"] = 8990000,
+			["mr"] = 8990000,
+		},
+		["Zealot Blade"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Crystalpine Stinger"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Jasper Ring of the Landslide"] = {
+			["mr"] = 438000,
+			["L150"] = 438000,
+			["H150"] = 438999,
+		},
+		["Fury of Angerforge"] = {
+			["H150"] = 190000000,
+			["mr"] = 190000000,
+		},
+		["Scorpion Sting"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Majestic Zircon"] = {
+			["mr"] = 1697000,
+			["L150"] = 1697000,
+			["H150"] = 1697500,
+		},
+		["Darkmoon Card: Heroism"] = {
+			["H150"] = 9999999,
+			["mr"] = 9999999,
+		},
+		["De-Weaponized Mechanical Companion"] = {
+			["H150"] = 4887500,
+			["mr"] = 4887500,
+		},
+		["Black Duskweave Robe"] = {
+			["H150"] = 1499999,
+			["mr"] = 1499999,
+		},
+		["Battlecaller Gauntlets"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Flying Carpet"] = {
+			["mr"] = 2987500,
+			["L150"] = 2987500,
+			["H150"] = 2990000,
+		},
+		["Triple-Loop Belt"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Demons Deck"] = {
+			["H150"] = 4000000,
+			["mr"] = 4000000,
+		},
+		["Treads of Fleeting Joy"] = {
+			["H150"] = 49944400,
+			["mr"] = 49944400,
+		},
+		["Claws of Agony"] = {
+			["H150"] = 53450000,
+			["mr"] = 53450000,
+		},
+		["Black Malice"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Berserker's Sabatons"] = {
+			["H150"] = 350000,
+			["mr"] = 350000,
+		},
+		["Heartbinder Ring"] = {
+			["H150"] = 3100000,
+			["mr"] = 3100000,
+		},
+		["Ace of Beasts"] = {
+			["H150"] = 356000,
+			["mr"] = 356000,
+		},
+		["Sword of Corruption"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Heavy Geode Mace"] = {
+			["H150"] = 2024000,
+			["mr"] = 2024000,
+		},
+		["King's Eyesocket of Restoration"] = {
+			["H150"] = 490000,
+			["mr"] = 490000,
+		},
+		["Bloodied Wyrmhide Shoulders"] = {
+			["mr"] = 5000000,
+			["L150"] = 5000000,
+			["H150"] = 5490000,
+		},
+		["Armbands of the Construct"] = {
+			["H150"] = 5000000,
+			["mr"] = 5000000,
+		},
+		["Bloodied Scale Gloves"] = {
+			["H150"] = 26424985,
+			["mr"] = 26424985,
+		},
+		["Holy Shroud"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Bloodied Wyrmhide Belt"] = {
+			["H150"] = 6760000,
+			["mr"] = 6760000,
+		},
+		["Arrowsinger Legguards"] = {
+			["H150"] = 160000000,
+			["mr"] = 160000000,
+		},
+		["Alicite Pendant of the Feverflare"] = {
+			["H150"] = 1970100,
+			["mr"] = 1970100,
+		},
+		["Parrot Cage (Hyacinth Macaw)"] = {
+			["H150"] = 84990000,
+			["mr"] = 84990000,
+		},
+		["Dark Frostscale Leggings"] = {
+			["H150"] = 450000,
+			["mr"] = 450000,
+		},
+		["Twisted Sabre"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Nightstone Choker of the Wavecrest"] = {
+			["mr"] = 499000,
+			["L150"] = 499000,
+			["H150"] = 3778942,
+		},
+		["Dark Nerubian Leggings"] = {
+			["H150"] = 283920,
+			["mr"] = 283920,
+		},
+		["Blauvelt's Family Crest"] = {
+			["H150"] = 230009999,
+			["mr"] = 230009999,
+		},
+		["Bloodied Pyrium Breastplate"] = {
+			["H150"] = 5880000,
+			["mr"] = 5880000,
+		},
+		["Belt of Valor"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Time-Forward Talisman of the Marksman"] = {
+			["H150"] = 990000,
+			["mr"] = 990000,
+		},
+		["Delicate Cardinal Ruby"] = {
+			["mr"] = 1850000,
+			["L150"] = 1850000,
+			["H150"] = 2009999,
+		},
+		["Thunderwood"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Darkmoon Necklace"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Volatile Thunderstick"] = {
+			["mr"] = 2000000,
+			["cc"] = 1,
+			["H150"] = 2000000,
+			["id"] = "59599",
+			["sc"] = 4,
+		},
+		["Dust of Disappearance"] = {
+			["mr"] = 179500,
+			["cc"] = 0,
+			["H150"] = 179500,
+			["id"] = "63388",
+			["sc"] = 0,
+		},
+		["Girdle of Divine Blessing"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Ace of Storms"] = {
+			["H150"] = 1190000,
+			["mr"] = 1190000,
+		},
+		["Mug O' Hurt"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Tundra Wolf Boots"] = {
+			["H150"] = 818422,
+			["mr"] = 818422,
+		},
+		["Sky Sapphire Amulet"] = {
+			["H150"] = 381439,
+			["mr"] = 381439,
+		},
+		["Plans: Dirge"] = {
+			["H150"] = 66660000,
+			["mr"] = 66660000,
+		},
+		["Shadowforge's Lightbound Smock"] = {
+			["mr"] = 145000000,
+			["L150"] = 145000000,
+			["H150"] = 149990000,
+		},
+		["Skull Splitting Crossbow"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Emberfire Boots"] = {
+			["H150"] = 1100000,
+			["mr"] = 1100000,
+		},
+		["Hood of the Crying Rogue"] = {
+			["H150"] = 2750000,
+			["mr"] = 2750000,
+		},
+		["Ornate Pyrium Legguards"] = {
+			["H150"] = 6640000,
+			["mr"] = 6640000,
+		},
+		["Blackflame Cape"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Corded Viper Belt"] = {
+			["H150"] = 32970000,
+			["mr"] = 32970000,
+		},
+		["Reins of the Crimson Deathcharger"] = {
+			["mr"] = 1700000000,
+			["L150"] = 1700000000,
+			["H150"] = 2000000000,
+		},
+		["Soul's Anguish"] = {
+			["H150"] = 8742703,
+			["mr"] = 8742703,
+		},
+		["Petrified Camel Haunch"] = {
+			["H150"] = 1440000,
+			["mr"] = 1440000,
+		},
+		["Pattern: Swiftheal Mantle"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Tome of Polymorph: Turtle"] = {
+			["H150"] = 4450000,
+			["mr"] = 4450000,
+		},
+		["Whiptail"] = {
+			["mr"] = 18600,
+			["cc"] = 6,
+			["H150"] = 18600,
+			["id"] = "52988",
+			["sc"] = 6,
+		},
+		["Phase-Twister Leggings"] = {
+			["H150"] = 47999999,
+			["mr"] = 47999999,
+		},
+		["Crystalforged War Axe"] = {
+			["H150"] = 3869404,
+			["mr"] = 3869404,
+		},
+		["Elixir of Impossible Accuracy"] = {
+			["mr"] = 49500,
+			["cc"] = 4,
+			["H150"] = 49500,
+			["id"] = "58094",
+			["sc"] = 3,
+		},
+		["Vrykul Shackles"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Bloodied Leather Gloves"] = {
+			["H150"] = 6999999,
+			["mr"] = 6999999,
+		},
+		["Doombringer"] = {
+			["H150"] = 507750,
+			["mr"] = 507750,
+		},
+		["Woe Breeder's Boots"] = {
+			["mr"] = 70707070,
+			["L150"] = 70707070,
+			["H150"] = 70990000,
+		},
+		["Sapphire Signet of the Bear"] = {
+			["H150"] = 200000,
+			["mr"] = 200000,
+		},
+		["Pattern: Swiftstrike Shoulders"] = {
+			["H150"] = 3789900,
+			["mr"] = 3789900,
+		},
+		["Hardened Elementium Hauberk"] = {
+			["H150"] = 74005050,
+			["mr"] = 74005050,
+		},
+		["Icemail Jerkin"] = {
+			["H150"] = 2500000,
+			["mr"] = 2500000,
+		},
+		["Needle Threader"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Aquamarine Signet of Strength"] = {
+			["H150"] = 365565,
+			["mr"] = 365565,
+		},
+		["Jasper Ring of the Earthbreaker"] = {
+			["H150"] = 439000,
+			["mr"] = 439000,
+		},
+		["Double Link Tunic"] = {
+			["H150"] = 600000,
+			["mr"] = 600000,
+		},
+		["Spaulders of the Savage Beast"] = {
+			["H150"] = 5000000,
+			["mr"] = 5000000,
+		},
+		["Emberfire Robe"] = {
+			["H150"] = 15990000,
+			["mr"] = 15990000,
+		},
+		["Elementium Ingot"] = {
+			["mr"] = 4990000,
+			["L150"] = 4990000,
+			["H150"] = 5990000,
+		},
+		["Ace of Furies"] = {
+			["H150"] = 550000,
+			["mr"] = 550000,
+		},
+		["Worgen's Ring of Revitalization"] = {
+			["H150"] = 400000,
+			["mr"] = 400000,
+		},
+		["Killmaim"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Sapphire Signet of the Boar"] = {
+			["H150"] = 120000,
+			["mr"] = 120000,
+		},
+		["Austere Earthsiege Diamond"] = {
+			["H150"] = 800000,
+			["mr"] = 800000,
+		},
+		["Shortsword of Vengeance"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Necklace of Trophies"] = {
+			["H150"] = 500000,
+			["mr"] = 500000,
+		},
+		["Berto's Staff"] = {
+			["H150"] = 870000,
+			["mr"] = 870000,
+		},
+		["Jasper Ring of the Feverflare"] = {
+			["mr"] = 438000,
+			["L150"] = 438000,
+			["H150"] = 438999,
+		},
+		["Melodious Slippers"] = {
+			["mr"] = 44990000,
+			["L150"] = 44990000,
+			["H150"] = 48490000,
+		},
+		["Dalewind Trousers"] = {
+			["H150"] = 500000,
+			["mr"] = 500000,
+		},
+		["Tooga's Lost Toenail"] = {
+			["H150"] = 1100000,
+			["mr"] = 1100000,
+		},
+		["Zom's Electrostatic Cloak"] = {
+			["mr"] = 66980000,
+			["L150"] = 66980000,
+			["H150"] = 66990000,
+		},
+		["Austere Shadowspirit Diamond"] = {
+			["mr"] = 1487500,
+			["L150"] = 1487500,
+			["H150"] = 1492495,
+		},
+		["Belt of the Depths"] = {
+			["mr"] = 28490000,
+			["L150"] = 28490000,
+			["H150"] = 28500000,
+		},
+		["Elementium Girdle of Pain"] = {
+			["H150"] = 40000000,
+			["mr"] = 40000000,
+		},
+		["Widowmaker"] = {
+			["H150"] = 450000,
+			["mr"] = 450000,
+		},
+		["Arctic Fur"] = {
+			["mr"] = 584025,
+			["L150"] = 584025,
+			["H150"] = 599000,
+		},
+		["Scaleslicer"] = {
+			["mr"] = 184999999,
+			["L150"] = 184999999,
+			["H150"] = 185000000,
+		},
+		["Nightstone Choker of the Wildfire"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Manual of the Planes"] = {
+			["H150"] = 220000,
+			["mr"] = 220000,
+		},
+		["Warmonger"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Aquamarine Signet of the Gorilla"] = {
+			["H150"] = 192563,
+			["mr"] = 192563,
+		},
+		["Mugthol's Helm"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Tempered Saronite Bracers"] = {
+			["H150"] = 899999,
+			["mr"] = 899999,
+		},
+		["Emberfire Pants"] = {
+			["mr"] = 14970000,
+			["L150"] = 14970000,
+			["H150"] = 15980000,
+		},
+		["Prospector Axe"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Ring of the Great Whale"] = {
+			["H150"] = 1199900,
+			["mr"] = 1199900,
+		},
+		["Thornstone Sledgehammer"] = {
+			["H150"] = 1399900,
+			["mr"] = 1399900,
+		},
+		["Eternal Belt Buckle"] = {
+			["H150"] = 550000,
+			["mr"] = 550000,
+		},
+		["Cow King's Hide"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Breeches of Mended Nightmares"] = {
+			["mr"] = 25000000,
+			["L150"] = 25000000,
+			["H150"] = 32999000,
+		},
+		["Assassin's Chestplate"] = {
+			["mr"] = 35500000,
+			["L150"] = 35500000,
+			["H150"] = 37900000,
+		},
+		["Nightslayer Bracelets"] = {
+			["H150"] = 990000,
+			["mr"] = 990000,
+		},
+		["Felheart Bracers"] = {
+			["H150"] = 1490000,
+			["mr"] = 1490000,
+		},
+		["Bracing Shadowspirit Diamond"] = {
+			["H150"] = 2300000,
+			["mr"] = 2300000,
+		},
+		["Darkmoon Card: Volcano"] = {
+			["H150"] = 86979900,
+			["mr"] = 86979900,
+		},
+		["Skeletal Shoulders"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Aquamarine Signet of the Eagle"] = {
+			["H150"] = 50000,
+			["mr"] = 50000,
+		},
+		["Girdle of Uther"] = {
+			["H150"] = 2487500,
+			["mr"] = 2487500,
+		},
+		["Wand of Dark Worship"] = {
+			["H150"] = 899829,
+			["mr"] = 899829,
+		},
+		["Scorched Leg Armor"] = {
+			["H150"] = 890000,
+			["mr"] = 890000,
+		},
+		["Scentsniffer Hood"] = {
+			["H150"] = 3918141,
+			["mr"] = 3918141,
+		},
+		["Elementium Earthguard"] = {
+			["H150"] = 26900000,
+			["mr"] = 26900000,
+		},
+		["Sapphiron's Scale Boots"] = {
+			["H150"] = 2400000,
+			["mr"] = 2400000,
+		},
+		["Sorrow's End"] = {
+			["H150"] = 7880000,
+			["mr"] = 7880000,
+		},
+		["Bloodied Wyrmhide Legs"] = {
+			["H150"] = 6990000,
+			["mr"] = 6990000,
+		},
+		["Frostsavage Belt"] = {
+			["H150"] = 600000,
+			["mr"] = 600000,
+		},
+		["Fireweave Shoulders"] = {
+			["H150"] = 7430000,
+			["mr"] = 7430000,
+		},
+		["Bloodied Wyrmhide Chest"] = {
+			["H150"] = 1987500,
+			["mr"] = 1987500,
+		},
+		["Lightning Crown"] = {
+			["H150"] = 12511999,
+			["mr"] = 12511999,
+		},
+		["Redsteel Breastplate"] = {
+			["H150"] = 3487500,
+			["mr"] = 3487500,
+		},
+		["Boahn's Fang"] = {
+			["H150"] = 1587500,
+			["mr"] = 1587500,
+		},
+		["Abyssal Signet"] = {
+			["H150"] = 495000,
+			["mr"] = 495000,
+		},
+		["Night Reaver"] = {
+			["H150"] = 500000,
+			["mr"] = 500000,
+		},
+		["Cobalt Crusher"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Twilight Tome"] = {
+			["H150"] = 2367376,
+			["mr"] = 2367376,
+		},
+		["Bloodied Pyrium Boots"] = {
+			["H150"] = 3490000,
+			["mr"] = 3490000,
+		},
+		["Emberfire Bracers"] = {
+			["H150"] = 1560000,
+			["mr"] = 1560000,
+		},
+		["Gryphonwing Long Bow"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Runescale Girdle"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Chesterfall Musket"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Cinderbloom"] = {
+			["mr"] = 10300,
+			["cc"] = 6,
+			["H150"] = 10300,
+			["id"] = "52983",
+			["sc"] = 6,
+		},
+		["Skullcage of Eternal Terror"] = {
+			["H150"] = 1999999,
+			["mr"] = 1999999,
+		},
+		["Enormous Ogre Belt"] = {
+			["H150"] = 1100000,
+			["mr"] = 1100000,
+		},
+		["Eternal Pathfinders"] = {
+			["H150"] = 65000000,
+			["mr"] = 65000000,
+		},
+		["Stormforged Legguards"] = {
+			["H150"] = 498000,
+			["mr"] = 498000,
+		},
+		["The Judge's Gavel"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Belmont's Vampire Hacker"] = {
+			["H150"] = 4540000,
+			["mr"] = 4540000,
+		},
+		["Beguiler Robes"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Fireweave Belt"] = {
+			["mr"] = 2897500,
+			["L150"] = 2897500,
+			["H150"] = 3000000,
+		},
+		["Viscous Hammer"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Cloak of Frozen Spirits"] = {
+			["H150"] = 150000,
+			["mr"] = 150000,
+		},
+		["Felheart Belt"] = {
+			["mr"] = 399999,
+			["L150"] = 399999,
+			["H150"] = 487000,
+		},
+		["Acanthia's Lost Pendant"] = {
+			["mr"] = 300000,
+			["L150"] = 300000,
+			["H150"] = 409000,
+		},
+		["Volatile Earth"] = {
+			["mr"] = 23999,
+			["cc"] = 6,
+			["H150"] = 23999,
+			["id"] = "52327",
+			["sc"] = 1,
+			["L150"] = 9800,
+		},
+		["The Oathkeeper"] = {
+			["H150"] = 992800,
+			["mr"] = 992800,
+		},
+		["Bloodied Wyrmhide Gloves"] = {
+			["H150"] = 2299999,
+			["mr"] = 2299999,
+		},
+		["Frostsavage Bracers"] = {
+			["H150"] = 1297500,
+			["mr"] = 1297500,
+		},
+		["Bloodied Pyrium Gauntlets"] = {
+			["H150"] = 3340000,
+			["mr"] = 3340000,
+		},
+		["Skin of Stone"] = {
+			["mr"] = 400000,
+			["L150"] = 400000,
+			["H150"] = 499000,
+		},
+		["Notched Jawbone"] = {
+			["H150"] = 7850000,
+			["mr"] = 7850000,
+		},
+		["Earthborn Kilt"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Powerful Ghostly Spellthread"] = {
+			["mr"] = 4690000,
+			["L150"] = 4690000,
+			["H150"] = 4710000,
+		},
+		["Tarvus's Poison-Scarred Boots"] = {
+			["H150"] = 6799999,
+			["mr"] = 6799999,
+		},
+		["Pattern: Windscale Hood"] = {
+			["H150"] = 99990000,
+			["mr"] = 99990000,
+		},
+		["Firemane Leggings"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Nightstone Choker of the Earthshaker"] = {
+			["H150"] = 1360000,
+			["mr"] = 1360000,
+		},
+		["Corehammer's Riveted Girdle"] = {
+			["H150"] = 42000000,
+			["mr"] = 42000000,
+		},
+		["Battle Tome"] = {
+			["H150"] = 9660000,
+			["mr"] = 9660000,
+		},
+		["Pattern: Ensorcelled Nerubian Breastplate"] = {
+			["H150"] = 1241978,
+			["mr"] = 1241978,
+		},
+		["Hessonite Band of the Wavecrest"] = {
+			["H150"] = 919000,
+			["mr"] = 919000,
+		},
+		["Void Sphere"] = {
+			["H150"] = 850000,
+			["mr"] = 850000,
+		},
+		["Hessonite Band of the Mountainbed"] = {
+			["H150"] = 660000,
+			["mr"] = 660000,
+		},
+		["Ebonsteel Belt Buckle"] = {
+			["H150"] = 975000,
+			["mr"] = 975000,
+		},
+		["Pyrestone"] = {
+			["H150"] = 57984,
+			["mr"] = 57984,
+		},
+		["Powerful Enchanted Spellthread"] = {
+			["mr"] = 4387500,
+			["L150"] = 4387500,
+			["H150"] = 4397500,
+		},
+		["Bindings of Elements"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Alpheus Legguards"] = {
+			["H150"] = 3000000,
+			["mr"] = 3000000,
+		},
+		["Soulguard Bracers"] = {
+			["H150"] = 1000200,
+			["mr"] = 1000200,
+		},
+		["Eye of Zul"] = {
+			["H150"] = 999999,
+			["mr"] = 999999,
+		},
+		["Brittany's Ceremonial Spaulders"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Tome of Kings"] = {
+			["H150"] = 500000,
+			["mr"] = 500000,
+		},
+		["Dragonstompers"] = {
+			["H150"] = 990000,
+			["mr"] = 990000,
+		},
+		["Howling Blade"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Legguards of the Forlorn Seas"] = {
+			["H150"] = 600000,
+			["mr"] = 600000,
+		},
+		["Chestguard of the Dark Stalker"] = {
+			["H150"] = 699500,
+			["mr"] = 699500,
+		},
+		["Ring of Saviors"] = {
+			["H150"] = 3000000,
+			["mr"] = 3000000,
+		},
+		["Toughened Leather Armor"] = {
+			["H150"] = 1399999,
+			["mr"] = 1399999,
+		},
+		["Serenity Belt"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Truesilver Commander's Ring"] = {
+			["H150"] = 440000,
+			["mr"] = 440000,
+		},
+		["Buc-Zakai Choker"] = {
+			["H150"] = 55000000,
+			["mr"] = 55000000,
+		},
+		["Heavy Silver Ring of the Monkey"] = {
+			["H150"] = 100000,
+			["mr"] = 100000,
+		},
+		["Darkbrand Gloves of the Wavecrest"] = {
+			["H150"] = 1499899,
+			["mr"] = 1499899,
+		},
+		["Soulsurge Necklace"] = {
+			["H150"] = 1600000,
+			["mr"] = 1600000,
+		},
+		["Heavy Silver Ring of Strength"] = {
+			["H150"] = 100000,
+			["mr"] = 100000,
+		},
+		["Darksky Treads"] = {
+			["mr"] = 350000,
+			["L150"] = 350000,
+			["H150"] = 355000,
+		},
+		["Brilliant Saronite Belt"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Binding Promise"] = {
+			["H150"] = 4500000,
+			["mr"] = 4500000,
+		},
+		["Ace of Waves"] = {
+			["H150"] = 16494999,
+			["mr"] = 16494999,
+		},
+		["Bloodied Scale Legs"] = {
+			["H150"] = 7009999,
+			["mr"] = 7009999,
+		},
+		["Brilliant Chromatic Scale"] = {
+			["H150"] = 86000,
+			["mr"] = 86000,
+		},
+		["Ace of Embers"] = {
+			["mr"] = 4987499,
+			["L150"] = 4987499,
+			["H150"] = 4987500,
+		},
+		["Brilliant Inferno Ruby"] = {
+			["H150"] = 369999,
+			["mr"] = 369999,
+		},
+		["Chimera's Eye"] = {
+			["H150"] = 1333333,
+			["mr"] = 1333333,
+		},
+		["Dawnstone"] = {
+			["H150"] = 34999,
+			["mr"] = 34999,
+		},
+		["Mercury-Coated Hood"] = {
+			["H150"] = 900000,
+			["mr"] = 900000,
+		},
+		["Deadly Ember Topaz"] = {
+			["H150"] = 249000,
+			["mr"] = 249000,
+		},
+		["Chaotic Shadowspirit Diamond"] = {
+			["H150"] = 897998,
+			["mr"] = 897998,
+		},
+		["Defender's Demonseye"] = {
+			["H150"] = 326000,
+			["mr"] = 326000,
+		},
+		["Radiant Eye of Zul"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Bolt of Embersilk Cloth"] = {
+			["mr"] = 252000,
+			["cc"] = 6,
+			["H150"] = 252000,
+			["id"] = "53643",
+			["sc"] = 2,
+		},
+		["Wing of the Whelpling"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Silithid Husked Launcher"] = {
+			["H150"] = 990000,
+			["mr"] = 990000,
+		},
+		["Medallion of Grand Marshal Morris"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Heartblossom"] = {
+			["mr"] = 26750,
+			["cc"] = 6,
+			["H150"] = 26750,
+			["id"] = "52986",
+			["sc"] = 6,
+		},
+		["Azshara's Veil"] = {
+			["mr"] = 39300,
+			["cc"] = 6,
+			["H150"] = 39300,
+			["id"] = "52985",
+			["sc"] = 6,
+		},
+		["The Perforator"] = {
+			["H150"] = 1549999,
+			["mr"] = 1549999,
+		},
+		["Quick King's Amber"] = {
+			["H150"] = 2587500,
+			["mr"] = 2587500,
+		},
+		["Stormvine"] = {
+			["mr"] = 11880,
+			["cc"] = 6,
+			["H150"] = 11880,
+			["id"] = "52984",
+			["sc"] = 6,
+		},
+		["Small Dream Shard"] = {
+			["mr"] = 4495,
+			["cc"] = 6,
+			["H150"] = 4495,
+			["id"] = "34053",
+			["sc"] = 7,
+		},
+		["Dream Shard"] = {
+			["mr"] = 9599,
+			["cc"] = 6,
+			["H150"] = 9599,
+			["id"] = "34052",
+			["sc"] = 7,
+		},
+		["Bloodied Leather Shoulders"] = {
+			["H150"] = 5780000,
+			["mr"] = 5780000,
+		},
+		["Greater Cosmic Essence"] = {
+			["mr"] = 148500,
+			["cc"] = 6,
+			["H150"] = 148500,
+			["id"] = "34055",
+			["sc"] = 7,
+		},
+		["Lesser Celestial Essence"] = {
+			["mr"] = 77415,
+			["cc"] = 6,
+			["H150"] = 77415,
+			["id"] = "52718",
+			["sc"] = 7,
+		},
+		["Greater Celestial Essence"] = {
+			["mr"] = 199900,
+			["cc"] = 6,
+			["H150"] = 199900,
+			["id"] = "52719",
+			["sc"] = 1,
+		},
+		["Hypnotic Dust"] = {
+			["mr"] = 114999,
+			["cc"] = 6,
+			["H150"] = 114999,
+			["id"] = "52555",
+			["sc"] = 7,
+		},
+		["Cloak of Entropy"] = {
+			["H150"] = 2939319,
+			["mr"] = 2939319,
+		},
+		["Crystallized Water"] = {
+			["mr"] = 11400,
+			["cc"] = 6,
+			["H150"] = 11400,
+			["id"] = "37705",
+			["sc"] = 1,
+		},
+		["Sapphire Signet of the Owl"] = {
+			["H150"] = 200000,
+			["mr"] = 200000,
+		},
+		["Gauntlets of Elements"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Sheepshear Mantle"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Volatile Water"] = {
+			["mr"] = 29800,
+			["cc"] = 6,
+			["H150"] = 29800,
+			["id"] = "52326",
+			["sc"] = 1,
+		},
+		["Woundsplicer Handwraps"] = {
+			["H150"] = 150000000,
+			["mr"] = 150000000,
+		},
+		["Maimgor's Bite"] = {
+			["mr"] = 75000000,
+			["L150"] = 75000000,
+			["H150"] = 80000000,
+		},
+		["Enchanted Spellthread"] = {
+			["mr"] = 432000,
+			["L150"] = 432000,
+			["H150"] = 439000,
+		},
+		["Volatile Life"] = {
+			["mr"] = 19996,
+			["cc"] = 6,
+			["H150"] = 20199,
+			["id"] = "52329",
+			["sc"] = 1,
+			["L150"] = 19996,
+		},
+		["Aquamarine Signet of the Whale"] = {
+			["H150"] = 59900,
+			["mr"] = 59900,
+		},
+		["Leggings of Concentrated Darkness"] = {
+			["H150"] = 1855295,
+			["mr"] = 1855295,
+		},
+		["Tanglewood Staff"] = {
+			["H150"] = 2487500,
+			["mr"] = 2487500,
+		},
+		["Charm of the Muse"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Darkmoon Card: Tsunami"] = {
+			["H150"] = 125790000,
+			["mr"] = 125790000,
+		},
+		["Spiritmend Cowl"] = {
+			["H150"] = 849000,
+			["mr"] = 849000,
+		},
+		["Pattern: Boots of Natural Grace"] = {
+			["H150"] = 1490000,
+			["mr"] = 1490000,
+		},
+		["Sparkleshell Mantle"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Nightstone Choker of the Faultline"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Volatile Fire"] = {
+			["mr"] = 49999,
+			["cc"] = 6,
+			["H150"] = 49999,
+			["id"] = "52325",
+			["sc"] = 1,
+		},
+		["Six Demon Bag"] = {
+			["H150"] = 2100000,
+			["mr"] = 2100000,
+		},
+		["Entwined Elementium Choker"] = {
+			["H150"] = 25310997,
+			["mr"] = 25310997,
+		},
+		["Elementium Dragonling"] = {
+			["H150"] = 195000,
+			["mr"] = 195000,
+		},
+		["Dragonwreck Throwing Axe"] = {
+			["mr"] = 68000000,
+			["L150"] = 68000000,
+			["H150"] = 69900000,
+		},
+		["Jasper Ring of the Wavecrest"] = {
+			["mr"] = 437000,
+			["L150"] = 437000,
+			["H150"] = 438000,
+		},
+		["Deadwood Sledge"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Black Duskwood Staff"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Seaspray Emerald"] = {
+			["H150"] = 150000,
+			["mr"] = 150000,
+		},
+		["Nerubian Leg Armor"] = {
+			["H150"] = 1100000,
+			["mr"] = 1100000,
+		},
+		["Combatant Claymore"] = {
+			["H150"] = 2400000,
+			["mr"] = 2400000,
+		},
+		["Jasper Ring of the Wildfire"] = {
+			["H150"] = 1977318,
+			["mr"] = 1977318,
+		},
+		["Emberfire Shoulders"] = {
+			["H150"] = 1507500,
+			["mr"] = 1507500,
+		},
+		["Void Crystal"] = {
+			["mr"] = 36500,
+			["L150"] = 36500,
+			["H150"] = 37635,
+		},
+		["Pauldrons of Edward the Odd"] = {
+			["H150"] = 350000000,
+			["mr"] = 350000000,
+		},
+		["Serathil"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Lady La-La's Singing Shell"] = {
+			["H150"] = 9924150,
+			["mr"] = 9924150,
+		},
+		["Seafoam Gauntlets"] = {
+			["H150"] = 400000,
+			["mr"] = 400000,
+		},
+		["Toxidunk Dagger"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Fire-Etched Dagger"] = {
+			["H150"] = 6990000,
+			["mr"] = 6990000,
+		},
+		["Finely-Tuned Throat Needler"] = {
+			["H150"] = 1150000,
+			["mr"] = 1150000,
+		},
+		["The Pacifier"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Ben-Son's Royal Crown"] = {
+			["H150"] = 3750000,
+			["mr"] = 3750000,
+		},
+		["Endwyn's Flickering Gauntlets"] = {
+			["H150"] = 2990000,
+			["mr"] = 2990000,
+		},
+		["Rhie-Ay's Clutching Gauntlets"] = {
+			["H150"] = 3500000,
+			["mr"] = 3500000,
+		},
+		["Ornate Pyrium Helm"] = {
+			["mr"] = 4329000,
+			["L150"] = 4329000,
+			["H150"] = 4360000,
+		},
+		["Nightstone Choker of the Galeburst"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Embersilk Cloth"] = {
+			["mr"] = 27200,
+			["cc"] = 6,
+			["H150"] = 27200,
+			["id"] = "53010",
+			["sc"] = 2,
+		},
+		["Nightstone Choker of the Undertow"] = {
+			["H150"] = 2174388,
+			["mr"] = 2174388,
+		},
+		["Lifegiving Cloak"] = {
+			["H150"] = 1600000,
+			["mr"] = 1600000,
+		},
+		["Abyss Crystal"] = {
+			["mr"] = 405500,
+			["cc"] = 6,
+			["H150"] = 405500,
+			["id"] = "34057",
+			["sc"] = 7,
+		},
+		["Pads of the Venom Spider"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Valanos' Longbow"] = {
+			["H150"] = 370000,
+			["mr"] = 370000,
+		},
+		["Vilerend Slicer"] = {
+			["H150"] = 2480000,
+			["mr"] = 2480000,
+		},
+		["Bracers of Unmitigated Larceny"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Dungeoneering Guide"] = {
+			["mr"] = 3000000,
+			["L150"] = 3000000,
+			["H150"] = 9790000,
+		},
+		["Plans: Swiftsteel Shoulders"] = {
+			["H150"] = 5000000,
+			["mr"] = 5000000,
+		},
+		["Helm of the Broken Ram"] = {
+			["H150"] = 418061,
+			["mr"] = 418061,
+		},
+		["Bloodied Leather Helm"] = {
+			["H150"] = 4000000,
+			["mr"] = 4000000,
+		},
+		["Hardened Obsidium Helm"] = {
+			["H150"] = 5490000,
+			["mr"] = 5490000,
+		},
+		["Blanchard's Stout"] = {
+			["H150"] = 900000,
+			["mr"] = 900000,
+		},
+		["Maelstrom Crystal"] = {
+			["mr"] = 10790000,
+			["cc"] = 6,
+			["H150"] = 10940000,
+			["id"] = "52722",
+			["sc"] = 7,
+			["L150"] = 10790000,
+		},
+		["Jasper Ring of the Faultline"] = {
+			["H150"] = 438999,
+			["mr"] = 438999,
+		},
+		["Hardened Elementium Girdle"] = {
+			["mr"] = 35145000,
+			["L150"] = 35145000,
+			["H150"] = 35500000,
+		},
+		["Hardened Obsidium Shoulders"] = {
+			["H150"] = 5499998,
+			["mr"] = 5499998,
+		},
+		["Solid Majestic Zircon"] = {
+			["H150"] = 5440000,
+			["mr"] = 5440000,
+		},
+		["Brilliant Cardinal Ruby"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Book of Origination"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Wyrmslayer Spaulders"] = {
+			["H150"] = 2401621,
+			["mr"] = 2401621,
+		},
+		["Lawbringer Bracers"] = {
+			["H150"] = 550000,
+			["mr"] = 550000,
+		},
+		["Alicite Pendant of the Wavecrest"] = {
+			["mr"] = 549900,
+			["L150"] = 549900,
+			["H150"] = 550000,
+		},
+		["Gnarled Ash Staff"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Black Duskweave Wristwraps"] = {
+			["H150"] = 1490000,
+			["mr"] = 1490000,
+		},
+		["Gloves of Old"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Aquamarine Signet of the Monkey"] = {
+			["H150"] = 250000,
+			["mr"] = 250000,
+		},
+		["Bloodied Wyrmhide Helm"] = {
+			["H150"] = 6990000,
+			["mr"] = 6990000,
+		},
+		["Stormforged Gauntlets"] = {
+			["H150"] = 490000,
+			["mr"] = 490000,
+		},
+		["Rage-Possessed Greatsword"] = {
+			["H150"] = 16005555,
+			["mr"] = 16005555,
+		},
+		["Arena Vambraces"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Bloodied Leather Belt"] = {
+			["H150"] = 6990000,
+			["mr"] = 6990000,
+		},
+		["Blade Dancer's Wristguards"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Fletcher's Gloves"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Sulfuron Ingot"] = {
+			["H150"] = 3222220,
+			["mr"] = 3222220,
+		},
+		["Bloodied Scale Helm"] = {
+			["H150"] = 9990000,
+			["mr"] = 9990000,
+		},
+		["Lady Alizabeth's Pendant"] = {
+			["H150"] = 800000,
+			["mr"] = 800000,
+		},
+		["Bloodied Pyrium Helm"] = {
+			["H150"] = 4620000,
+			["mr"] = 4620000,
+		},
+		["Ironstar's Impenetrable Cover"] = {
+			["mr"] = 87990000,
+			["L150"] = 87990000,
+			["H150"] = 88000000,
+		},
+		["Etched Horn"] = {
+			["H150"] = 749900,
+			["mr"] = 749900,
+		},
+		["Blackfang"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Dream Signet of the Squire"] = {
+			["H150"] = 346980,
+			["mr"] = 346980,
+		},
+		["Magiskull Cuffs"] = {
+			["H150"] = 500000,
+			["mr"] = 500000,
+		},
+		["Volatile Blasting Trigger"] = {
+			["mr"] = 174108,
+			["cc"] = 6,
+			["H150"] = 174108,
+			["id"] = "39690",
+			["sc"] = 9,
+		},
+		["Chain of Latent Energies"] = {
+			["H150"] = 1490000,
+			["mr"] = 1490000,
+		},
+		["Heartbound Tome"] = {
+			["H150"] = 190000000,
+			["mr"] = 190000000,
+		},
+		["Golgarok's Tenderized Treads"] = {
+			["H150"] = 6000000,
+			["mr"] = 6000000,
+		},
+		["Helm of Holy Visions"] = {
+			["H150"] = 1254500,
+			["mr"] = 1254500,
+		},
+		["Hanzo Sword"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Rod of Molten Fire"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Cold-Forged Shank"] = {
+			["H150"] = 4259999,
+			["mr"] = 4259999,
+		},
+		["Bloodied Leather Chest"] = {
+			["H150"] = 6990000,
+			["mr"] = 6990000,
+		},
+		["Girdle of the Dawn"] = {
+			["H150"] = 258075,
+			["mr"] = 258075,
+		},
+		["Ced's Carver"] = {
+			["H150"] = 1450000,
+			["mr"] = 1450000,
+		},
+		["Amber Idol"] = {
+			["H150"] = 1200000,
+			["mr"] = 1200000,
+		},
+		["Nagascale Legguards of Strength"] = {
+			["H150"] = 350881,
+			["mr"] = 350881,
+		},
+		["Empyrean Sapphire"] = {
+			["H150"] = 47057,
+			["mr"] = 47057,
+		},
+		["Twig of the World Tree"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Smooth King's Amber"] = {
+			["H150"] = 6364999,
+			["mr"] = 6364999,
+		},
+		["Lhakaz's Swiftblade"] = {
+			["H150"] = 1150000,
+			["mr"] = 1150000,
+		},
+		["Jasper Ring of the Earthfall"] = {
+			["H150"] = 498000,
+			["mr"] = 498000,
+		},
+		["Elementium Stormshield"] = {
+			["H150"] = 22989960,
+			["mr"] = 22989960,
+		},
+		["Orb of Mistmantle"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Mammoth-Riding Boots of the Necromancer"] = {
+			["H150"] = 1005000,
+			["mr"] = 1005000,
+		},
+		["Gazlowe's Charm"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Girdle of Chained Thunder"] = {
+			["H150"] = 5500000,
+			["mr"] = 5500000,
+		},
+		["Vibroblade"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Taran Icebreaker"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Sapphire Signet of Concentration"] = {
+			["H150"] = 500000,
+			["mr"] = 500000,
+		},
+		["Stormforged Shoulders"] = {
+			["H150"] = 4355900,
+			["mr"] = 4355900,
+		},
+		["Moccasins of the White Hare"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Soulkeeper"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Belt of Nefarious Whispers"] = {
+			["mr"] = 42000000,
+			["L150"] = 42000000,
+			["H150"] = 44990000,
+		},
+		["Eye of Adaegus"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Blackwater Cutlass"] = {
+			["H150"] = 1597500,
+			["mr"] = 1597500,
+		},
+		["Nightstone Choker of the Landslide"] = {
+			["H150"] = 894950,
+			["mr"] = 894950,
+		},
+		["Elementium Guardian"] = {
+			["H150"] = 19799998,
+			["mr"] = 19799998,
+		},
+		["Barbed Thorn Necklace"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Crocolisk Hide Bindings of the Sorcerer"] = {
+			["H150"] = 500000,
+			["mr"] = 500000,
+		},
+		["Twilight Leg Armor"] = {
+			["mr"] = 850000,
+			["L150"] = 850000,
+			["H150"] = 900000,
+		},
+		["Ankh of Life"] = {
+			["H150"] = 3000000,
+			["mr"] = 3000000,
+		},
+		["Potent Ametrine"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Mindbender Bloom"] = {
+			["H150"] = 2450000,
+			["mr"] = 2450000,
+		},
+		["Stonegrip Gauntlets"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Cardinal Ruby"] = {
+			["H150"] = 980000,
+			["mr"] = 980000,
+		},
+		["Alabaster Idol"] = {
+			["H150"] = 750000,
+			["mr"] = 750000,
+		},
+		["Ace of Elementals"] = {
+			["H150"] = 623062,
+			["mr"] = 623062,
+		},
+		["Nightstone Choker of the Fireflash"] = {
+			["H150"] = 770000,
+			["mr"] = 770000,
+		},
+		["Alicite Pendant of the Undertow"] = {
+			["H150"] = 1988750,
+			["mr"] = 1988750,
+		},
+		["Tracker's Balanced Knives"] = {
+			["H150"] = 999999,
+			["mr"] = 999999,
+		},
+		["Lapidis Tankard of Tidesippe"] = {
+			["H150"] = 400000,
+			["mr"] = 400000,
+		},
+		["Jasper Ring of the Undertow"] = {
+			["H150"] = 438999,
+			["mr"] = 438999,
+		},
+		["Elder Wizard's Mantle"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Hammer of the Northern Wind"] = {
+			["H150"] = 10196783,
+			["mr"] = 10196783,
+		},
+		["Slaghammer"] = {
+			["H150"] = 2500000,
+			["mr"] = 2500000,
+		},
+		["Moccasins of Verdurous Glooms"] = {
+			["H150"] = 100000000,
+			["mr"] = 100000000,
+		},
+		["Poison-Tipped Bone Spear"] = {
+			["H150"] = 200000,
+			["mr"] = 200000,
+		},
+		["Shining Spellthread"] = {
+			["H150"] = 300000,
+			["mr"] = 300000,
+		},
+		["Giantslayer Bracers"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Maldo's Sword Cane"] = {
+			["H150"] = 250000000,
+			["mr"] = 250000000,
+		},
+		["Silver Inlaid Leaf"] = {
+			["mr"] = 6710000,
+			["L150"] = 6710000,
+			["H150"] = 6730000,
+		},
+		["Divine Companion"] = {
+			["mr"] = 3000000,
+			["L150"] = 3000000,
+			["H150"] = 5250000,
+		},
+		["Faces of Doom"] = {
+			["H150"] = 2450000,
+			["mr"] = 2450000,
+		},
+		["Unbridled Leggings"] = {
+			["H150"] = 1650000,
+			["mr"] = 1650000,
+		},
+		["Runecaster's Mantle"] = {
+			["H150"] = 150000,
+			["mr"] = 150000,
+		},
+		["Mechano-Hog"] = {
+			["H150"] = 149990000,
+			["mr"] = 149990000,
+		},
+		["Fading Violet Sandals"] = {
+			["H150"] = 70000000,
+			["mr"] = 70000000,
+		},
+		["Elven Spirit Claws"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Executioner's Cleaver"] = {
+			["H150"] = 2487500,
+			["mr"] = 2487500,
+		},
+		["Deanship Claymore"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Robe of the Magi"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Pattern: Shoulders of Lightning Reflexes"] = {
+			["H150"] = 2650000,
+			["mr"] = 2650000,
+		},
+		["Ornate Pyrium Bracers"] = {
+			["H150"] = 4980000,
+			["mr"] = 4980000,
+		},
+		["Ravasaur Scale Boots"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Accurate Dreadstone"] = {
+			["H150"] = 1400000,
+			["mr"] = 1400000,
+		},
+		["Belt of the Gladiator"] = {
+			["H150"] = 790000,
+			["mr"] = 790000,
+		},
+		["Nightrend Choker"] = {
+			["H150"] = 2520000,
+			["mr"] = 2520000,
+		},
+		["Theresa's Booklight"] = {
+			["H150"] = 650000000,
+			["mr"] = 650000000,
+		},
+		["Nightstone Choker of the Rockslab"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Charscale Leg Armor"] = {
+			["H150"] = 8610000,
+			["mr"] = 8610000,
+		},
+		["Bloodied Scale Shoulders"] = {
+			["mr"] = 6820000,
+			["L150"] = 6820000,
+			["H150"] = 6825000,
+		},
+		["Nagascale Legplates of Intellect"] = {
+			["H150"] = 550000,
+			["mr"] = 550000,
+		},
+		["Braincage"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Tol'Vir Hereditary Girdle"] = {
+			["H150"] = 3990000,
+			["mr"] = 3990000,
+		},
+		["Belt of Might"] = {
+			["H150"] = 465855,
+			["mr"] = 465855,
+		},
+		["Staff of Natural Fury"] = {
+			["H150"] = 2000000,
+			["mr"] = 2000000,
+		},
+		["Eye of Many Deaths"] = {
+			["H150"] = 19800000,
+			["mr"] = 19800000,
+		},
+		["Cenarion Belt"] = {
+			["mr"] = 595000,
+			["L150"] = 595000,
+			["H150"] = 595955,
+		},
+		["Lightning Lash"] = {
+			["mr"] = 51999998,
+			["L150"] = 51999998,
+			["H150"] = 51999999,
+		},
+		["Fireweave Boots"] = {
+			["H150"] = 3550000,
+			["mr"] = 3550000,
+		},
+		["Bloodied Wyrmhide Bracers"] = {
+			["H150"] = 4440000,
+			["mr"] = 4440000,
+		},
+		["Bloodied Pyrium Shoulders"] = {
+			["H150"] = 4940000,
+			["mr"] = 4940000,
+		},
+		["Blazewing's Furious Kilt"] = {
+			["H150"] = 4995000,
+			["mr"] = 4995000,
+		},
+		["Alicite Pendant of the Flameblaze"] = {
+			["H150"] = 550000,
+			["mr"] = 550000,
+		},
+		["Sapphire Signet of Agility"] = {
+			["H150"] = 1259900,
+			["mr"] = 1259900,
+		},
+		["Ashes of Youth"] = {
+			["H150"] = 2238800,
+			["mr"] = 2238800,
+		},
+		["Claws of Torment"] = {
+			["H150"] = 139999999,
+			["mr"] = 139999999,
+		},
+		["Bold Inferno Ruby"] = {
+			["mr"] = 349799,
+			["L150"] = 349799,
+			["H150"] = 349900,
+		},
+		["Orb of Deception"] = {
+			["H150"] = 99999999,
+			["mr"] = 99999999,
+		},
+		["Abandoned Dark Iron Ring"] = {
+			["H150"] = 3000000,
+			["mr"] = 3000000,
+		},
+		["Bloodspiller"] = {
+			["H150"] = 2100000,
+			["mr"] = 2100000,
+		},
+		["Cenarion Bracers"] = {
+			["H150"] = 587559,
+			["mr"] = 587559,
+		},
+		["Grim Reaper"] = {
+			["H150"] = 359900,
+			["mr"] = 359900,
+		},
+		["Ravenheart Longbow"] = {
+			["H150"] = 6400000,
+			["mr"] = 6400000,
+		},
+		["Volcanic Deck"] = {
+			["H150"] = 130000000,
+			["mr"] = 130000000,
+		},
+		["Emberfire Belt"] = {
+			["mr"] = 819000,
+			["L150"] = 819000,
+			["H150"] = 849000,
+		},
+		["Hessonite Band of the Faultline"] = {
+			["H150"] = 769995,
+			["mr"] = 769995,
+		},
+		["Wand of Allistarj"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Pattern: Hurricane Boots"] = {
+			["H150"] = 3200000,
+			["mr"] = 3200000,
+		},
+		["Lordly Armguards"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Alicite Pendant of the Faultline"] = {
+			["H150"] = 999950,
+			["mr"] = 999950,
+		},
+		["Pyrium Shield Spike"] = {
+			["H150"] = 3250000,
+			["mr"] = 3250000,
+		},
+		["The Ziggler"] = {
+			["H150"] = 1100000,
+			["mr"] = 1100000,
+		},
+		["Don Rodrigo's Fabulous Necklace"] = {
+			["H150"] = 190000000,
+			["mr"] = 190000000,
+		},
+		["Ametrine"] = {
+			["H150"] = 1290000,
+			["mr"] = 1290000,
+		},
+		["Reticulated Bone Gauntlets"] = {
+			["H150"] = 2487500,
+			["mr"] = 2487500,
+		},
+		["Gauntlets of the Skullsplitter"] = {
+			["H150"] = 199900,
+			["mr"] = 199900,
+		},
+		["Dragonscale Leg Armor"] = {
+			["H150"] = 8287500,
+			["mr"] = 8287500,
+		},
+		["Amberjewel"] = {
+			["H150"] = 46500,
+			["mr"] = 46500,
+		},
+		["Steelclaw Reaver"] = {
+			["H150"] = 1000000,
+			["mr"] = 1000000,
+		},
+		["Nightstone Choker of the Mountainbed"] = {
+			["H150"] = 1009999,
+			["mr"] = 1009999,
+		},
+		["Earthquake Deck"] = {
+			["H150"] = 15550000,
+			["mr"] = 15550000,
+		},
+		["Archaic Defender"] = {
+			["H150"] = 2427750,
+			["mr"] = 2427750,
+		},
+		["Ace of the Winds"] = {
+			["mr"] = 2084999,
+			["L150"] = 2084999,
+			["H150"] = 2087500,
+		},
+		["Staff of Old Woes"] = {
+			["H150"] = 6000000,
+			["mr"] = 6000000,
+		},
+		["Ironweaver"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Mages Deck"] = {
+			["H150"] = 4000000,
+			["mr"] = 4000000,
+		},
+		["Spored Tendrils Spaulders"] = {
+			["H150"] = 558112,
+			["mr"] = 558112,
+		},
+		["Royal Guide of Escape Routes"] = {
+			["H150"] = 210000,
+			["mr"] = 210000,
+		},
+		["Dreamslayer"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Ornate Pyrium Breastplate"] = {
+			["mr"] = 5370000,
+			["L150"] = 5370000,
+			["H150"] = 5380000,
+		},
+		["Bloodied Leather Boots"] = {
+			["H150"] = 4500000,
+			["mr"] = 4500000,
+		},
+		["Yorgen Bracers"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Guardian Blade"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+		["Bulwark of the Scorned Man"] = {
+			["mr"] = 1390000,
+			["L150"] = 1390000,
+			["H150"] = 1599998,
+		},
+		["Agile Shadowspirit Diamond"] = {
+			["mr"] = 1155000,
+			["L150"] = 1155000,
+			["H150"] = 1170000,
+		},
+		["Khoo's Point"] = {
+			["H150"] = 450000,
+			["mr"] = 450000,
+		},
+		["Gracious Cape"] = {
+			["H150"] = 2490000,
+			["mr"] = 2490000,
+		},
+	},
+}
+AUCTIONATOR_LAST_SCAN_TIME = 1302811126
+AUCTIONATOR_TOONS = {
+	["Tikytaka"] = {
+		["firstSeen"] = 1302799280,
+		["firstVersion"] = "2.9.0",
+	},
+}
+AUCTIONATOR_STACKING_PREFS = {
+}
+AUCTIONATOR_SCAN_MINLEVEL = 1
+AUCTIONATOR_DB_MAXITEM_AGE = 180
+AUCTIONATOR_DB_MAXHIST_AGE = -1
+AUCTIONATOR_DB_MAXHIST_DAYS = 5
+AUCTIONATOR_DC_PAUSE = 200
+AUCTIONATOR_DE_DATA = nil
+AUCTIONATOR_DE_DATA_BAK = nil

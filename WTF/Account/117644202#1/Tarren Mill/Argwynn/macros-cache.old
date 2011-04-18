@@ -1,0 +1,49 @@
+MACRO 16777227 "AD/AW" INV_Misc_QuestionMark
+/cast  Ardent Defender
+/cast Avenging Wrath
+/cast Divine Protection
+END
+MACRO 16777232 "Cleanse/HoF" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Hand of Freedom; Cleanse
+END
+MACRO 16777221 "Crus/HoR" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Crusader Strike; Hammer of the Righteous
+END
+MACRO 16777228 "FoL" INV_Misc_QuestionMark
+#showtooltip Flash of Light
+ /cast [@mouseover, help] [help] [@targettarget, help] [@player] Flash of Light
+END
+MACRO 16777217 "Healing" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Flash of Light; [modifier:alt] Holy Light; Divine Light
+END
+MACRO 16777233 "Heals2" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Lay on Hands; Word of Glory
+END
+MACRO 16777230 "HoR/Cons" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Consecration; [modifier:alt] Righteous Defense; Hand of Reckoning
+END
+MACRO 16777225 "HoW/DS" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Shield of the Righteous; Hammer of Wrath
+END
+MACRO 16777231 "HR/GoK" INV_Misc_QuestionMark
+/cast Guardian of Ancient Kings
+/cast Holy Radiance
+END
+MACRO 16777224 "Imparin" INV_Misc_QuestionMark
+/use [modifier:ctrl] 14; 13
+END
+MACRO 16777229 "Jud/Inq" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Inquisition; Judgement
+END
+MACRO 16777223 "Silence" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Divine Shield; Hammer of Justice
+END
+MACRO 16777220 "Tanking" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Holy Wrath; [modifier:alt] Shield of the Righteous; Avenger's Shield
+END
+MACRO 16777234 "VuhDoDCShieldData" Ability_Hunter_FerociousInspiration
+P[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]1P_[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+END
+MACRO 16777235 "VuhDoDCShieldNames" Ability_Hunter_FerociousInspiration
+N[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]Arg[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+END

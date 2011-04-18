@@ -1,0 +1,19 @@
+## $Id: rogue-subtlety.toc 19 2010-10-30 23:47:49Z decipherable $
+## Title: Rogue: Subtlety
+## Version: 1.0
+## Author: decipherable (jareem,xecbdoyb)
+## Interface: 40000
+## X-Compatible-With: 40000
+## SavedVariables: Subtletydb
+## Notes: Recommends abilities based on spell priorities for Subtlety Rogues.
+## X-Credits: Rogue: Sublety is based off of Mutilate done by luijk.
+## X-Curse-Packaged-Version: r5
+## X-Curse-Project-Name: Rogue: Subtlety
+## X-Curse-Project-ID: rogue-subtlety
+## X-Curse-Repository-ID: wow/rogue-subtlety/mainline
+## X-Curse-Packaged-Version: r20
+## X-Curse-Project-Name: Rogue: Subtlety
+## X-Curse-Project-ID: rogue-subtlety
+## X-Curse-Repository-ID: wow/rogue-subtlety/mainline
+
+rogue-Subtlety.lua

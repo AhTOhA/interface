@@ -1,0 +1,22 @@
+------------------------------------------------------------------------
+r1403 | phanx | 2011-01-03 07:03:02 +0000 (Mon, 03 Jan 2011) | 1 line
+Changed paths:
+   A /tags/1.40000.1403 (from /trunk:1402)
+
+Tagging as 1.40000.1403
+------------------------------------------------------------------------
+r1400 | Phanx | 2010-12-03 10:15:33 +0000 (Fri, 03 Dec 2010) | 1 line
+Changed paths:
+   M /trunk/GridFrame.lua
+   M /trunk/GridLayout.lua
+   M /trunk/GridStatus.lua
+
+- Fix for Ticket #447 ("Groups not correctly aligned")
+------------------------------------------------------------------------
+r1399 | Phanx | 2010-11-22 03:19:24 +0000 (Mon, 22 Nov 2010) | 1 line
+Changed paths:
+   M /trunk/GridFrame.lua
+   M /trunk/GridLayout.lua
+
+* Fix border selection widget
+------------------------------------------------------------------------

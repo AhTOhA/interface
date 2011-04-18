@@ -1,0 +1,5 @@
+
+VengeanceHistoryDB = {
+	["Tikytaka - Outland"] = {
+	},
+}

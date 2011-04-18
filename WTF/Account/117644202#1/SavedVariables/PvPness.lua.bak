@@ -1,0 +1,12 @@
+
+_settings = {
+	["font"] = "Fonts\\ARIALN.TTF",
+	["textKey"] = "Blizzard",
+	["hp"] = 0,
+	["fontKey"] = "Arial Narrow",
+	["fontSize"] = 10,
+	["cp"] = 0,
+	["titleSize"] = 18,
+	["texture"] = "Interface\\TargetingFrame\\UI-StatusBar",
+}
+_dbg = nil

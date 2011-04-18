@@ -1,0 +1,57 @@
+Version 1.2 (1/7/11)
+
+- Updated Information for most encounters with better information
+
+- Fixed some Party and Target links
+
+- Added an About button
+
+- Added an ability to inform your party member where you got this mod
+
+
+Version 1.1 (12/16/10)
+
+- Added a Slash Command for the Options Menu. /bioptions or /bossinfooptions
+
+- Fixed some Party and Target links
+
+- Changed Strategy on some Cataclysm Bosses
+
+- Added updated party information for many Cataclysm Bosses (Thanks to TrollPuncher for the Info)
+
+- BossInfo no longer resets to the Default info when you close the window.
+
+
+Version 1.0 (12/7/10)
+
+- Added the ability to output Boss Overview to Party.
+
+- Added Info for all Cataclysm Instances. Info was taken from WowHead. Info will be updated as i expirience the content.
+
+
+
+Version 0.9b - (11/27/10)
+
+- Added Boss name and Instance name on the main page when you choose a boss.
+
+- Added Target Button. Target a boss and press this button to bring up information.
+
+- Added Options Menu. Right click on the icon to bring up options menu. Changes made on the Options Menu will take effect on next login; or press ReloadUI button.
+
+- BossInfo now uses local SavedVariables per Character. So each character can have a different option setup.
+
+- Added the ability to hide Tank, DPS or Healer information. Helpful if you only want to focus on your information. This is found on the Options Menu.
+
+-Added the ability to hide the Wrath of the Lich King Instance information. With Cataclysm on the way, users may wish to hide the old Wrath content. This is found on the Options Menu. 
+
+- WOTLK and Cataclysm buttons switched places. It looks better this way when WOTLK is hidden.
+
+
+
+Version 0.8b - Initial Release (11/24/10)
+
+BossInfo is an addon used to provide a simple overview of Boss fights and encounters. The information is broken down into section for Tanks, Healers and DPS.
+
+To access the addon, simply click on the icon; or use the slash commands /bi or /bossinfo
+
+The addon is still in Beta. All feedback is welcome.

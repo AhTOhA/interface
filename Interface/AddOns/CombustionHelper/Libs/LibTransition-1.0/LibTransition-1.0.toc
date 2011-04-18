@@ -1,0 +1,13 @@
+## Interface: 40000
+## Title: Lib: LibTransition-1.0
+## Notes: PowerPoint goodness for your addon
+## Author: Humbedooh
+## X-Max-Interface: 40000
+## X-Min-Interface: 30000
+## X-Compatible-With: 40000
+## X-Curse-Packaged-Version: r15
+## X-Curse-Project-Name: LibTransition-1.0
+## X-Curse-Project-ID: libtransition-1-0
+## X-Curse-Repository-ID: wow/libtransition-1-0/mainline
+LibStub\LibStub.lua
+LibTransition-1.0.lua

@@ -1,0 +1,23 @@
+## Interface: 40000
+
+## Author : Angayelle of Nordrassil
+
+## Title: CombustionHelper
+
+## Notes: An addon for optimized use of the Combustion Talent for mages in Cataclysm
+
+## Dependencies:
+
+## SavedVariables: combulock, combuffb, combuautohide, combuimpact, combuscale, combubeforefade, combuafterfade, combufadeoutspeed, combufadeinspeed, combuwaitfade, combufadealpha, combubartimers, combubarwidth, combured, combugreen, combublue, combuopacity, combucrit, comburefreshmode, combureport,combureportvalue,combureportthreshold, combureportpyro, combutrack, combuchat, combulbtracker, combulbdown, combulbtarget, combulbup, combulbright, combulbleft, combutimervalue
+
+## version: 2.7.10beta
+
+Libs\LibStub\LibStub.lua
+
+Libs\LibTransition-1.0\LibTransition-1.0.lua
+
+CombustionHelper.lua
+
+CombustionHelper.xml
+
+Combuoptions.xml

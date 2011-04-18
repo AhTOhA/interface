@@ -1,0 +1,3 @@
+MACRO 16777217 "Totems" INV_Misc_QuestionMark
+/castsequence Searing Totem, Strength of Earth Totem
+END

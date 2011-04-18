@@ -1,0 +1,15 @@
+MACRO 16777221 "FB/SB" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Skull Bash(Cat Form); Ferocious Bite(Cat Form)
+END
+MACRO 16777220 "FC/Mangle" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Feral Charge(Cat Form); Mangle(Cat Form)
+END
+MACRO 16777218 "Heals" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Regrowth; [modifier:alt] Healing Touch; Rejuvenation
+END
+MACRO 16777219 "Stances" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Bear Form(Shapeshift); [modifier:alt] Travel Form(Shapeshift); Cat Form(Shapeshift)
+END
+MACRO 16777217 "Stealth/Speed" INV_Misc_QuestionMark
+/cast [modifier:alt] Dash(Cat Form);  [modifier:ctrl] Ravage(Cat Form); Prowl(Cat Form)
+END

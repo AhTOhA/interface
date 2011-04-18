@@ -1,0 +1,690 @@
+------------------------------------------------------------------------
+r8314 | funkydude | 2011-03-29 15:28:56 +0000 (Tue, 29 Mar 2011) | 1 line
+Changed paths:
+   A /tags/r8314-release (from /trunk:8313)
+
+Tagging as r8314-release
+------------------------------------------------------------------------
+r8313 | funkydude | 2011-03-29 15:22:05 +0000 (Tue, 29 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Baradin/Locales/esES.lua
+   M /trunk/Bastion/Locales/ruRU.lua
+   M /trunk/Locales/common.esES.lua
+   M /trunk/Locales/esES.lua
+
+remove utf headers/whitespace
+------------------------------------------------------------------------
+r8312 | funkydude | 2011-03-29 15:16:53 +0000 (Tue, 29 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/BigWigs.toc
+
+bump toc version
+------------------------------------------------------------------------
+r8311 | ammo | 2011-03-27 19:12:29 +0000 (Sun, 27 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Plugins/Proximity.lua
+
+fix proximity text to display actual name and not 'raid1' etc
+------------------------------------------------------------------------
+r8310 | 7destiny | 2011-03-25 10:56:07 +0000 (Fri, 25 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/deDE.lua
+   M /trunk/Bastion/Locales/frFR.lua
+   M /trunk/Bastion/Locales/koKR.lua
+   M /trunk/Bastion/Locales/ruRU.lua
+   M /trunk/Bastion/Sinestra.lua
+
+Sinestra: Fix slicer :/
+------------------------------------------------------------------------
+r8309 | funkydude | 2011-03-23 00:32:24 +0000 (Wed, 23 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/deDE.lua
+   M /trunk/Blackwing/Locales/esES.lua
+   M /trunk/Blackwing/Locales/frFR.lua
+   M /trunk/Blackwing/Locales/koKR.lua
+   M /trunk/Blackwing/Locales/ruRU.lua
+   M /trunk/Blackwing/Locales/zhCN.lua
+   M /trunk/Blackwing/Locales/zhTW.lua
+   M /trunk/Blackwing/Nefarian.lua
+
+Blackwing/Nefarian: trim down the trigger for p3
+------------------------------------------------------------------------
+r8308 | ammo | 2011-03-22 13:25:53 +0000 (Tue, 22 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Locales/deDE.lua
+   M /trunk/Locales/enUS.lua
+   M /trunk/Locales/esES.lua
+   M /trunk/Locales/frFR.lua
+   M /trunk/Locales/koKR.lua
+   M /trunk/Locales/ruRU.lua
+   M /trunk/Locales/zhCN.lua
+   M /trunk/Locales/zhTW.lua
+
+remove unused translation resolving an XXX :)
+------------------------------------------------------------------------
+r8307 | rabbit | 2011-03-21 22:18:33 +0000 (Mon, 21 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Plugins/Bars.lua
+
+Only iterate bars if they exist, doh.
+------------------------------------------------------------------------
+r8306 | rabbit | 2011-03-21 12:13:46 +0000 (Mon, 21 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Plugins/Bars.lua
+
+Unfuck the Beautycase changes the other guy did.
+------------------------------------------------------------------------
+r8305 | ammo | 2011-03-21 09:31:24 +0000 (Mon, 21 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Plugins/Proximity.lua
+
+remove obsolete fixme
+------------------------------------------------------------------------
+r8304 | pettigrow | 2011-03-19 11:26:21 +0000 (Sat, 19 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/frFR.lua
+
+frFR Update
+------------------------------------------------------------------------
+r8303 | funkydude | 2011-03-17 20:56:56 +0000 (Thu, 17 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+
+Core/BossPrototype: simplify difficulty check
+------------------------------------------------------------------------
+r8302 | Maat | 2011-03-17 19:19:05 +0000 (Thu, 17 Mar 2011) | 2 lines
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+I guess we can live with that 1 warning during RP for Electrocute
+Adjust Shadowblaze timer by 1 sec
+------------------------------------------------------------------------
+r8301 | funkydude | 2011-03-17 19:15:19 +0000 (Thu, 17 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Plugins/Proximity.lua
+
+Plugins/Proximity: don't play sounds when dead
+------------------------------------------------------------------------
+r8300 | Maat | 2011-03-16 21:05:33 +0000 (Wed, 16 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Sinestra.lua
+
+remove the red essence bar that 7Destiny added, its not useful
+------------------------------------------------------------------------
+r8299 | 7destiny | 2011-03-16 14:01:26 +0000 (Wed, 16 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/koKR.lua
+
+koKR Update
+------------------------------------------------------------------------
+r8298 | StingerSoft | 2011-03-15 22:38:50 +0000 (Tue, 15 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/ruRU.lua
+   M /trunk/Blackwing/Locales/ruRU.lua
+
+ruRU update
+------------------------------------------------------------------------
+r8297 | funkydude | 2011-03-15 21:01:10 +0000 (Tue, 15 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+Blackwing/Nefarian: reduce personal shadowblaze check to 1 second.
+------------------------------------------------------------------------
+r8296 | funkydude | 2011-03-15 20:23:40 +0000 (Tue, 15 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+Blackwing/Nefarian: tweak message
+------------------------------------------------------------------------
+r8295 | funkydude | 2011-03-15 20:16:06 +0000 (Tue, 15 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+Blackwing/Nefarian: bugfix shadowblaze warning
+------------------------------------------------------------------------
+r8294 | funkydude | 2011-03-15 17:29:13 +0000 (Tue, 15 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Plugins/Bars.lua
+   M /trunk/Plugins/BigWigs_Plugins.toc
+   M /trunk/Plugins/Locales/deDE.lua
+   M /trunk/Plugins/Locales/enUS.lua
+   M /trunk/Plugins/Locales/esES.lua
+   M /trunk/Plugins/Locales/frFR.lua
+   M /trunk/Plugins/Locales/koKR.lua
+   M /trunk/Plugins/Locales/ruRU.lua
+   M /trunk/Plugins/Locales/zhCN.lua
+   M /trunk/Plugins/Locales/zhTW.lua
+
+Add patch by Aftermathh for beautycase skin, he says it works so if it doesn't we've got Fisker on standby.
+------------------------------------------------------------------------
+r8293 | Maat | 2011-03-15 00:10:06 +0000 (Tue, 15 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+back to not warning for electrocute during the RP
+------------------------------------------------------------------------
+r8292 | Maat | 2011-03-14 23:28:40 +0000 (Mon, 14 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Sinestra.lua
+
+cleanup
+------------------------------------------------------------------------
+r8291 | Leialyn | 2011-03-14 19:09:31 +0000 (Mon, 14 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Throne/Alakir.lua
+
+Al'akir: - stop the old Feedback bar when we start a new one to avoid confusion
+------------------------------------------------------------------------
+r8290 | namelesss | 2011-03-14 18:22:53 +0000 (Mon, 14 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Throne/Locales/zhTW.lua
+
+zhTW Update
+------------------------------------------------------------------------
+r8289 | mojosdojo | 2011-03-13 12:33:13 +0000 (Sun, 13 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/esES.lua
+   M /trunk/Bastion/Sinestra.lua
+   M /trunk/Throne/Conclave.lua
+
+Small cleanups.
+------------------------------------------------------------------------
+r8288 | ammo | 2011-03-12 18:53:09 +0000 (Sat, 12 Mar 2011) | 4 lines
+Changed paths:
+   M /trunk/Bastion/DoubleDragon.lua
+   M /trunk/Bastion/Locales/koKR.lua
+
+just
+simply
+fuck
+off
+------------------------------------------------------------------------
+r8287 | jongt23 | 2011-03-12 13:53:27 +0000 (Sat, 12 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/esES.lua
+
+esES Update
+------------------------------------------------------------------------
+r8286 | 7destiny | 2011-03-11 23:28:26 +0000 (Fri, 11 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/DoubleDragon.lua
+   M /trunk/Bastion/Locales/koKR.lua
+
+valiona: Add say for Twilight Meteorite
+------------------------------------------------------------------------
+r8285 | 7destiny | 2011-03-11 22:52:01 +0000 (Fri, 11 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Sinestra.lua
+
+Sinestra: Add red essence
+------------------------------------------------------------------------
+r8284 | namelesss | 2011-03-11 17:51:38 +0000 (Fri, 11 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/zhTW.lua
+
+zhTW Update
+------------------------------------------------------------------------
+r8283 | nebula169 | 2011-03-11 05:10:01 +0000 (Fri, 11 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Magmaw.lua
+
+Magmaw: fix Mangle cd timer
+------------------------------------------------------------------------
+r8282 | funkydude | 2011-03-11 02:46:00 +0000 (Fri, 11 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+flip around an if statement
+------------------------------------------------------------------------
+r8281 | funkydude | 2011-03-11 02:40:11 +0000 (Fri, 11 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+SVN checkouts are alpha users not release
+------------------------------------------------------------------------
+r8280 | pettigrow | 2011-03-10 09:37:21 +0000 (Thu, 10 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/frFR.lua
+
+frFR Update
+------------------------------------------------------------------------
+r8279 | Niightblade | 2011-03-10 06:24:51 +0000 (Thu, 10 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Throne/Conclave.lua
+
+Throne/Conclave: Add Soothing Breeze timer.  Needs further testing/feedback.  Ticket 302.
+------------------------------------------------------------------------
+r8278 | funkydude | 2011-03-10 01:37:26 +0000 (Thu, 10 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Chogall.lua
+   M /trunk/Blackwing/Omnotron.lua
+
+Blackwing/Omnotron: move chemical cast from a name to a guid check
+------------------------------------------------------------------------
+r8277 | funkydude | 2011-03-09 22:57:43 +0000 (Wed, 09 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+
+BossPrototype: Better debug around CheckBossStatus
+------------------------------------------------------------------------
+r8276 | jongt23 | 2011-03-09 21:53:37 +0000 (Wed, 09 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/esES.lua
+
+esES Update
+------------------------------------------------------------------------
+r8275 | Maat | 2011-03-09 21:12:52 +0000 (Wed, 09 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+warn for electrocute even if we dont have boss frames up
+------------------------------------------------------------------------
+r8274 | nebula169 | 2011-03-09 06:34:14 +0000 (Wed, 09 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Magmaw.lua
+
+Magmaw: Stop the player mangle bar when the debuff is removed
+------------------------------------------------------------------------
+r8273 | mojosdojo | 2011-03-08 18:46:10 +0000 (Tue, 08 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Chimaeron.lua
+   M /trunk/Blackwing/Locales/deDE.lua
+   M /trunk/Blackwing/Magmaw.lua
+
+deDE update.
+------------------------------------------------------------------------
+r8272 | 7destiny | 2011-03-08 12:32:09 +0000 (Tue, 08 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/koKR.lua
+   M /trunk/Blackwing/Magmaw.lua
+
+Blackwing/Magmaw: Change mangle, add cd bar. 
+------------------------------------------------------------------------
+r8271 | clifflu | 2011-03-08 06:18:18 +0000 (Tue, 08 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/zhTW.lua
+
+Updated Blackwing > Nefarian P3 Trigger in zhTW
+------------------------------------------------------------------------
+r8270 | driiper | 2011-03-07 13:08:24 +0000 (Mon, 07 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/TwilightAscendants.lua
+
+*Proximity should be 10 yards!
+------------------------------------------------------------------------
+r8269 | Maat | 2011-03-07 11:03:44 +0000 (Mon, 07 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+1st shadowblaze bar should be 13 sec too
+------------------------------------------------------------------------
+r8268 | nebula169 | 2011-03-07 10:35:41 +0000 (Mon, 07 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Chimaeron.lua
+
+Chimaeron: show first Massacre timer and announce for the first stack of break
+------------------------------------------------------------------------
+r8267 | funkydude | 2011-03-07 06:26:48 +0000 (Mon, 07 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Atramedes.lua
+
+Blackwing/Atramedes: phase shift should only trigger on heroic as it is, no need for a check.
+------------------------------------------------------------------------
+r8266 | funkydude | 2011-03-07 06:23:25 +0000 (Mon, 07 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Atramedes.lua
+
+Blackwing/Atramedes: cleanup the whole pestered stuff.
+------------------------------------------------------------------------
+r8265 | nebula169 | 2011-03-07 06:16:55 +0000 (Mon, 07 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Atramedes.lua
+
+Atramedes: check for Pestered! before announcing about it
+------------------------------------------------------------------------
+r8264 | nebula169 | 2011-03-07 05:55:43 +0000 (Mon, 07 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Atramedes.lua
+
+Atramedes: use the player name in the obnoxious warning (which seems to fire randomly)
+------------------------------------------------------------------------
+r8263 | Maat | 2011-03-06 23:19:44 +0000 (Sun, 06 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+adjust the first Shadow Blaze timer by 3 sec
+------------------------------------------------------------------------
+r8262 | Maat | 2011-03-06 18:22:03 +0000 (Sun, 06 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Sinestra.lua
+
+reset playerInList boolean on engage
+------------------------------------------------------------------------
+r8261 | Maat | 2011-03-06 18:02:09 +0000 (Sun, 06 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+lets be consistent about shadowBlazeTimer
+------------------------------------------------------------------------
+r8260 | Maat | 2011-03-06 17:58:03 +0000 (Sun, 06 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Sinestra.lua
+
+fix typo
+------------------------------------------------------------------------
+r8259 | funkydude | 2011-03-06 03:53:40 +0000 (Sun, 06 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Compare alpha versions against release versions also for the situation where there is only 1 alpha in the raid, and it is really outdated.
+------------------------------------------------------------------------
+r8258 | StingerSoft | 2011-03-06 01:15:14 +0000 (Sun, 06 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/ruRU.lua
+   M /trunk/Blackwing/Locales/ruRU.lua
+   M /trunk/Locales/ruRU.lua
+   M /trunk/Plugins/Locales/ruRU.lua
+
+ruRU update
+------------------------------------------------------------------------
+r8257 | 7destiny | 2011-03-06 00:39:21 +0000 (Sun, 06 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Throne/Alakir.lua
+
+Fix cloud spawn timer
+------------------------------------------------------------------------
+r8256 | Maat | 2011-03-06 00:07:36 +0000 (Sun, 06 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+shadow blaze timer is no longer 5 sec in heroic (its 10 just like in normal)
+------------------------------------------------------------------------
+r8255 | zhTW | 2011-03-05 14:05:37 +0000 (Sat, 05 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/zhTW.lua
+   M /trunk/Blackwing/Locales/zhTW.lua
+
+zhTW Update.
+------------------------------------------------------------------------
+r8254 | pettigrow | 2011-03-04 15:15:51 +0000 (Fri, 04 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/frFR.lua
+   M /trunk/Locales/frFR.lua
+
+frFR Update
+------------------------------------------------------------------------
+r8253 | 7destiny | 2011-03-04 10:31:58 +0000 (Fri, 04 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/koKR.lua
+
+koKR Update
+------------------------------------------------------------------------
+r8252 | mojosdojo | 2011-03-04 10:01:30 +0000 (Fri, 04 Mar 2011) | 2 lines
+Changed paths:
+   M /trunk/Bastion/Locales/deDE.lua
+   M /trunk/Bastion/Sinestra.lua
+   M /trunk/Blackwing/Locales/deDE.lua
+   M /trunk/Locales/deDE.lua
+
+Sinestra: Fix a typo.
+deDE update.
+------------------------------------------------------------------------
+r8251 | jongt23 | 2011-03-04 00:50:35 +0000 (Fri, 04 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/esES.lua
+   M /trunk/Locales/esES.lua
+
+esES Update
+------------------------------------------------------------------------
+r8250 | funkydude | 2011-03-03 23:53:45 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: add a bunch of comments around the place
+------------------------------------------------------------------------
+r8249 | funkydude | 2011-03-03 20:23:33 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+bugfix
+------------------------------------------------------------------------
+r8248 | funkydude | 2011-03-03 20:10:11 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+   M /trunk/Locales/deDE.lua
+   M /trunk/Locales/enUS.lua
+   M /trunk/Locales/esES.lua
+   M /trunk/Locales/frFR.lua
+   M /trunk/Locales/koKR.lua
+   M /trunk/Locales/ruRU.lua
+   M /trunk/Locales/zhCN.lua
+   M /trunk/Locales/zhTW.lua
+
+Loader: Show a different out-of-date message to alpha users, as they aren't release users. Show an "a" next to alpha users in /bwv instead of "ALPHA" because that's how we roll.
+------------------------------------------------------------------------
+r8247 | jongt23 | 2011-03-03 20:04:46 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/esES.lua
+
+esES Update
+------------------------------------------------------------------------
+r8246 | funkydude | 2011-03-03 19:50:51 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Omnotron.lua
+
+Blackwing/Omnotron: rename some things
+------------------------------------------------------------------------
+r8245 | Maat | 2011-03-03 19:27:22 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Throne/Alakir.lua
+
+cleanup
+------------------------------------------------------------------------
+r8244 | Maat | 2011-03-03 18:32:20 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Nefarian.lua
+
+add the "new" Stolen Power spellId
+------------------------------------------------------------------------
+r8243 | jongt23 | 2011-03-03 18:15:52 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Baradin/Locales/esES.lua
+   M /trunk/Bastion/Locales/esES.lua
+   M /trunk/Blackwing/Locales/esES.lua
+
+esES Update
+------------------------------------------------------------------------
+r8242 | Maat | 2011-03-03 17:56:09 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Sinestra.lua
+
+a bit more cleanup
+------------------------------------------------------------------------
+r8241 | 7destiny | 2011-03-03 17:31:16 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Throne/Alakir.lua
+
+Throne/Alakir: Add timer for Cloud spawn
+------------------------------------------------------------------------
+r8240 | Maat | 2011-03-03 17:15:36 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/frFR.lua
+   M /trunk/Bastion/Locales/koKR.lua
+   M /trunk/Bastion/Sinestra.lua
+
+cleanups
+------------------------------------------------------------------------
+r8239 | 7destiny | 2011-03-03 16:36:42 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Throne/Alakir.lua
+
+Throne/Alakir: add stack for Feedback bar
+------------------------------------------------------------------------
+r8238 | 7destiny | 2011-03-03 15:13:23 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Magmaw.lua
+
+Blackwing/Magmaw: Fix first timer for blazing
+------------------------------------------------------------------------
+r8237 | 7destiny | 2011-03-03 11:50:28 +0000 (Thu, 03 Mar 2011) | 2 lines
+Changed paths:
+   M /trunk/Bastion/Locales/koKR.lua
+   M /trunk/Bastion/Sinestra.lua
+   M /trunk/Blackwing/Locales/koKR.lua
+
+Bastion/Sinestra: Slicer Repeat for 28 sec
+koKR Update
+------------------------------------------------------------------------
+r8236 | rabbit | 2011-03-03 03:06:41 +0000 (Thu, 03 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Sinestra.lua
+
+Add in some comments, this stuff needs cleaning.
+------------------------------------------------------------------------
+r8235 | Maat | 2011-03-02 23:35:11 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Atramedes.lua
+
+improve obnoxious fiend warning a bit (thx to mysticalos for the suggestion)
+------------------------------------------------------------------------
+r8234 | pettigrow | 2011-03-02 23:06:28 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/frFR.lua
+   M /trunk/Blackwing/Locales/frFR.lua
+
+frFR Update
+------------------------------------------------------------------------
+r8233 | Maat | 2011-03-02 22:28:49 +0000 (Wed, 02 Mar 2011) | 5 lines
+Changed paths:
+   M /trunk/Bastion/Sinestra.lua
+   M /trunk/Blackwing/Atramedes.lua
+
+Sinestra.lua
+  add possible orb targets
+  add sound for indomitable for classes that can dispell it
+Atramedes.lua
+  add obnoxious fiend warning
+------------------------------------------------------------------------
+r8232 | funkydude | 2011-03-02 18:58:15 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: Only whine to alpha versions older than 10 instead of 5, add "ALPHA" next to alpha users when running /bwv
+------------------------------------------------------------------------
+r8231 | funkydude | 2011-03-02 18:20:22 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: Better fix for svn users
+------------------------------------------------------------------------
+r8230 | funkydude | 2011-03-02 18:02:55 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: Add a version for svn users
+------------------------------------------------------------------------
+r8229 | jongt23 | 2011-03-02 16:42:50 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/esES.lua
+
+esES Update
+------------------------------------------------------------------------
+r8228 | mojosdojo | 2011-03-02 15:36:37 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/deDE.lua
+
+deDE update.
+------------------------------------------------------------------------
+r8227 | 7destiny | 2011-03-02 14:30:53 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/koKR.lua
+   M /trunk/Locales/koKR.lua
+
+koKR Update
+------------------------------------------------------------------------
+r8226 | funkydude | 2011-03-02 12:04:30 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+   M /trunk/Locales/deDE.lua
+   M /trunk/Locales/enUS.lua
+   M /trunk/Locales/esES.lua
+   M /trunk/Locales/frFR.lua
+   M /trunk/Locales/koKR.lua
+   M /trunk/Locales/ruRU.lua
+   M /trunk/Locales/zhCN.lua
+   M /trunk/Locales/zhTW.lua
+
+tweak out-of-date message
+------------------------------------------------------------------------
+r8225 | funkydude | 2011-03-02 10:35:11 +0000 (Wed, 02 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: Don't let alpha users tell release users they are out of date. Tell old alpha users they are out of date. Drycoded.
+------------------------------------------------------------------------
+r8224 | funkydude | 2011-03-01 22:53:02 +0000 (Tue, 01 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Chogall.lua
+
+Bastion/Chogall: tweak blaze message
+------------------------------------------------------------------------
+r8223 | jongt23 | 2011-03-01 22:08:41 +0000 (Tue, 01 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Locales/common.esES.lua
+
+esES Update
+------------------------------------------------------------------------
+r8222 | funkydude | 2011-03-01 22:02:54 +0000 (Tue, 01 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/TwilightAscendants.lua
+
+Bastion/TwilightAscendants: warn when the shield is down
+------------------------------------------------------------------------
+r8221 | jongt23 | 2011-03-01 21:32:13 +0000 (Tue, 01 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/esES.lua
+
+esES Update
+------------------------------------------------------------------------
+r8220 | 7destiny | 2011-02-27 10:39:48 +0000 (Sun, 27 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Sinestra.lua
+
+Bastion/Sinestra: Fix timer for Twilight Slicer
+------------------------------------------------------------------------
+r8219 | 7destiny | 2011-02-27 08:14:38 +0000 (Sun, 27 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Maloriak.lua
+
+Blackwing/Maloriak: Add FlashShake for Dark Sludge
+------------------------------------------------------------------------
+r8218 | rabbit | 2011-02-27 01:52:37 +0000 (Sun, 27 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+
+Unfuck drycode.
+------------------------------------------------------------------------
+r8217 | rabbit | 2011-02-27 01:44:22 +0000 (Sun, 27 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+
+Untested, drycoded workaround for 4.1.
+------------------------------------------------------------------------
+r8216 | 7destiny | 2011-02-26 23:34:43 +0000 (Sat, 26 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/Bastion/Locales/koKR.lua
+
+koKR Update
+------------------------------------------------------------------------
+r8215 | funkydude | 2011-02-26 22:23:40 +0000 (Sat, 26 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/Plugins/Proximity.lua
+
+Plugins/Proximity: Adapt config mode to textual/radial, /range 0 closes the window.
+------------------------------------------------------------------------
+r8214 | jongt23 | 2011-02-25 12:51:54 +0000 (Fri, 25 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/Blackwing/Locales/esES.lua
+
+esES Update
+------------------------------------------------------------------------

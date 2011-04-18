@@ -1,0 +1,15 @@
+MACRO 16777220 "AoE" INV_Misc_QuestionMark
+/cast [mod:ctrl] Chains of Ice; Death and Decay
+END
+MACRO 16777222 "DC/DG" INV_Misc_QuestionMark
+/cast [mod:ctrl] Death Grip; Death Coil
+END
+MACRO 16777218 "DS/BS" INV_Misc_QuestionMark
+/cast [mod:ctrl] Blood Strike; Death Strike
+END
+MACRO 16777221 "PS/SS" INV_Misc_QuestionMark
+/cast [mod:ctrl] Scourge Strike; Plague Strike
+END
+MACRO 16777219 "Silence" INV_Misc_QuestionMark
+/cast [mod:ctrl] Strangulate; [mod:alt] Arcane Torrent(Racial); Mind Freeze
+END

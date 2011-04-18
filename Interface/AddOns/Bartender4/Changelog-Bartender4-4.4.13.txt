@@ -1,0 +1,17 @@
+tag 4.4.13
+45b343f5c479a18c70a9dae6df242e2230d90b0d
+Hendrik Leppkes <h.leppkes@gmail.com>
+2010-10-27 17:03:20 +0200
+
+Tag as 4.4.13
+
+
+--------------------
+
+Hendrik Leppkes:
+	- Replace all single quotes with double quotes.
+	- Apply the Blizzard preset to new profiles.
+	- Remove some outdated conversion code.
+	- Fix vehicle ui button rebinding for good.
+	- Fix binding remapping in the vehicle bar.
+	- Fix rightclick self-casting with modifier switched bars.

@@ -1,0 +1,6 @@
+1.0: Add-on Released
+2.0: Interface is more compact, and movable. 
+2.0: Pressing Tab & Enter while an Edit-box has focus now serves a function.
+2.0: Guided Invite, and DNIL Bypass mode created.
+2.0: Will no longer tell you when each person is invited or not invited, but will instead tell you how many people were invited, how many were not invited and way.
+2.0: Invite Message Edit-Box, no longer receives focus by default to preserve your messages.

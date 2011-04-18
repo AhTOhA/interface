@@ -1,0 +1,299 @@
+﻿<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="BossInfo.lua" />
+	<GameTooltip name="BossInfoTip" inherits="ShoppingTooltipTemplate" />
+	<Button name="BossInfoButton" parent="UIParent" movable="true" frameStrata="MEDIUM" enableMouse="true">
+		<Size x="32" y="32" />
+		<Anchors>
+			<Anchor point="RIGHT" relativeTo="Minimap" relativePoint="RIGHT">
+				<Offset X="-95" Y="-90" />
+			</Anchor>
+		</Anchors>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentFrame" file="Interface\AddOns\BossInfo\images\burning.tga">
+					<Size x="32" y="32" />
+					<Anchors>
+						<Anchor point="TOPLEFT" />
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				self:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+				BossInfoButton_OnLoad(self)
+			</OnLoad>
+			<OnDragStart>
+				self:StartMoving()
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing()
+			</OnDragStop>
+			<OnClick>
+				BossInfoButton_OnClick(self, button)
+			</OnClick>
+			<OnEnter>
+				BossInfoTip:SetOwner(self, "ANCHOR_LEFT");
+				BossInfoTip:SetText("Boss Info");
+				BossInfoTip:AddLine("Left-Click to Open.", 0, 1, 0);
+				BossInfoTip:AddLine("Right-Click for Options.", 0, 1, 0);
+				BossInfoTip:Show();
+			</OnEnter>
+			<OnLeave>
+				BossInfoTip:Hide()
+			</OnLeave>
+		</Scripts>
+		<HighlightTexture file="Interface\AddOns\BossInfo\images\burning.tga" />
+	</Button>
+	<Frame name="BossInfoFrame" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="477" y="468" />
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset x="57" y="-42" />
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+		<Frames>
+			<Button name="Close" inherits="UIPanelButtonTemplate" parent="BossInfoFrame" text="Close">
+				<Size>
+					<AbsDimension x="75" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="382" y="-30" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Close_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="Target1" inherits="UIPanelButtonTemplate" parent="BossInfoFrame" text="Target">
+				<Size>
+					<AbsDimension x="75" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="206" y="-30" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Target1_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="Instance" inherits="UIPanelButtonTemplate" parent="BossInfoFrame" text="Instance">
+				<Size>
+					<AbsDimension x="75" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="116" y="-30" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Instance_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="Instancecat" inherits="UIPanelButtonTemplate" parent="BossInfoFrame" text="Instance">
+				<Size>
+					<AbsDimension x="75" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="19" y="-30" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Instancecat_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="Party1" inherits="UIPanelButtonTemplate" text="Party">
+				<Size>
+					<AbsDimension x="75" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="297" y="-30" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>Party1_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="About" inherits="UIPanelButtonTemplate" parent="BossInfoFrame" text="About">
+				<Size>
+					<AbsDimension x="75" y="23" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="390" y="-435" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>About_OnClick();</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="FontString1" inherits="GameFontNormal" text="|n |n This mod can be used to see simple information and strategy for Bosses. |n |n When you have a Boss encounter shown, use the Party button to send an overview of the Boss to the Party Chat." justifyV="TOP">
+					<Size>
+						<AbsDimension x="438" y="110" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="19" y="-106" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="FontString2" inherits="GameFontNormal" text="|n Separate info is shown for Tank, DPS and Healer. |n |n Simply Choose a Boss from the Menus or Target the Boss and Click the Target Button to see the information for the Boss encounter" justifyV="TOP">
+					<Size>
+						<AbsDimension x="438" y="110" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="19" y="-222" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="FontString3" inherits="GameFontNormal" text="|n Information in the Cataclysm section is a work in progress. Information is written for Heroic Version of the encounters. In most cases the regular is just an easier version of the Heroic. If you notice anything wrong or have strategy to share, leave me a comment on Curse." justifyV="TOP">
+					<Size>
+						<AbsDimension x="438" y="110" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="19" y="-338" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="FontString4" inherits="GameFontNormal" text="WOTLK">
+					<Size>
+						<AbsDimension x="75" y="18" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="116" y="-12" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="FontString5" inherits="GameFontNormal" text="Cataclysm">
+					<Size>
+						<AbsDimension x="75" y="18" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="19" y="-12" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="FontString6" inherits="GameFontNormal" text="Version 1.2">
+					<Size>
+						<AbsDimension x="85" y="18" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="382" y="-12" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="FontString8" inherits="GameFontNormal" text="Boss Info">
+					<Size>
+						<AbsDimension x="172" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="19" y="-69" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="FontString9" inherits="GameFontNormal" text="Written By Nerino1">
+					<Size>
+						<AbsDimension x="179" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="278" y="-69" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="FontString10" inherits="GameFontNormal" text="Send To">
+					<Size>
+						<AbsDimension x="75" y="18" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="297" y="-12" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				self:RegisterEvent("VARIABLES_LOADED");
+				self:RegisterForDrag("LeftButton");
+				self:Hide()
+			</OnLoad>
+			<OnEvent>
+				if (event == "VARIABLES_LOADED") then
+					BossInfo_Loaded();
+					HideWrath_Load()
+				end
+			</OnEvent>	
+			<OnDragStart>self:StartMoving();</OnDragStart>
+			<OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+		</Scripts>
+	</Frame>
+	<Frame name="BossInfoOptions" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="200" y="300" />
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset x="0" y="0" />
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="FontString7" inherits="GameFontNormal" justifyH="CENTER" setALLPoints="TRUE" parent="BossInfoOptions" text="Boss Info Options |n |n |n Changes made here do not take effect |n until next logon |n or Press ReloadUI button">
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset x="-10" y="-15" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>		
+			<Scripts>
+				<OnLoad>
+					self:RegisterForDrag("LeftButton");
+					self:Hide();
+				</OnLoad>
+				<OnDragStart>self:StartMoving();</OnDragStart>
+				<OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+		</Scripts>
+	</Frame>	
+	
+</Ui>

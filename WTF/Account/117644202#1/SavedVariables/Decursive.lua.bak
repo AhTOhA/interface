@@ -1,0 +1,31 @@
+
+DecursiveDB = {
+	["profileKeys"] = {
+		["Tikytaka - Tarren Mill"] = "Default",
+	},
+	["class"] = {
+		["DRUID"] = {
+			["CureOrder"] = {
+				4, -- [1]
+				-16, -- [2]
+				nil, -- [3]
+				1, -- [4]
+				[8] = 2,
+				[16] = -15,
+				[32] = 3,
+			},
+		},
+	},
+	["global"] = {
+		["LastVersionAnnounce"] = 1299106132,
+		["NonRealease"] = "2.6.1_beta_4",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["DebuffsFrameContainer_y"] = 522.2400005290989,
+			["MainBarX"] = 614.4000447540723,
+			["MainBarY"] = -96.00000230384097,
+			["DebuffsFrameContainer_x"] = 921.6000671311084,
+		},
+	},
+}

@@ -1,0 +1,15 @@
+
+TradeSkillMaster_MailingDB = {
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Tikytaka - Tarren Mill"] = "Default",
+	},
+	["factionrealm"] = {
+		["Horde - Tarren Mill"] = {
+			["test"] = 2,
+		},
+	},
+}

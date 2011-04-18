@@ -1,0 +1,8 @@
+## Interface: 40000
+## Title: Very Mobile Frames
+## Author: Cyanide
+## Version: 0.4
+## Notes: Allows you to move standard UI frames
+## SavedVariables: VMFSettings
+## SavedVariablesPerCharacter: VMFProfile
+VeryMobileFrames.xml

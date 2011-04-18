@@ -1,0 +1,9 @@
+
+AucAdvancedFilterBasic = {
+}
+AucAdvancedFilterBasic_IgnoreList = {
+	["Tarren Mill"] = {
+		["Horde"] = {
+		},
+	},
+}

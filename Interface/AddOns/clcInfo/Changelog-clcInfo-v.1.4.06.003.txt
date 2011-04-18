@@ -1,0 +1,105 @@
+------------------------------------------------------------------------
+r192 | abija | 2011-02-11 18:46:00 +0000 (Fri, 11 Feb 2011) | 1 line
+Changed paths:
+   A /tags/v.1.4.06.003 (from /trunk:191)
+
+Tagging as v.1.4.06.003
+------------------------------------------------------------------------
+r191 | abija | 2011-02-11 18:44:24 +0000 (Fri, 11 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/data/paladin/retribution.lua
+
+silly bugfix for cs
+------------------------------------------------------------------------
+r189 | abija | 2011-02-10 23:31:52 +0000 (Thu, 10 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/data/paladin/retribution.lua
+
+changed CS to not be suggested at 3HP
+------------------------------------------------------------------------
+r187 | abija | 2011-02-09 09:25:42 +0000 (Wed, 09 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/clcInfo_Options/data/paladin/index.xml
+   M /trunk/clcInfo_Options/data/paladin/retribution.lua
+   D /trunk/clcInfo_Options/data/paladin/retribution_experiment.lua
+   D /trunk/clcInfo_Options/data/paladin/retribution_ptr.lua
+   M /trunk/data/deathknight/frost.lua
+   M /trunk/data/paladin/index.xml
+   M /trunk/data/paladin/retribution.lua
+   D /trunk/data/paladin/retribution_experiment.lua
+   D /trunk/data/paladin/retribution_ptr.lua
+
+4.06 retribution updates
+------------------------------------------------------------------------
+r186 | abija | 2011-02-07 11:04:27 +0000 (Mon, 07 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/clcInfo_Options/data/paladin/retribution_ptr.lua
+   M /trunk/data/paladin/retribution_ptr.lua
+
+retribution ptr tweaks
+------------------------------------------------------------------------
+r185 | abija | 2011-02-06 10:41:05 +0000 (Sun, 06 Feb 2011) | 1 line
+Changed paths:
+   M /trunk/clcInfo_Options/data/paladin/retribution_ptr.lua
+   M /trunk/data/paladin/retribution_ptr.lua
+
+retribution ptr tweaks
+------------------------------------------------------------------------
+r184 | abija | 2011-01-30 09:27:28 +0000 (Sun, 30 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/core.lua
+   M /trunk/data/deathknight/frost.lua
+   M /trunk/data/paladin/retribution_ptr.lua
+
+some frost tweaks
+------------------------------------------------------------------------
+r183 | abija | 2011-01-24 15:12:30 +0000 (Mon, 24 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/clcInfo.toc
+   M /trunk/clcInfo_Options/clcInfo_Options.toc
+   M /trunk/clcInfo_Options/core.lua
+   M /trunk/clcInfo_Options/data/paladin/index.xml
+   M /trunk/clcInfo_Options/data/paladin/retribution.lua
+   A /trunk/clcInfo_Options/data/paladin/retribution_ptr.lua
+   M /trunk/clcInfo_Options/data/warlock/destruction.lua
+   A /trunk/clcInfo_Options/debug.lua
+   M /trunk/core.lua
+   M /trunk/data/druid/global.lua
+   M /trunk/data/paladin/index.xml
+   M /trunk/data/paladin/retribution_experiment.lua
+   A /trunk/data/paladin/retribution_ptr.lua
+   M /trunk/data/warlock/destruction.lua
+   A /trunk/debug.lua
+
+retribution module for ptr, work in progress
+------------------------------------------------------------------------
+r182 | abija | 2011-01-16 22:48:47 +0000 (Sun, 16 Jan 2011) | 2 lines
+Changed paths:
+   M /trunk/clcInfo_Options/display/bars.lua
+   M /trunk/clcInfo_Options/display/icons.lua
+   M /trunk/clcInfo_Options/display/mbars.lua
+   M /trunk/clcInfo_Options/display/micons.lua
+   M /trunk/clcInfo_Options/display/texts.lua
+   M /trunk/core.lua
+   M /trunk/data/paladin/retribution_experiment.lua
+   M /trunk/display/bars.lua
+   M /trunk/display/icons.lua
+   M /trunk/display/mbars.lua
+   M /trunk/display/micons.lua
+   M /trunk/display/texts.lua
+
+- framelevel option so display elements can be controlled a bit more
+- some retribution_experiment bug fix
+------------------------------------------------------------------------
+r181 | abija | 2011-01-13 08:40:07 +0000 (Thu, 13 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/data/paladin/retribution_experiment.lua
+
+retribution_ex tweaks
+------------------------------------------------------------------------
+r180 | abija | 2011-01-08 08:07:11 +0000 (Sat, 08 Jan 2011) | 1 line
+Changed paths:
+   M /trunk/clcInfo_Options/data/druid/global.lua
+
+druids have eclipse not rune bar :p
+------------------------------------------------------------------------

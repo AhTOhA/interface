@@ -1,0 +1,38 @@
+
+MRT_Options = {
+	["General_PrunningTime"] = 90,
+	["Attendance_GuildAttendanceCheckTrigger"] = "!triggerexample",
+	["Tracking_CreateNewRaidOnNewZone"] = 1,
+	["Tracking_AskCostAutoFocus"] = 2,
+	["ItemTracking_IgnoreGems"] = 1,
+	["DB_Version"] = 2,
+	["General_ClientLocale"] = "enUS",
+	["Tracking_Log10MenRaids"] = 1,
+	["Tracking_AskForDKPValue"] = 1,
+	["Export_ExportFormat"] = 2,
+	["Tracking_UseServerTime"] = 1,
+	["General_SlashCmdHandler"] = "mrt",
+	["Export_Currency"] = "DKP",
+	["Attendance_GuildAttendanceCustomText"] = "********************\nMRT: <<BOSS>> down! Whisper me your mains name to be added to the DKP list.\nMRT: <<TIME>> minutes remaining.\n********************",
+	["General_OptionsVersion"] = 11,
+	["ItemTracking_IgnoreEnchantingMats"] = 1,
+	["Tracking_MinItemQualityToGetDKPValue"] = 4,
+	["MiniMap_SV"] = {
+		["hide"] = true,
+	},
+	["Export_DateTimeFormat"] = "%m/%d/%Y",
+	["General_MasterEnable"] = 1,
+	["Tracking_LogAVRaids"] = 1,
+	["General_Version"] = "0.25-2 Beta",
+	["Attendance_GuildAttendanceCheckNoAuto"] = 1,
+	["Tracking_OnlyTrackItemsAboveILvl"] = 0,
+	["Attendance_TrackOffline"] = 1,
+	["Attendance_GuildAttendanceCheckDuration"] = 3,
+	["Tracking_MinItemQualityToLog"] = 4,
+}
+MRT_RaidLog = {
+}
+MRT_PlayerDB = {
+}
+MRT_NumOfCurrentRaid = nil
+MRT_NumOfLastBoss = nil

@@ -1,0 +1,38 @@
+
+clcprotDB = {
+	["profileKeys"] = {
+		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",
+	},
+	["profiles"] = {
+		["Argwynn - Tarren Mill"] = {
+			["y"] = 1170,
+			["x"] = 1660.300169217727,
+			["lbf"] = {
+				["Skills"] = {
+					"Blizzard", -- [1]
+					0, -- [2]
+					false, -- [3]
+					{
+					}, -- [4]
+				},
+				["Auras"] = {
+					"Blizzard", -- [1]
+					0, -- [2]
+					false, -- [3]
+					{
+					}, -- [4]
+				},
+			},
+			["scale"] = 0.52,
+			["stupidCheck2"] = true,
+			["fcfs"] = {
+				nil, -- [1]
+				nil, -- [2]
+				"as", -- [3]
+				nil, -- [4]
+				"j", -- [5]
+			},
+			["adjustHPBar"] = false,
+		},
+	},
+}

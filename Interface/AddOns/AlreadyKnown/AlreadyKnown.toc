@@ -1,0 +1,12 @@
+## Interface: 40000
+## Title: AlreadyKnown
+## Notes: Colorizes the item that is already known in some default frames.
+## Author: villiv
+
+## LoadManagers: AddonLoader
+## X-LoadOn-Merchant: true
+## X-LoadOn-AuctionHouse: true
+## X-LoadOn-Events: GUILDBANKFRAME_OPENED
+## X-LoadOn-GUILDBANKFRAME_OPENED: AddonLoader:LoadAddOn('AlreadyKnown')
+
+AlreadyKnown.lua

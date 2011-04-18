@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title : Nameplate Fix
+## Notes: Fixes the issue with nameplayes in patch 4.0
+## Version: 1.0
+
+nameplateFix.lua

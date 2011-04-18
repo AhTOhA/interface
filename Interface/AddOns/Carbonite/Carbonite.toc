@@ -1,0 +1,13 @@
+## Interface: 40000
+## Title: Carbonite 4.034
+## Version: 4.034
+## Author: Carbon Based Creations, LLC
+## Notes: Copyright 2007-2011 Carbon Based Creations, LLC
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: NxData, NxCombatOpts, NxMapOpts
+## SavedVariablesPerCharacter: NxCData
+
+Localization.lua
+Carbonite.lua
+Carbonite.xml

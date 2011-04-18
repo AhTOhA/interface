@@ -1,0 +1,41 @@
+
+DBMBaradinHold_SavedVars = {
+	["Argaloth"] = {
+		["Timer88954Argaloth0"] = true,
+		["HealthFrame"] = false,
+		["Meteor Slash"] = true,
+		["Consuming Darkness on >%s<"] = true,
+		["timer_berserk"] = true,
+		["Meteor Slash!"] = false,
+		["Fel Firestorm"] = true,
+		["Enabled"] = true,
+		["SetIconOnConsuming"] = false,
+		["Timer88972Argaloth4"] = true,
+		["Timer88972Argaloth5"] = true,
+		["Fel Flames - move away"] = true,
+		["SpeedKillTimer"] = false,
+		["Timer88942Argaloth3"] = true,
+		["Timer88954Argaloth1"] = true,
+		["WarnFirestormSoon"] = true,
+		["Timer88942Argaloth2"] = true,
+		["Fel Firestorm!"] = true,
+		["Record Kill"] = true,
+		["Announce"] = false,
+	},
+}
+DBMBaradinHold_SavedStats = {
+	["Argaloth"] = {
+		["heroic25Pulls"] = 0,
+		["normal25Pulls"] = 1,
+		["normalPulls"] = 5,
+		["heroicPulls"] = 0,
+		["heroic25Kills"] = 0,
+		["normal25BestTime"] = 262.3089999999975,
+		["heroicKills"] = 0,
+		["normal25LastTime"] = 262.3089999999975,
+		["normal25Kills"] = 1,
+		["normalKills"] = 1,
+		["normalLastTime"] = 253.1299999999974,
+		["normalBestTime"] = 253.1299999999974,
+	},
+}

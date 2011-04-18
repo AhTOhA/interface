@@ -1,0 +1,82 @@
+
+BossTacticsDB = {
+	["char"] = {
+		["Argwynn - Tarren Mill"] = {
+			["joinedChannelList"] = {
+				5, -- [1]
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Argwynn - Tarren Mill"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["settingsVersion"] = 6,
+			["savedIds"] = {
+				["Tarren Mill - Argwynn"] = {
+					{
+						["difficulty"] = 2,
+						["instname"] = "Deadmines",
+						["resetTime"] = 32306,
+						["id"] = 77306263,
+						["difficultyName"] = "5 Player (Heroic)",
+						["shotTime"] = {
+							["minutes"] = 0,
+							["year"] = 2011,
+							["month"] = 2,
+							["hours"] = 23,
+							["day"] = 11,
+						},
+						["maxPlayers"] = 5,
+					}, -- [1]
+					{
+						["difficulty"] = 2,
+						["instname"] = "Grim Batol",
+						["resetTime"] = 32306,
+						["id"] = 77326050,
+						["difficultyName"] = "5 Player (Heroic)",
+						["shotTime"] = {
+							["minutes"] = 0,
+							["year"] = 2011,
+							["month"] = 2,
+							["hours"] = 23,
+							["day"] = 11,
+						},
+						["maxPlayers"] = 5,
+					}, -- [2]
+					{
+						["difficulty"] = 2,
+						["instname"] = "Shadowfang Keep",
+						["resetTime"] = 32306,
+						["id"] = 77375865,
+						["difficultyName"] = "5 Player (Heroic)",
+						["shotTime"] = {
+							["minutes"] = 0,
+							["year"] = 2011,
+							["month"] = 2,
+							["hours"] = 23,
+							["day"] = 11,
+						},
+						["maxPlayers"] = 5,
+					}, -- [3]
+					{
+						["difficulty"] = 2,
+						["instname"] = "Lost City of the Tol'vir",
+						["resetTime"] = 32306,
+						["id"] = 77369314,
+						["difficultyName"] = "5 Player (Heroic)",
+						["shotTime"] = {
+							["minutes"] = 0,
+							["year"] = 2011,
+							["month"] = 2,
+							["hours"] = 23,
+							["day"] = 11,
+						},
+						["maxPlayers"] = 5,
+					}, -- [4]
+				},
+			},
+		},
+	},
+}

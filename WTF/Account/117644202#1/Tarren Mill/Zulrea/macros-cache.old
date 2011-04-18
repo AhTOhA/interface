@@ -1,0 +1,9 @@
+MACRO 16777217 "Heal" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Renew; Flash Heal
+END
+MACRO 16777218 "Openers" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Smite; Holy Fire
+END
+MACRO 16777225 "Power" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Power Word: Shield; Psychic Scream
+END

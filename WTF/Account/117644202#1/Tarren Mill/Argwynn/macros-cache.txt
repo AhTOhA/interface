@@ -1,0 +1,64 @@
+MACRO 16777241 "2-CS/INC" INV_Misc_QuestionMark
+/cast [mod:ctrl] Inquisition; Crusader Strike
+END
+MACRO 16777240 "2-GUARD/HW" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Holy Wrath; [modifier:alt] Rebuke; Guardian of Ancient Kings
+END
+MACRO 16777227 "AD/AW" INV_Misc_QuestionMark
+/cast  Ardent Defender
+/cast Avenging Wrath
+/cast Divine Protection
+/use 14
+END
+MACRO 16777232 "Cleanse/HoF" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Hand of Freedom; [modifier:alt] Hand of Protection; Cleanse
+END
+MACRO 16777221 "Crus/HoR" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Crusader Strike; [modifier:alt]Avenging Wrath; Hammer of the Righteous
+END
+MACRO 16777236 "CS/HoR" INV_Misc_QuestionMark
+/cast [modifier:ctrl]Hammer of the Righteous ; [modifier:alt]Avenging Wrath; Crusader Strike
+END
+MACRO 16777242 "D" INV_Misc_QuestionMark
+/cast Divine Protection
+/cast Holy Radiance
+END
+MACRO 16777239 "Enrage" INV_Misc_QuestionMark
+/cast Avenging Wrath
+/use Bloodthirsty Gladiator's Badge of Victory
+END
+MACRO 16777217 "Healing" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Divine Light; [modifier:alt] Holy Light;  Flash of Light
+END
+MACRO 16777233 "Heals2" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Lay on Hands; Word of Glory
+END
+MACRO 16777230 "HoR/Cons" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Consecration; [modifier:alt] Righteous Defense; Hand of Reckoning
+END
+MACRO 16777225 "HoW/DS" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Shield of the Righteous; Hammer of Wrath
+END
+MACRO 16777231 "HR/GoK" INV_Misc_QuestionMark
+/cast Guardian of Ancient Kings
+/cast Holy Radiance
+END
+MACRO 16777224 "Imparin" INV_Misc_QuestionMark
+/use [modifier:ctrl] 14; 13
+END
+MACRO 16777229 "Jud/Inq" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Inquisition; [modifier:alt] Divine Plea; Judgement
+END
+MACRO 16777244 "Rep" INV_Misc_QuestionMark
+#showtooltip [target=focus,harm] [] Repentance
+/stopcasting
+/clearfocus [modifier:shift][target=focus,dead][target=focus,noexists]  
+/focus [target=focus,noexists]  
+/cast [target=focus] Repentance
+END
+MACRO 16777223 "Silence" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Divine Shield; [modifier:alt] Arcane Torrent(Racial); Hammer of Justice
+END
+MACRO 16777220 "Tanking" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Holy Wrath; [modifier:alt] Rebuke; Avenger's Shield
+END

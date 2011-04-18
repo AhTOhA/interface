@@ -1,0 +1,55 @@
+
+TenTonHammer_Settings = {
+	["foobar"] = 0,
+	["color"] = "Yellow",
+	["ExperienceTab"] = 1,
+	["anchor"] = "TOPRIGHT",
+	["inspect"] = 1,
+	["Theme"] = "Neon",
+	["usertips"] = 1,
+	["ratingOnTip"] = 0,
+	["collapse"] = 0,
+	["TalentTab"] = 1,
+	["DDL"] = 1,
+	["raidOnTip"] = 1,
+	["pvpOnTip"] = 0,
+	["PvPTab"] = 1,
+	["scale"] = 5,
+	["minimap"] = 0,
+	["GroupTab"] = 1,
+	["target_inspect"] = 0,
+	["pveOnTip"] = 0,
+	["NewsTab"] = 1,
+	["REG"] = "eu",
+	["panel"] = 0,
+	["masterloot"] = 1,
+	["database"] = 1,
+	["SVR"] = "Tarren Mill",
+	["update"] = 0,
+	["online"] = 1,
+	["chat"] = 1,
+	["delay"] = 500,
+	["button"] = 0,
+	["itemtips"] = 1,
+	["EquipTab"] = 1,
+	["gearOnTip"] = 1,
+}
+TenTonHammer_Database = {
+	["Version"] = 4111,
+	["Tarren Mill"] = {
+		["Argwynn"] = "201101070050:6161:53:711:4432:0:0:0:0",
+	},
+}
+TenTonHammer_Elite = {
+	[839] = {
+		["ENCHANTS"] = {
+		},
+		["GEMS"] = {
+		},
+		["TALENTS"] = {
+		},
+	},
+}
+TenTonHammer_OnlineDatabase = nil
+TTHD = ""
+TenTonHammer_News = nil

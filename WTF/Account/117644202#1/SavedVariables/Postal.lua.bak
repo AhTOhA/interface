@@ -1,0 +1,17 @@
+
+Postal3DB = {
+	["global"] = {
+		["BlackBook"] = {
+			["alts"] = {
+				"Argwynn|Tarren Mill|Horde|85|PALADIN", -- [1]
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",
+	},
+	["profiles"] = {
+		["Argwynn - Tarren Mill"] = {
+		},
+	},
+}

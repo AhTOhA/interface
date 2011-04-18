@@ -1,0 +1,13 @@
+
+VendettaDB = {
+	["profileKeys"] = {
+		["Kraisus - Tarren Mill"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["point"] = "LEFT",
+			["y"] = -219.986469437693,
+			["x"] = 329.3150818114028,
+		},
+	},
+}

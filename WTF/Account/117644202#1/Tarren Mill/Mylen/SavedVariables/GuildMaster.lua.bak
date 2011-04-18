@@ -1,0 +1,437 @@
+
+GMLogs = {
+	[1298336237] = {
+		["Ro"] = {
+			1, -- [1]
+			0, -- [2]
+			1, -- [3]
+			0, -- [4]
+			0, -- [5]
+			0, -- [6]
+			0, -- [7]
+			0, -- [8]
+			0, -- [9]
+		},
+		["Mylen"] = {
+			62, -- [1]
+			60, -- [2]
+			2, -- [3]
+			0, -- [4]
+			0, -- [5]
+			0, -- [6]
+			0, -- [7]
+			0, -- [8]
+			0, -- [9]
+		},
+		["LastRecord"] = 1298336302,
+	},
+}
+GMSettings = {
+	["RankList"] = {
+	},
+	["Active"] = true,
+	["LastLogout"] = 1298336305,
+	["modules"] = {
+		["GMRecruit"] = {
+		},
+		["GMLocator"] = {
+		},
+		["GMGuildFrame"] = {
+		},
+		["GMEvent"] = {
+		},
+		["GMOTD"] = {
+		},
+		["GMForum"] = {
+		},
+		["GMBGReview"] = {
+		},
+		["GMAntiRankSpam"] = {
+		},
+		["GMAlts"] = {
+		},
+		["GMStats"] = {
+		},
+		["GMSync"] = {
+		},
+	},
+	["Version"] = 1.51,
+	["EnableEvent"] = true,
+	["GMRecruit"] = {
+		["lastsent"] = 1298336237,
+		["list"] = {
+		},
+		["delay"] = 10,
+		["Active"] = true,
+	},
+	["StartTime"] = 1298336237,
+	["lockout"] = false,
+	["GMForum"] = {
+	},
+}
+GMForum = {
+}
+GMRoster = {
+	["Theodorax"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "PALADIN",
+		["level"] = 78,
+		["rank"] = 7,
+	},
+	["Bubitza"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DRUID",
+		["level"] = 40,
+		["rank"] = 8,
+	},
+	["Mosneagu"] = {
+		["firstseen"] = 1298336239,
+		["online"] = 1,
+		["Alts"] = {
+		},
+		["class"] = "PRIEST",
+		["level"] = 85,
+		["rank"] = 4,
+	},
+	["Mastra"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "HUNTER",
+		["level"] = 80,
+		["rank"] = 7,
+	},
+	["Jupi"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DEATHKNIGHT",
+		["level"] = 65,
+		["rank"] = 8,
+	},
+	["Krugg"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "PALADIN",
+		["level"] = 70,
+		["rank"] = 7,
+	},
+	["Lukystrikes"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "WARRIOR",
+		["level"] = 85,
+		["rank"] = 6,
+	},
+	["Kayllan"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "ROGUE",
+		["level"] = 52,
+		["rank"] = 7,
+	},
+	["Sajbot"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "PALADIN",
+		["level"] = 82,
+		["rank"] = 7,
+	},
+	["Sageata"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "MAGE",
+		["level"] = 85,
+		["rank"] = 6,
+	},
+	["Adrianaro"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "HUNTER",
+		["level"] = 51,
+		["rank"] = 7,
+	},
+	["Meserie"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "PALADIN",
+		["level"] = 85,
+		["rank"] = 4,
+	},
+	["Yacucu"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "PALADIN",
+		["level"] = 85,
+		["rank"] = 7,
+	},
+	["Pocketaces"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DRUID",
+		["level"] = 10,
+		["rank"] = 7,
+	},
+	["Thespank"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DRUID",
+		["level"] = 81,
+		["rank"] = 7,
+	},
+	["Somnifer"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "WARRIOR",
+		["level"] = 85,
+		["rank"] = 6,
+	},
+	["Stelutze"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "WARLOCK",
+		["level"] = 85,
+		["rank"] = 5,
+	},
+	["Mylen"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "SHAMAN",
+		["level"] = 41,
+		["rank"] = 8,
+	},
+	["Kathana"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DRUID",
+		["level"] = 85,
+		["rank"] = 6,
+	},
+	["Chineza"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "SHAMAN",
+		["level"] = 85,
+		["rank"] = 4,
+	},
+	["Pisicutå"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "HUNTER",
+		["level"] = 80,
+		["rank"] = 7,
+	},
+	["Chinezu"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "HUNTER",
+		["level"] = 85,
+		["rank"] = 5,
+	},
+	["Lukanu"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DEATHKNIGHT",
+		["level"] = 85,
+		["rank"] = 3,
+	},
+	["Beastboss"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "HUNTER",
+		["level"] = 70,
+		["rank"] = 8,
+	},
+	["Mitzel"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DRUID",
+		["level"] = 57,
+		["rank"] = 7,
+	},
+	["Ro"] = {
+		["firstseen"] = 1298336239,
+		["online"] = 1,
+		["Alts"] = {
+		},
+		["class"] = "PALADIN",
+		["level"] = 81,
+		["rank"] = 0,
+	},
+	["Racit"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "MAGE",
+		["level"] = 85,
+		["rank"] = 1,
+	},
+	["Nerfmenot"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DRUID",
+		["level"] = 85,
+		["rank"] = 6,
+	},
+	["Arhanghelu"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DEATHKNIGHT",
+		["level"] = 59,
+		["rank"] = 7,
+	},
+	["Maxrobbye"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "SHAMAN",
+		["level"] = 85,
+		["rank"] = 6,
+	},
+	["Patriarh"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "PRIEST",
+		["level"] = 85,
+		["rank"] = 2,
+	},
+	["Myyh"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "HUNTER",
+		["level"] = 85,
+		["rank"] = 5,
+	},
+	["Lupoaica"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "ROGUE",
+		["level"] = 85,
+		["rank"] = 6,
+	},
+	["Nixy"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "MAGE",
+		["level"] = 85,
+		["rank"] = 6,
+	},
+	["Magmeserie"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "MAGE",
+		["level"] = 83,
+		["rank"] = 2,
+	},
+	["Hutzy"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "DRUID",
+		["level"] = 85,
+		["rank"] = 3,
+	},
+	["Rheea"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "MAGE",
+		["level"] = 85,
+		["rank"] = 5,
+	},
+	["Anduk"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "HUNTER",
+		["level"] = 68,
+		["rank"] = 7,
+	},
+	["Tulo"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "ROGUE",
+		["level"] = 3,
+		["rank"] = 8,
+	},
+	["Furazolidon"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "SHAMAN",
+		["level"] = 85,
+		["rank"] = 5,
+	},
+	["Hásh"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "WARLOCK",
+		["level"] = 31,
+		["rank"] = 7,
+	},
+	["Babusca"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "MAGE",
+		["level"] = 85,
+		["rank"] = 5,
+	},
+	["Skylead"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "MAGE",
+		["level"] = 36,
+		["rank"] = 8,
+	},
+	["Attis"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "HUNTER",
+		["level"] = 85,
+		["rank"] = 5,
+	},
+	["Rexx"] = {
+		["firstseen"] = 1298336239,
+		["Alts"] = {
+		},
+		["class"] = "SHAMAN",
+		["level"] = 85,
+		["rank"] = 6,
+	},
+}

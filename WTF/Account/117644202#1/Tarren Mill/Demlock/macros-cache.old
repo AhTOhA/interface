@@ -1,0 +1,21 @@
+MACRO 16777222 "AoE" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Rain of Fire; Hellfire
+END
+MACRO 16777217 "Banes" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Bane of Doom; Bane of Agony
+END
+MACRO 16777219 "Curses" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Curse of Tongues; Curse of Weakness
+END
+MACRO 16777218 "Drains" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Drain Soul;  [modifier:alt] Drain Mana; Drain Life
+END
+MACRO 16777220 "Heals" INV_Misc_QuestionMark
+/cast [modifier:alt] Soul Harvest; Health Funnel
+END
+MACRO 16777221 "Imo/Conf" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Conflagrate; Immolate
+END
+MACRO 16777223 "Souldburn" INV_Misc_QuestionMark
+/cast [modifier:ctrl] Searing Pain; Soulburn
+END

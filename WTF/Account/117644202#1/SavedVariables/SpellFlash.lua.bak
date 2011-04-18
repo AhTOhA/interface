@@ -1,0 +1,24 @@
+
+SpellFlashAddonConfig = {
+	["SERVER"] = {
+		["eu.logon.worldofwarcraft.com"] = {
+			["ImmuneIgnore"] = {
+			},
+			["REALM"] = {
+				["Tarren Mill"] = {
+					["PLAYER"] = {
+						["Argwynn"] = {
+							["selected_class_module"] = "SpellFlash_Paladin",
+							["MODULE"] = {
+							},
+						},
+					},
+				},
+			},
+			["Immune"] = {
+				["PALADIN"] = {
+				},
+			},
+		},
+	},
+}

@@ -1,0 +1,67 @@
+
+BeanCounterDB = {
+	["Tarren Mill"] = {
+		["Argwynn"] = {
+			["vendorsell"] = {
+			},
+			["postedBids"] = {
+			},
+			["postedAuctions"] = {
+				["37705"] = {
+					["item:37705:0:0:0:0:0:0:2108541568:80:0"] = {
+						"10;350310;405063;2880;3600;1294318933;", -- [1]
+					},
+					["item:37705:0:0:0:0:0:0:946962368:80:0"] = {
+						"10;350310;405063;2880;3600;1294318928;", -- [1]
+					},
+					["item:37705:0:0:0:0:0:0:1025229760:80:0"] = {
+						"10;350310;405063;2880;3600;1294318929;", -- [1]
+					},
+					["item:37705:0:0:0:0:0:0:485149472:80:0"] = {
+						"10;350310;405063;2880;3600;1294318932;", -- [1]
+					},
+					["item:37705:0:0:0:0:0:0:155927728:80:0"] = {
+						"10;350310;405063;2880;3600;1294318931;", -- [1]
+					},
+				},
+			},
+			["completedBidsBuyoutsNeutral"] = {
+			},
+			["vendorbuy"] = {
+			},
+			["failedAuctions"] = {
+			},
+			["failedBidsNeutral"] = {
+			},
+			["failedBids"] = {
+			},
+			["completedAuctions"] = {
+			},
+			["failedAuctionsNeutral"] = {
+			},
+			["completedAuctionsNeutral"] = {
+			},
+			["completedBidsBuyouts"] = {
+			},
+		},
+	},
+}
+BeanCounterDBSettings = {
+	["Tarren Mill"] = {
+		["Argwynn"] = {
+			["mailbox"] = {
+			},
+			["wealth"] = 34201921,
+			["version"] = 3,
+			["faction"] = "Horde",
+		},
+	},
+	["profile.Default"] = {
+		["configator.left"] = 484.1560736655825,
+		["configator.top"] = 777.5974914267194,
+	},
+}
+BeanCounterDBNames = {
+	["37705:0"] = "cffffffff;Crystallized Water",
+}
+BeanCounterAccountDB = nil

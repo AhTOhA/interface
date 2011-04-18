@@ -1,0 +1,55 @@
+
+BigWigs3DB = {
+	["namespaces"] = {
+		["BigWigs_Bosses_Chimaeron"] = {
+		},
+		["BigWigs_Plugins_Colors"] = {
+		},
+		["BigWigs_Plugins_Raid Icons"] = {
+		},
+		["BigWigs_Plugins_Messages"] = {
+			["profiles"] = {
+				["Default"] = {
+					["fontSize"] = 20.00000028115454,
+					["font"] = "Friz Quadrata TT",
+				},
+			},
+		},
+		["BigWigs_Plugins_Bars"] = {
+			["profiles"] = {
+				["Default"] = {
+					["font"] = "Friz Quadrata TT",
+				},
+			},
+		},
+		["BigWigs_Bosses_Magmaw"] = {
+		},
+		["BigWigs_Plugins_Super Emphasize"] = {
+		},
+		["BigWigs_Plugins_Sounds"] = {
+		},
+		["BigWigs_Bosses_Omnotron Defense System"] = {
+		},
+		["BigWigs_Bosses_Maloriak"] = {
+		},
+		["BigWigs_Bosses_Atramedes"] = {
+		},
+		["BigWigs_Plugins_Proximity"] = {
+		},
+		["BigWigs_Bosses_Argaloth"] = {
+		},
+		["BigWigs_Bosses_Nefarian"] = {
+		},
+		["BigWigs_Plugins_Tip of the Raid"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Argwynn - Tarren Mill"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}
+BigWigs3IconDB = {
+}

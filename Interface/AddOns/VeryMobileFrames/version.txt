@@ -1,0 +1,15 @@
+v0.4
+----
+
+New frames: durability, casting bar. Both are normally invisible, so you'll need to cast something or get some of your items damaged to reposition them.
+
+
+v0.3
+----
+
+New frames: mail, gemming, reforging, inspect.
+
+The item link tooltip and world map windows are no longer affected by the mod (item link tooltips are still movable; the world map isn't).
+
+The mod will now try and prevent windows from opening outside of the visible screen area.
+

@@ -1,0 +1,15 @@
+
+XLootDB = {
+	["profiles"] = {
+		["Default"] = {
+			["linkallchannels"] = {
+				["RAID"] = false,
+				["GUILD"] = false,
+				["RAID_WARNING"] = false,
+				["SAY"] = false,
+				["OFFICER"] = false,
+				["PARTY"] = false,
+			},
+		},
+	},
+}

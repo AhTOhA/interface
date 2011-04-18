@@ -1,0 +1,11 @@
+
+BGD_Prefs = {
+	["BGChatTemp"] = "BATTLEGROUND",
+	["BGChat"] = "BATTLEGROUND",
+	["Title"] = "Battleground Defender",
+	["ShowUI"] = false,
+	["preface"] = false,
+	["version"] = "1.5.5",
+	["RaidChatTemp"] = "RAID",
+	["RaidChat"] = "RAID",
+}

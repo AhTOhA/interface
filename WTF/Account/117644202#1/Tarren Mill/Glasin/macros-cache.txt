@@ -1,0 +1,54 @@
+MACRO 16777229 "2-FB" INV_Misc_QuestionMark
+/cast [mod:ctrl] Living Bomb; [mod:alt]Flame Orb; Fireball
+END
+MACRO 16777232 "2-PB/FB" INV_Misc_QuestionMark
+/cast [mod:ctrl] Fire Blast; Pyroblast
+END
+MACRO 16777231 "2-Sc/Co" INV_Misc_QuestionMark
+/cast [mod:ctrl] Combustion; Scorch
+END
+MACRO 16777230 "2-Shields" INV_Misc_QuestionMark
+/cast [mod:ctrl] Mage Ward; Mana Shield
+END
+MACRO 16777219 "AB/FB" INV_Misc_QuestionMark
+/cast [mod:ctrl] Fire Blast; Arcane Blast
+END
+MACRO 16777220 "AM/SC" INV_Misc_QuestionMark
+/cast [mod:ctrl] Arcane Missiles; Scorch
+END
+MACRO 16777224 "Bl/Pm" INV_Misc_QuestionMark
+/cast [mod:ctrl] Polymorph; Blink
+END
+MACRO 16777218 "CS/PM" INV_Misc_QuestionMark
+/cast [mod:ctrl] Counterspell; Cone of Cold
+END
+MACRO 16777225 "DF/SS" INV_Misc_QuestionMark
+/cast [mod:ctrl] Spellsteal; Icy Veins
+END
+MACRO 16777217 "FB/FB" INV_Misc_QuestionMark
+/cast [mod:ctrl] Flame Orb; [mod:alt] Fireball; Frostbolt
+END
+MACRO 16777233 "FR/RoF" INV_Misc_QuestionMark
+/cast [mod:ctrl] Ring of Frost; Freeze
+END
+MACRO 16777221 "IL/FB" INV_Misc_QuestionMark
+/cast [mod:ctrl] Frostfire Bolt; Ice Lance
+END
+MACRO 16777227 "Poly2" INV_Misc_QuestionMark
+/clearfocus [target=focus,dead][target=focus,noexists]
+/focus [target=mouseover,exists][target=focus,noexists]
+/cast [target=focus] Polymorph
+/stopmacro [nogroup]
+END
+MACRO 16777222 "Shields" INV_Misc_QuestionMark
+/cast [mod:ctrl] Mana Shield; [mod:shift] Mage Ward; Ice Barrier
+END
+MACRO 16777223 "Slow Fall" INV_Misc_QuestionMark
+/cast Slow Fall
+END
+MACRO 16777228 "Spellsteal" INV_Misc_QuestionMark
+/clearfocus [target=focus,dead][target=focus,noexists]
+/focus [target=mouseover,exists][target=focus,noexists]
+/cast [target=focus] Spellsteal
+/stopmacro [nogroup]
+END

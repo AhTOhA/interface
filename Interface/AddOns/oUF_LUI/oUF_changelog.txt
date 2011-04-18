@@ -1,0 +1,61 @@
+Changelog
+
+All Files
+- removed (hopefully) all global variables
+- removed mostly all accesses to the db. within the update variables
+- cleaned up code
+- fixed "Click -> Target" problem
+- replaced class == "DEATH KNIGHT" with class == "DEATHKNIGHT"
+- added Aggro Glow to player, target, pet, focus, party, and maintank
+
+oUF_LUI_Main.lua
+- splittet into oUF_LUI_Main.lua and oUF_LUI_Boss.lua
+- added oUF_Swing
+- added oUF_Vengeance
+- added Texts to the Eclipse bar
+- added or unit == "pet" for castbar
+- added PvP timer text
+- finished code for Combat Text
+
+oUF_LUI_Party.lua
+- added Party Targets and Party Pets
+
+oUF_LUI_Tank.lua
+- file for Maintank + Targets
+
+oUF_LUI_Templates.xml
+- File for the Templates (needed for MT target/ToT and partytarget/partypet)
+
+all unitframes/.lua files
+- created options for maintank, maintanktarget, maintanktot, partytarget, partypet
+- added options for Combat Text
+
+unitframes/boss.lua
+- completed options
+- changed some default values for maintank + targets
+
+unitframes/player.lua
+- added options for Swingtimer, Vengeancebar and Eclipsebar Text
+- added options for PvP Timer
+
+unitframes/pet.lua
+- added options and db variables for castbar
+
+unitframes/maintank.lua
+unitframes/maintanktarget.lua
+unitframes/maintanktot.lua
+unitframes/partytarget.lua
+unitframes/partypet.lua
+- Files for the Options and Default values
+
+
+Installation:
+
+Add following lines into LUI/LUI.xml (under the other unitframes/... files):
+
+
+	<Script file="unitframes\partytarget.lua"/>
+	<Script file="unitframes\partypet.lua"/>
+	<Script file="unitframes\maintank.lua"/>
+	<Script file="unitframes\maintanktarget.lua"/>
+	<Script file="unitframes\maintanktot.lua"/>

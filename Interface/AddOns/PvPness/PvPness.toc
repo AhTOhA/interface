@@ -1,0 +1,23 @@
+## Interface: 40000
+## Title: PvPness
+## Notes: (it's a pun)
+## Author: shabadoo of rexxar
+## Version: 1.2.1
+## SavedVariables: _settings, _dbg
+## X-Curse-Packaged-Version: r17
+## X-Curse-Project-Name: PvPness
+## X-Curse-Project-ID: pvpness
+## X-Curse-Repository-ID: wow/pvpness/mainline
+
+embeds.xml
+
+PvPness.lua
+options.lua
+pvpBar.lua
+ab.lua
+av.lua
+bfg.lua
+eots.lua
+ioc.lua
+sota.lua
+wsg.lua
