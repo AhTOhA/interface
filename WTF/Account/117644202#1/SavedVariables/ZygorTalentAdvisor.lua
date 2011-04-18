@@ -3,106 +3,106 @@ ZygorTalentAdvisorSettings = {
 	["char"] = {
 		["Glasin - Tarren Mill"] = {
 			["debuglog"] = {
-				"01:45:23> > UpdateSuggestions(player)", -- [1]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [2]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [3]
-				"01:45:23> < ", -- [4]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [5]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [6]
-				"01:45:23> > UpdateSuggestions(player)", -- [7]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [8]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [9]
-				"01:45:23> < ", -- [10]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [11]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [12]
-				"01:45:23> > UpdateSuggestions(player)", -- [13]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [14]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [15]
-				"01:45:23> < ", -- [16]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [17]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [18]
-				"01:45:23> > UpdateSuggestions(player)", -- [19]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [20]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [21]
-				"01:45:23> < ", -- [22]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [23]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [24]
-				"01:45:23> > UpdateSuggestions(player)", -- [25]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [26]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [27]
-				"01:45:23> < ", -- [28]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [29]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [30]
-				"01:45:23> > UpdateSuggestions(player)", -- [31]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [32]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [33]
-				"01:45:23> < ", -- [34]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [35]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [36]
-				"01:45:23> > UpdateSuggestions(player)", -- [37]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [38]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [39]
-				"01:45:23> < ", -- [40]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [41]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [42]
-				"01:45:23> > UpdateSuggestions(player)", -- [43]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [44]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [45]
-				"01:45:23> < ", -- [46]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [47]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [48]
-				"01:45:23> > UpdateSuggestions(player)", -- [49]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [50]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [51]
-				"01:45:23> < ", -- [52]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [53]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [54]
-				"01:45:23> > UpdateSuggestions(player)", -- [55]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [56]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [57]
-				"01:45:23> < ", -- [58]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [59]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [60]
-				"01:45:23> > UpdateSuggestions(player)", -- [61]
-				"01:45:23> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [62]
-				"01:45:23> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [63]
-				"01:45:23> < ", -- [64]
-				"01:45:23> ZygorTalentAdvisorPopout_Update", -- [65]
-				"01:45:23> ZygorTalentAdvisorPopout hidden, not updating", -- [66]
-				"01:45:23> > UNIT_PET player (type nil, talents not ready, points 0)", -- [67]
-				"01:45:23> < ", -- [68]
-				"01:45:23> PLAYER_ALIVE", -- [69]
-				"01:45:23> > UNIT_PET player (type nil, talents not ready, points 0)", -- [70]
-				"01:45:23> < ", -- [71]
-				"01:45:24> > PET_TALENT_UPDATE (points: 0, talents not ready)", -- [72]
-				"01:45:24> < No pet build", -- [73]
-				"01:48:49> > UNIT_PET player (type nil, talents not ready, points 0)", -- [74]
-				"01:48:49> < ", -- [75]
-				"01:48:49> > UNIT_PET player (type nil, talents not ready, points 0)", -- [76]
-				"01:48:49> < ", -- [77]
-				"01:49:55> > UNIT_PET player (type nil, talents not ready, points 0)", -- [78]
-				"01:49:55> < ", -- [79]
-				"01:49:55> > UNIT_PET player (type nil, talents not ready, points 0)", -- [80]
-				"01:49:55> < ", -- [81]
-				"01:49:55> > UNIT_PET player (type nil, talents not ready, points 0)", -- [82]
-				"01:49:55> < ", -- [83]
-				"02:03:11> Viewer started. ---------------------------", -- [84]
-				"02:03:12> PLAYER_ALIVE", -- [85]
-				"02:03:12> > SetCurrentBuild Zygor Fire (7/31/3),nil", -- [86]
-				"02:03:12> |  build is Zygor Fire (7/31/3), pet=nil", -- [87]
-				"02:03:12> |  Parsing table build, pet=nil", -- [88]
-				"02:03:12> |  61 talents cached for lookup", -- [89]
-				"02:03:12> |  > UpdateSuggestions(player)", -- [90]
-				"02:03:12> |  |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [91]
-				"02:03:12> |  |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [92]
-				"02:03:12> |  < ", -- [93]
-				"02:03:12> < ", -- [94]
-				"02:03:12> > UNIT_PET player (type nil, talents not ready, points 0)", -- [95]
-				"02:03:12> < ", -- [96]
-				"02:03:12> > UNIT_PET player (type nil, talents not ready, points 0)", -- [97]
-				"02:03:12> < ", -- [98]
-				"02:03:13> > PET_TALENT_UPDATE (points: 0, talents not ready)", -- [99]
-				"02:03:13> < No pet build", -- [100]
+				"02:34:58> ZygorTalentAdvisorPopout_Update", -- [1]
+				"02:34:58> ZygorTalentAdvisorPopout hidden, not updating", -- [2]
+				"02:34:58> > UpdateSuggestions(player)", -- [3]
+				"02:34:58> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [4]
+				"02:34:58> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [5]
+				"02:34:58> < ", -- [6]
+				"02:34:58> ZygorTalentAdvisorPopout_Update", -- [7]
+				"02:34:58> ZygorTalentAdvisorPopout hidden, not updating", -- [8]
+				"02:34:58> > UpdateSuggestions(player)", -- [9]
+				"02:34:58> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [10]
+				"02:34:58> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [11]
+				"02:34:58> < ", -- [12]
+				"02:34:58> ZygorTalentAdvisorPopout_Update", -- [13]
+				"02:34:58> ZygorTalentAdvisorPopout hidden, not updating", -- [14]
+				"02:34:58> > UpdateSuggestions(player)", -- [15]
+				"02:34:58> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [16]
+				"02:34:58> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [17]
+				"02:34:58> < ", -- [18]
+				"02:34:58> ZygorTalentAdvisorPopout_Update", -- [19]
+				"02:34:58> ZygorTalentAdvisorPopout hidden, not updating", -- [20]
+				"02:34:58> > UpdateSuggestions(player)", -- [21]
+				"02:34:58> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [22]
+				"02:34:58> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [23]
+				"02:34:58> < ", -- [24]
+				"02:34:58> ZygorTalentAdvisorPopout_Update", -- [25]
+				"02:34:58> ZygorTalentAdvisorPopout hidden, not updating", -- [26]
+				"02:34:58> > UpdateSuggestions(player)", -- [27]
+				"02:34:58> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [28]
+				"02:34:58> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [29]
+				"02:34:58> < ", -- [30]
+				"02:34:58> ZygorTalentAdvisorPopout_Update", -- [31]
+				"02:34:58> ZygorTalentAdvisorPopout hidden, not updating", -- [32]
+				"02:34:58> > UpdateSuggestions(player)", -- [33]
+				"02:34:58> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [34]
+				"02:34:58> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [35]
+				"02:34:58> < ", -- [36]
+				"02:34:58> ZygorTalentAdvisorPopout_Update", -- [37]
+				"02:34:58> ZygorTalentAdvisorPopout hidden, not updating", -- [38]
+				"02:34:58> > UpdateSuggestions(player)", -- [39]
+				"02:34:58> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [40]
+				"02:34:58> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [41]
+				"02:34:58> < ", -- [42]
+				"02:34:58> ZygorTalentAdvisorPopout_Update", -- [43]
+				"02:34:58> ZygorTalentAdvisorPopout hidden, not updating", -- [44]
+				"02:34:58> > UpdateSuggestions(player)", -- [45]
+				"02:34:58> |  playersuggestion: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [46]
+				"02:34:58> |  playersuggestion_preview: BLACK (This is a build for a 'Fire' specialization, while you have chosen 'Frost'.\nYou'll have to reset your talents or dualspec to use this build.): ", -- [47]
+				"02:34:58> < ", -- [48]
+				"02:34:58> ZygorTalentAdvisorPopout_Update", -- [49]
+				"02:34:58> ZygorTalentAdvisorPopout hidden, not updating", -- [50]
+				"02:34:58> > UNIT_PET player (type nil, talents not ready, points 0)", -- [51]
+				"02:34:58> < ", -- [52]
+				"02:34:58> PLAYER_ALIVE", -- [53]
+				"02:34:58> > UNIT_PET player (type nil, talents not ready, points 0)", -- [54]
+				"02:34:58> < ", -- [55]
+				"02:34:59> > UNIT_PET player (type nil, talents not ready, points 0)", -- [56]
+				"02:34:59> < ", -- [57]
+				"02:34:59> > PET_TALENT_UPDATE (points: 0, talents not ready)", -- [58]
+				"02:34:59> < No pet build", -- [59]
+				"02:35:57> > UNIT_PET player (type nil, talents not ready, points 0)", -- [60]
+				"02:35:57> < ", -- [61]
+				"02:35:57> > UNIT_PET player (type nil, talents not ready, points 0)", -- [62]
+				"02:35:57> < ", -- [63]
+				"02:36:27> > UNIT_PET player (type nil, talents not ready, points 0)", -- [64]
+				"02:36:27> < ", -- [65]
+				"02:36:27> > UNIT_PET player (type nil, talents not ready, points 0)", -- [66]
+				"02:36:27> < ", -- [67]
+				"02:36:27> > UNIT_PET player (type nil, talents not ready, points 0)", -- [68]
+				"02:36:27> < ", -- [69]
+				"02:36:55> > UNIT_PET player (type nil, talents not ready, points 0)", -- [70]
+				"02:36:55> < ", -- [71]
+				"02:36:55> > UNIT_PET player (type nil, talents not ready, points 0)", -- [72]
+				"02:36:55> < ", -- [73]
+				"02:37:13> > UNIT_PET player (type nil, talents not ready, points 0)", -- [74]
+				"02:37:13> < ", -- [75]
+				"02:37:13> > UNIT_PET player (type nil, talents not ready, points 0)", -- [76]
+				"02:37:13> < ", -- [77]
+				"02:37:13> > UNIT_PET player (type nil, talents not ready, points 0)", -- [78]
+				"02:37:13> < ", -- [79]
+				"02:40:15> > UNIT_PET player (type nil, talents not ready, points 0)", -- [80]
+				"02:40:15> < ", -- [81]
+				"02:40:15> > UNIT_PET player (type nil, talents not ready, points 0)", -- [82]
+				"02:40:15> < ", -- [83]
+				"02:40:32> PLAYER_ALIVE", -- [84]
+				"02:40:59> > UNIT_PET player (type nil, talents not ready, points 0)", -- [85]
+				"02:40:59> < ", -- [86]
+				"02:40:59> > UNIT_PET player (type nil, talents not ready, points 0)", -- [87]
+				"02:40:59> < ", -- [88]
+				"02:40:59> > UNIT_PET player (type nil, talents not ready, points 0)", -- [89]
+				"02:40:59> < ", -- [90]
+				"02:41:06> > UNIT_PET player (type nil, talents not ready, points 0)", -- [91]
+				"02:41:06> < ", -- [92]
+				"02:41:06> > UNIT_PET player (type nil, talents not ready, points 0)", -- [93]
+				"02:41:06> < ", -- [94]
+				"02:41:54> > UNIT_PET player (type nil, talents not ready, points 0)", -- [95]
+				"02:41:54> < ", -- [96]
+				"02:41:54> > UNIT_PET player (type nil, talents not ready, points 0)", -- [97]
+				"02:41:54> < ", -- [98]
+				"02:41:54> > UNIT_PET player (type nil, talents not ready, points 0)", -- [99]
+				"02:41:54> < ", -- [100]
 			},
 			["currentBuildTitle"] = "Zygor Fire (7/31/3)",
 		},
@@ -526,13 +526,12 @@ ZygorTalentAdvisorSettings = {
 			},
 			["currentBuildTitle"] = "Zygor Affliction DPS (31/10/0)",
 		},
-		["Gobifrost - Tarren Mill"] = {
+		["Eiratos - Tarren Mill"] = {
 			["debuglog"] = {
-				"22:55:48> Viewer started. ---------------------------", -- [1]
-				"22:55:50> PLAYER_ALIVE", -- [2]
-				"22:56:14> Viewer started. ---------------------------", -- [3]
-				"15:28:02> Viewer started. ---------------------------", -- [4]
-				"15:28:03> PLAYER_ALIVE", -- [5]
+				"02:54:05> Viewer started. ---------------------------", -- [1]
+				"02:54:06> PLAYER_ALIVE", -- [2]
+				"02:54:30> Viewer started. ---------------------------", -- [3]
+				"02:56:57> ToggleTalentFrame hook", -- [4]
 			},
 		},
 		["Mylen - Tarren Mill"] = {
@@ -954,12 +953,13 @@ ZygorTalentAdvisorSettings = {
 			},
 			["currentBuildTitle"] = "Zygor Marksmanship (5/31/5)",
 		},
-		["Eiratos - Tarren Mill"] = {
+		["Gobifrost - Tarren Mill"] = {
 			["debuglog"] = {
-				"02:54:05> Viewer started. ---------------------------", -- [1]
-				"02:54:06> PLAYER_ALIVE", -- [2]
-				"02:54:30> Viewer started. ---------------------------", -- [3]
-				"02:56:57> ToggleTalentFrame hook", -- [4]
+				"22:55:48> Viewer started. ---------------------------", -- [1]
+				"22:55:50> PLAYER_ALIVE", -- [2]
+				"22:56:14> Viewer started. ---------------------------", -- [3]
+				"15:28:02> Viewer started. ---------------------------", -- [4]
+				"15:28:03> PLAYER_ALIVE", -- [5]
 			},
 		},
 	},
@@ -969,12 +969,12 @@ ZygorTalentAdvisorSettings = {
 		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",
 		["Fallens - Tarren Mill"] = "Fallens - Tarren Mill",
 		["Demlock - Tarren Mill"] = "Demlock - Tarren Mill",
-		["Gobifrost - Tarren Mill"] = "Gobifrost - Tarren Mill",
+		["Eiratos - Tarren Mill"] = "Eiratos - Tarren Mill",
 		["Mylen - Tarren Mill"] = "Mylen - Tarren Mill",
 		["Kraisus - Tarren Mill"] = "Kraisus - Tarren Mill",
 		["Tikytaka - Tarren Mill"] = "Tikytaka - Tarren Mill",
 		["Myyh - Tarren Mill"] = "Myyh - Tarren Mill",
-		["Eiratos - Tarren Mill"] = "Eiratos - Tarren Mill",
+		["Gobifrost - Tarren Mill"] = "Gobifrost - Tarren Mill",
 	},
 	["profiles"] = {
 		["Glasin - Tarren Mill"] = {
@@ -987,7 +987,7 @@ ZygorTalentAdvisorSettings = {
 		},
 		["Demlock - Tarren Mill"] = {
 		},
-		["Gobifrost - Tarren Mill"] = {
+		["Eiratos - Tarren Mill"] = {
 		},
 		["Mylen - Tarren Mill"] = {
 			["hints"] = false,
@@ -998,7 +998,7 @@ ZygorTalentAdvisorSettings = {
 		},
 		["Myyh - Tarren Mill"] = {
 		},
-		["Eiratos - Tarren Mill"] = {
+		["Gobifrost - Tarren Mill"] = {
 		},
 	},
 }

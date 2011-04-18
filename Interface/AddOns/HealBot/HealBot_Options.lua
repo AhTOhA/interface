@@ -617,7 +617,6 @@ function HealBot_Options_setNewSkin(newSkinName)
     Healbot_Config_Skins.HideIncGroup[newSkinName] = Healbot_Config_Skins.HideIncGroup[Healbot_Config_Skins.Current_Skin]
     Healbot_Config_Skins.HideIncFocus[newSkinName] = Healbot_Config_Skins.HideIncFocus[Healbot_Config_Skins.Current_Skin]
     Healbot_Config_Skins.HideIncMyTargets[newSkinName] = Healbot_Config_Skins.HideIncMyTargets[Healbot_Config_Skins.Current_Skin]
-    Healbot_Config_Skins.DisableHealBot[newSkinName] = Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]
     Healbot_Config_Skins.TooltipPos[newSkinName] = Healbot_Config_Skins.TooltipPos[Healbot_Config_Skins.Current_Skin]
     Healbot_Config_Skins.FrameScale[newSkinName] = Healbot_Config_Skins.FrameScale[Healbot_Config_Skins.Current_Skin] 
     unique=true;
@@ -813,7 +812,6 @@ function HealBot_Options_DeleteSkin_OnClick(self)
         Healbot_Config_Skins.HideIncMyTargets[hbDelSkinName] = nil
         Healbot_Config_Skins.CombatProtParty[hbDelSkinName] = nil
         Healbot_Config_Skins.CombatProtRaid[hbDelSkinName] = nil
-        Healbot_Config_Skins.DisableHealBot[hbDelSkinName] = nil
         Healbot_Config_Skins.TooltipPos[hbDelSkinName] = nil
         Healbot_Config_Skins.FrameScale[hbDelSkinName] = nil
         table.remove(HealBot_Skins,Healbot_Config_Skins.Skin_ID)
@@ -1414,7 +1412,7 @@ end
 function HealBot_Options_AutoShow_OnClick(self)
     Healbot_Config_Skins.AutoClose[Healbot_Config_Skins.Current_Skin] = self:GetChecked() or 0;
     HealBot_setOptions_Timer(80)
-    if Healbot_Config_Skins.AutoClose[Healbot_Config_Skins.Current_Skin]==0 and Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]==0 then
+    if Healbot_Config_Skins.AutoClose[Healbot_Config_Skins.Current_Skin]==0 and HealBot_Config.DisabledNow==0 then
         ShowUIPanel(HealBot_Action)
     else
         HealBot_Action_Refresh(HealBot_PlayerGUID)
@@ -1648,20 +1646,41 @@ function HealBot_Options_VisibleRange_OnClick(self)
 end
 
 function HealBot_Options_DisableHealBot_OnClick(self)
-    HealBot_Options_ToggleHealBot(self:GetChecked() or 0)
+    HealBot_Options_DisableHealBot(self:GetChecked() or 0)
 end
 
-function HealBot_Options_ToggleHealBot(checkval)
-    Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]=checkval
-    HealBot_setOptions_Timer(500+checkval)
-    if checkval==1 then 
-        HideUIPanel(HealBot_Action) 
-		HealBot_AddChat(HEALBOT_CHAT_ADDONID..HEALBOT_CHAT_DISABLED)
+function HealBot_Options_DisableHealBot(checkval)
+    HealBot_Config.DisableHealBot=checkval
+    HealBot_Options_DisableCheck()
+end
+
+function HealBot_Options_DisableHealBotSolo_OnClick(self)
+    HealBot_Config.DisableSolo = self:GetChecked() or 0
+    HealBot_Options_DisableCheck()
+end
+
+function HealBot_Options_DisableCheck()
+    if HealBot_Config.DisableHealBot==0 then
+        z=0
+    elseif HealBot_Config.DisableSolo==0 then
+        z=1
+    elseif GetNumRaidMembers()==0 and GetNumPartyMembers()==0 then
+        z=1
     else
-        ShowUIPanel(HealBot_Action)
-		HealBot_AddChat(HEALBOT_CHAT_ADDONID..HEALBOT_CHAT_ENABLED)
+        z=0
     end
-	if TITAN_HEALBOT_ID then TitanPanelButton_UpdateButton(TITAN_HEALBOT_ID, 1) end
+    if HealBot_Config.DisabledNow~=z then
+        HealBot_Config.DisabledNow=z
+        HealBot_setOptions_Timer(500+z)
+        if z==1 then 
+            HideUIPanel(HealBot_Action) 
+            HealBot_AddChat(HEALBOT_CHAT_ADDONID..HEALBOT_CHAT_DISABLED)
+        else
+            ShowUIPanel(HealBot_Action)
+            HealBot_AddChat(HEALBOT_CHAT_ADDONID..HEALBOT_CHAT_ENABLED)
+        end
+        if TITAN_HEALBOT_ID then TitanPanelButton_UpdateButton(TITAN_HEALBOT_ID, 1) end
+    end
 end
 
 function HealBot_Options_GroupHeals_OnClick(self)
@@ -4265,7 +4284,7 @@ function HealBot_Options_Set_Current_Skin(newSkin)
             if not hbFoundSkin then
                 HealBot_AddChat(HEALBOT_CHAT_ADDONID..HEALBOT_CHAT_CHANGESKINERR1..newSkin)
                 if hbValidSkins then HealBot_AddChat(HEALBOT_CHAT_ADDONID..HEALBOT_CHAT_CHANGESKINERR2..hbValidSkins) end
-            elseif Healbot_Config_Skins.AutoClose[Healbot_Config_Skins.Current_Skin]==0 and Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]==0 then
+            elseif Healbot_Config_Skins.AutoClose[Healbot_Config_Skins.Current_Skin]==0 and HealBot_Config.DisabledNow==0 then
                 ShowUIPanel(HealBot_Action)
             else
                 HealBot_Action_Refresh(HealBot_PlayerGUID)
@@ -6473,6 +6492,7 @@ end
 function HealBot_Options_CDebuffTxt1_Refresh(onselect)
     if not onselect then HealBot_Options_CDebuffTxt1_Initialize() end
     UIDropDownMenu_SetSelectedID(HealBot_Options_CDebuffTxt1,HealBot_Options_StorePrev["CDebuffcustomID"])
+    HealBot_Options_CDCReverseDurC:SetChecked(HealBot_Globals.HealBot_Custom_Debuffs_RevDur[HealBot_Options_StorePrev["CDebuffcustomName"]] or 0)
 end
 
 function HealBot_Options_CDebuffTxt1_OnSelect(self)
@@ -6571,6 +6591,15 @@ function HealBot_Options_DeleteCDebuffBtn_OnClick(self)
     HealBot_Options_CDebuffTxt1_Refresh()
     HealBot_Options_CDCPriorityC_Refresh()
     HealBot_SetCDCBarColours();
+end
+
+function HealBot_Options_RevDurCDebuffBtn_OnClick(self)
+    x= self:GetChecked() or 0
+    if x==0 then
+        HealBot_Globals.HealBot_Custom_Debuffs_RevDur[HealBot_Options_StorePrev["CDebuffcustomName"]] = nil
+    else
+        HealBot_Globals.HealBot_Custom_Debuffs_RevDur[HealBot_Options_StorePrev["CDebuffcustomName"]] = x
+    end
 end
 
 function HealBot_Options_ResetCDebuff()
@@ -8203,7 +8232,8 @@ function HealBot_Options_Init(tabNo)
         HealBot_Options_InitSub(708)
         DoneInitTab[7]=true
     elseif tabNo==9 and not DoneInitTab[9] then
-        HealBot_Options_DisableHealBot:SetChecked(Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin])
+        HealBot_Options_DisableHealBotOpt:SetChecked(HealBot_Config.DisableHealBot)
+        HealBot_Options_DisableHealBotSolo:SetChecked(HealBot_Config.DisableSolo)
         HealBot_Options_EnableSmartCast:SetChecked(HealBot_Globals.SmartCast)
         HealBot_Options_MonitorDebuffs:SetChecked(HealBot_Config.DebuffWatch)
         HealBot_Options_MonitorBuffs:SetChecked(HealBot_Config.BuffWatch)
@@ -8472,7 +8502,6 @@ function HealBot_Options_SetSkins()
         hbCurSkin=Healbot_Config_Skins.Current_Skin
     end
     if hbCurSkinSubFrameID==1001 and not DoneInitTab[1001] then
-        HealBot_Options_DisableHealBot:SetChecked(Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin])
         HealBot_Options_PartyFrames:SetChecked(Healbot_Config_Skins.HidePartyFrames[Healbot_Config_Skins.Current_Skin])
         HealBot_Options_PlayerTargetFrames:SetChecked(Healbot_Config_Skins.HidePlayerTarget[Healbot_Config_Skins.Current_Skin])
         HealBot_Options_ActionLocked:SetChecked(Healbot_Config_Skins.ActionLocked[Healbot_Config_Skins.Current_Skin])
@@ -8625,11 +8654,6 @@ function HealBot_Options_SetSkins()
         DoneInitTab[1010]=true
     end
         
-    if HealBot_disabledState~=Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin] then
-        HealBot_Options_ToggleHealBot(Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin])
-        HealBot_disabledState=Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]
-    end
-
 end
 
 function HealBot_Options_SetSkinBars()

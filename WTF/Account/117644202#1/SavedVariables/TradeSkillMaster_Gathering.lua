@@ -4,9 +4,9 @@ TradeSkillMaster_GatheringDB = {
 		["Glasin - Tarren Mill"] = "Default",
 		["Zulrea - Tarren Mill"] = "Default",
 		["Kraisus - Tarren Mill"] = "Default",
+		["Tikytaka - Tarren Mill"] = "Default",
 		["Myyh - Tarren Mill"] = "Default",
 		["Argwynn - Tarren Mill"] = "Default",
-		["Tikytaka - Tarren Mill"] = "Default",
 	},
 	["factionrealm"] = {
 		["Horde - Tarren Mill"] = {
@@ -19,20 +19,20 @@ TradeSkillMaster_GatheringDB = {
 						[51950] = 30,
 						[20815] = 1,
 						[57192] = 18,
-						[52179] = 10,
+						[52291] = 5,
 						[52178] = 37,
-						[2934] = 58,
+						[52179] = 10,
 						[52986] = 27,
 						[2318] = 34,
 						[52182] = 16,
 						[52183] = 13,
-						[58257] = 20,
-						[53038] = 2,
+						[56551] = 4,
+						[52180] = 17,
 						[23425] = 2,
 						[20824] = 1,
-						[52180] = 17,
-						[56551] = 4,
-						[52291] = 5,
+						[53038] = 2,
+						[58257] = 20,
+						[2934] = 58,
 					},
 					["guild"] = "Abesse Ignis",
 					["bank"] = {
@@ -54,23 +54,6 @@ TradeSkillMaster_GatheringDB = {
 						[42749] = 2,
 					},
 					["guild"] = "Aesir",
-					["bank"] = {
-					},
-				},
-				["Argwynn"] = {
-					["bags"] = {
-						[5956] = 1,
-						[52327] = 18,
-						[52186] = 1,
-						[58269] = 20,
-						[58263] = 1,
-						[53051] = 44,
-						[2901] = 1,
-						[58257] = 6,
-						[52325] = 6,
-						[52183] = 1,
-					},
-					["guild"] = "Abesse Ignis",
 					["bank"] = {
 					},
 				},
@@ -100,6 +83,23 @@ TradeSkillMaster_GatheringDB = {
 					["bank"] = {
 					},
 				},
+				["Argwynn"] = {
+					["bags"] = {
+						[5956] = 1,
+						[52327] = 18,
+						[52186] = 1,
+						[58269] = 20,
+						[58263] = 1,
+						[53051] = 44,
+						[2901] = 1,
+						[58257] = 6,
+						[52325] = 6,
+						[52183] = 1,
+					},
+					["guild"] = "Abesse Ignis",
+					["bank"] = {
+					},
+				},
 				["Zulrea"] = {
 					["bags"] = {
 						[18299] = 1,
@@ -116,11 +116,11 @@ TradeSkillMaster_GatheringDB = {
 						[52306] = 3,
 						[52308] = 13,
 						[6260] = 8,
-						[52309] = 1,
-						[8343] = 6,
-						[1710] = 2,
-						[14341] = 2,
 						[11176] = 83,
+						[8343] = 6,
+						[14341] = 2,
+						[1710] = 2,
+						[52309] = 1,
 					},
 					["guild"] = "Aesir",
 					["bank"] = {
@@ -133,17 +133,17 @@ TradeSkillMaster_GatheringDB = {
 					},
 					["characters"] = {
 						["Tikytaka"] = true,
+						["CURRENT_PLAYER"] = true,
 						["Argwynn"] = true,
 						["Kraisus"] = true,
-						["CURRENT_PLAYER"] = true,
 					},
 				},
 				["Aesir"] = {
 					["items"] = {
 					},
 					["characters"] = {
-						["CURRENT_PLAYER"] = true,
 						["Glasin"] = true,
+						["CURRENT_PLAYER"] = true,
 						["Zulrea"] = true,
 					},
 				},

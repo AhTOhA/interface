@@ -1,5 +1,21 @@
 
 Postal3DB = {
+	["profileKeys"] = {
+		["Glasin - Tarren Mill"] = "Glasin - Tarren Mill",
+		["Zulrea - Tarren Mill"] = "Zulrea - Tarren Mill",
+		["Eiratos - Tarren Mill"] = "Eiratos - Tarren Mill",
+		["Tikytaka - Outland"] = "Tikytaka - Outland",
+		["Daladin - Outland"] = "Daladin - Outland",
+		["Fallens - Tarren Mill"] = "Fallens - Tarren Mill",
+		["Demlock - Tarren Mill"] = "Demlock - Tarren Mill",
+		["Tikytaka - Tarren Mill"] = "Tikytaka - Tarren Mill",
+		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",
+		["Mylen - Tarren Mill"] = "Mylen - Tarren Mill",
+		["Kraisus - Tarren Mill"] = "Kraisus - Tarren Mill",
+		["Belfrogue - Outland"] = "Belfrogue - Outland",
+		["Myyh - Tarren Mill"] = "Myyh - Tarren Mill",
+		["Gobifrost - Tarren Mill"] = "Gobifrost - Tarren Mill",
+	},
 	["global"] = {
 		["BlackBook"] = {
 			["alts"] = {
@@ -19,22 +35,6 @@ Postal3DB = {
 				"Zulrea|Tarren Mill|Horde|41|PRIEST", -- [14]
 			},
 		},
-	},
-	["profileKeys"] = {
-		["Glasin - Tarren Mill"] = "Glasin - Tarren Mill",
-		["Zulrea - Tarren Mill"] = "Zulrea - Tarren Mill",
-		["Gobifrost - Tarren Mill"] = "Gobifrost - Tarren Mill",
-		["Tikytaka - Outland"] = "Tikytaka - Outland",
-		["Daladin - Outland"] = "Daladin - Outland",
-		["Fallens - Tarren Mill"] = "Fallens - Tarren Mill",
-		["Demlock - Tarren Mill"] = "Demlock - Tarren Mill",
-		["Belfrogue - Outland"] = "Belfrogue - Outland",
-		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",
-		["Mylen - Tarren Mill"] = "Mylen - Tarren Mill",
-		["Kraisus - Tarren Mill"] = "Kraisus - Tarren Mill",
-		["Tikytaka - Tarren Mill"] = "Tikytaka - Tarren Mill",
-		["Myyh - Tarren Mill"] = "Myyh - Tarren Mill",
-		["Eiratos - Tarren Mill"] = "Eiratos - Tarren Mill",
 	},
 	["profiles"] = {
 		["Glasin - Tarren Mill"] = {
@@ -59,7 +59,7 @@ Postal3DB = {
 				},
 			},
 		},
-		["Gobifrost - Tarren Mill"] = {
+		["Eiratos - Tarren Mill"] = {
 		},
 		["Tikytaka - Outland"] = {
 			["BlackBook"] = {
@@ -84,7 +84,19 @@ Postal3DB = {
 				},
 			},
 		},
-		["Belfrogue - Outland"] = {
+		["Tikytaka - Tarren Mill"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Kraisus", -- [1]
+					"Argwynn", -- [2]
+					"Glasin", -- [3]
+					"Zulrea", -- [4]
+					"Côntrôl", -- [5]
+					"Mielikki", -- [6]
+					"Nápalm", -- [7]
+					"Mylen", -- [8]
+				},
+			},
 		},
 		["Argwynn - Tarren Mill"] = {
 			["BlackBook"] = {
@@ -117,19 +129,7 @@ Postal3DB = {
 				},
 			},
 		},
-		["Tikytaka - Tarren Mill"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Kraisus", -- [1]
-					"Argwynn", -- [2]
-					"Glasin", -- [3]
-					"Zulrea", -- [4]
-					"Côntrôl", -- [5]
-					"Mielikki", -- [6]
-					"Nápalm", -- [7]
-					"Mylen", -- [8]
-				},
-			},
+		["Belfrogue - Outland"] = {
 		},
 		["Myyh - Tarren Mill"] = {
 			["BlackBook"] = {
@@ -140,7 +140,7 @@ Postal3DB = {
 				},
 			},
 		},
-		["Eiratos - Tarren Mill"] = {
+		["Gobifrost - Tarren Mill"] = {
 		},
 	},
 }

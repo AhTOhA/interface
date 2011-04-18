@@ -998,5 +998,7 @@ HEALBOT_RESTRICTTARGETBAR_ON            = "Restriction barre de cible Active"
 HEALBOT_RESTRICTTARGETBAR_OFF           = "Restriction barre de cible Inactive"
 HEALBOT_PRELOADOPTIONS_ON               = "Pr\195\169chargement des options actif"
 HEALBOT_PRELOADOPTIONS_OFF              = "Pr\195\169chargement des options inactif"
+HEALBOT_OPTIONS_CUSTOMDEBUFF_REVDUR     = "Dur\195\169e invers\195\169e"
+HEALBOT_OPTIONS_DISABLEHEALBOTSOLO      = "seulement en solo"
 
 end

@@ -1,22 +1,14 @@
 
 TradeSkillMaster_ShoppingDB = {
-	["profileKeys"] = {
-		["Glasin - Tarren Mill"] = "Glasin - Tarren Mill",
-		["Zulrea - Tarren Mill"] = "Zulrea - Tarren Mill",
-		["Kraisus - Tarren Mill"] = "Kraisus - Tarren Mill",
-		["Myyh - Tarren Mill"] = "Myyh - Tarren Mill",
-		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",
-		["Tikytaka - Tarren Mill"] = "Tikytaka - Tarren Mill",
-	},
 	["global"] = {
 		["treeGroupStatus"] = {
 			["groups"] = {
 				true, -- [1]
 			},
 			["scrollvalue"] = 0,
+			["fullwidth"] = 745.9998595633066,
 			["selected"] = 1,
 			["treesizable"] = true,
-			["fullwidth"] = 745.9998595633066,
 		},
 		["itemNames"] = {
 			[4304] = "Thick Leather",
@@ -30,23 +22,31 @@ TradeSkillMaster_ShoppingDB = {
 			[52078] = "Chaos Orb",
 			[52327] = "Volatile Earth",
 			[52328] = "Volatile Air",
-			[52326] = "Volatile Water",
+			[23446] = "Adamantite Bar",
 			[62778] = "Toughened Flesh",
-			[52325] = "Volatile Fire",
+			[53039] = "Hardened Elementium Bar",
 			[7069] = "Elemental Air",
 			[7910] = "Star Ruby",
-			[18567] = "Elemental Flux",
+			[41163] = "Titanium Bar",
 			[67749] = "Electrified Ether",
-			[51950] = "Pyrium Bar",
+			[3859] = "Steel Bar",
 			[54849] = "Obsidium Bar",
 			[2838] = "Heavy Stone",
 			[62654] = "Lavascale Fillet",
 			[52186] = "Elementium Bar",
-			[3859] = "Steel Bar",
-			[41163] = "Titanium Bar",
-			[53039] = "Hardened Elementium Bar",
-			[23446] = "Adamantite Bar",
+			[51950] = "Pyrium Bar",
+			[18567] = "Elemental Flux",
+			[52325] = "Volatile Fire",
+			[52326] = "Volatile Water",
 		},
+	},
+	["profileKeys"] = {
+		["Glasin - Tarren Mill"] = "Glasin - Tarren Mill",
+		["Zulrea - Tarren Mill"] = "Zulrea - Tarren Mill",
+		["Kraisus - Tarren Mill"] = "Kraisus - Tarren Mill",
+		["Tikytaka - Tarren Mill"] = "Tikytaka - Tarren Mill",
+		["Myyh - Tarren Mill"] = "Myyh - Tarren Mill",
+		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",
 	},
 	["profiles"] = {
 		["Kraisus - Tarren Mill"] = {

@@ -164,37 +164,11 @@
               </BackgroundInsets>
             </Backdrop>
             <Frames>
-              <CheckButton name="HealBot_Options_ShowMinimapButton" inherits="OptionsCheckButtonTemplate">
+              <CheckButton name="HealBot_Options_HideOptions" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                   <Anchor point="TOPLEFT">
                     <Offset>
-                      <AbsDimension x="40" y="-28" />
-                    </Offset>
-                  </Anchor>
-                </Anchors>
-                <Scripts>
-                  <OnLoad>HealBot_Options_SetText(self,HEALBOT_OPTIONS_SHOWMINIMAPBUTTON)</OnLoad>
-                  <OnClick>HealBot_Options_ShowMinimapButton_OnClick(self)</OnClick>
-                </Scripts>
-              </CheckButton>
-              <CheckButton name="HealBot_Options_EnableLibQuickHealth" inherits="OptionsCheckButtonTemplate">
-                <Anchors>
-                  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowMinimapButton" relativePoint="TOPRIGHT">>
-                    <Offset>
-                      <AbsDimension x="150" y="0" />
-                    </Offset>
-                  </Anchor>
-                </Anchors>
-                <Scripts>
-                  <OnLoad>HealBot_Options_SetText(self,HEALBOT_OPTIONS_ENABLELIBQH)</OnLoad>
-                  <OnClick>HealBot_Options_EnableLibQuickHealth_OnClick(self)</OnClick>
-                </Scripts>
-              </CheckButton>
-              <CheckButton name="HealBot_Options_HideOptions" inherits="OptionsCheckButtonTemplate">
-                <Anchors>
-                  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowMinimapButton" relativePoint="BOTTOMLEFT">
-                    <Offset>
-                      <AbsDimension x="0" y="-25" />
+                      <AbsDimension x="32" y="-25" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -216,11 +190,37 @@
                   <OnClick>HealBot_Options_RightButtonOptions_OnClick(self)</OnClick>
                 </Scripts>
               </CheckButton>
-              <CheckButton name="HealBot_Options_CPUProfiler" inherits="OptionsCheckButtonTemplate">
+              <CheckButton name="HealBot_Options_ShowMinimapButton" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                   <Anchor point="TOPLEFT" relativeTo="HealBot_Options_HideOptions" relativePoint="BOTTOMLEFT">
                     <Offset>
-                      <AbsDimension x="28" y="-32" />
+                      <AbsDimension x="0" y="-20" />
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts>
+                  <OnLoad>HealBot_Options_SetText(self,HEALBOT_OPTIONS_SHOWMINIMAPBUTTON)</OnLoad>
+                  <OnClick>HealBot_Options_ShowMinimapButton_OnClick(self)</OnClick>
+                </Scripts>
+              </CheckButton>
+              <CheckButton name="HealBot_Options_EnableLibQuickHealth" inherits="OptionsCheckButtonTemplate">
+                <Anchors>
+                  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowMinimapButton" relativePoint="TOPRIGHT">
+                    <Offset>
+                      <AbsDimension x="150" y="0" />
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts>
+                  <OnLoad>HealBot_Options_SetText(self,HEALBOT_OPTIONS_ENABLELIBQH)</OnLoad>
+                  <OnClick>HealBot_Options_EnableLibQuickHealth_OnClick(self)</OnClick>
+                </Scripts>
+              </CheckButton>
+              <CheckButton name="HealBot_Options_CPUProfiler" inherits="OptionsCheckButtonTemplate">
+                <Anchors>
+                  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowMinimapButton" relativePoint="BOTTOMLEFT">
+                    <Offset>
+                      <AbsDimension x="28" y="-24" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -236,7 +236,7 @@
                 <Anchors>
                   <Anchor point="TOPLEFT" relativeTo="HealBot_Options_CPUProfiler" relativePoint="BOTTOMLEFT">>
                     <Offset>
-                      <AbsDimension x="-8" y="-38" />
+                      <AbsDimension x="-8" y="-34" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -245,6 +245,32 @@
                   <OnValueChanged>HealBot_Options_RangeCheckFreq_OnValueChanged(self)</OnValueChanged>
                 </Scripts>
               </Slider>
+              <CheckButton name="HealBot_Options_DisableHealBotOpt" inherits="OptionsCheckButtonTemplate">
+                <Anchors>
+                  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_CPUProfiler" relativePoint="BOTTOMLEFT">>
+                    <Offset>
+                      <AbsDimension x="42" y="-70" />
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts>
+                  <OnLoad>HealBot_Options_SetText(self,HEALBOT_OPTIONS_DISABLEHEALBOT)</OnLoad>
+                  <OnClick>HealBot_Options_DisableHealBot_OnClick(self)</OnClick>
+                </Scripts>
+              </CheckButton>
+              <CheckButton name="HealBot_Options_DisableHealBotSolo" inherits="SendMailRadioButtonTemplate">
+                <Anchors>
+                  <Anchor point="LEFT" relativeTo="HealBot_Options_DisableHealBotOpt" relativePoint="RIGHT">>
+                    <Offset>
+                      <AbsDimension x="110" y="0" />
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts>
+                  <OnLoad>HealBot_Options_SetText(self,HEALBOT_OPTIONS_DISABLEHEALBOTSOLO)</OnLoad>
+                  <OnClick>HealBot_Options_DisableHealBotSolo_OnClick(self)</OnClick>
+                </Scripts>
+              </CheckButton>
             </Frames>
           </Frame>
           <Frame name="HealBot_Options_hbCommands" inherits="UIDropDownMenuTemplate" id="1">
@@ -2641,7 +2667,7 @@
                 <Anchors>
                   <Anchor point="TOPLEFT">
                     <Offset>
-                      <AbsDimension x="25" y="-35" />
+                      <AbsDimension x="175" y="-30" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -2649,9 +2675,9 @@
                   <Layer level="OVERLAY">
                     <FontString inherits="GameFontNormal" text="HEALBOT_OPTIONS_SKINDEFAULTFOR">
                       <Anchors>
-                        <Anchor point="TOP">
+                        <Anchor point="RIGHT" relativeTo="HealBot_Options_SkinPartyRaidDefault" relativePoint="LEFT">
                           <Offset>
-                            <AbsDimension x="0" y="14"/>
+                            <AbsDimension x="7" y="4"/>
                           </Offset>
                         </Anchor>
                       </Anchors>
@@ -2662,24 +2688,11 @@
                   <OnLoad>HealBot_Options_SkinDefault_OnLoad(self)</OnLoad>
                 </Scripts>
               </Frame>
-              <CheckButton name="HealBot_Options_DisableHealBot" inherits="OptionsCheckButtonTemplate">
-                <Anchors>
-                  <Anchor point="TOPLEFT">
-                    <Offset>
-                      <AbsDimension x="218" y="-36" />
-                    </Offset>
-                  </Anchor>
-                </Anchors>
-                <Scripts>
-                  <OnLoad>HealBot_Options_SetText(self,HEALBOT_OPTIONS_DISABLEHEALBOT)</OnLoad>
-                  <OnClick>HealBot_Options_DisableHealBot_OnClick(self)</OnClick>
-                </Scripts>
-              </CheckButton>
               <CheckButton name="HealBot_Options_AutoShow" inherits="OptionsCheckButtonTemplate">
                 <Anchors>
                   <Anchor point="TOPLEFT">
                     <Offset>
-                      <AbsDimension x="40" y="-70" />
+                      <AbsDimension x="40" y="-72" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -6800,7 +6813,7 @@
                 <Anchors>
                   <Anchor point="TOPLEFT" relativeTo="HealBot_Options_CustomCureFrame" relativePoint="TOPLEFT">
                     <Offset>
-                      <AbsDimension x="55" y="-22" />
+                      <AbsDimension x="55" y="-20" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -6825,7 +6838,7 @@
                 <Anchors>
                   <Anchor point="TOPLEFT" relativeTo="HealBot_Options_CustomCureFrame" relativePoint="TOPLEFT">
                     <Offset>
-                      <AbsDimension x="90" y="-75" />
+                      <AbsDimension x="90" y="-62" />
                     </Offset>
                   </Anchor>
                 </Anchors>
@@ -6986,6 +6999,19 @@
                   <OnClick>HealBot_Options_ResetCDebuff()</OnClick>
                 </Scripts>
               </Button>
+              <CheckButton name="HealBot_Options_CDCReverseDurC" inherits="SendMailRadioButtonTemplate">
+                <Anchors>
+                  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_CDCPriorityC" relativePoint="BOTTOMLEFT">
+                    <Offset>
+                      <AbsDimension x="142" y="-2"/>
+                    </Offset>
+                  </Anchor>
+                </Anchors>
+                <Scripts>
+                  <OnLoad>HealBot_Options_SetText(self,HEALBOT_OPTIONS_CUSTOMDEBUFF_REVDUR)</OnLoad>
+                  <OnClick>HealBot_Options_RevDurCDebuffBtn_OnClick(self)</OnClick>
+                </Scripts>
+              </CheckButton>
             </Frames>
           </Frame>
           <Frame name="HealBot_Options_WarningCureFrame">

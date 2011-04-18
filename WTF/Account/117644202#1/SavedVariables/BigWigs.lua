@@ -11,19 +11,19 @@ BigWigs3DB = {
 		},
 		["BigWigs_Bosses_Chimaeron"] = {
 		},
-		["BigWigs_Bosses_Valiona and Theralion"] = {
+		["BigWigs_Bosses_Nefarian"] = {
 		},
-		["BigWigs_Bosses_Al'Akir"] = {
+		["BigWigs_Bosses_Maloriak"] = {
 		},
 		["BigWigs_Plugins_Colors"] = {
 		},
 		["BigWigs_Plugins_Raid Icons"] = {
 		},
-		["BigWigs_Plugins_Messages"] = {
+		["BigWigs_Plugins_Proximity"] = {
 			["profiles"] = {
 				["Default"] = {
-					["fontSize"] = 20.00000028115454,
 					["font"] = "Friz Quadrata TT",
+					["fontSize"] = 20.00000028115454,
 				},
 			},
 		},
@@ -40,25 +40,25 @@ BigWigs3DB = {
 		},
 		["BigWigs_Bosses_Omnotron Defense System"] = {
 		},
-		["BigWigs_Plugins_Super Emphasize"] = {
-		},
-		["BigWigs_Bosses_Conclave of Wind"] = {
+		["BigWigs_Bosses_Atramedes"] = {
 		},
 		["BigWigs_Bosses_Ascendant Council"] = {
 		},
-		["BigWigs_Bosses_Atramedes"] = {
+		["BigWigs_Bosses_Conclave of Wind"] = {
 		},
-		["BigWigs_Plugins_Proximity"] = {
+		["BigWigs_Plugins_Super Emphasize"] = {
+		},
+		["BigWigs_Plugins_Messages"] = {
 			["profiles"] = {
 				["Default"] = {
-					["fontSize"] = 20.00000028115454,
 					["font"] = "Friz Quadrata TT",
+					["fontSize"] = 20.00000028115454,
 				},
 			},
 		},
-		["BigWigs_Bosses_Maloriak"] = {
+		["BigWigs_Bosses_Al'Akir"] = {
 		},
-		["BigWigs_Bosses_Nefarian"] = {
+		["BigWigs_Bosses_Valiona and Theralion"] = {
 		},
 		["BigWigs_Plugins_Tip of the Raid"] = {
 		},
@@ -66,9 +66,9 @@ BigWigs3DB = {
 	["profileKeys"] = {
 		["Glasin - Tarren Mill"] = "Default",
 		["Kraisus - Tarren Mill"] = "Default",
+		["Argwynn - Tarren Mill"] = "Default",
 		["Tikytaka - Tarren Mill"] = "Default",
 		["Myyh - Tarren Mill"] = "Default",
-		["Argwynn - Tarren Mill"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

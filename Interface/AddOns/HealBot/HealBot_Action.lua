@@ -1523,7 +1523,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                 icon1:ClearAllPoints();
                 icon1:SetPoint("BOTTOMLEFT",b,"BOTTOMLEFT",1,0);
                 icon1t:ClearAllPoints();
-                icon1t:SetPoint("BOTTOMLEFT",icon1,"BOTTOMLEFT",-2,0);
+                icon1t:SetPoint("BOTTOMLEFT",icon1,"BOTTOMLEFT",-1,0);
                 icon1ta:ClearAllPoints();
                 icon1ta:SetPoint("TOPRIGHT",icon1,"TOPRIGHT",5,0);
                 for x=2,14 do
@@ -1541,7 +1541,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                         icon:SetPoint("BOTTOMLEFT",bar:GetName().."Icon"..x-1,"BOTTOMRIGHT",1,0);
                     end
                     icont:ClearAllPoints();
-                    icont:SetPoint("BOTTOMLEFT",icon,"BOTTOMLEFT",-2,0);
+                    icont:SetPoint("BOTTOMLEFT",icon,"BOTTOMLEFT",-1,0);
                     iconta:ClearAllPoints();
                     iconta:SetPoint("TOPRIGHT",icon,"TOPRIGHT",5,0);
                 end
@@ -1554,7 +1554,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                     icon16:SetPoint("BOTTOMRIGHT",icon15,"BOTTOMLEFT",-1,0);
                 end
                 icon15t:ClearAllPoints();
-                icon15t:SetPoint("BOTTOMLEFT",icon15,"BOTTOMLEFT",-2,0); 
+                icon15t:SetPoint("BOTTOMLEFT",icon15,"BOTTOMLEFT",-1,0); 
                 icon15ta:ClearAllPoints();
                 icon15ta:SetPoint("TOPRIGHT",icon15,"TOPRIGHT",5,0);
             else
@@ -1563,7 +1563,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                 icon1t:ClearAllPoints();
                 icon1t:SetPoint("BOTTOMRIGHT",icon1,"BOTTOMRIGHT",5,0);
                 icon1ta:ClearAllPoints();
-                icon1ta:SetPoint("TOPLEFT",icon1,"TOPLEFT",-2,0);
+                icon1ta:SetPoint("TOPLEFT",icon1,"TOPLEFT",-1,0);
                 for x=2,14 do
                     icon=_G[bar:GetName().."Icon"..x];
                     icont=_G[bar:GetName().."Count"..x];
@@ -1581,7 +1581,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                     icont:ClearAllPoints();
                     icont:SetPoint("BOTTOMRIGHT",icon,"BOTTOMRIGHT",5,0);
                     iconta:ClearAllPoints();
-                    iconta:SetPoint("TOPLEFT",icon,"TOPLEFT",-2,0);
+                    iconta:SetPoint("TOPLEFT",icon,"TOPLEFT",-1,0);
                 end
                 icon15:ClearAllPoints();
                 icon15:SetPoint("BOTTOMLEFT",b,"BOTTOMLEFT",1,0);
@@ -1592,9 +1592,9 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                     icon16:SetPoint("BOTTOMLEFT",icon15,"BOTTOMRIGHT",1,0);
                 end
                 icon15t:ClearAllPoints();
-                icon15t:SetPoint("BOTTOMRIGHT",icon15,"BOTTOMRIGHT",-2,0); 
+                icon15t:SetPoint("BOTTOMRIGHT",icon15,"BOTTOMRIGHT",5,0); 
                 icon15ta:ClearAllPoints();
-                icon15ta:SetPoint("TOPLEFT",icon15,"TOPLEFT",4,0);
+                icon15ta:SetPoint("TOPLEFT",icon15,"TOPLEFT",-1,0);
             end
         elseif Healbot_Config_Skins.HoTonBar[Healbot_Config_Skins.Current_Skin]==2 then
             HealBot_Panel_SetMultiColHoToffset((iScale+1)*5)
@@ -1605,7 +1605,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                 icon1t:ClearAllPoints();
                 icon1t:SetPoint("BOTTOMRIGHT",icon1,"BOTTOMRIGHT",5,0);
                 icon1ta:ClearAllPoints();
-                icon1ta:SetPoint("TOPLEFT",icon1,"TOPLEFT",-2,0);
+                icon1ta:SetPoint("TOPLEFT",icon1,"TOPLEFT",-1,0);
                 for x=2,14 do
                     icon=_G[bar:GetName().."Icon"..x];
                     icont=_G[bar:GetName().."Count"..x];
@@ -1623,7 +1623,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                     icont:ClearAllPoints();
                     icont:SetPoint("BOTTOMRIGHT",icon,"BOTTOMRIGHT",5,0);
                     iconta:ClearAllPoints();
-                    iconta:SetPoint("TOPLEFT",icon,"TOPLEFT",-2,0);
+                    iconta:SetPoint("TOPLEFT",icon,"TOPLEFT",-1,0);
                 end
                 icon15:ClearAllPoints();
                 icon15:SetPoint("BOTTOMLEFT",b,"BOTTOMRIGHT",1,0);
@@ -1634,14 +1634,14 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                     icon16:SetPoint("BOTTOMLEFT",icon15,"BOTTOMRIGHT",1,0);
                 end
                 icon15t:ClearAllPoints();
-                icon15t:SetPoint("BOTTOMRIGHT",icon15,"BOTTOMRIGHT",-2,0); 
+                icon15t:SetPoint("BOTTOMRIGHT",icon15,"BOTTOMRIGHT",5,0); 
                 icon15ta:ClearAllPoints();
-                icon15ta:SetPoint("TOPLEFT",icon15,"TOPLEFT",5,0);
+                icon15ta:SetPoint("TOPLEFT",icon15,"TOPLEFT",-1,0);
             else
                 icon1:ClearAllPoints();
                 icon1:SetPoint("BOTTOMLEFT",b,"BOTTOMRIGHT",2,0);
                 icon1t:ClearAllPoints();
-                icon1t:SetPoint("BOTTOMLEFT",icon1,"BOTTOMLEFT",-2,0);
+                icon1t:SetPoint("BOTTOMLEFT",icon1,"BOTTOMLEFT",-1,0);
                 icon1ta:ClearAllPoints();
                 icon1ta:SetPoint("TOPRIGHT",icon1,"TOPRIGHT",5,0);
                 for x=2,14 do
@@ -1659,7 +1659,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                         icon:SetPoint("BOTTOMLEFT",bar:GetName().."Icon"..x-1,"BOTTOMRIGHT",1,0);
                     end
                     icont:ClearAllPoints();
-                    icont:SetPoint("BOTTOMLEFT",icon,"BOTTOMLEFT",-2,0);
+                    icont:SetPoint("BOTTOMLEFT",icon,"BOTTOMLEFT",-1,0);
                     iconta:ClearAllPoints();
                     iconta:SetPoint("TOPRIGHT",icon,"TOPRIGHT",5,0);
                 end
@@ -1672,7 +1672,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                     icon16:SetPoint("BOTTOMRIGHT",icon15,"BOTTOMLEFT",-1,0);
                 end
                 icon15t:ClearAllPoints();
-                icon15t:SetPoint("BOTTOMLEFT",icon15,"BOTTOMLEFT",-2,0); 
+                icon15t:SetPoint("BOTTOMLEFT",icon15,"BOTTOMLEFT",-1,0); 
                 icon15ta:ClearAllPoints();
                 icon15ta:SetPoint("TOPRIGHT",icon15,"TOPRIGHT",5,0);
             end
@@ -1687,7 +1687,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                 icon1:ClearAllPoints();
                 icon1:SetPoint("TOPLEFT",b,"BOTTOMLEFT",1,-1);
                 icon1t:ClearAllPoints();
-                icon1t:SetPoint("BOTTOMLEFT",icon1,"BOTTOMLEFT",-2,0);
+                icon1t:SetPoint("BOTTOMLEFT",icon1,"BOTTOMLEFT",-1,0);
                 icon1ta:ClearAllPoints();
                 icon1ta:SetPoint("TOPRIGHT",icon1,"TOPRIGHT",5,0);
                 for x=2,14 do
@@ -1705,7 +1705,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                         icon:SetPoint("BOTTOMLEFT",bar:GetName().."Icon"..x-1,"BOTTOMRIGHT",1,0);
                     end
                     icont:ClearAllPoints();
-                    icont:SetPoint("BOTTOMLEFT",icon,"BOTTOMLEFT",-2,0);
+                    icont:SetPoint("BOTTOMLEFT",icon,"BOTTOMLEFT",-1,0);
                     iconta:ClearAllPoints();
                     iconta:SetPoint("TOPRIGHT",icon,"TOPRIGHT",5,0);
                 end
@@ -1718,7 +1718,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                     icon16:SetPoint("BOTTOMRIGHT",icon15,"BOTTOMLEFT",-1,0);
                 end
                 icon15t:ClearAllPoints();
-                icon15t:SetPoint("BOTTOMLEFT",icon15,"BOTTOMLEFT",-2,0); 
+                icon15t:SetPoint("BOTTOMLEFT",icon15,"BOTTOMLEFT",-1,0); 
                 icon15ta:ClearAllPoints();
                 icon15ta:SetPoint("TOPRIGHT",icon15,"TOPRIGHT",5,0);
             else
@@ -1727,7 +1727,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                 icon1t:ClearAllPoints();
                 icon1t:SetPoint("BOTTOMRIGHT",icon1,"BOTTOMRIGHT",5,0);
                 icon1ta:ClearAllPoints();
-                icon1ta:SetPoint("TOPLEFT",icon1,"TOPLEFT",-2,0);
+                icon1ta:SetPoint("TOPLEFT",icon1,"TOPLEFT",-1,0);
                 for x=2,14 do
                     icon=_G[bar:GetName().."Icon"..x];
                     icont=_G[bar:GetName().."Count"..x];
@@ -1745,7 +1745,7 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                     icont:ClearAllPoints();
                     icont:SetPoint("BOTTOMRIGHT",icon,"BOTTOMRIGHT",5,0);
                     iconta:ClearAllPoints();
-                    iconta:SetPoint("TOPLEFT",icon,"TOPLEFT",-2,0);
+                    iconta:SetPoint("TOPLEFT",icon,"TOPLEFT",-1,0);
                 end
                 icon15:ClearAllPoints();
                 icon15:SetPoint("TOPLEFT",b,"BOTTOMLEFT",1,-1);
@@ -1756,9 +1756,9 @@ local abtSize = {[0]=1,[1]=1,[2]=1,[3]=2,[4]=2,[5]=2,[6]=3,[7]=3,[8]=3,[9]=3,[10
                     icon16:SetPoint("BOTTOMLEFT",icon15,"BOTTOMRIGHT",1,0);
                 end
                 icon15t:ClearAllPoints();
-                icon15t:SetPoint("BOTTOMRIGHT",icon15,"BOTTOMRIGHT",-2,0); 
+                icon15t:SetPoint("BOTTOMRIGHT",icon15,"BOTTOMRIGHT",5,0); 
                 icon15ta:ClearAllPoints();
-                icon15ta:SetPoint("TOPLEFT",icon15,"TOPLEFT",5,0);
+                icon15ta:SetPoint("TOPLEFT",icon15,"TOPLEFT",-1,0);
             end
         end
 
@@ -1933,7 +1933,7 @@ function HealBot_Action_CheckReserved()
 end
 
 function HealBot_Action_ShowPanel()
-    if HealBot_Config.ActionVisible==0 and Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]==0 then
+    if HealBot_Config.ActionVisible==0 and HealBot_Config.DisabledNow==0 then
         HealBot_Config.ActionVisible=1
         ShowUIPanel(HealBot_Action)
     end
@@ -2489,7 +2489,7 @@ end
 
 local uCnt=0
 function HealBot_Action_PartyChanged(HealBot_PreCombat, disableHealBot)
-    if Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]==1 and not disableHealBot then return end
+    if HealBot_Config.DisabledNow==1 and not disableHealBot then return end
     if InCombatLockdown() then 
         HealBot_IsFighting=true
     elseif HealBot_IsFighting then 
@@ -2709,7 +2709,7 @@ function HealBot_Action_Refresh(hbGUID)
     end
     HealBot_Action_RefreshButtons(hbGUID);
     if not HealBot_IsFighting then
-        if HealBot_Config.ActionVisible==0 and Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]==0 then
+        if HealBot_Config.ActionVisible==0 and HealBot_Config.DisabledNow==0 then
             if HealBot_Action_ShouldHealSome(hbGUID) then
                 ShowUIPanel(HealBot_Action)
             end
@@ -2939,7 +2939,7 @@ function HealBot_Action_Set_Timers(override)
     if HealBot_Panel_retTestBars() then
         HB_Action_Timer1 = 0.02
     else
-        if Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]==0 and Healbot_Config_Skins.UseFluidBars[Healbot_Config_Skins.Current_Skin]==1 then
+        if HealBot_Config.DisabledNow==0 and Healbot_Config_Skins.UseFluidBars[Healbot_Config_Skins.Current_Skin]==1 then
             if not override then
                 HB_Action_Timer1 = 0.02
             else
@@ -2949,7 +2949,7 @@ function HealBot_Action_Set_Timers(override)
             HB_Action_Timer1 = 5
         end
     end
-    if Healbot_Config_Skins.DisableHealBot[Healbot_Config_Skins.Current_Skin]==0 and ((Healbot_Config_Skins.ShowAggroBars[Healbot_Config_Skins.Current_Skin]==1 and Healbot_Config_Skins.ShowAggro[Healbot_Config_Skins.Current_Skin]==1) or 
+    if HealBot_Config.DisabledNow==0 and ((Healbot_Config_Skins.ShowAggroBars[Healbot_Config_Skins.Current_Skin]==1 and Healbot_Config_Skins.ShowAggro[Healbot_Config_Skins.Current_Skin]==1) or 
                                              (Healbot_Config_Skins.HighLightActiveBar[Healbot_Config_Skins.Current_Skin]==1 or Healbot_Config_Skins.HighLightTargetBar[Healbot_Config_Skins.Current_Skin]==1)) then
         if not override then
             HB_Action_Timer2 = Healbot_Config_Skins.AggroBarsFreq[Healbot_Config_Skins.Current_Skin]
