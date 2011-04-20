@@ -7,8 +7,8 @@ TradeSkillMaster_ShoppingDB = {
 			},
 			["scrollvalue"] = 0,
 			["fullwidth"] = 745.9998595633066,
-			["selected"] = 1,
 			["treesizable"] = true,
+			["selected"] = 1,
 		},
 		["itemNames"] = {
 			[4304] = "Thick Leather",
@@ -44,9 +44,9 @@ TradeSkillMaster_ShoppingDB = {
 		["Glasin - Tarren Mill"] = "Glasin - Tarren Mill",
 		["Zulrea - Tarren Mill"] = "Zulrea - Tarren Mill",
 		["Kraisus - Tarren Mill"] = "Kraisus - Tarren Mill",
-		["Tikytaka - Tarren Mill"] = "Tikytaka - Tarren Mill",
 		["Myyh - Tarren Mill"] = "Myyh - Tarren Mill",
 		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",
+		["Tikytaka - Tarren Mill"] = "Tikytaka - Tarren Mill",
 	},
 	["profiles"] = {
 		["Kraisus - Tarren Mill"] = {

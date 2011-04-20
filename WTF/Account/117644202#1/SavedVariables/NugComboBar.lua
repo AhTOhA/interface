@@ -5,6 +5,9 @@ NugComboBarDB_Global = {
 	["point"] = "CENTER",
 	["animation"] = false,
 	["scale"] = 1,
+	["anchorpoint"] = "LEFT",
+	["charspec"] = {
+	},
 	["colors"] = {
 		{
 			0.96, -- [1]
@@ -32,7 +35,4 @@ NugComboBarDB_Global = {
 			0.32, -- [3]
 		}, -- [5]
 	},
-	["charspec"] = {
-	},
-	["anchorpoint"] = "LEFT",
 }

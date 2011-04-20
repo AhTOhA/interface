@@ -22,8 +22,10 @@ BigWigs3DB = {
 		["BigWigs_Plugins_Proximity"] = {
 			["profiles"] = {
 				["Default"] = {
-					["font"] = "Friz Quadrata TT",
+					["posx"] = 740.5855490179599,
 					["fontSize"] = 20.00000028115454,
+					["posy"] = 442.5168892967381,
+					["font"] = "Friz Quadrata TT",
 				},
 			},
 		},
@@ -66,9 +68,9 @@ BigWigs3DB = {
 	["profileKeys"] = {
 		["Glasin - Tarren Mill"] = "Default",
 		["Kraisus - Tarren Mill"] = "Default",
-		["Argwynn - Tarren Mill"] = "Default",
 		["Tikytaka - Tarren Mill"] = "Default",
 		["Myyh - Tarren Mill"] = "Default",
+		["Argwynn - Tarren Mill"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

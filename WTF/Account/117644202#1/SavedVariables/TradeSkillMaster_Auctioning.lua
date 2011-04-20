@@ -20,8 +20,8 @@ TradeSkillMaster_AuctioningDB = {
 				["2test"] = true,
 			},
 			["scrollvalue"] = 0,
-			["selected"] = "2~test",
 			["treesizable"] = true,
+			["selected"] = "2~test",
 			["fullwidth"] = 745.9998595633066,
 		},
 		["hideAdvanced"] = true,
@@ -30,9 +30,9 @@ TradeSkillMaster_AuctioningDB = {
 		["Glasin - Tarren Mill"] = "Default",
 		["Zulrea - Tarren Mill"] = "Default",
 		["Kraisus - Tarren Mill"] = "Default",
-		["Tikytaka - Tarren Mill"] = "Default",
 		["Myyh - Tarren Mill"] = "Default",
 		["Argwynn - Tarren Mill"] = "Default",
+		["Tikytaka - Tarren Mill"] = "Default",
 	},
 	["factionrealm"] = {
 		["Horde - Tarren Mill"] = {

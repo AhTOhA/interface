@@ -5,7 +5,7 @@ HealBot_Config = {
 	},
 	["CDCshownHB"] = 1,
 	["DebuffWatch"] = 1,
-	["CurrentSpec"] = 3,
+	["CurrentSpec"] = 2,
 	["IgnoreFastDurDebuffs"] = 1,
 	["HealBotBuffColB"] = {
 		1, -- [1]
@@ -110,8 +110,8 @@ HealBot_Config = {
 		["Ctrl-ShiftLeft"] = "Menu",
 		["Ctrl-ShiftRight2"] = "HBmenu",
 		["ShiftLeft"] = "Unknown",
-		["Ctrl-ShiftRight1"] = "HBmenu",
 		["Ctrl-ShiftLeft3"] = "Menu",
+		["Ctrl-ShiftRight1"] = "HBmenu",
 		["ShiftLeft1"] = "Unknown",
 		["Button43"] = "MainTank",
 		["Button53"] = "MainAssist",
@@ -120,65 +120,9 @@ HealBot_Config = {
 		["Button52"] = "MainAssist",
 	},
 	["ActionVisible"] = 1,
-	["SoundDebuffWarning"] = 0,
 	["Current_Skin"] = "Standard",
-	["ButtonCastMethod"] = 2,
-	["EnabledKeyCombo"] = {
-		["Button42"] = "MainTank",
-		["Alt-ShiftLeft2"] = "Target",
-		["Right3"] = "Slow Fall",
-		["ShiftMiddle3"] = "",
-		["Left"] = "Remove Curse",
-		["Ctrl-ShiftRight"] = "HBmenu",
-		["Button5"] = "MainAssist",
-		["Button51"] = "MainAssist",
-		["Ctrl-ShiftLeft1"] = "Menu",
-		["Alt-ShiftLeft1"] = "Target",
-		["Alt-CtrlLeft3"] = "",
-		["Ctrl-ShiftLeft2"] = "Menu",
-		["Ctrl-ShiftRight2"] = "HBmenu",
-		["AltLeft3"] = "",
-		["Ctrl-ShiftRight1"] = "HBmenu",
-		["Alt-ShiftRight3"] = "Assist",
-		["Alt-ShiftLeft3"] = "Target",
-		["Left1"] = "Remove Curse",
-		["Alt-ShiftLeft"] = "Target",
-		["Button53"] = "MainAssist",
-		["ShiftRight3"] = "",
-		["Alt-ShiftRight1"] = "Assist",
-		["Left3"] = "Remove Curse",
-		["Button4"] = "MainTank",
-		["ShiftLeft2"] = "Unknown",
-		["Ctrl-ShiftRight3"] = "HBmenu",
-		["Ctrl-ShiftLeft3"] = "Menu",
-		["Left2"] = "Remove Curse",
-		["Ctrl-ShiftLeft"] = "Menu",
-		["ShiftLeft3"] = "Unknown",
-		["Ctrl-ShiftMiddle3"] = "",
-		["Alt-ShiftRight"] = "Assist",
-		["Button41"] = "MainTank",
-		["ShiftLeft1"] = "Unknown",
-		["Alt-ShiftMiddle3"] = "",
-		["Middle3"] = "",
-		["Button43"] = "MainTank",
-		["Alt-ShiftRight2"] = "Assist",
-		["ShiftLeft"] = "Unknown",
-		["Button52"] = "MainAssist",
-		["CtrlLeft3"] = "",
-	},
-	["ShortBuffTimer"] = 30,
-	["HealBotBuffColR"] = {
-		1, -- [1]
-		1, -- [2]
-		1, -- [3]
-		1, -- [4]
-		1, -- [5]
-		1, -- [6]
-		1, -- [7]
-		1, -- [8]
-		1, -- [9]
-		1, -- [10]
-	},
+	["ShowDebuffWarning"] = 1,
+	["SoundDebuffWarning"] = 0,
 	["HealBotBuffText"] = {
 		"Arcane Brilliance", -- [1]
 		"None", -- [2]
@@ -221,6 +165,65 @@ HealBot_Config = {
 		["22"] = "None",
 		["23"] = "None",
 	},
+	["ButtonCastMethod"] = 2,
+	["EnabledKeyCombo"] = {
+		["Button42"] = "MainTank",
+		["Alt-ShiftLeft2"] = "Target",
+		["Right3"] = "Slow Fall",
+		["ShiftMiddle3"] = "",
+		["Left"] = "Remove Curse",
+		["Ctrl-ShiftRight"] = "HBmenu",
+		["Button5"] = "MainAssist",
+		["Button51"] = "MainAssist",
+		["Ctrl-ShiftLeft1"] = "Menu",
+		["Alt-ShiftLeft1"] = "Target",
+		["Alt-CtrlLeft3"] = "",
+		["Ctrl-ShiftLeft2"] = "Menu",
+		["Ctrl-ShiftRight2"] = "HBmenu",
+		["AltLeft3"] = "",
+		["Ctrl-ShiftRight1"] = "HBmenu",
+		["Alt-ShiftRight3"] = "Assist",
+		["Alt-ShiftLeft3"] = "Target",
+		["Left1"] = "Remove Curse",
+		["Alt-ShiftLeft"] = "Target",
+		["Button53"] = "MainAssist",
+		["ShiftRight3"] = "",
+		["Alt-ShiftRight1"] = "Assist",
+		["Left3"] = "Remove Curse",
+		["Button4"] = "MainTank",
+		["ShiftLeft2"] = "Unknown",
+		["Ctrl-ShiftRight3"] = "HBmenu",
+		["Ctrl-ShiftLeft3"] = "Menu",
+		["Left2"] = "Remove Curse",
+		["ShiftLeft3"] = "Unknown",
+		["Ctrl-ShiftLeft"] = "Menu",
+		["Ctrl-ShiftMiddle3"] = "",
+		["Alt-ShiftRight"] = "Assist",
+		["Button41"] = "MainTank",
+		["ShiftLeft1"] = "Unknown",
+		["Alt-ShiftMiddle3"] = "",
+		["Middle3"] = "",
+		["Button43"] = "MainTank",
+		["Alt-ShiftRight2"] = "Assist",
+		["ShiftLeft"] = "Unknown",
+		["Button52"] = "MainAssist",
+		["CtrlLeft3"] = "",
+	},
+	["HealBotBuffColR"] = {
+		1, -- [1]
+		1, -- [2]
+		1, -- [3]
+		1, -- [4]
+		1, -- [5]
+		1, -- [6]
+		1, -- [7]
+		1, -- [8]
+		1, -- [9]
+		1, -- [10]
+	},
+	["DisableSolo"] = 0,
+	["DisabledSpellTrinket1"] = {
+	},
 	["HealBotDebuffPriority"] = {
 		["Disease"] = 15,
 		["Custom"] = 10,
@@ -228,11 +231,11 @@ HealBot_Config = {
 		["Magic"] = 13,
 		["Curse"] = 14,
 	},
-	["ShowDebuffWarning"] = 1,
+	["DisabledNow"] = 0,
 	["CrashProt"] = 0,
 	["EnabledSpellTarget"] = {
 	},
-	["IgnoreFastDurDebuffsSecs"] = 3,
+	["IgnoreNonHarmfulDebuffs"] = 1,
 	["CDCMonitor"] = 1,
 	["SoundDebuffPlay"] = "Tribal Bass Drum",
 	["DisableHealBot"] = 0,
@@ -254,19 +257,18 @@ HealBot_Config = {
 	["ShowDebuffIcon"] = 1,
 	["CrashProtMacroName"] = "hbCrashProt",
 	["HealBot_CDCWarnRange_Screen"] = 2,
-	["LastVersionSkinUpdate"] = "4.0.6.3",
+	["LastVersionSkinUpdate"] = "4.0.6.4",
 	["EnableHealthy"] = 1,
 	["BuffWatch"] = 0,
 	["HealBot_CDCWarnRange_Aggro"] = 2,
-	["IgnoreNonHarmfulDebuffs"] = 1,
+	["IgnoreFastDurDebuffsSecs"] = 3,
 	["IgnoreClassDebuffs"] = 1,
 	["LongBuffTimer"] = 120,
 	["BuffWatchInCombat"] = 0,
-	["MacroUse10"] = 0,
 	["HealBot_CDCWarnRange_Bar"] = 3,
-	["HealBot_CDCWarnRange_Sound"] = 3,
-	["EnabledSpellTrinket2"] = {
+	["DisabledSpellTarget"] = {
 	},
+	["HealBot_CDCWarnRange_Sound"] = 3,
 	["SkinDefault"] = {
 		["Ranged"] = 1,
 		["Square"] = 1,
@@ -279,12 +281,12 @@ HealBot_Config = {
 		["Group"] = 1,
 		["Light"] = 1,
 	},
+	["EnabledSpellTrinket2"] = {
+	},
 	["CDCshownAB"] = 0,
-	["DisabledSpellTarget"] = {
-	},
+	["MacroUse10"] = 0,
 	["Version"] = "4.0.6.0",
-	["DisabledSpellTrinket1"] = {
-	},
+	["ShortBuffTimer"] = 30,
 	["DisabledSpellTrinket2"] = {
 	},
 	["CDCBarColour"] = {

@@ -15,7 +15,7 @@ MACRO 16777230 "HM/AS" INV_Misc_QuestionMark
 /petattack
 END
 MACRO 16777233 "Hm/Ss" INV_Misc_QuestionMark
-/castsequence reset=target/combat Hunter's Mark, Serpent Sting
+/castsequence reset=target/combat/20 Serpent Sting, Hunter's Mark
 END
 MACRO 16777226 "KC/BW" INV_Misc_QuestionMark
 /cast Kill Command

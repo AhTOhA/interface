@@ -5,7 +5,7 @@ BGD_Prefs = {
 	["Title"] = "Battleground Defender",
 	["RaidChat"] = "RAID",
 	["preface"] = false,
-	["ShowUI"] = true,
+	["ShowUI"] = false,
 	["version"] = "1.5.5",
 	["RaidChatTemp"] = "RAID",
 }

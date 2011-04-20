@@ -6,55 +6,25 @@ RecountPerCharDB = {
 			["GUID"] = "0x050000000378CC7F",
 			["type"] = "Self",
 			["TimeLast"] = {
-				["TimeDamage"] = 1303088171,
-				["ActiveTime"] = 1303088171,
-				["OVERALL"] = 1303131797,
-				["ManaGain"] = 1303088179,
-				["DamageTaken"] = 1303131797,
-				["Damage"] = 1303088171,
+				["DamageTaken"] = 1303308698,
+				["OVERALL"] = 1303308698,
 			},
-			["LastAttackedBy"] = "Environment",
-			["LastDamageAbility"] = "Fire",
+			["LastAttackedBy"] = "Boubblebeef-Chamber of Aspects",
 			["Owner"] = false,
 			["enClass"] = "PALADIN",
-			["LastDamageTaken"] = 10,
-			["LastFightIn"] = 0,
-			["UnitLockout"] = 1303088171,
-			["Name"] = "Argwynn",
-			["LastActive"] = 1303131797,
+			["LastDamageTaken"] = 588,
+			["LastDamageAbility"] = "Censure (DoT)",
 			["TimeWindows"] = {
-				["TimeDamage"] = {
-					3.5, -- [1]
-				},
-				["ActiveTime"] = {
-					3.5, -- [1]
-				},
-				["ManaGain"] = {
-					3878, -- [1]
-				},
 				["DamageTaken"] = {
-					10, -- [1]
-				},
-				["Damage"] = {
-					2336, -- [1]
+					1764, -- [1]
 				},
 			},
-			["level"] = 85,
+			["Name"] = "Argwynn",
+			["LastActive"] = 1303308698,
 			["Fights"] = {
 				["CurrentFightData"] = {
-					["TimeSpent"] = {
-						["Muddy Crawfish"] = {
-							["Details"] = {
-								["Judgement of Truth"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["DamageTaken"] = 0,
 					["PartialResist"] = {
-						["Melee"] = {
+						["Censure (DoT)"] = {
 							["Details"] = {
 								["No Resist"] = {
 									["max"] = 0,
@@ -64,53 +34,11 @@ RecountPerCharDB = {
 								},
 							},
 							["count"] = 0,
-							["amount"] = 0,
-						},
-						["Fire"] = {
-							["Details"] = {
-								["No Resist"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["ManaGained"] = {
-						["Replenishment"] = {
-							["Details"] = {
-								["Argwynn"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Judgements of the Bold"] = {
-							["Details"] = {
-								["Argwynn"] = {
-									["count"] = 0,
-								},
-							},
 							["amount"] = 0,
 						},
 					},
 					["PartialAbsorb"] = {
-						["Melee"] = {
-							["Details"] = {
-								["No Absorb"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-						["Fire"] = {
+						["Censure (DoT)"] = {
 							["Details"] = {
 								["No Absorb"] = {
 									["max"] = 0,
@@ -123,95 +51,24 @@ RecountPerCharDB = {
 							["amount"] = 0,
 						},
 					},
-					["ActiveTime"] = 0,
-					["ElementTaken"] = {
-						["Fire"] = 0,
-					},
-					["Damage"] = 0,
 					["WhoDamaged"] = {
-						["Environment"] = {
+						["Boubblebeef-Chamber of Aspects"] = {
 							["Details"] = {
-								["Fire"] = {
+								["Censure (DoT)"] = {
 									["count"] = 0,
 								},
 							},
 							["amount"] = 0,
 						},
 					},
-					["ManaGainedFrom"] = {
-						["Argwynn"] = {
-							["Details"] = {
-								["Replenishment"] = {
-									["count"] = 0,
-								},
-								["Judgements of the Bold"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["Attacks"] = {
-						["Judgement of Truth"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 0,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 0,
-						},
-					},
-					["ElementDone"] = {
+					["ElementTaken"] = {
 						["Holy"] = 0,
 					},
-					["DamagedWho"] = {
-						["Muddy Crawfish"] = {
-							["Details"] = {
-								["Judgement of Truth"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["TimeDamage"] = 0,
-					["TimeDamaging"] = {
-						["Muddy Crawfish"] = {
-							["Details"] = {
-								["Judgement of Truth"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ManaGain"] = 0,
+					["DamageTaken"] = 0,
 					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-						["Fire"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 0,
-								},
-							},
-							["amount"] = 0,
-						},
-					},
-					["ElementHitsDone"] = {
 						["Holy"] = {
 							["Details"] = {
-								["Hit"] = {
+								["Tick"] = {
 									["count"] = 0,
 								},
 							},
@@ -220,185 +77,63 @@ RecountPerCharDB = {
 					},
 				},
 				["OverallData"] = {
-					["TimeSpent"] = {
-						["Muddy Crawfish"] = {
-							["Details"] = {
-								["Judgement of Truth"] = {
-									["count"] = 3.5,
-								},
-							},
-							["amount"] = 3.5,
-						},
-					},
-					["DamageTaken"] = 10,
 					["PartialResist"] = {
-						["Melee"] = {
+						["Censure (DoT)"] = {
 							["Details"] = {
 								["No Resist"] = {
 									["max"] = 0,
 									["min"] = 0,
-									["count"] = 1,
+									["count"] = 3,
 									["amount"] = 0,
 								},
 							},
-							["count"] = 1,
+							["count"] = 3,
 							["amount"] = 0,
-						},
-						["Fire"] = {
-							["Details"] = {
-								["No Resist"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-					},
-					["ManaGained"] = {
-						["Replenishment"] = {
-							["Details"] = {
-								["Argwynn"] = {
-									["count"] = 149,
-								},
-							},
-							["amount"] = 149,
-						},
-						["Judgements of the Bold"] = {
-							["Details"] = {
-								["Argwynn"] = {
-									["count"] = 3729,
-								},
-							},
-							["amount"] = 3729,
 						},
 					},
 					["PartialAbsorb"] = {
-						["Melee"] = {
+						["Censure (DoT)"] = {
 							["Details"] = {
 								["No Absorb"] = {
 									["max"] = 0,
 									["min"] = 0,
-									["count"] = 1,
+									["count"] = 3,
 									["amount"] = 0,
 								},
 							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-						["Fire"] = {
-							["Details"] = {
-								["No Absorb"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
+							["count"] = 3,
 							["amount"] = 0,
 						},
 					},
-					["ActiveTime"] = 3.5,
-					["ElementTaken"] = {
-						["Fire"] = 10,
-					},
-					["Damage"] = 2336,
 					["WhoDamaged"] = {
-						["Environment"] = {
+						["Boubblebeef-Chamber of Aspects"] = {
 							["Details"] = {
-								["Fire"] = {
-									["count"] = 10,
+								["Censure (DoT)"] = {
+									["count"] = 1764,
 								},
 							},
-							["amount"] = 10,
+							["amount"] = 1764,
 						},
 					},
-					["ManaGainedFrom"] = {
-						["Argwynn"] = {
-							["Details"] = {
-								["Replenishment"] = {
-									["count"] = 149,
-								},
-								["Judgements of the Bold"] = {
-									["count"] = 3729,
-								},
-							},
-							["amount"] = 3878,
-						},
+					["ElementTaken"] = {
+						["Holy"] = 1764,
 					},
-					["Attacks"] = {
-						["Judgement of Truth"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 2336,
-									["min"] = 2336,
-									["count"] = 1,
-									["amount"] = 2336,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 2336,
-						},
-					},
-					["ElementDone"] = {
-						["Holy"] = 2336,
-					},
-					["DamagedWho"] = {
-						["Muddy Crawfish"] = {
-							["Details"] = {
-								["Judgement of Truth"] = {
-									["count"] = 2336,
-								},
-							},
-							["amount"] = 2336,
-						},
-					},
-					["TimeDamage"] = 3.5,
-					["TimeDamaging"] = {
-						["Muddy Crawfish"] = {
-							["Details"] = {
-								["Judgement of Truth"] = {
-									["count"] = 3.5,
-								},
-							},
-							["amount"] = 3.5,
-						},
-					},
-					["ManaGain"] = 3878,
+					["DamageTaken"] = 1764,
 					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Miss"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-						["Fire"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-					["ElementHitsDone"] = {
 						["Holy"] = {
 							["Details"] = {
-								["Hit"] = {
-									["count"] = 1,
+								["Tick"] = {
+									["count"] = 3,
 								},
 							},
-							["amount"] = 1,
+							["amount"] = 3,
 						},
 					},
 				},
 			},
-			["LastAbility"] = 4191.727,
+			["level"] = 85,
+			["UnitLockout"] = 1303308692,
+			["LastFightIn"] = 0,
 		},
 	},
 	["FightNum"] = 0,

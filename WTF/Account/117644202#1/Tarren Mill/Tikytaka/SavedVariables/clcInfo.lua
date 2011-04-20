@@ -37,7 +37,12 @@ clcInfoCharDB = {
 					["iconPadding"] = 1,
 					["t3Outline"] = true,
 					["barTexture"] = "Aluminium",
-					["t3Center"] = 0,
+					["barBgColor"] = {
+						0.17, -- [1]
+						0.22, -- [2]
+						0.43, -- [3]
+						0.5, -- [4]
+					},
 					["bdBorder"] = "Blizzard Tooltip",
 					["t1Aliasing"] = true,
 					["bdBorderColor"] = {
@@ -103,19 +108,14 @@ clcInfoCharDB = {
 					["iconBdBorder"] = "Blizzard Tooltip",
 					["t1Size"] = 70,
 					["barEdgeSize"] = 6,
-					["t1Outline"] = true,
-					["barBgColor"] = {
-						0.17, -- [1]
-						0.22, -- [2]
-						0.43, -- [3]
-						0.5, -- [4]
-					},
 					["barColor"] = {
 						0.43, -- [1]
 						0.5600000000000001, -- [2]
 						1, -- [3]
 						1, -- [4]
 					},
+					["t3Center"] = 0,
+					["t1Outline"] = true,
 					["iconRight"] = 2,
 					["iconLeft"] = 0,
 					["iconInset"] = 0,
@@ -173,7 +173,12 @@ clcInfoCharDB = {
 					["iconPadding"] = 1,
 					["t3Outline"] = true,
 					["barTexture"] = "Aluminium",
-					["t3Center"] = 0,
+					["barBgColor"] = {
+						0.17, -- [1]
+						0.22, -- [2]
+						0.43, -- [3]
+						0.5, -- [4]
+					},
 					["bdBorder"] = "Blizzard Tooltip",
 					["t1Aliasing"] = true,
 					["bdBorderColor"] = {
@@ -239,19 +244,14 @@ clcInfoCharDB = {
 					["iconBdBorder"] = "Blizzard Tooltip",
 					["t1Size"] = 70,
 					["barEdgeSize"] = 6,
-					["t1Outline"] = true,
-					["barBgColor"] = {
-						0.17, -- [1]
-						0.22, -- [2]
-						0.43, -- [3]
-						0.5, -- [4]
-					},
 					["barColor"] = {
 						0.43, -- [1]
 						0.5600000000000001, -- [2]
 						1, -- [3]
 						1, -- [4]
 					},
+					["t3Center"] = 0,
+					["t1Outline"] = true,
 					["iconRight"] = 2,
 					["iconLeft"] = 0,
 					["iconInset"] = 0,

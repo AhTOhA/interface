@@ -40,8 +40,8 @@ Postal3DB = {
 		["Glasin - Tarren Mill"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Tikytaka", -- [1]
-					"Kraisus", -- [2]
+					"Kraisus", -- [1]
+					"Tikytaka", -- [2]
 					"Zulrea", -- [3]
 					"Soofy", -- [4]
 					"Côntrôl", -- [5]
@@ -88,9 +88,9 @@ Postal3DB = {
 			["BlackBook"] = {
 				["recent"] = {
 					"Kraisus", -- [1]
-					"Argwynn", -- [2]
-					"Glasin", -- [3]
-					"Zulrea", -- [4]
+					"Zulrea", -- [2]
+					"Argwynn", -- [3]
+					"Glasin", -- [4]
 					"Côntrôl", -- [5]
 					"Mielikki", -- [6]
 					"Nápalm", -- [7]
@@ -102,8 +102,8 @@ Postal3DB = {
 			["BlackBook"] = {
 				["recent"] = {
 					"Tikytaka", -- [1]
-					"Glasin", -- [2]
-					"Kraisus", -- [3]
+					"Kraisus", -- [2]
+					"Glasin", -- [3]
 					"Mylen", -- [4]
 					"Fallens", -- [5]
 					"Zulrea", -- [6]

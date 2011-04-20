@@ -4,13 +4,13 @@ NxCData = {
 	["Taxi"] = {
 		["Sen'jin Village, Durotar"] = true,
 		["Razor Hill, Durotar"] = true,
-		["The Mor'Shan Ramparts, Ashenvale"] = true,
+		["Valormok, Azshara"] = true,
 		["Nozzlepot's Outpost, Northern Barrens"] = true,
 		["Sun Rock Retreat, Stonetalon Mountains"] = true,
-		["Crossroads, Northern Barrens"] = true,
-		["Krom'gar Fortress, Stonetalon Mountains"] = true,
 		["Orgrimmar, Durotar"] = true,
+		["Krom'gar Fortress, Stonetalon Mountains"] = true,
+		["Crossroads, Northern Barrens"] = true,
 		["Silverwind Refuge, Ashenvale"] = true,
-		["Valormok, Azshara"] = true,
+		["The Mor'Shan Ramparts, Ashenvale"] = true,
 	},
 }
