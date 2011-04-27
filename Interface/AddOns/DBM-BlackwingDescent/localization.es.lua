@@ -13,23 +13,21 @@ L:SetGeneralLocalization({
 
 L:SetWarningLocalization({
 	SpecWarnInferno	= "Ensamblaje osario llameante pronto (~4s)",
-	WarnPhase2Soon	= "Fase 2 pronto"
 })
 
 L:SetTimerLocalization({
+})
+
+L:SetOptionLocalization({
+	SpecWarnInferno	= "Mostrar pre-aviso especial para $spell:92190 (~4s)",
+	RangeFrame		= "Mostrar distancia en Fase 2 (5 yardas)"
+
 })
 
 L:SetMiscLocalization({
 	Slump			= "¡%s cae hacia delante y deja expuestas sus tenazas!",
 	HeadExposed		= "¡%s acaba empalado en el pincho y deja expuesta la cabeza!",
 	YellPhase2		= "Inconceivable! You may actually defeat my lava worm! Perhaps I can help... tip the scales."--translate
-})
-
-L:SetOptionLocalization({
-	SpecWarnInferno	= "Mostrar pre-aviso especial para $spell:92190 (~4s)",
-	WarnPhase2Soon	= "Mostrar pre-aviso para Fase 2",
-	RangeFrame		= "Mostrar distancia en Fase 2 (5 yardas)"
-
 })
 
 -------------------------------
@@ -42,21 +40,28 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
+	SpecWarnActivated			= "Cambia el objetivo a %s!",
+	specWarnGenerator			= "¡Generador de poder! ¡Mueve a %s!"
 })
 
 L:SetTimerLocalization({
 	timerArcaneBlowbackCast		= "Retorno Arcano",
-	timerShadowConductorCast	= "Conductor de las Sombras"
+	timerShadowConductorCast	= "Conductor de las Sombras",
+	timerNefAblity				= "CD de Bufo de Habilidad",
+	timerArcaneLockout			= "Aniquilador Silenciado"
 })
 
 L:SetOptionLocalization({
 	timerShadowConductorCast	= "Mostrar tiempo para lanzamiento de $spell:92053",
 	timerArcaneBlowbackCast	= "Mostrar tiempo para lanzamiento de $spell:91879",
-	YellBombTarget			= "Gritar cuando tengas $spell:80094",
+	timerArcaneLockout			= "Mostrar tiempo de silenciamiento de hechizo de $spell:91542",
+	timerNefAblity				= "Mostrar tiempo de CoolDown de las habilidades de bufos en heroico",
+	SpecWarnActivated			= "Mostrar aviso especial cuando se activa un nuevo boss",
+	specWarnGenerator			= "Mostrar aviso especial cuando un boss gana $spell:91557",
 	AcquiringTargetIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79501),
 	ConductorIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79888),
-	BombTargetIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(80094),
-	ShadowConductorIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92053)
+	ShadowConductorIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92053),
+	SetIconOnActivated			= "Poner un icono en el último boss activado"
 })
 
 L:SetMiscLocalization({
@@ -64,7 +69,7 @@ L:SetMiscLocalization({
 	Electron	= "Electron",
 	Toxitron	= "Toxitron",
 	Arcanotron	= "Arcanotron",
-	SayBomb		= "¡Bomba de veneno en mi!"
+	YellTargetLock		= "¡Sombras atrapantes! ¡Apartaos de mi!"
 })
 
 ----------------
@@ -85,6 +90,17 @@ L:SetTimerLocalization({
 	TimerPhase		= "Siguiente fase"
 })
 
+L:SetOptionLocalization({
+	WarnPhase		= "Mostrar aviso de la fase que viene",
+	WarnRemainingAdds	= "Mostrar un aviso con las aberraciones restantes",
+	TimerPhase		= "Mostrar tiempo para la siguiente fase",	
+	RangeFrame		= "Mostrar distancia (6 yardas) durante la fase azul",
+	SetTextures			= "Desactivar las texturas proyectadas automáticamente en fase oscura\n(se reactivan al cambiar de fase)",
+	FlashFreezeIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92979),
+	BitingChillIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77760),
+	ConsumingFlamesIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77786)
+})
+
 L:SetMiscLocalization({
 	YellRed			= "rojo|r a la caldera!",
 	YellBlue		= "azul|r a la caldera!",
@@ -96,17 +112,6 @@ L:SetMiscLocalization({
 	Dark			= "Oscuro"
 })
 
-L:SetOptionLocalization({
-	WarnPhase		= "Mostrar aviso de la fase que viene",
-	WarnRemainingAdds	= "Mostrar un aviso con las aberraciones restantes",
-	TimerPhase		= "Mostrar tiempo para la siguiente fase",	
-	RangeFrame		= "Mostrar distancia (6 yardas) durante la fase azul",
-	FlashFreezeIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92979),
-	BitingChillIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77760),
-	ConsumingFlamesIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77786)
-})
-
-
 -----------------
 --  Chimaeron  --
 -----------------
@@ -117,23 +122,19 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
-	WarnPhase2Soon	= "Fase 2 pronto",
-	WarnBreak	= "%s en >%s< (%d)"
 })
 
 L:SetTimerLocalization({
 })
 
-L:SetMiscLocalization({
-	HealthInfo	= "Información de vida"
-})
-
 L:SetOptionLocalization({
-	WarnPhase2Soon	= "Mostrar un preaviso para la fase 2",
 	RangeFrame		= "Mostrar distancia (6 yardas)",
-	WarnBreak	= DBM_CORE_AUTO_ANNOUNCE_OPTIONS.spell:format(82881, GetSpellInfo(82881) or "unknown"),
 	SetIconOnSlime	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(82935),
 	InfoFrame	= "Mostrar información sobre la vida (<10k vida)"
+})
+
+L:SetMiscLocalization({
+	HealthInfo	= "Información de vida"
 })
 
 -----------------
@@ -167,7 +168,6 @@ L:SetOptionLocalization({
 	TimerAirphase		= "Mostrar tiempo para siguiente Fase aerea",
 	TimerGroundphase	= "Mostrar tiempo para siguiente Fase en tierra",
 	InfoFrame			= "Mostrar información de los niveles de sonido",
-	YellOnPestered			= "Gritar cuando tengas $spell:92685",
 	TrackingIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(78092)
 })
 
@@ -185,17 +185,19 @@ L:SetMiscLocalization({
 L = DBM:GetModLocalization("Nefarian-BD")
 
 L:SetGeneralLocalization({
-	name = "Nefarian"
+	name = "El Final de Nefarian"
 })
 
 L:SetWarningLocalization({
 	OnyTailSwipe		= "Latigazo de cola (Onyxia)",
 	NefTailSwipe		= "Latigazo de cola (Nefarian)",
 	OnyBreath			= "Aliento (Onyxia)",
-	NefBreath			= "Aliento (Nefarian)"
+	NefBreath			= "Aliento (Nefarian)",
+	specWarnShadowblazeSoon	= "Llamarada de las Sombras pronto (~5s)"
 })
 
 L:SetTimerLocalization({
+	timerNefLanding		= "Nefarian aterriza",
 	OnySwipeTimer		= "Latigazo de cola CD (Ony)",
 	NefSwipeTimer		= "Latigazo de cola CD (Nef)",
 	OnyBreathTimer		= "Aliento CD (Ony)",
@@ -207,19 +209,45 @@ L:SetOptionLocalization({
 	NefTailSwipe		= "Mostrar aviso para el $spell:77827 de Nefarian",
 	OnyBreath			= "Mostrar aviso para el $spell:94124 de Onyxia",
 	NefBreath			= "Mostrar aviso para el $spell:94124 de Nefarian",
+	specWarnShadowblazeSoon	= "Mostrar pre-aviso especial para $spell:94085 (~5s)",
+	timerNefLanding		= "Mostrar tiempo para que Nefarian aterrice",
 	OnySwipeTimer		= "Mostrar tiempo de cooldown de $spell:77827 de Onyxia",
 	NefSwipeTimer		= "Mostrar tiempo de cooldown de $spell:77827 de Nefarian",
 	OnyBreathTimer		= "Mostrar tiempo de cooldown de $spell:94124 de Onyxia",
 	NefBreathTimer		= "Mostrar tiempo de cooldown de $spell:94124 de Nefarian",
-	YellOnCinder		= "Gritar cuando tengas $spell:79339",
-	RangeFrame			= "Mostrar distancia (10 yardas) cuando tengas $spell:79339",
-	SetIconOnCinder		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79339)
+	InfoFrame			= "Mostrar información sobre la carga eléctrica de Onyxia",
+	SetWater			= "Desactivar la colisión con el agua automáticamente al pullear\n(se reactiva al abandonar el combate)",
+	TankArrow			= "Mostrar flecha para el kiteador de Guerrero Hueso animado\n(diseñado para estrategia de kiteo)",--npc 41918
+	SetIconOnCinder		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79339),
+	RangeFrame			= "Mostrar distancia (10 yardas) cuando tengas $spell:79339"
 })
 
 L:SetMiscLocalization({
 	NefAoe			= "¡El aire crepita cargado de electricidad!",
-	YellPhase2		= "¡Os maldigo, mortales! ¡Ese cruel menosprecio por las posesiones de uno debe ser castigado con fuerza extrema!",--translate
-	YellPhase3		= "He intentado ser un buen anfitrión, pero ¡no morís! Es hora de dejarnos de tonterías y simplemente... ¡MATAROS A TODOS!",--translate
-	YellCinder		= "¡Cenizas explosivas en mi!",
-	Onyxia				= "Onyxia"
+	YellPhase2		= "¡Os maldigo, mortales! ¡Ese cruel menosprecio por las posesiones de uno debe ser castigado con fuerza extrema!",
+	YellPhase3		= "He intentado ser un buen anfitrión, pero ¡no morís! Es hora de dejarnos de tonterías y simplemente... ¡MATAROS A TODOS!",--translate?
+	Nefarian		= "Nefarian",
+	Onyxia			= "Onyxia",
+	Charge			= "Carga Eléctrica"
+})
+
+--------------
+--  Blackwing Descent Trash  --
+--------------
+L = DBM:GetModLocalization("BWDTrash")
+
+L:SetGeneralLocalization({
+	name = "Pulls de Descenso de Alanegra"
+})
+
+L:SetWarningLocalization({
+})
+
+L:SetTimerLocalization({
+})
+
+L:SetOptionLocalization({
+})
+
+L:SetMiscLocalization({
 })

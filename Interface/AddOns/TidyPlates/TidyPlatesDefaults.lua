@@ -34,7 +34,7 @@ theme.threatcolor
 
 theme.hitbox = {
 	width = 149,
-	height = 37,
+	height = 40,
 }
 
 theme.highlight = {
@@ -220,7 +220,7 @@ theme.frame = {
 	width = 101,
 	height = 45,
 	x = 0,
-	y = -5,
+	y = 0,
 	anchor = "CENTER",
 }
 
@@ -255,7 +255,7 @@ theme.OnContextUpdate = function(frame, unit) end
 theme.OnActivateTheme = function(themetable, themename)		-- Fired for each theme during unloading, and once for the incoming theme during loading
 
 -- Special Objects
-theme.InterfacePanel = panelframe	-- If you create an interface panel, you can set a pointer to it, and Tidy Plates will pop up a 'configure icon' in the theme chooser
+theme.ShowConfigPanel = function() end	-- This function is called when the 'wrench' icon is clicked in the theme chooser menu.  it can be used to activate a theme config panel
 --]]
 
 --[[
@@ -276,7 +276,8 @@ unit.red, unit.green, unit.blue 	0.0-1 Values, the raw color of the health bar
 unit.isCasting						true, if cast bar is being shown
 _, unit.healthmax 					integer, the maximum health of the unit
 unit.class 							"DEATHKNIGHT", "DRUID","HUNTER", etc.. Only for PvP Enemies
-unit.isInCombat	- DEPRECIATED 		true, if name text is red (ie. unit is in combat with you)
+unit.isInCombat						true, if name text is red (ie. unit is in combat with you; Unreliable because of the way that Blizz's nameplates work)
+unit.raidIcon
 --]]
 TidyPlates.Template = theme
 TidyPlates:ActivateTheme(theme)		-- Activates the template as a holder theme, until the user preference is loaded
@@ -299,12 +300,11 @@ NameOnlyTheme.customtext = {
 	show = true,
 }
 
-NameOnlyTheme.level.show = false
-NameOnlyTheme.name.show = false
-NameOnlyTheme.customtext.show = true
-NameOnlyTheme.skullicon.show = false
-NameOnlyTheme.spellicon.show = false
-NameOnlyTheme.spellicon.show = false
+NameOnlyTheme.level = {show = false,}
+NameOnlyTheme.name = { show = false,}
+NameOnlyTheme.skullicon = { show = false,}
+NameOnlyTheme.spellicon = {show = false,}
+
 
 -- Hex Colors
 local TextColors = {}

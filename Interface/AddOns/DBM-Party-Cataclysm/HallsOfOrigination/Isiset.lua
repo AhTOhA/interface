@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("Isiset", "DBM-Party-Cataclysm", 4)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 4808 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5372 $"):sub(12, -3))
 mod:SetCreatureID(39587)
 mod:SetZone()
 
@@ -14,9 +14,9 @@ mod:RegisterEvents(
 )
 
 local warnAstralRain	= mod:NewSpellAnnounce(74134, 3)
-local warnVeilSky	= mod:NewSpellAnnounce(74133, 3)
-local warnSupernova	= mod:NewCastAnnounce(74136, 4)
-local warnSplitSoon	= mod:NewAnnounce("WarnSplitSoon", 3)
+local warnVeilSky		= mod:NewSpellAnnounce(74133, 3)
+local warnSupernova		= mod:NewCastAnnounce(74136, 4)
+local warnSplitSoon		= mod:NewAnnounce("WarnSplitSoon", 3)
 
 local timerAstralRain	= mod:NewBuffActiveTimer(8, 74134)
 local timerSupernova	= mod:NewCastTimer(3, 74136)

@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("Corborus", "DBM-Party-Cataclysm", 7)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5269 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5372 $"):sub(12, -3))
 mod:SetCreatureID(43438)
 mod:SetZone()
 
@@ -12,17 +12,17 @@ mod:RegisterEvents(
 	"SPELL_CAST_SUCCESS"
 )
 
-local warnCrystalBarrage	= mod:NewTargetAnnounce(81634, 2)
-local warnDampening			= mod:NewSpellAnnounce(82415, 2)
-local warnSubmerge			= mod:NewAnnounce("WarnSubmerge", 2, "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendBurrow.blp")
-local warnEmerge			= mod:NewAnnounce("WarnEmerge", 2, "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendUnBurrow.blp")
+local warnCrystalBarrage			= mod:NewTargetAnnounce(81634, 2)
+local warnDampening					= mod:NewSpellAnnounce(82415, 2)
+local warnSubmerge					= mod:NewAnnounce("WarnSubmerge", 2, "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendBurrow.blp")
+local warnEmerge					= mod:NewAnnounce("WarnEmerge", 2, "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendUnBurrow.blp")
 
 local specWarnCrystalBarrage		= mod:NewSpecialWarningYou(81634)
 local specWarnCrystalBarrageClose	= mod:NewSpecialWarningClose(81634)
 
-local timerDampening	= mod:NewCDTimer(10, 82415)
-local timerSubmerge		= mod:NewTimer(90, "TimerSubmerge", "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendBurrow.blp")
-local timerEmerge		= mod:NewTimer(25, "TimerEmerge", "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendUnBurrow.blp")
+local timerDampening				= mod:NewCDTimer(10, 82415)
+local timerSubmerge					= mod:NewTimer(90, "TimerSubmerge", "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendBurrow.blp")
+local timerEmerge					= mod:NewTimer(25, "TimerEmerge", "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendUnBurrow.blp")
 
 local crystalTargets = {}
 
@@ -35,8 +35,8 @@ local function warnCrystalTargets()
 end
 
 function mod:OnCombatStart(delay)
-	timerSubmerge:Start(28-delay)
-	self:ScheduleMethod(28-delay, "Submerge")
+	timerSubmerge:Start(31-delay)
+	self:ScheduleMethod(31-delay, "Submerge")
 	table.wipe(crystalTargets)
 	if self.Options.RangeFrame then
 		DBM.RangeCheck:Show(5)
@@ -69,11 +69,11 @@ function mod:Emerge()
 end
 
 function mod:SPELL_AURA_APPLIED(args)
-	if args:IsSpellID(86881, 92648) then--Need to relog this again maybe use UNIT_AURA cause my old logs just didn't have SPELL_AURA_APPLIED
+	if args:IsSpellID(86881, 92648) then
 		if args:IsPlayer() then
 			specWarnCrystalBarrage:Show()
 		end
-		local uId = DBM:GetRaidUnitId(args.destName)--Should work?
+		local uId = DBM:GetRaidUnitId(args.destName)
 		if uId then--May also not work right if same spellid is applied to people near the target, then will need more work.
 			local inRange = CheckInteractDistance(uId, 2)
 			local x, y = GetPlayerMapPosition(uId)
@@ -88,13 +88,14 @@ function mod:SPELL_AURA_APPLIED(args)
 				end
 			end
 		end
+		crystalTargets[#crystalTargets + 1] = args.destName
 		self:Unschedule(warnCrystalTargets)
 		self:Schedule(0.2, warnCrystalTargets)
 	end
 end
 
 function mod:SPELL_CAST_SUCCESS(args)
-	if args:IsSpellID(82415) then
+	if args:IsSpellID(82415, 92650) then
 		warnDampening:Show()
 		timerDampening:Start()
 	end

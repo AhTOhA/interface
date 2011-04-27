@@ -5,7 +5,7 @@ HealBot_Config = {
 	},
 	["CDCshownHB"] = 1,
 	["DebuffWatch"] = 1,
-	["CurrentSpec"] = 2,
+	["CurrentSpec"] = 3,
 	["IgnoreFastDurDebuffs"] = 1,
 	["HealBotBuffColB"] = {
 		1, -- [1]

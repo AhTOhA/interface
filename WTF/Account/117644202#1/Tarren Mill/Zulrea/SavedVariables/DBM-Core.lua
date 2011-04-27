@@ -40,15 +40,15 @@ DBM_SavedOptions = {
 	["RangeFrameY"] = -50,
 	["InfoFrameShowSelf"] = false,
 	["SpecialWarningFont"] = "Fonts\\FRIZQT__.TTF",
-	["ArrowPoint"] = "TOP",
-	["DontShowBossAnnounces"] = false,
 	["SpamBlockRaidWarning"] = true,
+	["HPFrameMaxEntries"] = 5,
+	["ArrowPoint"] = "TOP",
 	["ShowFakedRaidWarnings"] = false,
 	["LatencyThreshold"] = 200,
 	["DontSendBossAnnounces"] = false,
 	["InfoFramePoint"] = "CENTER",
 	["SettingsMessageShown"] = true,
-	["HPFrameMaxEntries"] = 5,
+	["DontShowBossAnnounces"] = false,
 	["HPFramePoint"] = "CENTER",
 	["ArrowPosY"] = -150,
 	["RangeFramePoint"] = "CENTER",
@@ -89,5 +89,11 @@ DBM_SavedOptions = {
 }
 DBT_SavedOptions = {
 	["DBM"] = {
+		["HugeTimerPoint"] = "CENTER",
+		["TimerPoint"] = "TOPRIGHT",
+		["TimerX"] = -222.9999962747023,
+		["HugeTimerX"] = 0,
+		["HugeTimerY"] = -119.9999971884546,
+		["TimerY"] = -259.9999879103547,
 	},
 }

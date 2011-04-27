@@ -1,7 +1,7 @@
-local mod	= DBM:NewMod("Atramedes", "DBM-BlackwingDescent", 5)
+local mod	= DBM:NewMod("Atramedes", "DBM-BlackwingDescent")
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5274 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5625 $"):sub(12, -3))
 mod:SetCreatureID(41442)
 mod:SetZone()
 mod:SetUsedIcons(8)
@@ -27,17 +27,19 @@ local warnShieldsLeft		= mod:NewAnnounce("WarnShieldsLeft", 2, 77611)
 local warnAddSoon			= mod:NewAnnounce("warnAddSoon", 3, 92685)
 local warnPhaseShift		= mod:NewSpellAnnounce(92681, 3)
 local warnObnoxious			= mod:NewCastAnnounce(92702, 4, nil, false)
+local warnSearingFlameSoon	= mod:NewSoonAnnounce(77840, 3, nil, false)
 
-local specWarnSearingFlame	= mod:NewSpecialWarningSpell(77840)
-local specWarnSonarPulse	= mod:NewSpecialWarningSpell(92411, false)
+local specWarnSearingFlame	= mod:NewSpecialWarningSpell(77840, nil, nil, nil, true)
+local specWarnSonarPulse	= mod:NewSpecialWarningSpell(92411, false, nil, nil, true)
 local specWarnTracking		= mod:NewSpecialWarningYou(78092)
 local specWarnPestered		= mod:NewSpecialWarningYou(92685)
+local yellPestered			= mod:NewYell(92685, L.YellPestered)
 local specWarnObnoxious		= mod:NewSpecialWarningInterrupt(92702, false)
 local specWarnAddTargetable	= mod:NewSpecialWarning("specWarnAddTargetable", false)
 
 local timerSonarPulseCD		= mod:NewCDTimer(10, 92411)
 local timerSonicBreath		= mod:NewCDTimer(41, 78075)
-local timerSearingFlame		= mod:NewNextTimer(46.5, 77840)
+local timerSearingFlame		= mod:NewCDTimer(45, 77840)
 local timerAirphase			= mod:NewTimer(85, "TimerAirphase", "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendUnBurrow.blp")--These both need more work
 local timerGroundphase		= mod:NewTimer(31.5, "TimerGroundphase", "Interface\\AddOns\\DBM-Core\\textures\\CryptFiendBurrow.blp")--I just never remember to log and /yell at right times since they lack most accurate triggers.
 
@@ -47,7 +49,6 @@ local soundTracking			= mod:NewSound(78092)
 
 mod:AddBoolOption("TrackingIcon")
 mod:AddBoolOption("InfoFrame")
-mod:AddBoolOption("YellOnPestered", "announce")
 
 local shieldsLeft = 10
 local pestered = GetSpellInfo(92685)
@@ -57,21 +58,23 @@ local function groundphase()
 	timerAirphase:Start()
 	timerSonicBreath:Start(25)
 	timerSearingFlame:Start()
+	warnSearingFlameSoon:Schedule(40)
 end
 
 function mod:OnCombatStart(delay)
 	timerSonarPulseCD:Start(-delay)
 	timerSonicBreath:Start(25-delay)
-	timerSearingFlame:Start(45-delay)
+	warnSearingFlameSoon:Schedule(40-delay)
+	timerSearingFlame:Start(-delay)
 	timerAirphase:Start(90-delay)
 	shieldsLeft = 10
 	pesteredWarned = false
-	if mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25") then
+	if mod:IsDifficulty("heroic10", "heroic25") then
 		berserkTimer:Start(-delay)
 	end
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:SetHeader(L.Soundlevel)
-		DBM.InfoFrame:Show(5, "power", 30, ALTERNATE_POWER_INDEX)
+		DBM.InfoFrame:Show(5, "playerpower", 10, ALTERNATE_POWER_INDEX)
 	end
 end
 
@@ -151,8 +154,6 @@ function mod:UNIT_AURA(uId)
 	if UnitDebuff("player", pestered) then
 		pesteredWarned = true--This aura is a periodic trigger, so we don't want to spam warn for it.
 		specWarnPestered:Show()
-		if self.Options.YellOnPestered then
-			SendChatMessage(L.YellPestered, "SAY")
-		end
+		yellPestered:Yell()
 	end
 end

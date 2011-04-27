@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("Anraphet", "DBM-Party-Cataclysm", 4)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5215 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5440 $"):sub(12, -3))
 mod:SetCreatureID(39788)
 mod:SetZone()
 
@@ -9,28 +9,31 @@ mod:RegisterCombat("combat")
 
 mod:RegisterEvents(
 	"SPELL_AURA_APPLIED",
+	"SPELL_AURA_REMOVED",
 	"SPELL_CAST_START",
 	"CHAT_MSG_MONSTER_SAY"
 )
 
 local warnAlphaBeams		= mod:NewSpellAnnounce(76184, 4)
 local warnOmegaStance		= mod:NewSpellAnnounce(75622, 4)
-local warnNemesis		= mod:NewTargetAnnounce(75603, 3)
-local warnBubble		= mod:NewTargetAnnounce(77336, 3)
-local warnImpale		= mod:NewTargetAnnounce(77235, 3)
-local warnInferno		= mod:NewSpellAnnounce(77241, 3)
+local warnNemesis			= mod:NewTargetAnnounce(75603, 3)
+local warnBubble			= mod:NewTargetAnnounce(77336, 3)
+local warnImpale			= mod:NewTargetAnnounce(77235, 3)
+local warnInferno			= mod:NewSpellAnnounce(77241, 3)
+
+local specWarnAlphaBeams	= mod:NewSpecialWarningMove(76956)
 
 local timerAlphaBeams		= mod:NewBuffActiveTimer(16, 76184)
 local timerAlphaBeamsCD		= mod:NewCDTimer(47, 76184)
 local timerOmegaStance		= mod:NewBuffActiveTimer(8, 75622)
 local timerOmegaStanceCD	= mod:NewCDTimer(47, 75622)
-local timerNemesis		= mod:NewTargetTimer(5, 75603)
-local timerBubble		= mod:NewCDTimer(15, 77336)
-local timerImpale		= mod:NewTargetTimer(3, 77235)
-local timerImpaleCD		= mod:NewCDTimer(20, 77235)
-local timerInferno		= mod:NewCDTimer(17, 77241)
+local timerNemesis			= mod:NewTargetTimer(5, 75603)
+local timerBubble			= mod:NewCDTimer(15, 77336)
+local timerImpale			= mod:NewTargetTimer(3, 77235)
+local timerImpaleCD			= mod:NewCDTimer(20, 77235)
+local timerInferno			= mod:NewCDTimer(17, 77241)
 
-local timerGauntlet		= mod:NewAchievementTimer(300, 5296, "achievementGauntlet")
+local timerGauntlet			= mod:NewAchievementTimer(300, 5296, "achievementGauntlet")
 
 function mod:OnCombatStart(delay)
 	timerAlphaBeamsCD:Start(10-delay)
@@ -49,6 +52,14 @@ function mod:SPELL_AURA_APPLIED(args)
 		warnImpale:Show(args.destName)
 		timerImpale:Start(args.destName)
 		timerImpaleCD:Start()
+	elseif args:IsSpellID(76956, 91177) and args:IsPlayer() then
+		specWarnAlphaBeams:Show()
+	end
+end
+
+function mod:SPELL_AURA_REMOVED(args)
+	if args:IsSpellID(75603, 91174) then
+		timerNemesis:Cancel(args.destName)
 	end
 end
 

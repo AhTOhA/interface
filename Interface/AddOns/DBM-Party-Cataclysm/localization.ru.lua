@@ -172,6 +172,7 @@ L:SetGeneralLocalization({
 
 L:SetMiscLocalization{
 	ValionaYell	= "Дракон, ты будеш делать то, что я прикажу! Подхвати меня!",	-- translate -- Yell when Valiona is incoming
+	Add			= "%s призывает",
 	Valiona		= "Валиона"
 }
 
@@ -371,6 +372,18 @@ L:SetGeneralLocalization({
 	name = "Командир Ручьедол"
 })
 
+L:SetTimerLocalization({
+	TimerAdds		= "След. помощники"
+})
+
+L:SetOptionLocalization{
+	TimerAdds		= "Показывать таймер для помощников"
+}
+
+L:SetMiscLocalization{
+	YellAdds		= "Repel the intruders!"
+}
+
 -----------------
 -- Lord Walden --
 -----------------
@@ -399,11 +412,9 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization{
-	WarnMortalWound	= "%s на >%s< (%d)"		-- Mortal Wound on >args.destName< (args.amount)
 }
 
 L:SetOptionLocalization{
-	WarnMortalWound	= DBM_CORE_AUTO_ANNOUNCE_OPTIONS.spell:format(93675, GetSpellInfo(93675) or "unknown")
 }
 
 ---------------------
@@ -493,6 +504,10 @@ L:SetGeneralLocalization({
 	name = "Великий визирь Эртан"
 })
 
+L:SetMiscLocalization{
+	Retract		= "%s притягивает к себе охранный смерч!"
+}
+
 --------------
 -- Altairus --
 -------------- 
@@ -560,3 +575,276 @@ L = DBM:GetModLocalization("Ozumat")
 L:SetGeneralLocalization({
 	name = "Озумат"
 })
+
+----------------
+--  Zul'Aman  --
+---------------
+--  Nalorakk --
+---------------
+L = DBM:GetModLocalization("Nalorakk5")
+
+L:SetGeneralLocalization{
+	name = "Налоракк"
+}
+
+L:SetWarningLocalization{
+	WarnBear		= "Облик медведя",
+	WarnBearSoon	= "Облик медведя через 5 секунд",
+	WarnNormal		= "Обычныый облик",
+	WarnNormalSoon	= "Обычный облик через 5 секунд"
+}
+
+L:SetTimerLocalization{
+	TimerBear		= "Облик медведя",
+	TimerNormal		= "Обычный облик"
+}
+
+L:SetOptionLocalization{
+	WarnBear		= "Показывать предупреждения для облика медведя",
+	WarnBearSoon	= "Показывать предупреждение о скорой смене облика на медвежий",
+	WarnNormal		= "Показывать предупреждения для обычного облика",
+	WarnNormalSoon	= "Показывать предупреждение о скорой смене облика на обычный",
+	TimerBear		= "Показывать таймер облика медведя",
+	TimerNormal		= "Показывать таймер обычного облика"
+}
+
+L:SetMiscLocalization{
+	YellBear 	= "Если вызвать чудовище, то мало не покажется, точно говорю!",
+	YellNormal	= "Пропустите Налоракка!"
+}
+
+---------------
+--  Akil'zon --
+---------------
+L = DBM:GetModLocalization("Akilzon5")
+
+L:SetGeneralLocalization{
+	name = "Акил'зон"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	StormIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(43648),
+	RangeFrame	= "Окно проверки дистанции (10 м)"
+}
+
+L:SetMiscLocalization{
+}
+
+---------------
+--  Jan'alai --
+---------------
+L = DBM:GetModLocalization("Janalai5")
+
+L:SetGeneralLocalization{
+	name = "Джан'алаи"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	FlameIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(43140)
+}
+
+L:SetMiscLocalization{
+	YellBomb	= "Сгиньте в огне!",
+	YellAdds	= "Где мои Наседки? Пора за яйца приниматься!"
+}
+
+--------------
+--  Halazzi --
+--------------
+L = DBM:GetModLocalization("Halazzi5")
+
+L:SetGeneralLocalization{
+	name = "Халаззи"
+}
+
+L:SetWarningLocalization{
+	WarnSpirit	= "Призывает дух",
+	WarnNormal	= "Дух исчезает"
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	WarnSpirit	= "Показывать предупреждения для фазы духа",
+	WarnNormal	= "Показывать предупреждения для обычной фазы "
+}
+
+L:SetMiscLocalization{
+	YellSpirit	= "Со мною дикий дух...",
+	YellNormal	= "О дух, вернись ко мне!"
+}
+
+-----------------------
+-- Hexlord Malacrass --
+-----------------------
+L = DBM:GetModLocalization("Malacrass5")
+
+L:SetGeneralLocalization{
+	name = "Hexlord Malacrass"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+	TimerSiphon	= "%s: %s"
+}
+
+L:SetOptionLocalization{
+	TimerSiphon	= "Показывать таймер для $spell:43501"
+}
+
+L:SetMiscLocalization{
+}
+
+-------------
+-- Daakara --
+-------------
+L = DBM:GetModLocalization("Daakara")
+
+L:SetGeneralLocalization{
+	name = "Daakara"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+}
+
+L:SetMiscLocalization{
+	SetIconOnThrow		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(97639)
+}
+
+-----------------
+--  Zul'Gurub  --
+-------------------------
+-- High Priest Venoxis --
+-------------------------
+L = DBM:GetModLocalization("Venoxis")
+
+L:SetGeneralLocalization{
+	name = "High Priest Venoxis"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	SetIconOnToxicLink	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(96477)
+}
+
+L:SetMiscLocalization{
+}
+
+------------
+-- Zanzil --
+------------
+L = DBM:GetModLocalization("Mandokir")
+
+L:SetGeneralLocalization{
+	name = "Bloodlord Mandokir"
+}
+
+L:SetWarningLocalization{
+	WarnRevive		= "Ghost Revive - %d left",
+	SpecWarnOhgan	= "Ohgan revived! Attack now!" -- check this, i'm not good at English
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	WarnRevive		= "Announce how many ghost revive remaining",
+	SpecWarnOhgan	= "Show warning when Ohgan is revived" -- check this, i'm not good at English
+}
+
+L:SetMiscLocalization{
+	Ohgan		= "Ohgan"
+}
+
+------------
+-- Zanzil --
+------------
+L = DBM:GetModLocalization("Zanzil")
+
+L:SetGeneralLocalization{
+	name = "Zanzil"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	SetIconOnGaze	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(96342)
+}
+
+L:SetMiscLocalization{
+}
+
+----------------------------
+-- High Priestess Kilnara --
+----------------------------
+L = DBM:GetModLocalization("Kilnara")
+
+L:SetGeneralLocalization{
+	name = "High Priestess Kilnara"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+}
+
+L:SetMiscLocalization{
+}
+
+----------------------------
+-- Jindo --
+----------------------------
+L = DBM:GetModLocalization("Jindo")
+
+L:SetGeneralLocalization{
+	name = "Jin'do the Godbreaker"
+}
+
+L:SetWarningLocalization{
+	WarnBarrierDown	= "Hakkar's Chains Barrier Down - %d/3 left"
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	WarnBarrierDown	= "Announce when Hakkar's Chains barrier down"
+}
+
+L:SetMiscLocalization{
+	Kill			= "Oh no, Hakkar's spirit is free!" -- temporarily
+}

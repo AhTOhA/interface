@@ -1,7 +1,7 @@
-local mod	= DBM:NewMod("Magmaw", "DBM-BlackwingDescent", 1)
+local mod	= DBM:NewMod("Magmaw", "DBM-BlackwingDescent")
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5226 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5572 $"):sub(12, -3))
 mod:SetCreatureID(41570)
 mod:SetZone()
 
@@ -15,7 +15,8 @@ mod:RegisterEvents(
 	"SPELL_DAMAGE",
 	"CHAT_MSG_MONSTER_YELL",
 	"CHAT_MSG_RAID_BOSS_EMOTE",
-	"UNIT_HEALTH"
+	"UNIT_HEALTH",
+	"UNIT_DIED"
 )
 
 local warnLavaSpew			= mod:NewSpellAnnounce(77689, 3, nil, mod:IsHealer())
@@ -23,13 +24,13 @@ local warnPillarFlame		= mod:NewSpellAnnounce(78006, 3)
 local warnMoltenTantrum		= mod:NewSpellAnnounce(78403, 4)
 local warnInferno			= mod:NewSpellAnnounce(92190, 4)
 local warnMangle			= mod:NewTargetAnnounce(89773, 3)
-local warnPhase2Soon		= mod:NewAnnounce("WarnPhase2Soon", 3)--heroic
+local warnPhase2Soon		= mod:NewPrePhaseAnnounce(2, 3)--heroic
 local warnPhase2			= mod:NewPhaseAnnounce(2, 4)--heroic
 
 local specWarnPillar		= mod:NewSpecialWarningSpell(78006, mod:IsRanged())
 local specWarnIgnition		= mod:NewSpecialWarningMove(92198)
 local specWarnInfernoSoon   = mod:NewSpecialWarning("SpecWarnInferno")
-local specWarnArmageddon	= mod:NewSpecialWarningSpell(92177)
+local specWarnArmageddon	= mod:NewSpecialWarningSpell(92177, nil, nil, nil, true)
 
 local timerLavaSpew			= mod:NewCDTimer(26, 77689, nil, mod:IsHealer())
 local timerPillarFlame		= mod:NewCDTimer(32.5, 78006)--This timer is a CD timer. 30-40 seconds. Use your judgement.
@@ -45,16 +46,18 @@ mod:AddBoolOption("RangeFrame")
 
 local lastLavaSpew = 0
 local ignitionSpam = 0
+local geddonConstruct = 0
 local prewarnedPhase2 = false
 
 function mod:OnCombatStart(delay)
 	lastLavaSpew = 0
 	ignitionSpam = 0
+	geddonConstruct = 0
 	prewarnedPhase2 = false
 	timerPillarFlame:Start(30-delay)
 	timerMangleCD:Start(90-delay)
 	berserkTimer:Start(-delay)
-	if mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25") then
+	if mod:IsDifficulty("heroic10", "heroic25") then
 		timerInferno:Start(30-delay)
 		specWarnInfernoSoon:Schedule(26-delay)
 	end
@@ -96,6 +99,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 	elseif args:IsSpellID(92177) then
 		specWarnArmageddon:Show()
 		timerArmageddon:Start()
+		geddonConstruct = args.sourceGUID--Cache last mob to cast armageddon
 	end
 end
 
@@ -116,7 +120,7 @@ end
 
 -- heroic phase 2
 function mod:CHAT_MSG_MONSTER_YELL(msg)
-	if (msg == L.YellPhase2 or msg:find(L.YellPhase2)) and (mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25")) then
+	if msg == L.YellPhase2 or msg:find(L.YellPhase2) then
 		timerInferno:Cancel()
 		specWarnInfernoSoon:Cancel()
 		warnPhase2:Show()
@@ -136,7 +140,7 @@ function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg)
 end
 
 function mod:UNIT_HEALTH(uId)
-	if UnitName(uId) == L.name and (mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25")) then
+	if self:GetUnitCreatureId(uId) == 41570 and mod:IsDifficulty("heroic10", "heroic25") then
 		local h = UnitHealth(uId) / UnitHealthMax(uId) * 100
 		if h > 40 and prewarnedPhase2 then
 			prewarnedPhase2 = false
@@ -144,5 +148,11 @@ function mod:UNIT_HEALTH(uId)
 			prewarnedPhase2 = true
 			warnPhase2Soon:Show()
 		end
+	end
+end
+
+function mod:UNIT_DIED(args)
+	if args.destGUID == geddonConstruct then--Check GUID of units dying if they match last armageddon casting construct. Better than CID alone so we don't cancel it if a diff one dies, but probably not perfect if two cast it at once heh.
+		timerArmageddon:Cancel()
 	end
 end

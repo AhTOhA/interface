@@ -1,16 +1,10 @@
-## Interface: 40000
+## Interface: 40100
 ## Title: Tidy Plates: Neon Theme
 ## Notes: It toasts your Eggo waffles, and butters your bread.
 ## Author: Daniel/Binbwen
-## Dependencies: TidyPlates
+## Dependencies: TidyPlates, TidyPlatesHub
 ## SavedVariablesPerCharacter: TidyPlatesNeonTankSavedVariables, TidyPlatesNeonDPSSavedVariables
 
-DPS\Style.lua
-DPS\Functions.lua
-DPS\Panel.lua
-
-Tank\Style.lua
-Tank\Functions.lua
-Tank\Panel.lua
+Neon.lua
 
 

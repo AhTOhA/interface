@@ -4,7 +4,7 @@ DBM_CORE_NEED_SUPPORT				= "¿Eres bueno programando o con los idiomas? Si es as
 DBM_HOW_TO_USE_MOD					= "Bienvenido a DBM. Para acceder a las opciones escribe /dbm en tu chat para empezar a configurarlo. Puedes cargar las zonas manualmente para configurar las opciones específicas de cada Boss a tu gusto. DBM intenta hacer esto escaneando tu clase la primera vez que se inicia, pero quizás quieras más alertas de las que necesita tu clase."
 
 DBM_CORE_LOAD_MOD_ERROR				= "Error al cargar modulo %s: %s"
-DBM_CORE_LOAD_MOD_SUCCESS			= "Cargado modulo de '%s' !"
+DBM_CORE_LOAD_MOD_SUCCESS			= "Módulo de '%s' cargado correctamente. Para más opciones escribe /dbm o /dbm help en tu chat."
 DBM_CORE_LOAD_GUI_ERROR				= "No se puede cargar la GUI: %s"
 
 DBM_CORE_COMBAT_STARTED				= "%s llamado. Buena suerte y diviertase! :)";
@@ -87,6 +87,8 @@ DBM_CORE_SLASHCMD_HELP				= {
 	"/dbm broadcast timer <x> <text>: Muestra un contador de <x> segundos con el nombre <text> a la banda (requiere lider/ayudante)",
 	"/dbm break <min>: Empieza un descanso de <min> minutos. Muestra a todos los miembros de banda con DBM un contador de descanso (requiere lider/ayudante).",
 	"/dbm pull <seg>: Empieza una cuenta atrás para pullear en <seg> segundos. Muestra a todos los miembros de banda con DBM un contador para pullear (requiere lider/ayudante).",
+	"/dbm arrow: Muestra la flecha DBM, escribe /dbm arrow help para más detalles.",
+	"/dbm lockout: pregunta a los miembros de la raid por sus bloqueos de instancia (alias: lockouts, ids) (requiere líder/ayudante).",
 	"/dbm help: muestra esta ayuda",
 }
 
@@ -137,7 +139,10 @@ DBM_CORE_AUTO_ANNOUNCE_TEXTS = {
 	cast = "Casteando %s: %.1f seg",
 	soon = "%s pronto",
 	prewarn = "%s en %s",
-	phase = "Fase %d",
+	phase = "Fase %s",
+	prephase = "Fase %s pronto",
+	count = "%s (%%d)",
+	stack = "%s en >%%s< (%%d)",
 }
 
 local prewarnOption = "Mostrar una pre-alerta para |cff71d5ff|Hspell:%d|h%s|h|r"
@@ -147,7 +152,10 @@ DBM_CORE_AUTO_ANNOUNCE_OPTIONS = {
 	cast	= "Mostrar aviso cuando castee |cff71d5ff|Hspell:%d|h%s|h|r",
 	soon	= "Mostrar pre-aviso para |cff71d5ff|Hspell:%d|h%s|h|r",
 	prewarn	= "Mostrar pre-aviso para |cff71d5ff|Hspell:%d|h%s|h|r",
-	phase	= "Mostrar aviso para fase %d",
+	phase	= "Mostrar aviso para fase %s",
+	prephase = "Mostrar pre-aviso para Fase %s",
+	count	= "Mostrar aviso para |cff71d5ff|Hspell:%d|h%s|h|r",
+	stack	= "Anunciar objetivo de |cff71d5ff|Hspell:%d|h%s|h|r",
 }
 
 
@@ -181,6 +189,8 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS = {
 
 DBM_CORE_AUTO_ICONS_OPTION_TEXT		= "Poner iconos en objetivos de $spell:%d"
 DBM_CORE_AUTO_SOUND_OPTION_TEXT		= "Reproducir sonido en $spell:%d"
+DBM_CORE_AUTO_YELL_OPTION_TEXT		= "Gritar cuando tengas $spell:%d"
+DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT	= "¡%s en mi!"--Verify (%s is spellname)
 
 
 -- New special warnings
@@ -201,3 +211,15 @@ DBM_ARROW_ERROR_USAGE	= {
 
 DBM_SPEED_KILL_TIMER_TEXT	= "Superar récord"
 DBM_SPEED_KILL_TIMER_OPTION	= "Mostrar tiempo para superar tu muerte más rápida"
+
+
+DBM_REQ_INSTANCE_ID_PERMISSION		= "%s ha pedido tu ID de instancia y el progreso.\nQuieres enviarle esta información a %s? Esa persona podrá volver a solicitar esta información si aceptas hasta que reloguees."
+DBM_ERROR_NO_RAID					= "Tienes que estar en un grupo de banda para usar ésta característica."
+DBM_INSTANCE_INFO_REQUESTED			= "Enviar solicitud de bloqueo de instancias al grupo de banda.\nPor favor, entiende que los jugadores serán preguntados por si quieren enviarte esa información antes, por lo que se puede tardar un minuto en recibir todas las respuestas."
+DBM_INSTANCE_INFO_STATUS_UPDATE		= "Se ha obtenido respuesta de %d jugadores de %d usuarios de DBM: %d han enviado los datos, %d han denegado la solicitud. Se esperará %d segundos más para respuestas..."
+DBM_INSTANCE_INFO_ALL_RESPONSES		= "Se ha recibido respuestas de todos los miembros de la banda"
+DBM_INSTANCE_INFO_DETAIL_HEADER		= "%s (%d), dificultad %d:"
+DBM_INSTANCE_INFO_DETAIL_INSTANCE	= "    ID %s, progreso %d: %s"
+DBM_INSTANCE_INFO_STATS_DENIED		= "Han denegado la solicitud: %s"
+DBM_INSTANCE_INFO_STATS_AWAY		= "Ausentes: %s"
+DBM_INSTANCE_INFO_STATS_NO_RESPONSE	= "No tienen una versión reciente de DBM instalada: %s"

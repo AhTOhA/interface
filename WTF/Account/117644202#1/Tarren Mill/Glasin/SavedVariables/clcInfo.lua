@@ -28,23 +28,23 @@ clcInfoCharDB = {
 						0, -- [4]
 					},
 					["iconAlign"] = "left",
-					["t1Outline"] = true,
-					["t3Center"] = 0,
-					["t2ThickOutline"] = false,
 					["barColor"] = {
 						0.43, -- [1]
 						0.5600000000000001, -- [2]
 						1, -- [3]
 						1, -- [4]
 					},
-					["t1Center"] = 0,
-					["iconTop"] = 0,
 					["barBgColor"] = {
 						0.17, -- [1]
 						0.22, -- [2]
 						0.43, -- [3]
 						0.5, -- [4]
 					},
+					["t2ThickOutline"] = false,
+					["t1Outline"] = true,
+					["t1Center"] = 0,
+					["iconTop"] = 0,
+					["t3Center"] = 0,
 					["t3Outline"] = true,
 					["barTexture"] = "Aluminium",
 					["iconPadding"] = 1,
@@ -164,23 +164,23 @@ clcInfoCharDB = {
 						0, -- [4]
 					},
 					["iconAlign"] = "left",
-					["t1Outline"] = true,
-					["t3Center"] = 0,
-					["t2ThickOutline"] = false,
 					["barColor"] = {
 						0.43, -- [1]
 						0.5600000000000001, -- [2]
 						1, -- [3]
 						1, -- [4]
 					},
-					["t1Center"] = 0,
-					["iconTop"] = 0,
 					["barBgColor"] = {
 						0.17, -- [1]
 						0.22, -- [2]
 						0.43, -- [3]
 						0.5, -- [4]
 					},
+					["t2ThickOutline"] = false,
+					["t1Outline"] = true,
+					["t1Center"] = 0,
+					["iconTop"] = 0,
+					["t3Center"] = 0,
 					["t3Outline"] = true,
 					["barTexture"] = "Aluminium",
 					["iconPadding"] = 1,

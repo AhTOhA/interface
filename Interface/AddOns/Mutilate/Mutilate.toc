@@ -1,0 +1,8 @@
+## Title: Mutilate
+## Version: 1.11
+## Author: luijk
+## Interface: 40100
+## SavedVariables: Mutilatedb
+## Notes: Spell recommendation mod for Mutilate spec'd rogues
+
+Mutilate.lua

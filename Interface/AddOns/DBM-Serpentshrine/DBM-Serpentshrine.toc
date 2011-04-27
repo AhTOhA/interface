@@ -1,0 +1,29 @@
+﻿## Interface: 40100
+## X-Min-Interface: 40100
+## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0Serpentshrine Cavern|r
+## Title-koKR:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0불뱀 제단|r
+## LoadOnDemand: 1
+## RequiredDeps: DBM-Core
+## SavedVariablesPerCharacter: DBMSerpentshrine_SavedVars, DBMSerpentshrine_SavedStats
+## X-DBM-Mod: 1
+## X-DBM-Mod-Category: BC
+## X-DBM-Mod-Name: Serpentshrine Cavern
+## X-DBM-Mod-Name-zhCN: 毒蛇神殿
+## X-DBM-Mod-Name-zhTW: 毒蛇神殿
+## X-DBM-Mod-Name-ruRU: Змеиное святилище
+## X-DBM-Mod-Name-koKR: 불뱀 제단
+## X-DBM-Mod-Sort: 304
+## X-DBM-Mod-LoadZoneID: 780
+localization.en.lua
+localization.cn.lua
+localization.de.lua
+localization.kr.lua
+localization.ru.lua
+localization.tw.lua
+MapSizes.lua
+Hydross.lua
+TheLurkerBelow.lua
+Leotheras.lua
+Fathomlord.lua
+Tidewalker.lua
+Vashj.lua

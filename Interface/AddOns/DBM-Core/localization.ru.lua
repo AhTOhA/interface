@@ -86,6 +86,8 @@ DBM_CORE_SLASHCMD_HELP				= {
 	"/dbm broadcast timer <x> <text>: транслирует <x> сек. Pizza Timer с именем <text> в рейд (требуются права лидера или помощника)",
 	"/dbm break <min>: начинает отсчет времени отдыха на <min> мин. Транслирует отсчет времени отдыха всем членам рейда с DBM (требуются права лидера или помощника).",
 	"/dbm pull <sec>: начинает отсчет времени до атаки на <sec> сек. Транслирует отсчет времени до атаки всем членам рейда с DBM (требуются права лидера или помощника).",
+	"/dbm arrow: показывает стрелку DBM. Введите /dbm arrow help для получения подробной информации.",
+	"/dbm lockout: получает список текущих сохранений подземелий у членов рейда (псведонимы: lockouts, ids) (требуются права лидера или помощника).",
 	"/dbm help: вывод этой справки",
 }
 
@@ -136,7 +138,10 @@ DBM_CORE_AUTO_ANNOUNCE_TEXTS = {
 	cast = "Применение заклинания %s: %.1f сек",
 	soon = "Скоро %s",
 	prewarn = "%s через %s",
-	phase = "Фаза %d",
+	phase = "Фаза %s",
+	prephase = "Скоро фаза %s",
+	count = "%s (%%d)",
+	stack = "%s на |3-5(>%%s<) (%%d)",
 }
 
 local prewarnOption = "Предупреждать заранее о |cff71d5ff|Hspell:%d|h%s|h|r"
@@ -146,7 +151,10 @@ DBM_CORE_AUTO_ANNOUNCE_OPTIONS = {
 	cast = "Предупреждать о применении заклинания |cff71d5ff|Hspell:%d|h%s|h|r",
 	soon = prewarnOption,
 	prewarn = prewarnOption,
-	phase = "Объявлять фазу %d"
+	phase = "Объявлять фазу %s",
+	prephase = "Предупреждать заранее о фазе %s",
+	count = "Предупреждение для |cff71d5ff|Hspell:%d|h%s|h|r",
+	stack = "Объявлять цели заклинания |cff71d5ff|Hspell:%d|h%s|h|r",
 }
 
 
@@ -180,6 +188,8 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS = {
 
 DBM_CORE_AUTO_ICONS_OPTION_TEXT		= "Устанавливать метки на цели заклинания $spell:%d"
 DBM_CORE_AUTO_SOUND_OPTION_TEXT		= "Звуковой сигнал при $spell:%d"
+DBM_CORE_AUTO_YELL_OPTION_TEXT		= "Кричать, когда на вас $spell:%d"
+DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT	= "На МНЕ - %s!"
 
 
 -- New special warnings
@@ -201,3 +211,15 @@ DBM_ARROW_ERROR_USAGE	= {
 
 DBM_SPEED_KILL_TIMER_TEXT	= "Рекордное убийство"
 DBM_SPEED_KILL_TIMER_OPTION	= "Отсчет времени вашего самого быстрого убийства"
+
+DBM_REQ_INSTANCE_ID_PERMISSION		= "%s запрашивает разрешение на просмотр ваших текущих сохранений подземелий.\nВы хотите предоставить ему такое право? Этот игрок получит возможность запрашивать эту информацию без уведомления в течение вашей текущей игровой сессии."
+DBM_ERROR_NO_RAID					= "Вы должны состоять в рейдовой группе для использования этой функции."
+DBM_INSTANCE_INFO_REQUESTED			= "Отослан запрос на просмотр текущих сохранений подземелий у членов рейда.\nОбратите внимание, что игроки будут уведомлены об этом и могут отклонить ваш запрос."
+DBM_INSTANCE_INFO_STATUS_UPDATE		= "На запрос ответили %d игроков из %d пользователей DBM: %d послали данные, %d отклонили запрос. Ожидание ответа продлено на %d секунд..."
+DBM_INSTANCE_INFO_ALL_RESPONSES		= "Получен ответ ото всех членов рейда"
+DBM_INSTANCE_INFO_DETAIL_HEADER		= "%s (%d), сложность %d:"
+DBM_INSTANCE_INFO_DETAIL_INSTANCE	= "    ID %s, прогресс %d: %s"
+DBM_INSTANCE_INFO_STATS_DENIED		= "Отклонили запрос: %s"
+DBM_INSTANCE_INFO_STATS_AWAY		= "Отошли от компьютера: %s"
+DBM_INSTANCE_INFO_STATS_NO_RESPONSE	= "Установлена устаревшая версия DBM: %s"
+DMB_INSTANCE_INFO_RESULTS			= "Результаты сканирования сохранений."

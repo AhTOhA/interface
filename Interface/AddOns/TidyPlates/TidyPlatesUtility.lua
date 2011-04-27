@@ -1,4 +1,5 @@
 TidyPlatesUtility = {}
+TidyPlatesData = {}
 
 -------------------------------------------------------------------------------------
 --  General Helpers
@@ -300,34 +301,33 @@ end
 -- [[ COLOR
 local CreateColorBox
 do
-	local ShowColorPicker
-	do
-		local swatchframe
-		local function ChangeColor(cancel)
-			local a, r, g, b
-			if cancel then 
-				r,g,b,a = unpack(ColorPickerFrame.previousValues )
-				swatchframe:SetBackdropColor(r,g,b,a)
-			else
-				a, r, g, b = OpacitySliderFrame:GetValue(), ColorPickerFrame:GetColorRGB();
-				swatchframe:SetBackdropColor(r,g,b,1-a)
-			end
-		end
-
-		function ShowColorPicker(targetframe)
-			swatchframe = targetframe
-			local r,g,b,a = swatchframe:GetBackdropColor()
-			ColorPickerFrame.previousValues  = {r,g,b,a}
-			ColorPickerFrame:SetColorRGB(r,g,b);
-			ColorPickerFrame.hasOpacity = true
-			ColorPickerFrame.opacity = 1 - a
-			ColorPickerFrame.func, ColorPickerFrame.opacityFunc, ColorPickerFrame.cancelFunc = 	ChangeColor, ChangeColor, ChangeColor;
-			ColorPickerFrame:Hide(); -- Need to run the OnShow handler.
-			ColorPickerFrame:Show();
-			ColorPickerFrame:SetFrameStrata(targetframe:GetFrameStrata())
-			ColorPickerFrame:SetFrameLevel(targetframe:GetFrameLevel()+1)
+	
+	local workingFrame
+	local function ChangeColor(cancel)
+		local a, r, g, b
+		if cancel then 
+			--r,g,b,a = unpack(ColorPickerFrame.startingval )
+			workingFrame:SetBackdropColor(unpack(ColorPickerFrame.startingval ))
+		else
+			a, r, g, b = OpacitySliderFrame:GetValue(), ColorPickerFrame:GetColorRGB();
+			workingFrame:SetBackdropColor(r,g,b,1-a)
+			if workingFrame.OnValueChanged then workingFrame:OnValueChanged() end
 		end
 	end
+
+	local function ShowColorPicker(frame)
+		local r,g,b,a = frame:GetBackdropColor()
+		workingFrame = frame
+		ColorPickerFrame.func, ColorPickerFrame.opacityFunc, ColorPickerFrame.cancelFunc = 	ChangeColor, ChangeColor, ChangeColor;
+		ColorPickerFrame.startingval  = {r,g,b,a}
+		ColorPickerFrame:SetColorRGB(r,g,b);
+		ColorPickerFrame.hasOpacity = true
+		ColorPickerFrame.opacity = 1 - a
+		ColorPickerFrame:SetFrameStrata(frame:GetFrameStrata())
+		ColorPickerFrame:SetFrameLevel(frame:GetFrameLevel()+1)
+		ColorPickerFrame:Hide(); ColorPickerFrame:Show(); -- Need to activate the OnShow handler.
+	end
+	
 	function CreateColorBox(self, reference, parent, label, r, g, b, a)
 		local colorbox = CreateFrame("Button", reference, parent)
 		colorbox:SetWidth(24)

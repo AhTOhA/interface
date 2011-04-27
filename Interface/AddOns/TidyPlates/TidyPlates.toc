@@ -1,13 +1,10 @@
-## Interface: 40000
+## Interface: 40100
 ## Title: Tidy Plates
-## Notes: Devours entire ice-cream cakes in a single bite 
+## Notes: Enjoys long walks on Darkshore 
 ## Author: Binbwen and Friends
-## Version: 6.0 (r##)
+## Version: 6.1.13 Revision: 253
+## SavedVariables: TidyPlatesData
 ## SavedVariablesPerCharacter: TidyPlatesOptions
 
-widgets\Statusbar.lua
-TidyPlatesCore.lua
-TidyPlatesUtility.lua
-TidyPlatesDefaults.lua
-TidyPlatesPanel.lua
+TidyPlates.xml
 widgets\Widgets.xml

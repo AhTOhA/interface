@@ -16,7 +16,6 @@ L:SetGeneralLocalization({
 
 L:SetWarningLocalization({
 	SpecWarnInferno	= "Assemblage d'os flamboyant Imminent (~4s)",
-	WarnPhase2Soon	= "Phase 2 imminente"
 })
 
 L:SetTimerLocalization({
@@ -30,7 +29,6 @@ L:SetMiscLocalization({
 
 L:SetOptionLocalization({
 	SpecWarnInferno		= "Affiche une pré-alerte spéciale sur $spell:92190 (~4s)",
-	WarnPhase2Soon		= "Affiche une pré-alerte pour la Phase 2",
 	RangeFrame		= "Affiche la fenêtre de portée en Phase 2 (5)"
 })
 
@@ -54,7 +52,6 @@ L:SetTimerLocalization({
 L:SetOptionLocalization({
 	timerShadowConductorCast	= "Affiche le timer : $spell:92053",
 	timerArcaneBlowbackCast	= "Affiche le timer : $spell:91879",
-	YellBombTarget		= "Crier sur $spell:80094",
 	AcquiringTargetIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79501),
 	ConductorIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79888),
 	BombTargetIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(80094),
@@ -65,8 +62,7 @@ L:SetMiscLocalization({
 	Magmatron		= "Magmatron",
 	Electron		= "Electron",
 	Toxitron		= "Toxitron",
-	Arcanotron		= "Arcanotron",
-	SayBomb			= "Poison Bomb on me!"--Translate
+	Arcanotron		= "Arcanotron"
 })
 
 ----------------
@@ -118,23 +114,19 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
-	WarnPhase2Soon	= "Phase 2 imminente",
-	WarnBreak		= "%s sur >%s< (%d)"
 })
 
 L:SetTimerLocalization({
 })
 
-L:SetMiscLocalization({
-	HealthInfo		= "Info Santé"
-})
-
 L:SetOptionLocalization({
-	WarnPhase2Soon	= "Affiche la pré-alerte de la Phase 2",
 	RangeFrame	= "Affiche la fenêtre de portée (6)",
-	WarnBreak		= DBM_CORE_AUTO_ANNOUNCE_OPTIONS.spell:format(82881, GetSpellInfo(82881) or "inconnu"),
 	SetIconOnSlime	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(82935),
 	InfoFrame		= "Affiche une fenêtre d'info sur la santé (<10k pv)"
+})
+
+L:SetMiscLocalization({
+	HealthInfo		= "Info Santé"
 })
 
 -----------------
@@ -205,7 +197,6 @@ L:SetOptionLocalization({
 	NefSwipeTimer		= "Affiche le CoolDown $spell:77827 de Nefarian",
 	OnyBreathTimer		= "Affiche le CoolDown $spell:94124 d'Onyxia",
 	NefBreathTimer		= "Affiche le CoolDown $spell:94124 de Nefarian",
-	YellOnCinder		= "Crier sur $spell:79339",
 	RangeFrame		= "Affiche la fenêtre de portée (10) lorsque vous avez $spell:79339",
 	SetIconOnCinder		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79339)
 })
@@ -214,6 +205,5 @@ L:SetMiscLocalization({
 	NefAoe			= "L'air craque sous l'électricité !", -- à vérifier 
 	YellPhase2			= "Soyez maudits, mortels ! Un tel mépris pour les possessions d'autrui doit être traité avec une extrême fermeté !", -- à vérifier
 	YellPhase3			= "J'ai tout fait pour être un hôte accomodant, mais vous ne daignez pas mourir ! Oublions les bonnes manières et passons aux choses sérieuses... VOUS TUER TOUS !",
-	YellCinder			= "Explosive Cinders on me!",--Translate
 	Onyxia				= "Onyxia"
 })

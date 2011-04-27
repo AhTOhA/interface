@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("CorenDirebrew", "DBM-WorldEvents")
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 4540 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5572 $"):sub(12, -3))
 mod:SetCreatureID(23872)
 
 mod:RegisterCombat("combat")
@@ -16,7 +16,6 @@ local warnDisarm			= mod:NewCastAnnounce(47310, 2, nil, nil, mod:IsMelee())
 local warnBarrel			= mod:NewTargetAnnounce(51413, 4)
 local timerBarrel			= mod:NewTargetTimer(8, 51413)
 
-local specWarnDisarm		= mod:NewSpecialWarningRun(47310, false)
 local specWarnBrew			= mod:NewSpecialWarning("specWarnBrew")
 local specWarnBrewStun		= mod:NewSpecialWarning("specWarnBrewStun")
 
@@ -30,7 +29,6 @@ function mod:SPELL_CAST_START(args)
 	if args:IsSpellID(47310) then
 		warnDisarm:Show()
 		timerDisarm:Start()
-		specWarnDisarm:Show()
 	end
 end
 

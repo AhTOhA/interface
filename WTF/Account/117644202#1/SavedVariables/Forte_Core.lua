@@ -19,8 +19,7 @@ FC_Saved = {
 	["Timers"] = {
 	},
 	["Healthstone"] = {
-		["Argwynn"] = 0,
-		["Kraisus"] = 0,
+		["Tikytaka"] = 0,
 	},
 	["Exceptions"] = {
 		["Hellfire Channeler"] = 0,
@@ -32,7 +31,7 @@ FC_Saved = {
 		["Fathom-Guard Tidalvess"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 19109.925,
+	["Update"] = 4927.984,
 	["Profiles"] = {
 		["Myyh"] = {
 			["PaladinColor"] = {
@@ -2321,8 +2320,8 @@ FC_Saved = {
 					1, -- [3]
 					1, -- [4]
 				},
-				["y"] = 268.9604085611503,
-				["x"] = 475.420044423639,
+				["y"] = 268.9603804272534,
+				["x"] = 475.4200694315474,
 				["NormalAlpha"] = 0.4,
 				["FailTime"] = 2,
 				["HideLonger"] = 30,
@@ -5644,6 +5643,11 @@ FC_Saved = {
 				0.55, -- [2]
 				0.73, -- [3]
 			},
+			["HealthstoneUnknownMinColor"] = {
+				0.53, -- [1]
+				1, -- [2]
+				0, -- [3]
+			},
 			["SummonWidth"] = 100,
 			["SummoningColor"] = {
 				0.64, -- [1]
@@ -5656,7 +5660,7 @@ FC_Saved = {
 				1, -- [2]
 				1, -- [3]
 			},
-			["HealthstoneExpand"] = false,
+			["CooldownStrata"] = "MEDIUM",
 			["GlobalSparkEnable"] = true,
 			["SoulstoneBgColor"] = {
 				0.31, -- [1]
@@ -5698,7 +5702,11 @@ FC_Saved = {
 				0.5, -- [2]
 				0.5, -- [3]
 			},
-			["IgnoreCooldown"] = 2.99,
+			["SparkOverrideColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+			},
 			["ShowStartupText"] = true,
 			["WhisperColor"] = {
 				1, -- [1]
@@ -5762,7 +5770,7 @@ FC_Saved = {
 					0, -- [4]
 				},
 				["SpellEnable"] = true,
-				["IconSize"] = 16,
+				["IconSize"] = 36,
 				["AlphaMax"] = 0.6,
 				["Tags"] = 5,
 				["PetEnable"] = true,
@@ -5888,37 +5896,49 @@ FC_Saved = {
 					0.01568627450980392, -- [2]
 					0.01568627450980392, -- [3]
 				},
-				["Detail"] = true,
+				["SpellColor"] = {
+					0.07450980392156863, -- [1]
+					0.07450980392156863, -- [2]
+					0.07450980392156863, -- [3]
+				},
+				["MinRemaining"] = 0,
+				["DebuffOtherEnable"] = false,
+				["EnchantEnable"] = true,
 				["TextColor"] = {
 					1, -- [1]
 					1, -- [2]
 					1, -- [3]
 					1, -- [4]
 				},
-				["Flip"] = false,
+				["Detail"] = true,
+				["MaxRemaining"] = 3600,
 				["Swing"] = false,
 				["SparkEnable"] = true,
-				["Warn"] = true,
-				["DebuffOtherEnable"] = false,
+				["Flip"] = false,
+				["IconText"] = true,
 				["x"] = 614.4000447540723,
-				["alpha"] = 1,
-				["EnchantEnable"] = true,
+				["Ignore"] = true,
+				["MinRemainingEnable"] = false,
 				["IconTextColor"] = {
 					1, -- [1]
 					1, -- [2]
 					1, -- [3]
-					1, -- [4]
+					0, -- [4]
 				},
 				["IconFont"] = "Interface\\AddOns\\Forte_Core\\Fonts\\GOTHIC.TTF",
-				["HealthstoneEnable"] = false,
+				["Hide"] = true,
 				["Splash"] = true,
 				["ResTimerColor"] = {
 					0.07450980392156863, -- [1]
 					0.07450980392156863, -- [2]
 					0.07450980392156863, -- [3]
 				},
-				["CustomTags"] = false,
 				["EnchantColor"] = {
+					0.07450980392156863, -- [1]
+					0.07450980392156863, -- [2]
+					0.07450980392156863, -- [3]
+				},
+				["ItemColor"] = {
 					0.07450980392156863, -- [1]
 					0.07450980392156863, -- [2]
 					0.07450980392156863, -- [3]
@@ -5934,13 +5954,9 @@ FC_Saved = {
 					0.07450980392156863, -- [3]
 				},
 				["GroupOverride"] = true,
-				["ItemColor"] = {
-					0.07450980392156863, -- [1]
-					0.07450980392156863, -- [2]
-					0.07450980392156863, -- [3]
-				},
-				["ItemEnable"] = true,
 				["Alpha"] = 0.1,
+				["ItemEnable"] = true,
+				["alpha"] = 1,
 				["BuffOtherColor"] = {
 					0.5, -- [1]
 					0.5, -- [2]
@@ -5952,19 +5968,15 @@ FC_Saved = {
 					0.8627450980392157, -- [3]
 					0.3500000238418579, -- [4]
 				},
-				["Ignore"] = true,
+				["CustomTags"] = false,
 				["IconFontSize"] = 11,
-				["IconText"] = false,
-				["Hide"] = true,
+				["HealthstoneEnable"] = false,
+				["Warn"] = true,
 				["SplashFactor"] = 6,
 				["Test"] = false,
 				["BuffOtherEnable"] = false,
 				["PowerupEnable"] = true,
-				["SpellColor"] = {
-					0.07450980392156863, -- [1]
-					0.07450980392156863, -- [2]
-					0.07450980392156863, -- [3]
-				},
+				["MaxRemainingEnable"] = false,
 			},
 			["TimerStrata"] = "MEDIUM",
 			["GlobalAlpha"] = 1,
@@ -5978,7 +5990,6 @@ FC_Saved = {
 				1, -- [2]
 				0, -- [3]
 			},
-			["BlockShardReagent"] = false,
 			["OptionsModuleColor"] = true,
 			["SoulstoneDetailsAuto"] = false,
 			["SummonExpand"] = false,
@@ -5995,18 +6006,28 @@ FC_Saved = {
 				1, -- [2]
 				1, -- [3]
 			},
+			["TimerSmooth"] = 5,
 			["SoulstoneFontSize"] = 11,
 			["ShowAll"] = true,
 			["HealthstoneFontSize"] = 11,
 			["GlobalFrameNames"] = true,
-			["SafeBlockShardReagent"] = false,
+			["LoadDelay"] = 1,
 			["SpellTimerInterval"] = 0.2,
 			["HealthstoneAuto"] = false,
 			["GlobalLock"] = false,
 			["Tips"] = true,
 			["HealthstoneDetailsAuto"] = false,
 			["Delay"] = 0.05,
+			["FWSSFrame"] = {
+				["y"] = 384.0000092153639,
+				["x"] = 614.4000447540723,
+				["lock"] = false,
+				["scale"] = 1,
+				["alpha"] = 1,
+			},
 			["SparkOverrideEnable"] = false,
+			["TimerSmartSpaceEnable"] = true,
+			["TimerSmartSpace"] = 10,
 			["TimerBreakSoundVolume"] = 4,
 			["OptionsBackdrop"] = {
 				"Interface\\AddOns\\Forte_Core\\Textures\\Background", -- [1]
@@ -6018,40 +6039,48 @@ FC_Saved = {
 			},
 			["SummonInterval"] = 1,
 			["SummonFontSize"] = 11,
-			["FWSSFrame"] = {
-				["y"] = 384.0000092153639,
-				["x"] = 614.4000447540723,
-				["lock"] = false,
-				["scale"] = 1,
-				["alpha"] = 1,
-			},
-			["TimerResistSoundEnable"] = true,
-			["TimerClearcastingSoundEnable"] = false,
 			["TalentOffsetY"] = 0,
-			["SummonKeywordMsg"] = "summon",
-			["SoulstoneReadySoundVolume"] = 1,
-			["CancelDelay"] = 0.5,
-			["FontSize"] = 11,
-			["TimerImprove"] = false,
-			["SummonFont"] = "Interface\\AddOns\\Forte_Core\\Fonts\\GOTHIC.TTF",
-			["Mix"] = 0.5,
 			["SummonCloseColor"] = {
 				0.6, -- [1]
 				0.6, -- [2]
 				0.6, -- [3]
 			},
+			["TimerResistSoundEnable"] = true,
+			["HealthstoneInterval"] = 2,
+			["SummonBgColor"] = {
+				0.31, -- [1]
+				0, -- [2]
+				0.62, -- [3]
+				0.75, -- [4]
+			},
+			["SummonKeywordMsg"] = "summon",
+			["OptionBackgroundColor"] = {
+				0.4, -- [1]
+				0.4, -- [2]
+				0.4, -- [3]
+				0.9, -- [4]
+			},
+			["CancelDelay"] = 0.5,
+			["SoulstoneFadeSoundEnable"] = true,
+			["TimerInstantSoundVolume"] = 4,
+			["SummonFont"] = "Interface\\AddOns\\Forte_Core\\Fonts\\GOTHIC.TTF",
+			["Mix"] = 0.5,
+			["TimerClearcastingSoundEnable"] = false,
 			["RightClickOptions"] = true,
 			["TimeLeftMsg"] = ">> %s on %s is fading in %s <<",
 			["TimerResistSound"] = "Sound\\Spells\\SimonGame_Visual_BadPress.wav",
 			["SummonStrata"] = "MEDIUM",
+			["ExpandSubcats"] = false,
+			["TimeFormat"] = true,
 			["SoulstoneHeight"] = 12,
-			["SoulstoneSpace"] = 1,
-			["ShamanColor"] = {
-				0, -- [1]
-				0.86, -- [2]
-				0.73, -- [3]
+			["OptionsHeaderBackdrop"] = {
+				"Interface\\AddOns\\Forte_Core\\Textures\\Otravi", -- [1]
+				"None", -- [2]
+				false, -- [3]
+				16, -- [4]
+				1, -- [5]
+				1, -- [6]
 			},
-			["HealthstoneWidth"] = 100,
 			["SoulstoneMsgColor"] = {
 				1, -- [1]
 				0, -- [2]
@@ -6063,7 +6092,7 @@ FC_Saved = {
 				1, -- [2]
 				1, -- [3]
 			},
-			["ShowReady"] = false,
+			["OptionsColums"] = 2,
 			["FWSUFrame"] = {
 				["y"] = 384.0000092153639,
 				["x"] = 614.4000447540723,
@@ -6072,53 +6101,36 @@ FC_Saved = {
 				["alpha"] = 1,
 			},
 			["Strata"] = "MEDIUM",
-			["SummonMeetingStone"] = false,
-			["CooldownStrata"] = "MEDIUM",
-			["OptionsFontSize"] = 11,
-			["TimerBreakSound"] = "Sound\\Spells\\SimonGame_Visual_LevelStart.wav",
-			["SparkOverrideColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-			},
 			["SoulstoneMaxColor"] = {
 				0.64, -- [1]
 				0.21, -- [2]
 				0.9300000000000001, -- [3]
 			},
+			["ShowReady"] = false,
+			["IgnoreCooldown"] = 2.99,
+			["TimerBreakSound"] = "Sound\\Spells\\SimonGame_Visual_LevelStart.wav",
+			["FontSize"] = 11,
 			["SoulstoneAuto"] = false,
+			["HealthstoneUnknown"] = true,
 			["TimeLeftNoTargMsg"] = ">> %s is fading in %s <<",
 			["MeetingStoneSummonMsg"] = "Summoning >> %s << Clicky clicky!",
-			["HealthstoneTotal"] = false,
+			["OptionsHeight"] = 440,
 			["SoulstoneExpand"] = false,
-			["Splash"] = {
-				["SplashGlow"] = true,
-				["SecondSplashMax"] = 3,
-				["Enable"] = true,
-				["lock"] = true,
-				["scale"] = 2,
-				["y"] = 384.0000092153639,
-				["alpha"] = 0.7,
-				["x"] = 614.4000447540723,
-			},
+			["UseTokens"] = "pet pettarget vehicle focus mouseover",
 			["TimeLeft"] = 1,
-			["SoulstoneMinColor"] = {
-				1, -- [1]
-				0, -- [2]
-				0.6, -- [3]
-			},
+			["HealthstoneWidth"] = 100,
 			["TimerResistsEnable"] = true,
-			["LoadDelay"] = 1,
+			["OfflineColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+			},
 			["TalentOffsetX"] = 0,
 			["HealthstoneTexture"] = "Interface\\AddOns\\Forte_Core\\Textures\\Aluminium",
 			["TimeLeftNoTarg"] = 1,
+			["SummonHeight"] = 12,
+			["SummonSpace"] = 1,
 			["Output"] = true,
-			["Chill"] = 0.05,
-			["HealthstoneMinColor"] = {
-				0.9300000000000001, -- [1]
-				1, -- [2]
-				0, -- [3]
-			},
 			["CustomInstances"] = {
 				["Timer"] = {
 				},
@@ -6130,7 +6142,7 @@ FC_Saved = {
 			},
 			["SoulstoneFadeSound"] = "Interface\\AddOns\\Forte_Core\\Sounds\\SoulstoneExpire.mp3",
 			["TimerClearcastingSoundVolume"] = 4,
-			["SoulstoneReadySoundEnable"] = true,
+			["TimerInstantSound"] = "Sound\\Spells\\ShadowWard.wav",
 			["SoulstoneMax"] = 10,
 			["TimerSortOrder"] = "buff selfdebuff debuff cooldown notarget target",
 			["SoulstoneWidth"] = 100,
@@ -6141,15 +6153,16 @@ FC_Saved = {
 				0.49, -- [2]
 				0.04, -- [3]
 			},
+			["SoulstoneReadySoundEnable"] = true,
 			["GlobalScale"] = 1,
-			["OfflineColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-			},
 			["CooldownLeft"] = 1,
 			["GlobalSpark"] = 0.7,
-			["SummonHeight"] = 12,
+			["HealthstoneMinColor"] = {
+				0.9300000000000001, -- [1]
+				1, -- [2]
+				0, -- [3]
+			},
+			["Chill"] = 0.05,
 			["OptionsSubHeaderBackdrop"] = {
 				"Interface\\AddOns\\Forte_Core\\Textures\\Smooth", -- [1]
 				"None", -- [2]
@@ -6158,24 +6171,178 @@ FC_Saved = {
 				2, -- [5]
 				2, -- [6]
 			},
-			["SummonSpace"] = 1,
 			["SplashStrata"] = "MEDIUM",
-			["OptionsHeight"] = 440,
+			["Splash"] = {
+				["SplashGlow"] = true,
+				["SecondSplashMax"] = 3,
+				["x"] = 614.4000447540723,
+				["lock"] = true,
+				["scale"] = 2,
+				["y"] = 384.0000092153639,
+				["alpha"] = 0.7,
+				["Enable"] = true,
+			},
 			["SoulstoneFadeSoundVolume"] = 1,
 			["SoulstoneStrata"] = "MEDIUM",
-			["TimerClearcastingSound"] = "Sound\\Spells\\SimonGame_Visual_GameStart.wav",
-			["OptionsHeaderBackdrop"] = {
-				"Interface\\AddOns\\Forte_Core\\Textures\\Otravi", -- [1]
-				"None", -- [2]
-				false, -- [3]
-				16, -- [4]
-				1, -- [5]
-				1, -- [6]
-			},
+			["OptionsFontSize"] = 11,
+			["HealthstoneExpand"] = false,
 			["SoulstoneReadySound"] = "Sound\\Spells\\SimonGame_Visual_GameTick.wav",
 			["CooldownLeftMsg"] = ">> %s is ready in %s <<",
-			["OptionsColums"] = 2,
+			["SummonMeetingStone"] = false,
+			["SoulstoneMinColor"] = {
+				1, -- [1]
+				0, -- [2]
+				0.6, -- [3]
+			},
+			["SoulstoneSpace"] = 1,
+			["TimerClearcastingSound"] = "Sound\\Spells\\SimonGame_Visual_GameStart.wav",
+			["ShamanColor"] = {
+				0, -- [1]
+				0.86, -- [2]
+				0.73, -- [3]
+			},
 			["Timer"] = {
+				["CustomTag"] = false,
+				["SelfDebuffColor"] = {
+					-0.06, -- [1]
+					-0.06, -- [2]
+					-0.06, -- [3]
+				},
+				["CrowdEnable"] = true,
+				["CurseEnable"] = true,
+				["DebuffsEnable"] = true,
+				["CustomTagMsg"] = "id target :: spell stacks",
+				["DebuffsOtherColor"] = {
+					0, -- [1]
+					0.18, -- [2]
+					0.5, -- [3]
+				},
+				["PetEnable"] = true,
+				["HealEnable"] = true,
+				["SelfDebuffEnable"] = true,
+				["Filter"] = {
+					["Demonic Circle: Summon"] = {
+						[2] = {
+							-2, -- [1]
+							0, -- [2]
+							0.67, -- [3]
+							0, -- [4]
+						},
+					},
+				},
+				["CooldownsOtherColor"] = {
+					0.5, -- [1]
+					0.2, -- [2]
+					0.18, -- [3]
+				},
+				["GroupID"] = false,
+				["TargetColor"] = {
+					1, -- [1]
+					1, -- [2]
+					1, -- [3]
+					1, -- [4]
+				},
+				["IconRight"] = false,
+				["DebuffsColor"] = {
+					0.24, -- [1]
+					0.24, -- [2]
+					0.24, -- [3]
+				},
+				["TargetBgColor"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					1, -- [4]
+				},
+				["FocusBgEnable"] = false,
+				["CooldownsOtherEnable"] = false,
+				["PetColor"] = {
+					0.24, -- [1]
+					0.24, -- [2]
+					0.24, -- [3]
+				},
+				["Backdrop"] = {
+					"Interface\\AddOns\\Forte_Core\\Textures\\Background", -- [1]
+					"Interface\\AddOns\\LUI\\media\\textures\\statusbars\\glowTex", -- [2]
+					false, -- [3]
+					16, -- [4]
+					6, -- [5]
+					5, -- [6]
+				},
+				["You"] = true,
+				["Font"] = "Interface\\AddOns\\LUI\\media\\fonts\\vibrocen.ttf",
+				["CurseColor"] = {
+					0.24, -- [1]
+					0.24, -- [2]
+					0.24, -- [3]
+				},
+				["FontSize"] = 10,
+				["RaidTargetsAlpha"] = 0.7,
+				["TotemEarthEnable"] = true,
+				["LabelFontSize"] = 10,
+				["Time"] = true,
+				["lock"] = true,
+				["Shared3Color"] = {
+					1, -- [1]
+					0.5, -- [2]
+					0, -- [3]
+				},
+				["Texture"] = "Interface\\AddOns\\LUI\\media\\textures\\statusbars\\Minimalist",
+				["FadeSpeed"] = 0.3,
+				["MaxTime"] = 30,
+				["LabelHeight"] = 16,
+				["LabelFont"] = "Interface\\AddOns\\LUI\\media\\fonts\\vibrocen.ttf",
+				["SparkColor"] = {
+					0.04, -- [1]
+					0.39, -- [2]
+					0.98, -- [3]
+					0.5, -- [4]
+				},
+				["ExpiredColor"] = {
+					0.24, -- [1]
+					0.24, -- [2]
+					0.24, -- [3]
+					0.1, -- [4]
+				},
+				["TimeColor"] = {
+					1, -- [1]
+					1, -- [2]
+					1, -- [3]
+					1, -- [4]
+				},
+				["FriendlyBuffColor"] = {
+					0.24, -- [1]
+					0.24, -- [2]
+					0.24, -- [3]
+				},
+				["FriendlyBuffEnable"] = true,
+				["TotemWaterColor"] = {
+					0, -- [1]
+					1, -- [2]
+					0.67, -- [3]
+				},
+				["TargetBgEnable"] = false,
+				["CrowdColor"] = {
+					0.24, -- [1]
+					0.24, -- [2]
+					0.24, -- [3]
+				},
+				["HealColor"] = {
+					0.24, -- [1]
+					0.24, -- [2]
+					0.24, -- [3]
+				},
+				["TicksColor"] = {
+					1, -- [1]
+					1, -- [2]
+					1, -- [3]
+					1, -- [4]
+				},
+				["TargetEnable"] = false,
+				["HideLongerNoBoss"] = false,
+				["Ticks"] = 0.3,
+				["RaidDebuffs"] = true,
+				["SpacingHeight"] = 0,
 				["HighlightColor"] = {
 					0.24, -- [1]
 					0.24, -- [2]
@@ -6194,117 +6361,55 @@ FC_Saved = {
 				},
 				["NoTarget"] = true,
 				["MaxEnable"] = false,
-				["CustomTag"] = false,
 				["Expand"] = true,
-				["SelfDebuffColor"] = {
-					-0.06, -- [1]
-					-0.06, -- [2]
-					-0.06, -- [3]
-				},
 				["HideTime"] = 2,
-				["SpacingHeight"] = 0,
+				["TotemAirColor"] = {
+					0, -- [1]
+					1, -- [2]
+					1, -- [3]
+				},
 				["Shared2Color"] = {
 					0, -- [1]
 					0.54, -- [2]
 					0.42, -- [3]
 				},
-				["ForceMax"] = false,
-				["CurseEnable"] = true,
-				["Test"] = false,
-				["DebuffsOtherColor"] = {
-					0, -- [1]
-					0.18, -- [2]
-					0.5, -- [3]
-				},
-				["MagicEnable"] = true,
-				["CustomTagMsg"] = "id target :: spell stacks",
-				["TicksEnable"] = false,
-				["Blink"] = 3,
-				["NormalAlpha"] = 0.4,
+				["StacksFont"] = "Interface\\AddOns\\Forte_Core\\Fonts\\GOTHIC.TTF",
 				["FadeTime"] = 0.5,
-				["PetEnable"] = true,
-				["HealEnable"] = true,
-				["y"] = 275.627075227817,
-				["SelfDebuffEnable"] = true,
-				["DrainColor"] = {
-					0.24, -- [1]
-					0.24, -- [2]
-					0.24, -- [3]
-				},
-				["Filter"] = {
-					["Demonic Circle: Summon"] = {
-						[2] = {
-							-2, -- [1]
-							0, -- [2]
-							0.67, -- [3]
-							0, -- [4]
-						},
-					},
-				},
-				["FailTime"] = 2,
-				["CastSpark"] = 0.3,
-				["GroupID"] = false,
-				["FailColor"] = {
-					0.24, -- [1]
-					0.24, -- [2]
-					0.24, -- [3]
-				},
-				["Ticks"] = 0.3,
-				["TargetBgColor"] = {
-					0, -- [1]
-					0, -- [2]
-					0, -- [3]
+				["NormalColor"] = {
+					1, -- [1]
+					1, -- [2]
+					1, -- [3]
 					1, -- [4]
 				},
+				["y"] = 274.5196083711784,
+				["x"] = 475.420044423639,
+				["NormalAlpha"] = 0.4,
+				["FailTime"] = 2,
+				["HideLonger"] = 30,
 				["TotemWaterEnable"] = true,
-				["MaximizeName"] = false,
 				["scale"] = 1.2,
 				["TotemEarthColor"] = {
 					1, -- [1]
 					0.5600000000000001, -- [2]
 					0, -- [3]
 				},
-				["TargetColor"] = {
-					1, -- [1]
-					1, -- [2]
-					1, -- [3]
-					1, -- [4]
-				},
-				["MaxTimeEnable"] = false,
 				["MagicColor"] = {
 					0.24, -- [1]
 					0.24, -- [2]
 					0.24, -- [3]
 				},
-				["ExpiredEnable"] = false,
 				["TotemFireEnable"] = true,
 				["Shared3Enable"] = true,
-				["Target"] = true,
-				["IgnoreLong"] = false,
 				["ShowID"] = false,
-				["FocusBgEnable"] = false,
-				["CooldownsOtherEnable"] = false,
-				["FocusEnable"] = false,
-				["TimeRight"] = true,
-				["alpha"] = 1,
-				["Max"] = 10,
-				["Font"] = "Interface\\AddOns\\LUI\\media\\fonts\\vibrocen.ttf",
-				["Backdrop"] = {
-					"Interface\\AddOns\\Forte_Core\\Textures\\Background", -- [1]
-					"Interface\\AddOns\\LUI\\media\\textures\\statusbars\\glowTex", -- [2]
-					false, -- [3]
-					16, -- [4]
-					6, -- [5]
-					5, -- [6]
-				},
-				["HighlightEnable"] = true,
-				["Height"] = 17,
-				["CooldownsEnable"] = true,
-				["CurseColor"] = {
+				["FailColor"] = {
 					0.24, -- [1]
 					0.24, -- [2]
 					0.24, -- [3]
 				},
+				["FocusEnable"] = false,
+				["Max"] = 10,
+				["HighlightEnable"] = true,
+				["Name"] = true,
 				["FailEnable"] = true,
 				["FocusColor"] = {
 					1, -- [1]
@@ -6312,175 +6417,98 @@ FC_Saved = {
 					0.5, -- [3]
 					1, -- [4]
 				},
-				["RaidTargetsEnable"] = false,
-				["HideLonger"] = 30,
+				["Label"] = false,
 				["Enable"] = true,
-				["LabelFontSize"] = 10,
-				["FontSize"] = 10,
-				["DebuffsOtherEnable"] = false,
-				["RaidTargetsAlpha"] = 0.7,
-				["TotemEarthEnable"] = true,
-				["lock"] = true,
-				["Texture"] = "Interface\\AddOns\\LUI\\media\\textures\\statusbars\\Minimalist",
 				["Fade"] = true,
-				["Spark"] = 0.7,
 				["BarBackgroundAlpha"] = 0.5,
-				["Time"] = true,
+				["DebuffsOtherEnable"] = false,
 				["Focus"] = true,
-				["CastSparkEnable"] = false,
 				["TicksNext"] = false,
-				["Shared3Color"] = {
-					1, -- [1]
+				["Blink"] = 3,
+				["TimeSpace"] = 25,
+				["BuffOtherColor"] = {
+					0.5, -- [1]
 					0.5, -- [2]
-					0, -- [3]
+					0.5, -- [3]
 				},
-				["RaidTargets"] = 0.7,
-				["TotemAirEnable"] = true,
 				["Spell"] = false,
-				["MaxTime"] = 30,
-				["CrowdColor"] = {
-					0.24, -- [1]
-					0.24, -- [2]
-					0.24, -- [3]
-				},
-				["FriendlyBuffColor"] = {
-					0.24, -- [1]
-					0.24, -- [2]
-					0.24, -- [3]
-				},
+				["Spark"] = 0.7,
+				["BuffOtherEnable"] = false,
 				["Shared2Enable"] = true,
-				["LabelFont"] = "Interface\\AddOns\\LUI\\media\\fonts\\vibrocen.ttf",
+				["IconStacks"] = true,
+				["CastSparkEnable"] = false,
 				["Width"] = 208.3333333333333,
 				["BuffColor"] = {
 					0.24, -- [1]
 					0.24, -- [2]
 					0.24, -- [3]
 				},
-				["SparkColor"] = {
-					0.04, -- [1]
-					0.39, -- [2]
-					0.98, -- [3]
-					0.5, -- [4]
+				["TimeSpaceEnable"] = true,
+				["SelfDebuffOtherEnable"] = false,
+				["RaidTargetsEnable"] = false,
+				["MagicEnable"] = true,
+				["SelfDebuffOtherColor"] = {
+					0.5, -- [1]
+					0, -- [2]
+					0, -- [3]
 				},
+				["TicksEnable"] = false,
+				["TotemAirEnable"] = true,
+				["Other"] = true,
 				["OneMax"] = false,
+				["SparkEnable"] = true,
+				["Flip"] = false,
+				["Hide"] = false,
+				["BuffEnable"] = true,
+				["HideNonStacking"] = false,
+				["TimeRight"] = false,
+				["DrainColor"] = {
+					0.24, -- [1]
+					0.24, -- [2]
+					0.24, -- [3]
+				},
+				["Icon"] = true,
+				["UnknownTarget"] = true,
+				["Target"] = true,
+				["Space"] = 1,
+				["Background"] = true,
+				["Outwands"] = true,
+				["BlinkEnable"] = false,
+				["IgnoreLong"] = false,
+				["MaximizeName"] = false,
+				["MaxTimeEnable"] = false,
+				["ExpiredEnable"] = false,
+				["CooldownsEnable"] = true,
+				["CastSpark"] = 0.3,
+				["Height"] = 17,
+				["alpha"] = 1,
+				["DrainEnable"] = true,
+				["CooldownsColor"] = {
+					0.24, -- [1]
+					0.24, -- [2]
+					0.24, -- [3]
+				},
+				["Test"] = false,
+				["StacksFontSize"] = 10,
+				["RaidTargets"] = 0.7,
+				["ForceMax"] = false,
 				["NormalBgColor"] = {
 					0, -- [1]
 					0, -- [2]
 					0, -- [3]
 					0.7300000190734863, -- [4]
 				},
-				["TimeColor"] = {
-					1, -- [1]
-					1, -- [2]
-					1, -- [3]
-					1, -- [4]
-				},
-				["SelfDebuffOtherColor"] = {
-					0.5, -- [1]
-					0, -- [2]
-					0, -- [3]
-				},
-				["FriendlyBuffEnable"] = true,
-				["Other"] = true,
-				["TotemWaterColor"] = {
-					0, -- [1]
-					1, -- [2]
-					0.67, -- [3]
-				},
-				["TargetBgEnable"] = false,
-				["SparkEnable"] = true,
-				["Flip"] = false,
-				["ExpiredColor"] = {
-					0.24, -- [1]
-					0.24, -- [2]
-					0.24, -- [3]
-					0.1, -- [4]
-				},
-				["LabelHeight"] = 16,
-				["HideNonStacking"] = false,
-				["FadeSpeed"] = 0.3,
-				["TimeSpace"] = 25,
-				["DebuffsColor"] = {
-					0.24, -- [1]
-					0.24, -- [2]
-					0.24, -- [3]
-				},
-				["DrainEnable"] = true,
 				["HideLongerEnable"] = false,
-				["Space"] = 1,
-				["Background"] = true,
-				["Outwands"] = true,
-				["BlinkEnable"] = false,
-				["HealColor"] = {
-					0.24, -- [1]
-					0.24, -- [2]
-					0.24, -- [3]
-				},
-				["PetColor"] = {
-					0.24, -- [1]
-					0.24, -- [2]
-					0.24, -- [3]
-				},
-				["TicksColor"] = {
-					1, -- [1]
-					1, -- [2]
-					1, -- [3]
-					1, -- [4]
-				},
-				["TargetEnable"] = false,
-				["HideLongerNoBoss"] = false,
-				["BuffOtherColor"] = {
-					0.5, -- [1]
-					0.5, -- [2]
-					0.5, -- [3]
-				},
-				["DebuffsEnable"] = true,
-				["NormalColor"] = {
-					1, -- [1]
-					1, -- [2]
-					1, -- [3]
-					1, -- [4]
-				},
-				["CooldownsOtherColor"] = {
-					0.5, -- [1]
-					0.2, -- [2]
-					0.18, -- [3]
-				},
-				["CooldownsColor"] = {
-					0.24, -- [1]
-					0.24, -- [2]
-					0.24, -- [3]
-				},
-				["BuffEnable"] = true,
-				["x"] = 475.420044423639,
-				["SelfDebuffOtherEnable"] = false,
-				["BuffOtherEnable"] = false,
-				["TotemAirColor"] = {
-					0, -- [1]
-					1, -- [2]
-					1, -- [3]
-				},
-				["CrowdEnable"] = true,
 			},
-			["TimerInstantSoundVolume"] = 4,
-			["TimerInstantSound"] = "Sound\\Spells\\ShadowWard.wav",
-			["TimeFormat"] = true,
-			["SoulstoneFadeSoundEnable"] = true,
 			["DisableMouseover"] = false,
 			["OptionsHeaderFont"] = "Interface\\AddOns\\Forte_Core\\Fonts\\GOTHICB.TTF",
-			["OptionBackgroundColor"] = {
-				0.4, -- [1]
-				0.4, -- [2]
-				0.4, -- [3]
-				0.9, -- [4]
-			},
-			["SummonBgColor"] = {
-				0.31, -- [1]
+			["TimerImprove"] = false,
+			["HealthstoneUnknownMaxColor"] = {
+				1, -- [1]
 				0, -- [2]
-				0.62, -- [3]
-				0.75, -- [4]
+				0, -- [3]
 			},
-			["HealthstoneInterval"] = 2,
+			["SoulstoneReadySoundVolume"] = 1,
 			["TimerFadeSoundEnable"] = true,
 			["DisableFocus"] = false,
 			["HealthstoneFont"] = "Interface\\AddOns\\Forte_Core\\Fonts\\GOTHIC.TTF",
@@ -11331,6 +11359,7 @@ FC_Saved = {
 		["DEATHKNIGHT"] = {
 			["Microbe"] = " 013022055075122 012023042073083095123132141155162201215253261273283291305311 00",
 			["Landfill"] = " 013022051072 012023042063072081103112123133141151162171182191201 00",
+			["Gorbah"] = "012033042 011 011023033063072081092103122133141162171182193201 00",
 			["Rin"] = "022033072 013022043051072082092103113121131142152161193201 012 00",
 			["Fallens"] = "  023033051063072081092103133141162171181 00",
 			["Justinn"] = "033 013022043062092103113121131142152161172193201 022 00",
@@ -11352,12 +11381,14 @@ FC_Saved = {
 		},
 		["MAGE"] = {
 			["Lixshotzx"] = "022033072 023 012023032041052062073091103113131143152161181191 00",
-			["Glasin"] = "022033052072  012023032043052061073091103113121131143152161191 00",
+			["Akiffs"] = "013033043062071082091102112131142162171182191202211 012 023 00",
+			["Ribs"] = "022033052072  012023032043052062073091103113122131143161191 00",
+			["Rufio"] = "032 012023031043053071081091101131142151161171183192203211 023 00",
 			["Regio"] = "022033072  012023032043052062073091103113131143152161172191 00",
 			["Gálen-Nagrand"] = "012022033  012023032043052062073082091103121131143152161182191 00",
 			["Gobifrost"] = "   00",
-			["Ribs"] = "022033052072  012023032043052062073091103113122131143161191 00",
-			["Rufio"] = "032 012023031043053071081091101131142151161171183192203211 023 00",
+			["Mikkyz"] = "033 012023043053072082091101112131142151162171183192203211 023 00",
+			["Glasin"] = "022033052072  012023032043052061073091103113121131143152161191 00",
 		},
 		["PRIEST"] = {
 			["Qi"] = "025043052073081 012023035045083092122131145152165173193223233241253265271  00",
@@ -11367,6 +11398,7 @@ FC_Saved = {
 			["Bubbeldricka-Frostmane"] = "012023033042051072082091102111123132152163171211 023033041052061  00",
 			["Arianna"] = "023033 012023033052062072082091102121132142151161183192201211 032 00",
 			["Daterapist-Kazzak"] = "012023033042051082102122131   00",
+			["Sobarka"] = "023032  013022032053062072081102121132142152161192203211 00",
 			["Shadowlightz"] = "025043052073 012023035045083092122131145152165173193211223233241253265271  00",
 			["Twistey"] = "023  013022042053062081092102111121132142152161181192203211 00",
 			["Zulrea"] = "012023033061072082091111122   00",
@@ -11383,6 +11415,7 @@ FC_Saved = {
 		["SHAMAN"] = {
 			["Róló"] = "   00",
 			["Supermon"] = "012033042053062082091102112123131141152161173182 012033062 012 00",
+			["Eoss-Kilrogg"] = "012022033042073082091111121   00",
 			["Strayy-Chamber of Aspects"] = "013033042062 012023032043053062091103133151162173182191  00",
 			["Jacinthe"] = "013033062 012023033043053062091103121133151162173182191  00",
 			["Mylen"] = "  022033042063081091103121131 00",
@@ -11391,8 +11424,9 @@ FC_Saved = {
 		["DRUID"] = {
 			["Tikytaka"] = "013032053 022 022032043061073083092101132142153161171193201211 00",
 			["Qauxy"] = "025033042081  012023053063073081092102113121135152165173181205213223231243265271 00",
-			["Heion"] = " 015033042053062071083103112122141163175183191202223261273285291301 012033045063081092 00",
+			["Cyclownz"] = " 015033042053062071083103112122141163175183191202241261  00",
 			["Häxpipan"] = "013023032043062072081091102111122131142151161171182193201  042 00",
+			["Heion"] = " 015033042053062071083103112122141163175183191202223261273285291301 012033045063081092 00",
 		},
 		["PALADIN"] = {
 			["Shandel"] = " 013032042053072083091102111121132141151162171182193201 023032053 00",
@@ -11400,6 +11434,7 @@ FC_Saved = {
 			["Serene"] = "023033043052081092102111121133141153161172183201 013032 023031 00",
 			["Révan-Frostmane"] = "012033062 022 023032053062071083092101111121131143151161172183191201 00",
 			["Montular"] = "012033062 022 012023032053062071083092101111121131143161172183201 00",
+			["Gilded"] = "023033043052072081092102112121133141153183192201  032 00",
 			["Argwynn"] = "012033062 022031 011023032053062071083092111121131143161172183191201 00",
 			["Daladin"] = "   00",
 			["Xíro"] = "022033043052081092102111121133141153161172183201 013032 023032 00",
@@ -11411,284 +11446,67 @@ FC_Saved = {
 			["Akiffson"] = "022 012023042053062093102111122142153161172182191 023 00",
 		},
 	},
-	["PROFILE"] = "Argwynn",
+	["PROFILE"] = "Tikytaka",
 	["RAID"] = false,
 	["VERSION"] = "v1.974.7",
 	["Cooldowns"] = {
 	},
 	["RaidStatus"] = {
-		["Magmatron"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"MAGE", -- [3]
-		},
-		["Anaru"] = {
-			-2, -- [1]
-			17245.853, -- [2]
-			"WARLOCK", -- [3]
-		},
-		["Spellpowah"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"WARLOCK", -- [3]
-		},
-		["Balkarec"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Pulzo"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"HUNTER", -- [3]
-		},
-		["Darkmask"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Djmads"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"MAGE", -- [3]
-		},
-		["Argwynn"] = {
+		["Srangel-Karazhan"] = {
 			0, -- [1]
-			19109.925, -- [2]
-			"PALADIN", -- [3]
-			"v1.974.7", -- [4]
-		},
-		["Burttos"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"WARRIOR", -- [3]
-		},
-		["Awendel"] = {
-			-2, -- [1]
-			17342.673, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Chibi"] = {
-			-2, -- [1]
-			16007.123, -- [2]
-			"SHAMAN", -- [3]
-		},
-		["Eikenboom"] = {
-			-2, -- [1]
-			17335.241, -- [2]
-			"DRUID", -- [3]
-		},
-		["Influensa"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"DRUID", -- [3]
-		},
-		["Japper"] = {
-			-2, -- [1]
-			16746.274, -- [2]
+			4927.984, -- [2]
 			"PALADIN", -- [3]
 		},
-		["Pwnztr"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"SHAMAN", -- [3]
-		},
-		["Jumpa"] = {
-			-2, -- [1]
-			17342.673, -- [2]
-			"SHAMAN", -- [3]
-		},
-		["Kraisus"] = {
-			-2, -- [1]
-			17482.858, -- [2]
-			"ROGUE", -- [3]
-			"v1.974.7", -- [4]
-		},
-		["Denvér"] = {
-			-2, -- [1]
-			16741.813, -- [2]
-			"DRUID", -- [3]
-		},
-		["Rebbon"] = {
-			-2, -- [1]
-			17141.915, -- [2]
-			"WARLOCK", -- [3]
-		},
-		["Rezistance"] = {
-			-2, -- [1]
-			17322.721, -- [2]
-			"PALADIN", -- [3]
-		},
-		["Teábág"] = {
-			-2, -- [1]
-			17278.698, -- [2]
-			"DRUID", -- [3]
-		},
-		["Elbartto"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"DRUID", -- [3]
-		},
-		["Ehren"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"PRIEST", -- [3]
-		},
-		["Alchapone"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"SHAMAN", -- [3]
-		},
-		["Darksaffire"] = {
-			-2, -- [1]
-			17341.74, -- [2]
+		["Eliit"] = {
+			0, -- [1]
+			4927.984, -- [2]
 			"MAGE", -- [3]
 		},
-		["Oakfather"] = {
+		["Cimmikus-Kazzak"] = {
 			-2, -- [1]
-			16746.274, -- [2]
-			"PRIEST", -- [3]
-		},
-		["Fearluss"] = {
-			-2, -- [1]
-			16746.274, -- [2]
+			2936.754, -- [2]
 			"ROGUE", -- [3]
-			1, -- [4]
 		},
-		["Combs"] = {
-			-2, -- [1]
-			19106.412, -- [2]
-			"HUNTER", -- [3]
+		["Korman-Vek'nilash"] = {
+			0, -- [1]
+			4927.984, -- [2]
+			"SHAMAN", -- [3]
 		},
-		["Midián"] = {
+		["Brightblades-Auchindoun"] = {
 			-2, -- [1]
-			17330.649, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Murattos"] = {
-			-2, -- [1]
-			17285.819, -- [2]
-			"HUNTER", -- [3]
-		},
-		["Holynuts"] = {
-			-2, -- [1]
-			15914.165, -- [2]
-			"PRIEST", -- [3]
-		},
-		["Tendy"] = {
-			-2, -- [1]
-			16746.274, -- [2]
+			2936.754, -- [2]
 			"WARRIOR", -- [3]
+		},
+		["Tikytaka"] = {
+			0, -- [1]
+			4927.984, -- [2]
+			"DRUID", -- [3]
+			"v1.974.7", -- [4]
+		},
+		["Deathspànk"] = {
+			-2, -- [1]
+			2770.992, -- [2]
+			"PALADIN", -- [3]
+		},
+		["Blackasice-Karazhan"] = {
+			0, -- [1]
+			4927.984, -- [2]
+			"DEATHKNIGHT", -- [3]
 		},
 		["Unknown"] = {
 			-2, -- [1]
-			16145.111, -- [2]
-		},
-		["Budweizèr"] = {
-			-2, -- [1]
-			17262.892, -- [2]
-			"HUNTER", -- [3]
-		},
-		["Kilio"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"ROGUE", -- [3]
-		},
-		["Zock"] = {
-			-2, -- [1]
-			16736.765, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Kayos"] = {
-			-2, -- [1]
-			17324.741, -- [2]
-			"PRIEST", -- [3]
-		},
-		["Lominz"] = {
-			-2, -- [1]
-			17266.907, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Fireblood"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"MAGE", -- [3]
-		},
-		["Lenz"] = {
-			-2, -- [1]
-			17342.673, -- [2]
-			"PRIEST", -- [3]
-		},
-		["Cartwheel"] = {
-			-2, -- [1]
-			17269.431, -- [2]
-			"WARRIOR", -- [3]
-		},
-		["Xsentos"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"WARRIOR", -- [3]
-		},
-		["Chissay"] = {
-			-2, -- [1]
-			17051.689, -- [2]
-			"PALADIN", -- [3]
-		},
-		["Liquíd"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"WARLOCK", -- [3]
-		},
-		["Sígx"] = {
-			-2, -- [1]
-			17191.415, -- [2]
-			"HUNTER", -- [3]
-			1, -- [4]
-		},
-		["Sulf"] = {
-			-2, -- [1]
-			17270.903, -- [2]
-			"PALADIN", -- [3]
-		},
-		["Fadsa"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"PALADIN", -- [3]
-		},
-		["Gröntbajs"] = {
-			-2, -- [1]
-			17237.441, -- [2]
-			"DRUID", -- [3]
-		},
-		["Snousie"] = {
-			-2, -- [1]
-			16746.274, -- [2]
-			"DRUID", -- [3]
-		},
-		["Naturaly"] = {
-			-2, -- [1]
-			17342.673, -- [2]
-			"PALADIN", -- [3]
-		},
-		["Jhomia"] = {
-			-2, -- [1]
-			17342.673, -- [2]
-			"MAGE", -- [3]
-		},
-		["Lickelade"] = {
-			-2, -- [1]
-			17342.673, -- [2]
-			"WARLOCK", -- [3]
-		},
-		["Glennmagnum"] = {
-			-2, -- [1]
-			17234.91, -- [2]
-			"ROGUE", -- [3]
-		},
-		["Raycor"] = {
-			-2, -- [1]
-			17332.22, -- [2]
+			4891.395, -- [2]
 			"SHAMAN", -- [3]
+		},
+		["Arlithrien"] = {
+			-2, -- [1]
+			2936.754, -- [2]
+			"PALADIN", -- [3]
+		},
+		["Kallvind"] = {
+			-2, -- [1]
+			2936.754, -- [2]
+			"MAGE", -- [3]
 		},
 	},
 	["ProfileNames"] = {
@@ -11749,5 +11567,5 @@ FC_Saved = {
 			"Glasin", -- [2]
 		}, -- [14]
 	},
-	["GROUPED"] = false,
+	["GROUPED"] = true,
 }

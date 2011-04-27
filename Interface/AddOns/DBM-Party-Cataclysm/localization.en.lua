@@ -170,6 +170,7 @@ L:SetGeneralLocalization({
 
 L:SetMiscLocalization{
 	ValionaYell	= "Dragon, you will do as I command! Catch me!",	-- Yell when Valiona is incoming
+	Add			= "%s Summons an",
 	Valiona		= "Valiona"
 }
 
@@ -220,7 +221,7 @@ L:SetTimerLocalization({
 })
 
 L:SetMiscLocalization({
-	Brann		= "Right, let's go! Just need to input the final entry sequence into the door mechanism... and..."
+	Brann				= "Right, let's go! Just need to input the final entry sequence into the door mechanism... and..."
 })
 
 ------------
@@ -292,12 +293,12 @@ L:SetWarningLocalization{
 }
 
 L:SetTimerLocalization({
-	timerPhase2 	= "Phase 2 Starts"
+	timerPhase2 		= "Phase 2 Starts"
 })
 
 L:SetOptionLocalization{
 	specWarnPhase2Soon	= "Show special warning for phase 2 soon (5 seconds)",
-	timerPhase2 	= "Show timer for start of phase 2"
+	timerPhase2 		= "Show timer for start of phase 2"
 }
 
 ------------------------
@@ -409,11 +410,9 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization{
-	WarnMortalWound	= "%s on >%s< (%d)"		-- Mortal Wound on >args.destName< (args.amount)
 }
 
 L:SetOptionLocalization{
-	WarnMortalWound	= DBM_CORE_AUTO_ANNOUNCE_OPTIONS.spell:format(93675, GetSpellInfo(93675) or "unknown")
 }
 
 ---------------------
@@ -503,6 +502,10 @@ L:SetGeneralLocalization({
 	name = "Grand Vizier Ertan"
 })
 
+L:SetMiscLocalization{
+	Retract		= "%s retracts its cyclone shield!"
+}
+
 --------------
 -- Altairus --
 -------------- 
@@ -570,3 +573,276 @@ L = DBM:GetModLocalization("Ozumat")
 L:SetGeneralLocalization({
 	name = "Ozumat"
 })
+
+----------------
+--  Zul'Aman  --
+----------------
+-- Nalorakk --
+--------------
+L = DBM:GetModLocalization("Nalorakk5")
+
+L:SetGeneralLocalization{
+	name = "Nalorakk (Bear)"
+}
+
+L:SetWarningLocalization{
+	WarnBear		= "Bear Form",
+	WarnBearSoon	= "Bear Form in 5 sec",
+	WarnNormal		= "Normal Form",
+	WarnNormalSoon	= "Normal Form in 5 sec"
+}
+
+L:SetTimerLocalization{
+	TimerBear		= "Bear Form",
+	TimerNormal		= "Normal Form"
+}
+
+L:SetOptionLocalization{
+	WarnBear		= "Show warning for Bear form",
+	WarnBearSoon	= "Show pre-warning for Bear form",
+	WarnNormal		= "Show warning for Normal form",
+	WarnNormalSoon	= "Show pre-warning for Normal form",
+	TimerBear		= "Show timer for Bear form",
+	TimerNormal		= "Show timer for Normal form"
+}
+
+L:SetMiscLocalization{
+	YellBear 	= "You call on da beast, you gonna get more dan you bargain for!",
+	YellNormal	= "Make way for Nalorakk!"
+}
+
+--------------
+-- Akil'zon --
+--------------
+L = DBM:GetModLocalization("Akilzon5")
+
+L:SetGeneralLocalization{
+	name = "Akil'zon (Eagle)"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	StormIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(43648),
+	RangeFrame	= "Show range frame (10 yards)"
+}
+
+L:SetMiscLocalization{
+}
+
+--------------
+-- Jan'alai --
+--------------
+L = DBM:GetModLocalization("Janalai5")
+
+L:SetGeneralLocalization{
+	name = "Jan'alai (Dragonhawk)"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	FlameIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(43140)
+}
+
+L:SetMiscLocalization{
+	YellBomb	= "I burn ya now!",
+	YellAdds	= "Where ma hatcha? Get to work on dem eggs!"
+}
+
+-------------
+-- Halazzi --
+-------------
+L = DBM:GetModLocalization("Halazzi5")
+
+L:SetGeneralLocalization{
+	name = "Halazzi (Lynx)"
+}
+
+L:SetWarningLocalization{
+	WarnSpirit	= "Spirit Phase",
+	WarnNormal	= "Normal Phase"
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	WarnSpirit	= "Show warning for Spirit phase",
+	WarnNormal	= "Show warning for Normal phase"
+}
+
+L:SetMiscLocalization{
+	YellSpirit	= "I fight wit' untamed spirit....",
+	YellNormal	= "Spirit, come back to me!"
+}
+
+-----------------------
+-- Hexlord Malacrass --
+-----------------------
+L = DBM:GetModLocalization("Malacrass5")
+
+L:SetGeneralLocalization{
+	name = "Hexlord Malacrass"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+	TimerSiphon	= "%s: %s"
+}
+
+L:SetOptionLocalization{
+	TimerSiphon	= "Show timer for $spell:43501"
+}
+
+L:SetMiscLocalization{
+}
+
+-------------
+-- Daakara --
+-------------
+L = DBM:GetModLocalization("Daakara")
+
+L:SetGeneralLocalization{
+	name = "Daakara"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+}
+
+L:SetMiscLocalization{
+	SetIconOnThrow		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(97639)
+}
+
+-----------------
+--  Zul'Gurub  --
+-------------------------
+-- High Priest Venoxis --
+-------------------------
+L = DBM:GetModLocalization("Venoxis")
+
+L:SetGeneralLocalization{
+	name = "High Priest Venoxis"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	SetIconOnToxicLink	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(96477)
+}
+
+L:SetMiscLocalization{
+}
+
+------------
+-- Zanzil --
+------------
+L = DBM:GetModLocalization("Mandokir")
+
+L:SetGeneralLocalization{
+	name = "Bloodlord Mandokir"
+}
+
+L:SetWarningLocalization{
+	WarnRevive		= "Ghost Revive - %d left",
+	SpecWarnOhgan	= "Ohgan revived! Attack now!" -- check this, i'm not good at English
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	WarnRevive		= "Announce how many ghost revive remaining",
+	SpecWarnOhgan	= "Show warning when Ohgan is revived" -- check this, i'm not good at English
+}
+
+L:SetMiscLocalization{
+	Ohgan		= "Ohgan"
+}
+
+------------
+-- Zanzil --
+------------
+L = DBM:GetModLocalization("Zanzil")
+
+L:SetGeneralLocalization{
+	name = "Zanzil"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	SetIconOnGaze	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(96342)
+}
+
+L:SetMiscLocalization{
+}
+
+----------------------------
+-- High Priestess Kilnara --
+----------------------------
+L = DBM:GetModLocalization("Kilnara")
+
+L:SetGeneralLocalization{
+	name = "High Priestess Kilnara"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+}
+
+L:SetMiscLocalization{
+}
+
+----------------------------
+-- Jindo --
+----------------------------
+L = DBM:GetModLocalization("Jindo")
+
+L:SetGeneralLocalization{
+	name = "Jin'do the Godbreaker"
+}
+
+L:SetWarningLocalization{
+	WarnBarrierDown	= "Hakkar's Chains Barrier Down - %d/3 left"
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	WarnBarrierDown	= "Announce when Hakkar's Chains barrier down"
+}
+
+L:SetMiscLocalization{
+	Kill			= "Oh no, Hakkar's spirit is free!" -- temporarily
+}

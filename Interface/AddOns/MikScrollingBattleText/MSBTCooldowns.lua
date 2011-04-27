@@ -1,6 +1,8 @@
 -------------------------------------------------------------------------------
 -- Title: Mik's Scrolling Battle Text Cooldowns
 -- Author: Mikord
+-- Updated by the generous ppl at Curse.com use at own risk.
+-- Modified line is on 249
 -------------------------------------------------------------------------------
 
 -- Create module and set its name.
@@ -243,7 +245,8 @@ end
 -- ****************************************************************************
 -- Combat log event for detecting pet casts.
 -- ****************************************************************************
-function eventFrame:COMBAT_LOG_EVENT_UNFILTERED(timestamp, event, sourceGUID, sourceName, sourceFlags, recipientGUID, recipientName, recipientFlags, skillID)
+-- Modified here for the 4.1 patch by Protonova Rexxar (US)
+function eventFrame:COMBAT_LOG_EVENT_UNFILTERED(timestamp, event, hideCaster, sourceGUID, sourceName, sourceFlags, recipientGUID, recipientName, recipientFlags, skillID)
   if (event ~= "SPELL_CAST_SUCCESS") then return end
   if (sourceGUID == UnitGUID("pet")) then OnSpellCast("pet", skillID) end
 end

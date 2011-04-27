@@ -1,0 +1,260 @@
+Text Only
+
+Name, colored by...
+	- Class, Threat, Reaction or plain White
+Description
+	- Class (In BG), Level, Guild (world)
+	- Colored by reaction
+	- Enemy Players: Guild colored Reddish
+	- Friendly Players: Guild colored Bluish
+	
+
+
+Un-id'd friendly and hostile are greyish versions of the 'normal' colors
+turn off CPU polling
+
+Solve problems, not add meaningless features
+
+* Problem Solved:
+	In-combat filtering
+	
+* Quatre/Damage, Namer
+
+* UnitCache
+	* PLAYER Entering world
+		- Check if BG/instance or whatever, and turn off general polling if it is
+		- only poll in world
+
+* debuff widget
+	* poll for recycle?
+	* or, capture some event, like getting on a mount
+	*combat log event
+	
+	or use SetAuraInstance...
+	create ClearAuraInstance to clear removed auras
+	watch for unitdied events in the combat log, and clear those guids
+		- UNIT_DIED	 destGUID and destName refer to the unit that died.
+		- that won't clear many npc infos, but it might be ok.
+		- I think that the current structure of clearing after combat should work fine.  who doesn't engage in combat?
+
+Icons
+	- Keyhole watermark for cc
+	- Clamp or claws or bars (behind bars)
+	- 
+
+
+Video Content
+	- How to set up Tidy Plates for Tanking
+	- How to set up Tidy Plates for single target and multi-target DPS.
+	- How to set up Tidy Plates for PvP
+	
+"Vertical Position of Artwork"
+
+Function Definition in Core...  Makes notes of section
+ex...
+local FunctionName										-- Defined in Section II: Frame Init Functions
+local OtherFunctionName, MoreFunctions, EvenMore		-- Defined in Section III			
+
+
+Debuff Widget (while not in combat, poll every 2 mins to clear aura table, stop polling during combat)
+
+
+NOTES
+---------------------
+Tank Hex Color: 3782D1
+Damage Hex Color: FF4400
+
+
+6.1 Revisions
+................................................................................................................................
+
+6.1.3	- Welcome 
+6.1.4	- Colors reset, Welcome fix
+6.1.5	- Raid Tank Coloring for "By Threat" Modes
+		- Alphabetized List
+		- Better handling when previous theme selection does not exist
+		- Debuffs of the same spell-id are now handled more securely
+		
+6.1.6
+		- Added Events for UNIT_SPELLCAST_NOT_INTERRUPTIBLE, UNIT_SPELLCAST_INTERRUPTIBLE
+		- Added Threat Wheel to Hub
+		- Reverted to original health % mode (does not show % when full health)
+		- WoW 4.1 Compatibility (works on 4.0.x and 4.1)
+	
+
+6.1.7
+	- Changed from thousand/million suffix for health text to using a thousands seperator
+	- Restored PTR support (last time I checked)
+	- Moved Quatre Raid Icon to similar position as Neon (to left side of health bar)
+	
+6.1.8
+	- PTR bug fixes (Neon Threat Glow was turning green)
+	- Debuff widget will clear aurainstance tables when combat ends (regen returns)
+	- Added Health Text option: Approximate Health (will show 2 decimal places for thousands (k) and millions (M), with suffix)
+	- Added Text option, "Use Default Blizzard Font"; This will use the font defined by the global variable, 'NAMEPLATE_FONT'.  This should improve the situation for non-latin charcter sets (this is for you, Chinese, Russians, Taiwanese, and Koreans.. xoxo)
+
+6.1.11
+	NEW! Keyword filtering for the Debuff Widget
+	- See Demo on Youtube: http://www.youtube.com/watch?v=2KjGFd0TgvM
+	- By Prefix.. Mode for Debuff Widget
+		- ALL, MY, NO, OTHER, CC
+		- Using CC will eventually highlight the debuff on the widget, but for now it just acts as "ALL"
+		
+	- Fixed UnitChannelInfo interruptable spell argument bug
+	- Found a bug; The Editboxes contained in my ScrollFrames seem to invisibly extend past the bottom of the scrollframe, which can block underlying UI controls.  I've dropped the editboxes to a lower frame level, which is a hack method of preventing problems with it interferring with controls anchored to the bottom of the scrollframe.  Will attempt to figure out a better solution.
+	- Name text coloring modes
+	- By Raid Icon modes for Opacity and Scale
+
+6.1.12
+	- Fixed Hub/Tank NameTextColor errors
+	- Updated description of "Vertical Position of Frame" to "Vertical Position of Artwork"
+
+6.1.13
+	- tweaked name color function
+	- 
+
+6.1 ...x
+Tidy Plates: Crossover (Neon, Graphite, etc. for Friendly, Hostile, etc.)
+- Name Text Color, By Elite (or many levels above)
+- Text entry box to sliders
+- "By Low Health"
+- Texture Coordinates for Textures and Statusbar
+Add a tag to the icon
+UpdateIcon should put the debuff data onto the icon.
+One of the data elements should be "special case" in order to handle CC type spells
+
+* Spell Icon Border
+* Friendly Group Member Aggro Color
+* Reduce Double Calls / reduce context update load
+   * widget:Test() Testmode Update() function
+* Improve ScaleFunctionByActiveDebuffs and Opacity...
+	- Create function within the Aura widget to return if the widget is active
+	- test via guid, name and raid icon search
+	
+Debuff Icon "Create Icon" function, exposed
+
+Tidy Plates Blog
+Design Notes
+Design Diary
+
+
+
+
+
+Tidy Plates 7
+New Concepts
+Event Scripts...  Delegate Functions
+Direct Access Functions?
+	- Change style
+	- Change Custom Text
+	- Etc..
+Define a style	(TidyPlatesStyleList, TidyPlatesThemeList)
+
+Define a style in the style database
+
+
+Menu Design
+
+[[frame]
+	- subitems
+frame]
+[[frame]
+	- subitems
+	- items
+	- items
+frame]
+
+
+CategoryFrame
+	- SubItems
+	
+Each Frame has a bounding box and an access function.
+
+
+Style Full Editing Suite
+Theme/Function Suite
+
+	
+-------------------------------------------------------------------------------------
+Statusbar Header Graphic (For multicolor fade effects)
+fire an event when a nameplate is shown , hidden or created
+- Text Plates	
+- InCombat: Does red text still bug?  Test with Pericles
+	- Yes, text color only changes when the unit..
+		- Is attacked by you
+		- The unit health changes
+	- Make InCombat a spotlight option?
+- Make InCombat a filter option
+	- If the combat flag is set
+	- if the health is less than 100%
+
+- Filter: Filter Out Unmarked Units
+- Make a "Neon Mod" as a independent download
+* Checkbox for Aggro stuff: Hide/Avoid mobs that aren't In Combat.  Opacity: Hide if not in combat
+
+UpdateWidget
+UpdateIcon
+
+* Spell Casting Colors (int/non-int)
+* Graphite
+* neon "friendly" style and themecustomization() function
+
+* By Health Warning, By Low Health, Etc (Greater than/Less than)
+* Turn on/off Text Only Plate (Dropdown box: Show Health Bars for: Friendly, Enemy, Both
+* Friend List Feed?
+* Mouseover/Unitid search for cast bar interruptible status
+
+* Threat Widget Colors
+* ShowText Option for Threat Line Widget (Allow text for either side of the tugging)
+* Healer Hub
+
+
+* Allow unit.guid to be fed from another source:
+	- if unit.guid then GUID[unit.guid] = plate end
+	This should go in the OnUpdateNameplate function, I think:
+	- if not GUID[unit.guid] then GUID[unit.guid] = plate; ContextUpdate end
+
+* Platelevels for plates(1-100), targets(127), casters(101-120), other?(121-125) 
+
+* Raid_Target_Update should trigger UpdateWidgetContext
+------
+
+Slacker Bear
+
+Cataclysm So Far
+
+Hyjal I enjoyed immensly; It was like the Howling Fjords for me.  The "Regrowth" was one of my favorite parts.  Also enjoyed Deepholm, but that felt a bit small.  Went to Uldum, of course.  It's...  beautiful, of course.  I hate the pygmies.  I won't try to explain it, but I hate them soooo much.  Right from that cut scene at the intro to the zone, I hated them.  My character certainly wouldn't be taken captive my those little runts; He's soloed frost giants 40 times his size in Icecrown, and would certainly not SURRENDER to such a thing.  That pissed me off.  I stewed.
+
+Are the encounters fun?
+Do your characters feel special?  Do they feel OP in certain situations?  Do they feel unique?  Talent trees should give players the choice to be OP in ONE area.  Otherwise, it's all the same.  Use your strengths.  Water beats fire, which beats wood... Battlbeasts!
+Are the mechanics of a class enjoyable?
+5-mans...
+
+Raid accessibility...
+
+5-man regulars should help prep for end game raiding
+5-man herics should be end game content, somewhat on par with raids.
+5-mans to 10-man regular
+5-man heric = 10-man regular
+
+archaeology
+
+
+
+
+Videos
+
+Configuring a tanking setup for Tidy Plates
+- DPS
+- AoE
+- PvP
+- Leveling
+- CC
+
+Need to test Hibernate with no prefix
+
+
+"Default" style
+Tidy Plates Cross
+CC Highlkighting
+

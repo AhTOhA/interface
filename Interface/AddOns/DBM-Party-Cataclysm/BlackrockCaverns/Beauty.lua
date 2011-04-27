@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("Beauty", "DBM-Party-Cataclysm", 1)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 4715 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5372 $"):sub(12, -3))
 mod:SetCreatureID(39700)
 mod:SetZone()
 
@@ -13,7 +13,7 @@ mod:RegisterEvents(
 )
 
 local warnTerrifyingRoar	= mod:NewSpellAnnounce(76028, 2)
-local warnMagmaSpit		= mod:NewTargetAnnounce(76031, 3)
+local warnMagmaSpit			= mod:NewTargetAnnounce(76031, 3)
 
 local timerTerrifyingRoarCD	= mod:NewCDTimer(30, 76028)
 local timerMagmaSpit		= mod:NewTargetTimer(9, 76031)

@@ -1,7 +1,7 @@
-local mod	= DBM:NewMod("Maloriak", "DBM-BlackwingDescent", 3)
+local mod	= DBM:NewMod("Maloriak", "DBM-BlackwingDescent")
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5207 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5557 $"):sub(12, -3))
 mod:SetCreatureID(41378)
 mod:SetZone()
 mod:SetUsedIcons(1, 2, 3, 4, 6, 7, 8)
@@ -14,7 +14,8 @@ mod:RegisterEvents(
 	"SPELL_CAST_START",
 	"SPELL_CAST_SUCCESS",
 	"SPELL_INTERRUPT",
-	"CHAT_MSG_RAID_BOSS_EMOTE"
+	"CHAT_MSG_RAID_BOSS_EMOTE",
+	"UNIT_HEALTH"
 )
 
 local warnPhase					= mod:NewAnnounce("WarnPhase", 2)
@@ -29,18 +30,19 @@ local warnScorchingBlast		= mod:NewSpellAnnounce(77679, 4)
 local warnDebilitatingSlime		= mod:NewSpellAnnounce(77615, 2)
 local warnMagmaJets				= mod:NewSpellAnnounce(78194, 4, nil, mod:IsTank())--4.0.6+ now supporting this warning.
 local warnEngulfingDarkness		= mod:NewSpellAnnounce(92754, 4, nil, mod:IsHealer() or mod:IsTank())--Heroic Ability
-local warnPhase2				= mod:NewPhaseAnnounce(2)
+local warnPhase2Soon			= mod:NewPrePhaseAnnounce(2, 3)
+local warnPhase2				= mod:NewPhaseAnnounce(2, 4)
  
 local timerPhase				= mod:NewTimer(49, "TimerPhase", 89250)--Just some random cauldron icon not actual spellid
 local timerBitingChill			= mod:NewBuffActiveTimer(10, 77760)
 local timerFlashFreeze			= mod:NewCDTimer(14, 77699)--Varies on other abilities CDs
-local timerAddsCD				= mod:NewCDTimer(15, 77569)--Varies on other abilities CDs
+local timerAddsCD				= mod:NewCDTimer(15, 77569, nil, not mod:IsHealer())--Varies on other abilities CDs
 local timerArcaneStormCD		= mod:NewCDTimer(14, 77896)--Varies on other abilities CDs
-local timerConsumingFlames		= mod:NewTargetTimer(10, 77786)
+local timerConsumingFlames		= mod:NewTargetTimer(10, 77786, nil, mod:IsHealer())
 local timerScorchingBlast		= mod:NewCDTimer(10, 77679)--Varies on other abilities CDs
 local timerDebilitatingSlime	= mod:NewBuffActiveTimer(15, 77615)
 local timerMagmaJetsCD			= mod:NewNextTimer(10, 78194)
-local timerEngulfingDarknessCD	= mod:NewNextTimer(12, 92754)--Heroic Ability
+local timerEngulfingDarknessCD	= mod:NewNextTimer(12, 92754, nil, mod:IsHealer() or mod:IsTank())--Heroic Ability
 
 local specWarnBitingChill		= mod:NewSpecialWarningYou(77760)
 local specWarnConsumingFlames	= mod:NewSpecialWarningYou(77786)
@@ -58,6 +60,7 @@ mod:AddBoolOption("FlashFreezeIcon")
 mod:AddBoolOption("BitingChillIcon", false)
 mod:AddBoolOption("ConsumingFlamesIcon", false)
 mod:AddBoolOption("RangeFrame")
+mod:AddBoolOption("SetTextures", false)--Blizz sucks and just about ALL friendly spells cover dark sludge and make you unable to see it.
 
 local adds = 18
 local AddsInterrupted = false
@@ -67,6 +70,7 @@ local bitingChillTargets = {}
 local flashFreezeTargets = {}
 local bitingChillIcon = 6
 local flashFreezeIcon = 8
+local prewarnedPhase2 = false
 
 local function showBitingChillWarning()
 	warnBitingChill:Show(table.concat(bitingChillTargets, "<, >"))
@@ -91,10 +95,10 @@ local function InterruptCheck()
 end
 
 function mod:OnCombatStart(delay)
-	if mod:IsDifficulty("normal10") or mod:IsDifficulty("normal25") then
-		berserkTimer:Start(-delay)--7 min berserk on normal
+	if mod:IsDifficulty("heroic10", "heroic25") then
+		berserkTimer:Start(720-delay)--12 min berserk on heroic
 	else
-		berserkTimer:Start(720-delay)--12 min on heroic
+		berserkTimer:Start(-delay)--7 min on normal
 	end
 	adds = 18
 	AddsInterrupted = false
@@ -102,6 +106,7 @@ function mod:OnCombatStart(delay)
 	spamSludge = 0
 	bitingChillIcon = 6
 	flashFreezeIcon = 8
+	prewarnedPhase2 = false
 	timerArcaneStormCD:Start(10-delay)--10-15 seconds from pull
 	timerAddsCD:Start()--This may or may not happen depending on arcane storms duration and when it was cast.
 	timerPhase:Start(18.5-delay)
@@ -113,12 +118,15 @@ function mod:OnCombatEnd()
 	if self.Options.RangeFrame then
 		DBM.RangeCheck:Hide()
 	end
+	if self.Options.SetTextures and not GetCVarBool("projectedTextures") then
+		SetCVar("projectedTextures", 1)
+	end
 end
 
 function mod:SPELL_AURA_APPLIED(args)
 	if args:IsSpellID(77699, 92978, 92979, 92980) then
 		flashFreezeTargets[#flashFreezeTargets + 1] = args.destName
-		if mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25") then
+		if mod:IsDifficulty("heroic10", "heroic25") then
 			specWarnFlashFreeze:Show(args.destName)
 		end
 		if self.Options.FlashFreezeIcon then
@@ -197,6 +205,9 @@ function mod:SPELL_CAST_START(args)
 		timerScorchingBlast:Cancel()
 		timerAddsCD:Cancel()
 		timerEngulfingDarknessCD:Cancel()
+		if self.Options.SetTextures and not GetCVarBool("projectedTextures") then
+			SetCVar("projectedTextures", 1)
+		end
 	elseif args:IsSpellID(92754) then
 		warnEngulfingDarkness:Show()
 		timerEngulfingDarknessCD:Start()
@@ -205,10 +216,10 @@ function mod:SPELL_CAST_START(args)
 		end
 	elseif args:IsSpellID(78194) then
 		warnMagmaJets:Show()
-		if mod:IsDifficulty("normal10") or mod:IsDifficulty("normal25") then
-			timerMagmaJetsCD:Start()--10 second on normal.
+		if mod:IsDifficulty("heroic10", "heroic25") then
+			timerMagmaJetsCD:Start(5)
 		else
-			timerMagmaJetsCD:Start(5)--5 second cd on heroic
+			timerMagmaJetsCD:Start()
 		end
 		if self:GetUnitCreatureId("target") == 41378 then--Add tank doesn't need this spam, just tank on mal.
 			specWarnMagmaJets:Show()
@@ -241,6 +252,9 @@ function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg)
 		if self.Options.RangeFrame then
 			DBM.RangeCheck:Hide()
 		end
+		if self.Options.SetTextures and not GetCVarBool("projectedTextures") then
+			SetCVar("projectedTextures", 1)
+		end
 	elseif msg == L.YellBlue or msg:find(L.YellBlue) then
 		warnPhase:Show(L.Blue)
 		timerPhase:Start()
@@ -251,6 +265,9 @@ function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg)
 		timerEngulfingDarknessCD:Cancel()
 		if self.Options.RangeFrame then
 			DBM.RangeCheck:Show(6)
+		end
+		if self.Options.SetTextures and not GetCVarBool("projectedTextures") then
+			SetCVar("projectedTextures", 1)
 		end
 	elseif msg == L.YellGreen or msg:find(L.YellGreen) then
 		warnPhase:Show(L.Green)
@@ -271,6 +288,21 @@ function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg)
 		timerAddsCD:Cancel()
 		if self.Options.RangeFrame then
 			DBM.RangeCheck:Hide()
+		end
+		if self.Options.SetTextures and GetCVarBool("projectedTextures") then
+			SetCVar("projectedTextures", 0)
+		end
+	end
+end
+
+function mod:UNIT_HEALTH(uId)
+	if self:GetUnitCreatureId(uId) == 41378 then
+		local h = UnitHealth(uId) / UnitHealthMax(uId) * 100
+		if h > 35 and prewarnedPhase2 then
+			prewarnedPhase2 = false
+		elseif h > 24 and h < 29 and not prewarnedPhase2 then
+			prewarnedPhase2 = true
+			warnPhase2Soon:Show()
 		end
 	end
 end

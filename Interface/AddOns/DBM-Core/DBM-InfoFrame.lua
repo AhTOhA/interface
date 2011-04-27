@@ -1,7 +1,7 @@
--- ***************************************************
--- **             DBM Range Check Frame             **
--- **         http://www.deadlybossmods.com         **
--- ***************************************************
+-- ********************************************
+-- **             DBM Info Frame             **
+-- **     http://www.deadlybossmods.com      **
+-- ********************************************
 --
 -- This addon is written and copyrighted by:
 --    * Paul Emmerich (Tandanu @ EU-Aegwynn) (DBM-Core)
@@ -15,7 +15,7 @@
 --    * ruRU: Vampik					admin@vampik.ru
 --    * zhTW: Hman						herman_c1@hotmail.com
 --    * zhTW: Azael/kc10577				paul.poon.kw@gmail.com
---    * koKR: BlueNyx					bluenyx@gmail.com
+--    * koKR: BlueNyx/nBlueWiz			bluenyx@gmail.com / everfinale@gmail.com
 --    * esES: Snamor/1nn7erpLaY      	romanscat@hotmail.com
 --
 -- Special thanks to:
@@ -29,8 +29,8 @@
 --
 --
 --  You are free:
---    * to Share — to copy, distribute, display, and perform the work
---    * to Remix — to make derivative works
+--    * to Share ?to copy, distribute, display, and perform the work
+--    * to Remix ?to make derivative works
 --  Under the following conditions:
 --    * Attribution. You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).
 --    * Noncommercial. You may not use this work for commercial purposes.
@@ -186,7 +186,7 @@ local function updateHealth()
 	updateLines()
 end
 
-local function updatePower()
+local function updatePlayerPower()
 	table.wipe(lines)
 	for i = 1, GetNumRaidMembers() do
 		if not UnitIsDeadOrGhost("raid"..i) and UnitPower("raid"..i, pIndex)/UnitPowerMax("raid"..i, pIndex)*100 >= infoFrameThreshold then
@@ -195,6 +195,16 @@ local function updatePower()
 	end
 	if DBM.Options.InfoFrameShowSelf and not lines[UnitName("player")] and UnitPower("player", pIndex) > 0 then
 		lines[UnitName("player")] = UnitPower("player", pIndex)
+	end
+	updateLines()
+end
+
+local function updateEnemyPower()
+	table.wipe(lines)
+	for i = 1, 4 do
+		if UnitPower("boss"..i, pIndex)/UnitPowerMax("boss"..i, pIndex)*100 >= infoFrameThreshold then
+			lines[UnitName("boss"..i)] = UnitPower("boss"..i, pIndex)
+		end
 	end
 	updateLines()
 end
@@ -211,8 +221,10 @@ function onUpdate(self, elapsed)
 	end
 	if currentEvent == "health" then
 		updateHealth()
-	elseif currentEvent == "power" then
-		updatePower()
+	elseif currentEvent == "playerpower" then
+		updatePlayerPower()
+	elseif currentEvent == "enemypower" then
+		updateEnemyPower()
 	end
 	for i = 1, #sortedLines do
 		if self:NumLines() > maxlines or not addedSelf and DBM.Options.InfoFrameShowSelf and self:NumLines() > maxlines-1 then break end
@@ -247,8 +259,10 @@ function infoFrame:Show(maxLines, event, threshold, ...)
 	if event == "health" then
 		sortingAsc = true	-- Person who misses the most HP to be at threshold is listed on top
 		updateHealth()
-	elseif event == "power" then
-		updatePower()
+	elseif event == "playerpower" then
+		updatePlayerPower()
+	elseif event == "enemypower" then
+		updateEnemyPower()
 	else
 		print("DBM-InfoFrame: Unsupported event given")
 	end

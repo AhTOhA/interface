@@ -1,10 +1,15 @@
 
 AucAdvancedConfig = {
 	["profile.Default"] = {
-		["configator.left"] = 484.1560376778012,
+		["configator.left"] = 484.1560016900199,
 		["matcherlist"] = {
 			"Undercut", -- [1]
 			"BeanCount", -- [2]
+		},
+		["tooltip"] = {
+			["marketprice"] = {
+				["show"] = false,
+			},
 		},
 		["stat"] = {
 			["sales"] = {
@@ -12,6 +17,7 @@ AucAdvancedConfig = {
 				},
 			},
 		},
+		["ModTTShow"] = "never",
 		["util"] = {
 			["glypher"] = {
 			},
@@ -23,11 +29,11 @@ AucAdvancedConfig = {
 			},
 			["mover"] = {
 				["anchors"] = {
-					"TOP", -- [1]
+					"LEFT", -- [1]
 					nil, -- [2]
-					"TOP", -- [3]
-					-44.18197868272209, -- [4]
-					-138.7348762579118, -- [5]
+					"LEFT", -- [3]
+					172.6209531406052, -- [4]
+					-115.9344665313985, -- [5]
 				},
 			},
 			["automagic"] = {
@@ -51,21 +57,20 @@ AucAdvancedData = {
 		["Version"] = 1,
 		["Current"] = {
 			["columnwidth.Item"] = 204.2053055127166,
-			["columnsortcurSort"] = 2,
+			["columnsortcurSort"] = 1,
 			["enchantmats.allow.bid"] = false,
 			["prospect.profit.min"] = 50001,
 			["snatch.columnsortcurDir"] = 1,
 			["resale.profit.min"] = 200001,
 			["disenchant.level.max"] = 300,
 			["converter.profit.min"] = 50001,
-			["disenchant.allow.bid"] = false,
 			["disenchant.model"] = "market",
+			["prospect.allow.bid"] = false,
 			["snatch.itemsList"] = {
 			},
-			["prospect.allow.bid"] = false,
 			["resale.maxprice"] = 50000000,
 			["vendor.profit.min"] = 50001,
-			["columnsortcurDir"] = 1,
+			["columnsortcurDir"] = -1,
 			["disenchant.profit.min"] = 50001,
 			["columnwidth.Reason"] = 89.21026402449812,
 			["snatch.columnsortcurSort"] = 1,

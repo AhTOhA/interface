@@ -15,6 +15,9 @@ END
 MACRO 12 "Parachute" INV_Misc_QuestionMark
 /use 15
 END
+MACRO 14 "rogue_toftt" INV_Misc_QuestionMark
+/cast Tricks of the Trade
+END
 MACRO 11 "RogueSpeed" INV_Misc_QuestionMark
 #showtooltip Sprint
 /use 6

@@ -1,5 +1,5 @@
-﻿## Interface: 40000
-## X-Min-Interface: 40000
+﻿## Interface: 40100
+## X-Min-Interface: 40100
 ## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0Bastion of Twilight|r
 ## Title-esES:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0Bastión del Crepúsculo|r
 ## Title-koKR:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0황혼의 요새|r
@@ -11,7 +11,6 @@
 ## SavedVariablesPerCharacter: DBMBastionTwilight_SavedVars, DBMBastionTwilight_SavedStats
 ## X-DBM-Mod: 1
 ## X-DBM-Mod-Category: CATA
-## X-DBM-Mod-Has-Heroic-Mode: 0
 ## X-DBM-Mod-Name: Bastion of Twilight
 ## X-DBM-Mod-Name-deDE: Bastion des Zwielichts
 ## X-DBM-Mod-Name-esES: Bastión del Crepúsculo
@@ -33,3 +32,4 @@ ValionaTheralion.lua
 AscendantCouncil.lua
 Chogall.lua
 Sinestra.lua
+BoTTrash.lua

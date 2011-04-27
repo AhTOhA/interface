@@ -1,0 +1,17 @@
+## Interface: 40000
+## Title: CLCRet
+## Notes: Retribution FCFS helper
+## Author: Calcute of Ravencrest
+## SavedVariables: clcretDB
+## X-Curse-Packaged-Version: v.1.4.06.003
+## X-Curse-Project-Name: Retribution FCFS helper (clcret)
+## X-Curse-Project-ID: clcret
+## X-Curse-Repository-ID: wow/clcret/mainline
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+clcret.lua
+rotation.lua
+sov.lua

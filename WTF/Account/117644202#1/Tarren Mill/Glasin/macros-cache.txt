@@ -17,7 +17,7 @@ MACRO 16777220 "AM/SC" INV_Misc_QuestionMark
 /cast [mod:ctrl] Arcane Missiles; Scorch
 END
 MACRO 16777224 "Bl/Pm" INV_Misc_QuestionMark
-/cast [mod:ctrl] Polymorph; Blink
+/cast [mod:ctrl] Fire Blast; Blink
 END
 MACRO 16777218 "CS/PM" INV_Misc_QuestionMark
 /cast [mod:ctrl] Counterspell; Cone of Cold

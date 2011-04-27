@@ -42,7 +42,7 @@ RecountDB = {
 					["ReportButton"] = false,
 				},
 			},
-			["DetailWindowX"] = 281.0000099106976,
+			["MainWindowMode"] = 2,
 			["ConfirmDeleteInstance"] = false,
 			["GraphWindowX"] = 0,
 			["Locked"] = true,
@@ -63,13 +63,13 @@ RecountDB = {
 					["Boss"] = false,
 				},
 			},
-			["MainWindowMode"] = 2,
-			["LastInstanceName"] = "Baradin Hold",
+			["MainWindowHeight"] = 245,
+			["BarTextColorSwap"] = false,
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
+			["LastInstanceName"] = "Dalaran Sewers",
+			["CurDataSet"] = "CurrentFightData",
 			["SegmentBosses"] = true,
-			["Font"] = "vibrocen",
-			["CurDataSet"] = "LastFightData",
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -127,13 +127,13 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -191,11 +191,11 @@ RecountDB = {
 					},
 				},
 			},
-			["DetailWindowY"] = 143.0000041470295,
-			["MainWindowHeight"] = 245,
+			["DetailWindowY"] = -124.8386353573906,
+			["Font"] = "vibrocen",
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["BarTextColorSwap"] = false,
+			["DetailWindowX"] = 1134.614275860823,
 		},
 		["Zulrea - Tarren Mill"] = {
 			["GraphWindowY"] = 0,
@@ -243,11 +243,11 @@ RecountDB = {
 					["Boss"] = false,
 				},
 			},
-			["MainWindowHeight"] = 245,
 			["BarTextColorSwap"] = false,
+			["MainWindowHeight"] = 245,
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
-			["LastInstanceName"] = "Dire Maul",
+			["LastInstanceName"] = "Eye of the Storm",
 			["Font"] = "vibrocen",
 			["SegmentBosses"] = true,
 			["Colors"] = {
@@ -313,7 +313,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -325,7 +325,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -427,8 +427,8 @@ RecountDB = {
 			["MainWindowHeight"] = 245,
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
-			["CurDataSet"] = "LastFightData",
 			["SegmentBosses"] = true,
+			["CurDataSet"] = "LastFightData",
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -492,7 +492,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -504,7 +504,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -602,13 +602,13 @@ RecountDB = {
 					["Boss"] = false,
 				},
 			},
+			["BarTextColorSwap"] = false,
 			["MainWindowHeight"] = 245,
-			["LastInstanceName"] = "Warsong Gulch",
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
-			["CurDataSet"] = "LastFightData",
 			["SegmentBosses"] = true,
 			["Font"] = "vibrocen",
+			["CurDataSet"] = "LastFightData",
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -693,7 +693,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -704,7 +704,7 @@ RecountDB = {
 						["g"] = 0.592156862745098,
 						["b"] = 0.592156862745098,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -734,7 +734,7 @@ RecountDB = {
 			["MainWindowMode"] = 2,
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["BarTextColorSwap"] = false,
+			["LastInstanceName"] = "Warsong Gulch",
 		},
 		["Daladin - Outland"] = {
 			["GraphWindowY"] = 0,
@@ -787,7 +787,7 @@ RecountDB = {
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
 			["BarTextColorSwap"] = false,
-			["CurDataSet"] = "LastFightData",
+			["SegmentBosses"] = true,
 			["Colors"] = {
 				["Other Windows"] = {
 					["Title"] = {
@@ -863,13 +863,13 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -913,7 +913,7 @@ RecountDB = {
 			["Font"] = "vibrocen",
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["SegmentBosses"] = true,
+			["CurDataSet"] = "LastFightData",
 		},
 		["Fallens - Tarren Mill"] = {
 			["GraphWindowY"] = 0,
@@ -967,7 +967,7 @@ RecountDB = {
 			["ConfirmDeleteRaid"] = false,
 			["BarTextColorSwap"] = false,
 			["SegmentBosses"] = true,
-			["CurDataSet"] = "LastFightData",
+			["Font"] = "vibrocen",
 			["Colors"] = {
 				["Other Windows"] = {
 					["Title"] = {
@@ -1030,7 +1030,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1042,7 +1042,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1094,7 +1094,7 @@ RecountDB = {
 			["LastInstanceName"] = "Arathi Basin",
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["Font"] = "vibrocen",
+			["CurDataSet"] = "LastFightData",
 		},
 		["Demlock - Tarren Mill"] = {
 			["GraphWindowY"] = 0,
@@ -1147,7 +1147,7 @@ RecountDB = {
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
 			["BarTextColorSwap"] = false,
-			["SegmentBosses"] = true,
+			["CurDataSet"] = "LastFightData",
 			["Colors"] = {
 				["Other Windows"] = {
 					["Title"] = {
@@ -1229,7 +1229,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1241,7 +1241,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1273,23 +1273,11 @@ RecountDB = {
 			["Font"] = "vibrocen",
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["CurDataSet"] = "LastFightData",
+			["SegmentBosses"] = true,
 		},
 		["Tikytaka - Tarren Mill"] = {
 			["GraphWindowY"] = 0,
 			["MainWindow"] = {
-				["ShowScrollbar"] = false,
-				["Position"] = {
-					["y"] = -421.0975725046603,
-					["x"] = 332.9999787025434,
-					["w"] = 196.9999938848887,
-					["h"] = 244.9999927602705,
-				},
-				["RowHeight"] = 27,
-				["BarText"] = {
-					["Percent"] = false,
-					["NumFormat"] = 3,
-				},
 				["Buttons"] = {
 					["FileButton"] = false,
 					["CloseButton"] = false,
@@ -1299,46 +1287,54 @@ RecountDB = {
 					["RightButton"] = false,
 					["ReportButton"] = false,
 				},
+				["ShowScrollbar"] = false,
+				["Position"] = {
+					["y"] = -421.0975455138243,
+					["x"] = 332.9999067269808,
+					["w"] = 196.9999938848887,
+					["h"] = 244.9999927602705,
+				},
+				["RowHeight"] = 27,
+				["BarText"] = {
+					["NumFormat"] = 3,
+					["Percent"] = false,
+				},
 			},
-			["DetailWindowX"] = 281.0000099106976,
 			["ConfirmDeleteInstance"] = false,
-			["GraphWindowX"] = 0,
-			["Locked"] = true,
 			["ReportLines"] = 4,
-			["Filters"] = {
-				["Show"] = {
-					["Pet"] = true,
-					["Ungrouped"] = false,
-				},
-				["TrackDeaths"] = {
-					["Self"] = false,
-					["Boss"] = false,
-					["Pet"] = false,
-					["Grouped"] = false,
-				},
-				["Data"] = {
-					["Boss"] = false,
-					["Unknown"] = false,
-				},
-			},
-			["LastInstanceName"] = "Baradin Hold",
-			["BarTextColorSwap"] = false,
-			["BarTexture"] = "Minimalist",
-			["ConfirmDeleteRaid"] = false,
+			["MainWindowHeight"] = 245,
 			["SegmentBosses"] = true,
-			["CurDataSet"] = "LastFightData",
-			["Font"] = "vibrocen",
 			["Colors"] = {
 				["Other Windows"] = {
+					["Background"] = {
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 					["Title"] = {
 						["r"] = 0.2980392156862745,
 						["g"] = 0.3058823529411765,
 						["b"] = 0.2980392156862745,
 					},
+				},
+				["Window"] = {
 					["Background"] = {
+						["a"] = 0,
 						["r"] = 0,
 						["g"] = 0,
 						["b"] = 0,
+					},
+					["Title"] = {
+						["a"] = 0,
+						["r"] = 0.1333333333333333,
+						["g"] = 0.1333333333333333,
+						["b"] = 0.1333333333333333,
+					},
+					["Title Text"] = {
+						["a"] = 0,
+						["r"] = 0.1333333333333333,
+						["g"] = 0.1333333333333333,
+						["b"] = 0.1333333333333333,
 					},
 				},
 				["Class"] = {
@@ -1390,7 +1386,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1401,7 +1397,7 @@ RecountDB = {
 						["g"] = 0.592156862745098,
 						["b"] = 0.592156862745098,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1412,26 +1408,6 @@ RecountDB = {
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
-					},
-				},
-				["Window"] = {
-					["Background"] = {
-						["a"] = 0,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
-					["Title"] = {
-						["a"] = 0,
-						["r"] = 0.1333333333333333,
-						["g"] = 0.1333333333333333,
-						["b"] = 0.1333333333333333,
-					},
-					["Title Text"] = {
-						["a"] = 0,
-						["r"] = 0.1333333333333333,
-						["g"] = 0.1333333333333333,
-						["b"] = 0.1333333333333333,
 					},
 				},
 				["Bar"] = {
@@ -1449,15 +1425,40 @@ RecountDB = {
 					},
 				},
 			},
-			["DetailWindowY"] = 143.0000041470295,
-			["MainWindowHeight"] = 245,
+			["DetailWindowY"] = -79.50585289952218,
 			["ConfirmDeleteGroup"] = false,
-			["MainWindowWidth"] = 197,
+			["DetailWindowX"] = 1.672317193492875,
 			["MainWindowMode"] = 5,
+			["GraphWindowX"] = 0,
+			["Locked"] = true,
+			["Filters"] = {
+				["Show"] = {
+					["Pet"] = true,
+					["Ungrouped"] = false,
+				},
+				["TrackDeaths"] = {
+					["Self"] = false,
+					["Pet"] = false,
+					["Boss"] = false,
+					["Grouped"] = false,
+				},
+				["Data"] = {
+					["Boss"] = false,
+					["Unknown"] = false,
+				},
+			},
+			["BarTextColorSwap"] = false,
+			["BarTexture"] = "Blizzard",
+			["ConfirmDeleteRaid"] = false,
+			["CurDataSet"] = "CurrentFightData",
+			["LastInstanceName"] = "Zul'Gurub",
+			["Font"] = "Atarian System",
+			["MainWindowWidth"] = 197,
 		},
 		["Argwynn - Tarren Mill"] = {
 			["GraphWindowY"] = 0,
 			["MainWindow"] = {
+				["ShowScrollbar"] = false,
 				["Buttons"] = {
 					["FileButton"] = false,
 					["CloseButton"] = false,
@@ -1467,34 +1468,59 @@ RecountDB = {
 					["RightButton"] = false,
 					["ReportButton"] = false,
 				},
-				["ShowScrollbar"] = false,
+				["RowHeight"] = 27,
+				["BarText"] = {
+					["Percent"] = false,
+					["NumFormat"] = 3,
+				},
 				["Position"] = {
 					["y"] = -421.0975725046603,
 					["x"] = 332.9999787025434,
 					["w"] = 196.9999938848887,
 					["h"] = 244.9999927602705,
 				},
-				["RowHeight"] = 27,
-				["BarText"] = {
-					["NumFormat"] = 3,
-					["Percent"] = false,
+			},
+			["DetailWindowX"] = 281.0000099106976,
+			["ConfirmDeleteInstance"] = false,
+			["GraphWindowX"] = 0,
+			["Locked"] = true,
+			["ReportLines"] = 4,
+			["Filters"] = {
+				["Show"] = {
+					["Pet"] = true,
+					["Ungrouped"] = false,
+				},
+				["TrackDeaths"] = {
+					["Self"] = false,
+					["Boss"] = false,
+					["Pet"] = false,
+					["Grouped"] = false,
+				},
+				["Data"] = {
+					["Unknown"] = false,
+					["Boss"] = false,
 				},
 			},
-			["ConfirmDeleteInstance"] = false,
-			["ReportLines"] = 4,
+			["LastInstanceName"] = "The Bastion of Twilight",
 			["MainWindowHeight"] = 245,
+			["BarTexture"] = "Minimalist",
+			["ConfirmDeleteRaid"] = false,
 			["SegmentBosses"] = true,
+			["Font"] = "vibrocen",
+			["CurDataSet"] = "LastFightData",
 			["Colors"] = {
-				["Other Windows"] = {
-					["Background"] = {
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+						["r"] = 0.7764705882352941,
+						["g"] = 0.7764705882352941,
+						["b"] = 0.7764705882352941,
 					},
-					["Title"] = {
-						["r"] = 0.2980392156862745,
-						["g"] = 0.3058823529411765,
-						["b"] = 0.2980392156862745,
+					["Total Bar"] = {
+						["a"] = 1,
+						["r"] = 0.7764705882352941,
+						["g"] = 0.7764705882352941,
+						["b"] = 0.7764705882352941,
 					},
 				},
 				["Window"] = {
@@ -1565,7 +1591,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1577,7 +1603,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1590,50 +1616,24 @@ RecountDB = {
 						["b"] = 0.3686274509803922,
 					},
 				},
-				["Bar"] = {
-					["Bar Text"] = {
-						["a"] = 1,
-						["r"] = 0.7764705882352941,
-						["g"] = 0.7764705882352941,
-						["b"] = 0.7764705882352941,
+				["Other Windows"] = {
+					["Title"] = {
+						["r"] = 0.2980392156862745,
+						["g"] = 0.3058823529411765,
+						["b"] = 0.2980392156862745,
 					},
-					["Total Bar"] = {
-						["a"] = 1,
-						["r"] = 0.7764705882352941,
-						["g"] = 0.7764705882352941,
-						["b"] = 0.7764705882352941,
+					["Background"] = {
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
 				},
 			},
 			["DetailWindowY"] = 143.0000041470295,
-			["ConfirmDeleteGroup"] = false,
-			["DetailWindowX"] = 281.0000099106976,
-			["GraphWindowX"] = 0,
-			["Locked"] = true,
-			["Filters"] = {
-				["Show"] = {
-					["Pet"] = true,
-					["Ungrouped"] = false,
-				},
-				["TrackDeaths"] = {
-					["Self"] = false,
-					["Pet"] = false,
-					["Boss"] = false,
-					["Grouped"] = false,
-				},
-				["Data"] = {
-					["Boss"] = false,
-					["Unknown"] = false,
-				},
-			},
-			["BarTextColorSwap"] = false,
-			["BarTexture"] = "Minimalist",
-			["ConfirmDeleteRaid"] = false,
-			["Font"] = "vibrocen",
 			["MainWindowMode"] = 2,
-			["CurDataSet"] = "CurrentFightData",
+			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["LastInstanceName"] = "Blade's Edge Arena",
+			["BarTextColorSwap"] = false,
 		},
 		["Mylen - Tarren Mill"] = {
 			["GraphWindowY"] = 0,
@@ -1677,28 +1677,30 @@ RecountDB = {
 					["Grouped"] = false,
 				},
 				["Data"] = {
-					["Boss"] = false,
 					["Unknown"] = false,
+					["Boss"] = false,
 				},
 			},
-			["LastInstanceName"] = "Razorfen Downs",
 			["BarTextColorSwap"] = false,
+			["MainWindowHeight"] = 245,
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
+			["SegmentBosses"] = true,
 			["Font"] = "vibrocen",
 			["CurDataSet"] = "LastFightData",
-			["SegmentBosses"] = true,
 			["Colors"] = {
-				["Other Windows"] = {
-					["Title"] = {
-						["b"] = 0.2980392156862745,
-						["g"] = 0.3058823529411765,
-						["r"] = 0.2980392156862745,
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+						["b"] = 0.7764705882352941,
+						["g"] = 0.7764705882352941,
+						["r"] = 0.7764705882352941,
 					},
-					["Background"] = {
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
+					["Total Bar"] = {
+						["a"] = 1,
+						["b"] = 0.7764705882352941,
+						["g"] = 0.7764705882352941,
+						["r"] = 0.7764705882352941,
 					},
 				},
 				["Class"] = {
@@ -1744,13 +1746,13 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1794,18 +1796,16 @@ RecountDB = {
 						["r"] = 0.1333333333333333,
 					},
 				},
-				["Bar"] = {
-					["Bar Text"] = {
-						["a"] = 1,
-						["b"] = 0.7764705882352941,
-						["g"] = 0.7764705882352941,
-						["r"] = 0.7764705882352941,
+				["Other Windows"] = {
+					["Title"] = {
+						["b"] = 0.2980392156862745,
+						["g"] = 0.3058823529411765,
+						["r"] = 0.2980392156862745,
 					},
-					["Total Bar"] = {
-						["a"] = 1,
-						["b"] = 0.7764705882352941,
-						["g"] = 0.7764705882352941,
-						["r"] = 0.7764705882352941,
+					["Background"] = {
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
 					},
 				},
 			},
@@ -1813,7 +1813,7 @@ RecountDB = {
 			["MainWindowMode"] = 5,
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["MainWindowHeight"] = 245,
+			["LastInstanceName"] = "Razorfen Downs",
 		},
 		["Kraisus - Tarren Mill"] = {
 			["GraphWindowY"] = 0,
@@ -1857,30 +1857,28 @@ RecountDB = {
 					["Grouped"] = false,
 				},
 				["Data"] = {
-					["Unknown"] = false,
 					["Boss"] = false,
+					["Unknown"] = false,
 				},
 			},
-			["LastInstanceName"] = "Baradin Hold",
-			["MainWindowHeight"] = 245,
+			["DetailWindowX"] = 312.5770207754228,
+			["BarTextColorSwap"] = false,
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
-			["Font"] = "vibrocen",
-			["BarTextColorSwap"] = false,
+			["LastInstanceName"] = "Blade's Edge Arena",
 			["SegmentBosses"] = true,
+			["Font"] = "vibrocen",
 			["Colors"] = {
-				["Bar"] = {
-					["Bar Text"] = {
-						["a"] = 1,
-						["r"] = 0.7764705882352941,
-						["g"] = 0.7764705882352941,
-						["b"] = 0.7764705882352941,
+				["Other Windows"] = {
+					["Title"] = {
+						["r"] = 0.2980392156862745,
+						["g"] = 0.3058823529411765,
+						["b"] = 0.2980392156862745,
 					},
-					["Total Bar"] = {
-						["a"] = 1,
-						["r"] = 0.7764705882352941,
-						["g"] = 0.7764705882352941,
-						["b"] = 0.7764705882352941,
+					["Background"] = {
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
 				},
 				["Window"] = {
@@ -1951,7 +1949,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1963,7 +1961,7 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["b"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["r"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -1976,24 +1974,26 @@ RecountDB = {
 						["b"] = 0.3686274509803922,
 					},
 				},
-				["Other Windows"] = {
-					["Title"] = {
-						["r"] = 0.2980392156862745,
-						["g"] = 0.3058823529411765,
-						["b"] = 0.2980392156862745,
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+						["r"] = 0.7764705882352941,
+						["g"] = 0.7764705882352941,
+						["b"] = 0.7764705882352941,
 					},
-					["Background"] = {
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
+					["Total Bar"] = {
+						["a"] = 1,
+						["r"] = 0.7764705882352941,
+						["g"] = 0.7764705882352941,
+						["b"] = 0.7764705882352941,
 					},
 				},
 			},
-			["DetailWindowY"] = 143.0000041470295,
-			["CurDataSet"] = "LastFightData",
+			["DetailWindowY"] = -286.4472284523335,
+			["CurDataSet"] = "CurrentFightData",
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["DetailWindowX"] = 281.0000099106976,
+			["MainWindowHeight"] = 245,
 		},
 		["Belfrogue - Outland"] = {
 			["GraphWindowY"] = 0,
@@ -2046,7 +2046,7 @@ RecountDB = {
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
 			["BarTextColorSwap"] = false,
-			["SegmentBosses"] = true,
+			["CurDataSet"] = "LastFightData",
 			["Colors"] = {
 				["Other Windows"] = {
 					["Title"] = {
@@ -2103,13 +2103,13 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -2172,12 +2172,23 @@ RecountDB = {
 			["Font"] = "vibrocen",
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["CurDataSet"] = "LastFightData",
+			["SegmentBosses"] = true,
 		},
 		["Myyh - Tarren Mill"] = {
 			["GraphWindowY"] = 0,
 			["MainWindow"] = {
 				["ShowScrollbar"] = false,
+				["Position"] = {
+					["y"] = -421.0975725046603,
+					["x"] = 332.9999787025434,
+					["w"] = 196.9999938848887,
+					["h"] = 244.9999927602705,
+				},
+				["RowHeight"] = 27,
+				["BarText"] = {
+					["Percent"] = false,
+					["NumFormat"] = 3,
+				},
 				["Buttons"] = {
 					["FileButton"] = false,
 					["CloseButton"] = false,
@@ -2187,19 +2198,8 @@ RecountDB = {
 					["RightButton"] = false,
 					["ReportButton"] = false,
 				},
-				["RowHeight"] = 27,
-				["BarText"] = {
-					["Percent"] = false,
-					["NumFormat"] = 3,
-				},
-				["Position"] = {
-					["y"] = -421.0975725046603,
-					["x"] = 332.9999787025434,
-					["w"] = 196.9999938848887,
-					["h"] = 244.9999927602705,
-				},
 			},
-			["DetailWindowX"] = 281.0000099106976,
+			["MainWindowMode"] = 2,
 			["ConfirmDeleteInstance"] = false,
 			["GraphWindowX"] = 0,
 			["Locked"] = true,
@@ -2224,7 +2224,7 @@ RecountDB = {
 			["MainWindowHeight"] = 245,
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
-			["Font"] = "vibrocen",
+			["LastInstanceName"] = "Warsong Gulch",
 			["CurDataSet"] = "LastFightData",
 			["SegmentBosses"] = true,
 			["Colors"] = {
@@ -2240,26 +2240,6 @@ RecountDB = {
 						["b"] = 0.7764705882352941,
 						["g"] = 0.7764705882352941,
 						["r"] = 0.7764705882352941,
-					},
-				},
-				["Window"] = {
-					["Background"] = {
-						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-					["Title"] = {
-						["a"] = 0,
-						["b"] = 0.1333333333333333,
-						["g"] = 0.1333333333333333,
-						["r"] = 0.1333333333333333,
-					},
-					["Title Text"] = {
-						["a"] = 0,
-						["b"] = 0.1333333333333333,
-						["g"] = 0.1333333333333333,
-						["r"] = 0.1333333333333333,
 					},
 				},
 				["Class"] = {
@@ -2304,13 +2284,13 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -2335,6 +2315,26 @@ RecountDB = {
 						["r"] = 0.3686274509803922,
 					},
 				},
+				["Window"] = {
+					["Background"] = {
+						["a"] = 0,
+						["b"] = 0,
+						["g"] = 0,
+						["r"] = 0,
+					},
+					["Title"] = {
+						["a"] = 0,
+						["b"] = 0.1333333333333333,
+						["g"] = 0.1333333333333333,
+						["r"] = 0.1333333333333333,
+					},
+					["Title Text"] = {
+						["a"] = 0,
+						["b"] = 0.1333333333333333,
+						["g"] = 0.1333333333333333,
+						["r"] = 0.1333333333333333,
+					},
+				},
 				["Other Windows"] = {
 					["Title"] = {
 						["b"] = 0.2980392156862745,
@@ -2349,10 +2349,10 @@ RecountDB = {
 				},
 			},
 			["DetailWindowY"] = 143.0000041470295,
-			["MainWindowMode"] = 2,
+			["Font"] = "vibrocen",
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["LastInstanceName"] = "Ruins of Lordaeron",
+			["DetailWindowX"] = 281.0000099106976,
 		},
 		["Gobifrost - Tarren Mill"] = {
 			["GraphWindowY"] = 0,
@@ -2405,7 +2405,7 @@ RecountDB = {
 			["BarTexture"] = "Minimalist",
 			["ConfirmDeleteRaid"] = false,
 			["BarTextColorSwap"] = false,
-			["Font"] = "vibrocen",
+			["SegmentBosses"] = true,
 			["Colors"] = {
 				["Other Windows"] = {
 					["Title"] = {
@@ -2481,13 +2481,13 @@ RecountDB = {
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["PET"] = {
+					["MOB"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
 						["r"] = 0.3686274509803922,
 					},
-					["MOB"] = {
+					["PET"] = {
 						["a"] = 0.8900000005960465,
 						["b"] = 0.3686274509803922,
 						["g"] = 0.3686274509803922,
@@ -2531,7 +2531,7 @@ RecountDB = {
 			["CurDataSet"] = "LastFightData",
 			["ConfirmDeleteGroup"] = false,
 			["MainWindowWidth"] = 197,
-			["SegmentBosses"] = true,
+			["Font"] = "vibrocen",
 		},
 	},
 }

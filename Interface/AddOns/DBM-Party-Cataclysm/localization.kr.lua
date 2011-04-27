@@ -22,11 +22,11 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
-	WarnAdd		= "탄원하며 무릎 꿇기"
+	WarnAdd		= "광신도 진화!"
 })
 
 L:SetOptionLocalization({
-	WarnAdd		= "$spell:75608 버프가 추가될 때 경고하기"
+	WarnAdd		= "광신도가 $spell:75608 효과를 잃었을 때 경고 보기(광신도 진화)"
 })
 
 -----------------------
@@ -65,7 +65,7 @@ L:SetGeneralLocalization({
 })
 
 L:SetOptionLocalization({
-	SetIconOnBoss	= "$spell:76200 시전 후 보스에게 아이콘 표시 "
+	SetIconOnBoss	= "$spell:76200 시전 후 보스에게 전술 목표 아이콘 표시 "
 })
 
 ---------------------
@@ -144,11 +144,11 @@ L:SetGeneralLocalization({
 })
 
 L:SetOptionLocalization{
-	PingBlitz	= "장군 움브리스가 당신을 향해 대공세를 시전할 경우 미니맵에 알리기"
+	PingBlitz	= "당신이 $spell:74670 의 대상이 될 경우 미니맵에 위치 표시하기"
 }
 
 L:SetMiscLocalization{
-	Blitz		= "장군 움브리스가 |cFFFF0000(%S+)"
+	Blitz		= "보면서"
 }
 
 --------------------------
@@ -171,6 +171,7 @@ L:SetGeneralLocalization({
 
 L:SetMiscLocalization{
 	ValionaYell	= "용이여, 내 명령을 따라라! 날 태워라!",	-- translate -- Yell when Valiona is incoming
+	Add			= "화염의 기원",
 	Valiona		= "발리오나"	-- translate
 }
 
@@ -311,7 +312,7 @@ L:SetGeneralLocalization({
 })
 
 L:SetOptionLocalization{
-	BossHealthAdds	= "보스 체력 프레임 확장 보기"	-- translate
+	BossHealthAdds	= "추가되는 몹의 체력 프레임 보기"	-- translate
 }
 
 L:SetMiscLocalization{
@@ -379,7 +380,7 @@ L:SetOptionLocalization{
 }
 
 L:SetMiscLocalization{
-	YellAdds		= "Repel the intruders!"
+	YellAdds		= "침입자를 물리쳐라!"
 }
 
 -----------------
@@ -410,11 +411,9 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization{
-	WarnMortalWound	= "%s : >%s< (%d)"		-- Mortal Wound on >args.destName< (args.amount)
 }
 
 L:SetOptionLocalization{
-	WarnMortalWound	= DBM_CORE_AUTO_ANNOUNCE_OPTIONS.spell:format(93675, GetSpellInfo(93675) or "알 수 없음")
 }
 
 ---------------------
@@ -429,21 +428,21 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
-	WarnEmerge		= "다음 등장",
-	WarnSubmerge	= "다음 잠수"
+	WarnEmerge		= "등장",
+	WarnSubmerge	= "잠수"
 })
 
 L:SetTimerLocalization({
-	TimerEmerge		= "등장",
-	TimerSubmerge	= "잠수"
+	TimerEmerge		= "다음 등장",
+	TimerSubmerge	= "다음 잠수"
 })
 
 L:SetOptionLocalization({
 	WarnEmerge		= "등장 경고 보기",
 	WarnSubmerge	= "잠수 경고 보기",
-	TimerEmerge		= "등장 타이머 보기",
-	TimerSubmerge	= "잠수 타이머 보기",
-	CrystalArrow	= "당신의 주변에 $spell:81634이 생성될 경우 DBM 화살표 보기",
+	TimerEmerge		= "다음 등장 타이머 보기",
+	TimerSubmerge	= "다음 잠수 타이머 보기",
+	CrystalArrow	= "당신 주변에 $spell:81634이 시전 된 경우 DBM 화살표 보기",
 	RangeFrame		= "거리 프레임 보기 (5m)"	
 })
 
@@ -506,6 +505,10 @@ L:SetGeneralLocalization({
 	name = "대장로 에르탄"
 })
 
+L:SetMiscLocalization{
+	Retract		= "회오리 방패를 가까이 끌어당깁니다!"
+}
+
 --------------
 -- Altairus --
 -------------- 
@@ -533,7 +536,7 @@ L:SetOptionLocalization({
 })
 
 L:SetWarningLocalization({
-	SpecWarnStaticCling	= "점프!"
+	SpecWarnStaticCling	= "전하 응집 - 점프!"
 })
 
 ---------------------------
@@ -573,3 +576,276 @@ L = DBM:GetModLocalization("Ozumat")
 L:SetGeneralLocalization({
 	name = "오주마트"
 })
+
+----------------
+--  Zul'Aman  --
+----------------
+--  Nalorakk --
+---------------
+L = DBM:GetModLocalization("Nalorakk5")
+
+L:SetGeneralLocalization{
+	name = "날로라크 (곰)"
+}
+
+L:SetWarningLocalization{
+	WarnBear		= "곰 형상",
+	WarnBearSoon	= "5초 후 곰 형상",
+	WarnNormal		= "인간 형상",
+	WarnNormalSoon	= "5초 후 인간 형상"
+}
+
+L:SetTimerLocalization{
+	TimerBear		= "다음 곰 형상",
+	TimerNormal		= "다음 인간 형상"
+}
+
+L:SetOptionLocalization{
+	WarnBear		= "곰 형상 경고 보기",
+	WarnBearSoon	= "곰 형상 사전 경고 보기(soon)",
+	WarnNormal		= "인간 형상 경고 보기",
+	WarnNormalSoon	= "인간 형상 사전 경고 보기(soon)",
+	TimerBear		= "다음 곰 형상 타이머 보기",
+	TimerNormal		= "다음 인간 형상 타이머 보기"
+}
+
+L:SetMiscLocalization{
+	YellBear 	= "너희들이 짐승을 불러냈다. 놀랄 준비나 해라!",
+	YellNormal	= "날로라크 나가신다!"
+}
+
+---------------
+--  Akil'zon --
+---------------
+L = DBM:GetModLocalization("Akilzon5")
+
+L:SetGeneralLocalization{
+	name = "아킬존 (독수리)"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	StormIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(43648),
+	RangeFrame	= "거리 프레임 보기 (10 m)"
+}
+
+L:SetMiscLocalization{
+}
+
+---------------
+--  Jan'alai --
+---------------
+L = DBM:GetModLocalization("Janalai5")
+
+L:SetGeneralLocalization{
+	name = "잔알라이 (용매)"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	FlameIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(43140)
+}
+
+L:SetMiscLocalization{
+	YellBomb	= "태워버리겠다!",
+	YellAdds	= "다 어디 갔지? 당장 알을 부화시켜!"
+}
+
+--------------
+--  Halazzi --
+--------------
+L = DBM:GetModLocalization("Halazzi5")
+
+L:SetGeneralLocalization{
+	name = "할라지 (스라소니)"
+}
+
+L:SetWarningLocalization{
+	WarnSpirit	= "영혼 단계",
+	WarnNormal	= "보통 단계"
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	WarnSpirit	= "영혼 단계 경고 보기",
+	WarnNormal	= "보통 단계 경고 보기"
+}
+
+L:SetMiscLocalization{
+	YellSpirit	= "야생의 혼이 내 편이다...",
+	YellNormal	= "혼이여, 이리 돌아오라!"
+}
+
+-----------------------
+-- Hexlord Malacrass --
+-----------------------
+L = DBM:GetModLocalization("Malacrass5")
+
+L:SetGeneralLocalization{
+	name = "주술 군주 말라크라스 (5인)"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+	TimerSiphon	= "%s: %s"
+}
+
+L:SetOptionLocalization{
+	TimerSiphon	= "$spell:43501 타이머 보기"
+}
+
+L:SetMiscLocalization{
+}
+
+-------------
+-- Daakara --
+-------------
+L = DBM:GetModLocalization("Daakara")
+
+L:SetGeneralLocalization{
+	name = "다카라"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+}
+
+L:SetMiscLocalization{
+	SetIconOnThrow		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(97639)
+}
+
+-----------------
+--  Zul'Gurub  --
+-------------------------
+-- High Priest Venoxis --
+-------------------------
+L = DBM:GetModLocalization("Venoxis")
+
+L:SetGeneralLocalization{
+	name = "대사제 베녹시스"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	SetIconOnToxicLink	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(96477)
+}
+
+L:SetMiscLocalization{
+}
+
+------------
+-- Zanzil --
+------------
+L = DBM:GetModLocalization("Mandokir")
+
+L:SetGeneralLocalization{
+	name = "혈군주 만도키르"
+}
+
+L:SetWarningLocalization{
+	WarnRevive		= "영혼 부활 - %d회 남음",
+	SpecWarnOhgan	= "오간 되살아남! 극딜!"
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	WarnRevive		= "영혼 부활 남은 횟수 경고 보기",
+	SpecWarnOhgan	= "오간이 공격 가능 할때 특수 경고 보기"
+}
+
+L:SetMiscLocalization{
+	Ohgan		= "오간"
+}
+
+------------
+-- Zanzil --
+------------
+L = DBM:GetModLocalization("Zanzil")
+
+L:SetGeneralLocalization{
+	name = "잔질"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	SetIconOnGaze	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(96342)
+}
+
+L:SetMiscLocalization{
+}
+
+----------------------------
+-- High Priestess Kilnara --
+----------------------------
+L = DBM:GetModLocalization("Kilnara")
+
+L:SetGeneralLocalization{
+	name = "대여사제 킬나라"
+}
+
+L:SetWarningLocalization{
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+}
+
+L:SetMiscLocalization{
+}
+
+----------------------------
+-- Jindo --
+----------------------------
+L = DBM:GetModLocalization("Jindo")
+
+L:SetGeneralLocalization{
+	name = "신파괴자 진도"
+}
+
+L:SetWarningLocalization{
+	WarnBarrierDown	= "학카르의 사슬 보호막 사라짐 - %d/3"
+}
+
+L:SetTimerLocalization{
+}
+
+L:SetOptionLocalization{
+	WarnBarrierDown	= "학카르의 사슬 보호막이 사라질 때 경고 보기"
+}
+
+L:SetMiscLocalization{
+	Kill	= "Oh no, Hakkar's spirit is free!" -- temporarily
+}

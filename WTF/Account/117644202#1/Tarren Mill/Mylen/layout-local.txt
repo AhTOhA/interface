@@ -7,7 +7,7 @@ Y: 37
 W: 157
 H: 56
 Frame: NxMap1
-FrameLevel: 37
+FrameLevel: 44
 Anchor: TOPRIGHT
 X: -45
 Y: -48
@@ -17,13 +17,13 @@ Frame: DBMMinimapButton
 FrameLevel: 2
 Anchor: RIGHT
 X: -12
-Y: 236
+Y: 265
 W: 32
 H: 32
 Frame: HealBot_Action
 FrameLevel: 14
 Anchor: BOTTOMRIGHT
-X: -25
+X: -20
 Y: 35
 W: 146
 H: 66
@@ -41,3 +41,10 @@ X: 0
 Y: 128
 W: 150
 H: 42
+Frame: AuctionFrame
+FrameLevel: 61
+Anchor: LEFT
+X: 0
+Y: 37
+W: 832
+H: 447

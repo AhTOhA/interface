@@ -1,0 +1,11 @@
+## Interface: 40000
+## Title: WoW Dings
+## Version: 1.1
+## Author: Lenwë (EU-Sargeras)
+## Notes: Allows you to send special characters into chat messages.
+
+## Character table
+CharMap.lua
+
+## Main code
+WoWDings.lua

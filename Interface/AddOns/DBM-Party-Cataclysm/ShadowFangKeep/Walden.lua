@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("Walden", "DBM-Party-Cataclysm", 6)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 4920 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5372 $"):sub(12, -3))
 mod:SetCreatureID(46963)
 mod:SetZone()
 
@@ -13,11 +13,11 @@ mod:RegisterEvents(
 	"SPELL_AURA_APPLIED_DOSE"
 )
 
-local warnFrostMix	= mod:NewSpellAnnounce(93702, 3)
-local warnIceShards	= mod:NewSpellAnnounce(93527, 3)
-local warnPoisonMix	= mod:NewSpellAnnounce(93704, 3)
-local warnGreenMix	= mod:NewSpellAnnounce(93617, 4)
-local warnRedMix	= mod:NewSpellAnnounce(93689, 4)
+local warnFrostMix		= mod:NewSpellAnnounce(93702, 3)
+local warnIceShards		= mod:NewSpellAnnounce(93527, 3)
+local warnPoisonMix		= mod:NewSpellAnnounce(93704, 3)
+local warnGreenMix		= mod:NewSpellAnnounce(93617, 4)
+local warnRedMix		= mod:NewSpellAnnounce(93689, 4)
 
 local specWarnGreenMix	= mod:NewSpecialWarning("specWarnCoagulant", nil, false)
 local specWarnRedMix	= mod:NewSpecialWarning("specWarnRedMix", nil, false)

@@ -81,7 +81,20 @@ theme.spellicon = {
 
 
 theme.name = {
-	show = false,
+	typeface = "Interface\\Addons\\TidyPlates_Neon\\Media\\Qlassik_TB.ttf",
+	
+	size = 10,
+	width = 175,
+	height = 14,
+	x = 0,
+	y = 7,	-- For OVER the bar
+	--y = -7,		-- For UNDER the bar
+	align = "CENTER",
+	anchor = "CENTER",
+	vertical = "CENTER",
+	--flags = "",
+	shadow = true,
+	show = true,
 }
 
 -- /run TidyPlatesThemeList["Graphite"].spellicon.x = 4
@@ -123,7 +136,7 @@ theme.customtext = {
 	vertical = "CENTER",
 	--flags = "",
 	shadow = true,
-	show = true,
+	show = false,
 }
 
 
@@ -146,6 +159,9 @@ theme.hitbox = {
 	height = 35,
 }
 
+theme.skullicon = {
+	show = false,
+}
 
 
 local function SpellText(unit)
@@ -160,13 +176,40 @@ end
 local OrangeHexColor = "|cFFfc551b"
 local PaleBlueHexColor = "|cFF5cb8ff"
 
-local BlueHexColor = "|cFF3cA8ff"
+local BlueHexColor = "|cFF3cA8ff"	-- 3c A8 ff		-- 60 168 255
 --local GreenHexColor = "|cFF3cee35"
-local GreenHexColor = "|cFF60E025"
+local GreenHexColor = "|cFF60E025"	-- 60 E0 25		-- 96 224 37
 --local RedHexColor = "|cFFFF0000"
-local RedHexColor = "|cFFFF3320"
-local GoldHexColor = "|cFFfcb41b"
+local RedHexColor = "|cFFFF3320"	-- FF 33 20		-- 255 51 32
+local GoldHexColor = "|cFFfcb41b"	-- fc b4 1b		-- 252 180 27
 
+---------------------------------------
+-- Name Text Color
+---------------------------------------
+local NameReactionColors = {
+	["FRIENDLY"] = {
+		["PLAYER"] = {r = 60/255, g = 168/255, b = 255/255,},
+		["NPC"] = {r = 96/255, g = 224/255, b = 37/255,},
+	},
+	["HOSTILE"] = {
+		["PLAYER"] = {r = 255/255, g = 51/255, b = 32/255,},
+		["NPC"] = {r = 255/255, g = 51/255, b = 32/255,},
+	},
+	["NEUTRAL"] = {
+		["NPC"] = {r = 252/255, g = 180/255, b = 27/255,},
+	},
+}
+
+local function SetNameColorDelegate(unit)
+	local color = NameReactionColors[unit.reaction][unit.type]
+	if color then 
+		return color.r, color.g, color.b
+	else 
+		return unit.red, unit.green, unit.blue 
+	end
+end
+
+theme.SetNameColor = SetNameColorDelegate
 
 
 local dec2hex = {

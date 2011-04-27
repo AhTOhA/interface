@@ -1,10 +1,7 @@
-local Gilneas		= DBM:NewMod("Gilneas", "DBM-PvP", 2)
+local Gilneas	= DBM:NewMod("Gilneas", "DBM-PvP", 2)
 local L			= Gilneas:GetLocalizedStrings()
 
 Gilneas:SetZone(DBM_DISABLE_ZONE_DETECTION)
-
-Gilneas:RemoveOption("HealthFrame")
-Gilneas:RemoveOption("SpeedKillTimer")
 
 Gilneas:RegisterEvents(
 	"ZONE_CHANGED_NEW_AREA",
@@ -14,10 +11,32 @@ Gilneas:RegisterEvents(
 	"CHAT_MSG_RAID_BOSS_EMOTE",
 	"UPDATE_WORLD_STATES"
 )
+
+local startTimer 	= Gilneas:NewTimer(62, "TimerStart", 2457)
+local winTimer 		= Gilneas:NewTimer(30, "TimerWin", "Interface\\Icons\\INV_Misc_PocketWatch_01")
+local capTimer 		= Gilneas:NewTimer(63, "TimerCap", "Interface\\Icons\\Spell_Misc_HellifrePVPHonorHoldFavor")
+
+Gilneas:AddBoolOption("ShowGilneasEstimatedPoints", true, nil, function()
+	if Gilneas.Options.ShowGilneasEstimatedPoints and bgzone then
+		Gilneas:ShowEstimatedPoints()
+	else
+		Gilneas:HideEstimatedPoints()
+	end
+end)
+Gilneas:AddBoolOption("ShowGilneasBasesToWin", false, nil, function()
+	if Gilneas.Options.ShowGilneasBasesToWin and bgzone then
+		Gilneas:ShowBasesToWin()
+	else
+		Gilneas:HideBasesToWin()
+	end
+end)
+
+Gilneas:RemoveOption("HealthFrame")
+Gilneas:RemoveOption("SpeedKillTimer")
 	
 local bgzone = false
 local ResPerSec = {
-	[0] = 0,
+	[0] = 0.01,
 	[1] = 10/9,
 	[2] = 10/3,
 	[3] = 30
@@ -39,12 +58,28 @@ local objectives = {
 	Mines = 0,
 	Waterworks = 0
 }
-
-local function get_objective(id)
-	if id >=6 and id <=12 then return "Lighthouse"
-	elseif id >= 16 and id <= 20 then return "Mines"
-	elseif id >= 26 and id <= 30 then return "Waterworks"
-	else return false
+local function getObjectiveType(id)
+	if id >=6 and id <=12 then 
+		return "Lighthouse"
+	elseif id >= 16 and id <= 20 then 
+		return "Mines"
+	elseif id >= 26 and id <= 30 then 
+		return "Waterworks"
+	else
+		return false
+	end
+end
+local function getObjectiveState(id)
+	if id == 11 or id == 18 or id == 28 then	
+		return 1 	-- Alliance controlled
+	elseif id == 10 or id == 20 or id == 30 then
+		return 2 	-- Horde controlled
+	elseif id == 9 or id == 17 or id == 27 then
+		return 3 	-- Alliance assaulted
+	elseif id == 12 or id == 19 or id == 29 then
+		return 4 	-- Horde assaulted
+	else 
+		return false
 	end
 end
 
@@ -85,77 +120,37 @@ do
 	end
 end
 
-do
-	local function Gilneas_Initialize()
-		if select(2, IsInInstance()) == "pvp" and GetCurrentMapAreaID() == 736 then
-			bgzone = true
-			update_gametime()
-			for i=1, GetNumMapLandmarks(), 1 do
-				local name, _, textureIndex = GetMapLandmarkInfo(i)
-				if name and textureIndex then
-					local typ = get_objective(textureIndex)
-					if typ then
-						objectives[typ] = textureIndex
-					end
+function Gilneas_Initialize()
+	if select(2, IsInInstance()) == "pvp" and GetCurrentMapAreaID() == 736 then
+		bgzone = true
+		update_gametime()
+		for i=1, GetNumMapLandmarks(), 1 do
+			local name, _, textureIndex = GetMapLandmarkInfo(i)
+			if name and textureIndex then
+				local type = getObjectiveType(textureIndex)
+				if type then
+					objectives[type] = textureIndex
 				end
 			end
-
-			if Gilneas.Options.ShowGilneasEstimatedPoints then
-				Gilneas:ShowEstimatedPoints()
-			end
-			if Gilneas.Options.ShowGilneasBasesToWin then
-				Gilneas:ShowBasesToWin()
-			end
-
-		elseif bgzone then
-			bgzone = false
-
-			if Gilneas.Options.ShowGilneasEstimatedPoints then
-				Gilneas:HideEstimatedPoints()
-			end
-			if Gilneas.Options.ShowGilneasBasesToWin then
-				Gilneas:HideBasesToWin()
-			end
+		end
+		if Gilneas.Options.ShowGilneasEstimatedPoints then
+			Gilneas:ShowEstimatedPoints()
+		end
+		if Gilneas.Options.ShowGilneasBasesToWin then
+			Gilneas:ShowBasesToWin()
+		end
+	elseif bgzone then
+		bgzone = false
+		if Gilneas.Options.ShowGilneasEstimatedPoints then
+			Gilneas:HideEstimatedPoints()
+		end
+		if Gilneas.Options.ShowGilneasBasesToWin then
+			Gilneas:HideBasesToWin()
 		end
 	end
-	Gilneas.OnInitialize = Gilneas_Initialize
-	Gilneas.ZONE_CHANGED_NEW_AREA = Gilneas_Initialize
 end
-
-
-Gilneas:AddBoolOption("ShowGilneasEstimatedPoints", true, nil, function()
-	if Gilneas.Options.ShowGilneasEstimatedPoints and bgzone then
-		Gilneas:ShowEstimatedPoints()
-	else
-		Gilneas:HideEstimatedPoints()
-	end
-end)
-
-Gilneas:AddBoolOption("ShowGilneasBasesToWin", false, nil, function()
-	if Gilneas.Options.ShowGilneasBasesToWin and bgzone then
-		Gilneas:ShowBasesToWin()
-	else
-		Gilneas:HideBasesToWin()
-	end
-end)
-
-
-local startTimer = Gilneas:NewTimer(62, "TimerStart")
-local winTimer = Gilneas:NewTimer(30, "TimerWin")
-local capTimer = Gilneas:NewTimer(63, "TimerCap")
-
-local function obj_state(id)
-	if id == 11 or id == 18 or id == 28 then	
-		return 1 -- if obj_state(id) > 2 then .. conflict state ...	( 1 == alliance,  2 == horde )
-	elseif id == 10 or id == 20 or id == 30 then
-		return 2 
-	elseif id == 9 or id == 17 or id == 27 then
-		return 3 -- if obj_state(id) == 3 then --- alliance trys to capture from horde
-	elseif id == 12 or id == 19 or id == 29 then
-		return 4 -- if obj_state(id) == 4 then --- horde trys to capture from alliance
-	else return 0
-	end
-end
+Gilneas.OnInitialize = Gilneas_Initialize
+Gilneas.ZONE_CHANGED_NEW_AREA = Gilneas_Initialize
 
 do
 	local function check_for_updates()
@@ -163,25 +158,23 @@ do
 		for i=1, GetNumMapLandmarks(), 1 do
 			local name, _, textureIndex = GetMapLandmarkInfo(i)
 			if name and textureIndex then
-				local typ = get_objective(textureIndex)
-				if typ then
-					if obj_state(objectives[typ]) <= 2 and obj_state(textureIndex) > 2 then
+				local type = getObjectiveType(textureIndex)		-- name of the objective without spaces
+				local state = getObjectiveState(textureIndex)	-- state of the objective
+				if type and state and textureIndex ~= objectives[type] then
+					capTimer:Stop(name)
+					if state > 2 then
 						capTimer:Start(nil, name)
-		
-						if obj_state(textureIndex) == 3 then
+						if state == 3 then
 							capTimer:SetColor(allyColor, name)
 							capTimer:UpdateIcon("Interface\\Icons\\INV_BannerPVP_02.blp", name)
 						else
 							capTimer:SetColor(hordeColor, name)
 							capTimer:UpdateIcon("Interface\\Icons\\INV_BannerPVP_01.blp", name)
 						end	
-						
-					elseif obj_state(textureIndex) <= 2 then
-						capTimer:Stop(name)
 					end
-					objectives[typ] = textureIndex
+					objectives[type] = textureIndex
 				end
-			end		 
+			end
 		end
 	end
 
@@ -208,6 +201,8 @@ do
 	local winner_is = 0		-- 0 = nobody  1 = alliance  2 = horde
 	local last_horde_score = 0 
 	local last_alliance_score = 0
+	local last_horde_bases = 0
+	local last_alliance_bases = 0
 
 	function Gilneas:UPDATE_WORLD_STATES()
 		if not bgzone then return end
@@ -227,18 +222,22 @@ do
 				callupdate = true
 			end
 		end
+		if last_alliance_bases ~= AllyBases then
+			last_alliance_bases = AllyBases
+			callupdate = true
+		end
+		if last_horde_bases ~= HordeBases then 
+			last_horde_bases = HordeBases
+			callupdate = true
+		end
 
 		if callupdate or winner_is == 0 then
 			self:UpdateWinTimer()
 		end
 	end
 	function Gilneas:UpdateWinTimer()
-		local last_alliance_bases, last_horde_bases = get_basecount()
-
-		-- calculate new times
 		local AllyTime = (2000 - last_alliance_score) / ResPerSec[last_alliance_bases]
 		local HordeTime = (2000 - last_horde_score) / ResPerSec[last_horde_bases]
-
 		if AllyTime > 2000 then		AllyTime = 2000 end
 		if HordeTime > 2000 then	HordeTime = 2000 end
 
@@ -317,9 +316,6 @@ do
 	end
 end
 
-
-
-
 function Gilneas:ShowEstimatedPoints()
 	if AlwaysUpFrame1Text and AlwaysUpFrame2Text then
 		if not self.ScoreFrame1 then
@@ -378,5 +374,3 @@ function Gilneas:HideBasesToWin()
 		self.ScoreFrameToWinText:SetText("")
 	end
 end
-
-

@@ -4,7 +4,7 @@ local Events = LibStub("AceEvent-3.0")
 local AceLocale = LibStub("AceLocale-3.0")
 local L = AceLocale:GetLocale( "Recount" )
 
-local revision = tonumber(string.sub("$Revision: 1121 $", 12, -3))
+local revision = tonumber(string.sub("$Revision: 1148 $", 12, -3))
 local Recount = _G.Recount
 if Recount.Version < revision then Recount.Version = revision end
 
@@ -58,7 +58,7 @@ end
 
 function me:SetFontSize(string, size)
 	local Font, Height, Flags = string:GetFont()
-	string:SetFont(Font, 13, Flags)
+	string:SetFont(Font, size, Flags)
 end
 
 function Recount:BarDropDownOpen(myframe)
@@ -1176,7 +1176,7 @@ function Recount:ReportData(amount,loc,loc2)
 				if type(reportTable[i][5])=="number" then
 					PerSec=string.format("%.1f, ",reportTable[i][5])
 				else
-					PerSec=reportTable[i][5]
+					PerSec=reportTable[i][5]..", "
 				end
 			else
 				PerSec=""

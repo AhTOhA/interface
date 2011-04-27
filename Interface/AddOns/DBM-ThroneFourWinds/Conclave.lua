@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("Conclave", "DBM-ThroneFourWinds")
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5279 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5572 $"):sub(12, -3))
 mod:SetCreatureID(45870, 45871, 45872)
 mod:SetZone()
 
@@ -34,15 +34,15 @@ local warnGatherStrength	= mod:NewTargetAnnounce(86307, 4)
 local warnSpecialSoon		= mod:NewAnnounce("warnSpecialSoon", 2, "Interface\\Icons\\INV_Enchant_EssenceMagicLarge")--Hurricane/Sleet Storm/Zephyr in single announce
 local warnSpecial			= mod:NewAnnounce("warnSpecial", 3, "Interface\\Icons\\INV_Enchant_EssenceMagicLarge")--Hurricane/Sleet Storm/Zephyr in single announce
 
-local specWarnSpecial		= mod:NewSpecialWarning("specWarnSpecial")
+local specWarnSpecial		= mod:NewSpecialWarning("specWarnSpecial", nil, nil, nil, true)
+local specWarnIcePatch      = mod:NewSpecialWarningMove(93131)
 local specWarnShield		= mod:NewSpecialWarningSpell(95865)
 local specWarnWindBlast		= mod:NewSpecialWarningSpell(86193, false)
-local specWarnIcePatch      = mod:NewSpecialWarningMove(93131)
 
 local timerNurture			= mod:NewNextTimer(35, 85422)--This this is typically 35 seconds after a special has ended.
 local timerWindChill		= mod:NewNextTimer(10.5, 84645, nil, false)
 local timerSlicingGale		= mod:NewBuffActiveTimer(45, 93058, nil, false)
-local timerWindBlast		= mod:NewBuffActiveTimer(10, 86193)
+local timerWindBlast		= mod:NewBuffActiveTimer(11.5, 86193)
 local timerWindBlastCD		= mod:NewCDTimer(60, 86193)-- Cooldown: 1st->2nd = 22sec || 2nd->3rd = 60sec || 3rd->4th = 60sec ?
 local timerStormShieldCD	= mod:NewNextTimer(35, 95865)--Heroic ability, seems to share CD/line up with Nurture and also 35 seconds after a special ended.
 local timerGatherStrength	= mod:NewTargetTimer(60, 86307)
@@ -62,26 +62,30 @@ local windBlastCounter = 0
 local specialSpam = 0
 local specialsEnded = 0
 local poisonCounter = 0
+local breezeCounter = 0
 local poisonSpam = 0
 local iceSpam = 0
 local GatherStrengthwarned = false
 
 function mod:OnCombatStart(delay)
 	windBlastCounter = 0
+	breezeCounter = 0
+	poisonCounter = 0
 	specialSpam = 0
 	specialsEnded = 0
 	iceSpam = 0
+	poisonSpam = 0
 	GatherStrengthwarned = false
 	warnSpecialSoon:Schedule(80-delay)
 	timerSpecial:Start(90-delay)
 	enrageTimer:Start(-delay)
 	if self:GetUnitCreatureId("target") == 45870 or self:GetUnitCreatureId("focus") == 45870 or self:GetUnitCreatureId("target") == 45812 or not self.Options.OnlyWarnforMyTarget then--Anshal and his flowers
-		timerSoothingBreezeCD:Start(15-delay)
+		timerSoothingBreezeCD:Start(16-delay)
 		timerNurture:Start(30-delay)
 	end
 	if self:GetUnitCreatureId("target") == 45872 or self:GetUnitCreatureId("focus") == 45872 or not self.Options.OnlyWarnforMyTarget then--Rohash
 		timerWindBlastCD:Start(30-delay)
-		if mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25") then
+		if mod:IsDifficulty("heroic10", "heroic25") then
 			timerStormShieldCD:Start(30-delay)
 		end
 	end
@@ -103,7 +107,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			timerSpecial:Start()
 			specialsEnded = GetTime()
 			if self:GetUnitCreatureId("target") == 45870 or self:GetUnitCreatureId("focus") == 45870 or self:GetUnitCreatureId("target") == 45812 or not self.Options.OnlyWarnforMyTarget then--Anshal and his flowers
-				timerSoothingBreezeCD:Start(15)
+				timerSoothingBreezeCD:Start(16)
 				timerNurture:Start()
 			end
 			if self:GetUnitCreatureId("target") == 45872 or self:GetUnitCreatureId("focus") == 45872 or not self.Options.OnlyWarnforMyTarget then--Rohash
@@ -122,7 +126,7 @@ function mod:SPELL_AURA_REMOVED(args)
 		timerSpecial:Start()
 		specialsEnded = GetTime()
 		if self:GetUnitCreatureId("target") == 45870 or self:GetUnitCreatureId("focus") == 45870 or self:GetUnitCreatureId("target") == 45812 or not self.Options.OnlyWarnforMyTarget then--Anshal and his flowers
-			timerSoothingBreezeCD:Start(15)
+			timerSoothingBreezeCD:Start(16)
 			timerNurture:Start()
 		end
 		if self:GetUnitCreatureId("target") == 45872 or self:GetUnitCreatureId("focus") == 45872 or not self.Options.OnlyWarnforMyTarget then--Rohash
@@ -140,9 +144,12 @@ end
 
 function mod:SPELL_CAST_START(args)
 	if args:IsSpellID(86205) then
+		breezeCounter = breezeCounter + 1
 		if self:GetUnitCreatureId("target") == 45870 or self:GetUnitCreatureId("focus") == 45870 or self:GetUnitCreatureId("target") == 45812 or not self.Options.OnlyWarnforMyTarget then--Anshal and his flowers
 			warnSoothingBreeze:Show()--possibly change to target scanning and announce whether he's casting it on himself or one of his flowers.
-			timerSoothingBreezeCD:Start()
+			if breezeCounter < 3 then--Make sure it doesn't start another bar just before special.
+				timerSoothingBreezeCD:Start()
+			end
 		end
 	elseif args:IsSpellID(86192) then
 		if self:GetUnitCreatureId("target") == 45872 or self:GetUnitCreatureId("focus") == 45872 or not self.Options.OnlyWarnforMyTarget then
@@ -155,7 +162,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 	if args:IsSpellID(85422) then
 		if self:GetUnitCreatureId("target") == 45870 or self:GetUnitCreatureId("focus") == 45870 or self:GetUnitCreatureId("target") == 45812 or not self.Options.OnlyWarnforMyTarget then--Anshal and his flowers
 			warnNurture:Show()
-			if mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25") then
+			if mod:IsDifficulty("heroic10", "heroic25") then
 				timerPoisonToxicCD:Start()
 			end
 		end
@@ -169,6 +176,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 		timerSpecialActive:Start()
 		specialSpam = GetTime()--Trigger it off any of 3 spells, but only once.
 		poisonCounter = 0
+		breezeCounter = 0
 		if self:GetUnitCreatureId("target") == 45871 or self:GetUnitCreatureId("focus") == 45871 or not self.Options.OnlyWarnforMyTarget then--Nezir
 			timerPermaFrostCD:Start(15)--This is gonna slap you in face the instance special ends.
 		end
@@ -208,25 +216,27 @@ end
 
 -- Posion Toxic can do casts during stun, so if Poison Toxic cancelled, Next Poision Toxic timer known by boss`s power.
 function mod:UNIT_POWER(uId)
-	if self:GetUnitCreatureId(uId) == 45870 and UnitPower(uId) == 62 and poisonCounter == 0 and (mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25")) then
+	if self:GetUnitCreatureId(uId) == 45870 and UnitPower(uId) == 62 and poisonCounter == 0 and mod:IsDifficulty("heroic10", "heroic25") then
 		if self:GetUnitCreatureId("target") == 45870 or self:GetUnitCreatureId("focus") == 45870 or self:GetUnitCreatureId("target") == 45812 or not self.Options.OnlyWarnforMyTarget then
 			timerPoisonToxicCD:Start(10)
 		end
-	elseif self:GetUnitCreatureId(uId) == 45870 and UnitPower(uId) == 79 and (mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25")) then
+	elseif self:GetUnitCreatureId(uId) == 45870 and UnitPower(uId) == 79 and mod:IsDifficulty("heroic10", "heroic25") then
 		timerPoisonToxicCD:Cancel()
 	end
 end
 
 function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg, boss)
-	if (msg == L.gatherstrength or msg:find(L.gatherstrength)) and mod:LatencyCheck() then
+	if msg == L.gatherstrength or msg:find(L.gatherstrength) then
 		self:SendSync("GatherStrength", boss)
 	end
 end
 
 function mod:OnSync(msg, boss)
-	if msg == "GatherStrength" and self:IsInCombat() and not GatherStrengthwarned then
+	if msg == "GatherStrength" and self:IsInCombat() then
 		warnGatherStrength:Show(boss)
-		timerGatherStrength:Start(boss)
-		GatherStrengthwarned = true
+		if not GatherStrengthwarned then
+			timerGatherStrength:Start(boss)
+			GatherStrengthwarned = true
+		end
 	end
 end

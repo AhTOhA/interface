@@ -43,6 +43,7 @@ TradeSkillMaster_ShoppingDB = {
 	["profileKeys"] = {
 		["Glasin - Tarren Mill"] = "Glasin - Tarren Mill",
 		["Zulrea - Tarren Mill"] = "Zulrea - Tarren Mill",
+		["Mylen - Tarren Mill"] = "Mylen - Tarren Mill",
 		["Kraisus - Tarren Mill"] = "Kraisus - Tarren Mill",
 		["Myyh - Tarren Mill"] = "Myyh - Tarren Mill",
 		["Argwynn - Tarren Mill"] = "Argwynn - Tarren Mill",

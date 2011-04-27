@@ -53,8 +53,8 @@ BigWigs3DB = {
 		["BigWigs_Plugins_Messages"] = {
 			["profiles"] = {
 				["Default"] = {
-					["font"] = "Friz Quadrata TT",
 					["fontSize"] = 20.00000028115454,
+					["font"] = "Friz Quadrata TT",
 				},
 			},
 		},
@@ -68,9 +68,9 @@ BigWigs3DB = {
 	["profileKeys"] = {
 		["Glasin - Tarren Mill"] = "Default",
 		["Kraisus - Tarren Mill"] = "Default",
-		["Tikytaka - Tarren Mill"] = "Default",
 		["Myyh - Tarren Mill"] = "Default",
 		["Argwynn - Tarren Mill"] = "Default",
+		["Tikytaka - Tarren Mill"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

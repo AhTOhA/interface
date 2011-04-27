@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("HalfusWyrmbreaker", "DBM-BastionTwilight")
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5243 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5557 $"):sub(12, -3))
 mod:SetCreatureID(44600)
 mod:SetZone()
 
@@ -17,10 +17,10 @@ mod:RegisterEvents(
 
 local warnBreath			= mod:NewSpellAnnounce(83707, 3)
 local warnFuriousRoar		= mod:NewSpellAnnounce(83710, 3)
-local warnTimeDilation		= mod:NewSpellAnnounce(83601, 3)
 local warnVengeance			= mod:NewSpellAnnounce(87683, 3)
-local warnShadowNova		= mod:NewSpellAnnounce(83703, 3)
+local warnShadowNova		= mod:NewSpellAnnounce(83703, 4)
 local warnParalysis			= mod:NewSpellAnnounce(84030, 2)
+local warnMalevolentStrike	= mod:NewStackAnnounce(83908, 2, nil, mod:IsTank() or mod:IsHealer())
 
 local specWarnShadowNova	= mod:NewSpecialWarningInterrupt(83703, false)
 
@@ -28,6 +28,8 @@ local timerFuriousRoar		= mod:NewCDTimer(30, 83710)
 local timerBreathCD			= mod:NewCDTimer(20, 83707)--every 20-25 seconds.
 local timerParalysis		= mod:NewBuffActiveTimer(12, 84030)
 local timerParalysisCD		= mod:NewCDTimer(35, 84030)
+local timerNovaCD			= mod:NewCDTimer(7.2, 86168)--7.2 is actually exact next timer, but since there are other variables like roars, or paralysis that could mis time it, we use CD bar instead so we don't give false idea of precision.
+local timerMalevolentStrike	= mod:NewTargetTimer(30, 83908, nil, mod:IsTank() or mod:IsHealer())
 
 local berserkTimer			= mod:NewBerserkTimer(360)
 
@@ -38,7 +40,7 @@ local spamFuriousRoar = 0
 function mod:OnCombatStart(delay)
 	spamFuriousRoar = 0
 	berserkTimer:Start(-delay)
-	if mod:IsDifficulty("heroic10") or mod:IsDifficulty("heroic25") then
+	if mod:IsDifficulty("heroic10", "heroic25") then--On heroic we know for sure the drake has breath ability.
 		timerBreathCD:Start(10-delay)
 	end
 end
@@ -52,12 +54,19 @@ function mod:SPELL_AURA_APPLIED(args)
 		timerParalysisCD:Start()
 	elseif args:IsSpellID(83601, 83603, 83611) and self.Options.ShowDrakeHealth then
 		DBM.BossHealth:AddBoss(self:GetCIDFromGUID(args.sourceGUID), args.sourceName)
+	elseif args:IsSpellID(83908, 86158, 86157, 86159) then
+		timerMalevolentStrike:Start(args.destName)
 	end
 end
 
 function mod:SPELL_AURA_APPLIED_DOSE(args)
 	if args:IsSpellID(87683) then
 		warnVengeance:Show()
+	elseif args:IsSpellID(83908, 86158, 86157, 86159) then
+		if args.amount % 4 == 0 or args.amount >= 10 then		-- warn every 4th stack and every stack if 10 or more (goes up to 12 @heroic and 15 @normal)
+			warnMalevolentStrike:Show(args.destName, args.amount)
+		end
+		timerMalevolentStrike:Start(args.destName)
 	end
 end
 
@@ -73,17 +82,14 @@ function mod:SPELL_CAST_START(args)
 		timerBreathCD:Start()
 	elseif args:IsSpellID(83703, 86166, 86167, 86168) then
 		warnShadowNova:Show()
-		if self:GetUnitCreatureId("target") == 44600 or self:GetUnitCreatureId("focus") == 44600 then--Don't annoy tanks or dps or healers with this nonsense when they aren't targeting halfus.
-			specWarnShadowNova:Show()
-		end
+		specWarnShadowNova:Show()
+		timerNovaCD:Start()
 	end
 end
 
 function mod:SPELL_CAST_SUCCESS(args)
 	if args:IsSpellID(83612) then
 		DBM.BossHealth:AddBoss(self:GetCIDFromGUID(args.sourceGUID), args.sourceName)
-	elseif args:IsSpellID(83601) then
-		warnTimeDilation:Show()
 	end
 end
 

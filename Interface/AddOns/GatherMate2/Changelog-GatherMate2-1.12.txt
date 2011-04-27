@@ -1,0 +1,17 @@
+tag 1.12
+31504af8e1cef9726e4ee591168c916bc241d2ae
+root <root@db06.curselive.local>
+2011-01-22 19:05:50 +0000
+
+Tagging as 1.12
+
+
+--------------------
+
+Sal Scotto:
+	- All phased maps should now be properly support to fix issues with map id being in the wrong phase
+	- Forgot to comit
+	- Fixes for Hyjal phasing, db will upgrade itself and move any phase 2 nodes back to P1/p3 area id
+	- adjusted rare spawn mapping for obsidium
+	- more rare mappings
+	- Added some more rare spawn mappings, reduced fishing node placement by 5 yards

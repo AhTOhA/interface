@@ -19,21 +19,21 @@ DBMBaradinHold_SavedVars = {
 		["Timer88954Argaloth1"] = true,
 		["WarnFirestormSoon"] = true,
 		["Fel Firestorm!"] = true,
-		["Announce"] = false,
 		["SpeedKillTimer"] = false,
+		["Announce"] = false,
 	},
 }
 DBMBaradinHold_SavedStats = {
 	["Argaloth"] = {
 		["heroic25Pulls"] = 0,
-		["normal25Pulls"] = 4,
-		["normalPulls"] = 0,
+		["normal25Pulls"] = 10,
+		["normalPulls"] = -2,
 		["heroicPulls"] = 0,
 		["heroic25Kills"] = 0,
 		["heroicKills"] = 0,
-		["normal25Kills"] = 3,
+		["normal25Kills"] = 4,
 		["normalKills"] = 0,
-		["normal25LastTime"] = 272.8299999999999,
-		["normal25BestTime"] = 257.5460000000003,
+		["normal25LastTime"] = 253.8979999999992,
+		["normal25BestTime"] = 253.8979999999992,
 	},
 }

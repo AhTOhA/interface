@@ -647,6 +647,99 @@
 			</Layer>
 		</Layers>
 	</Frame>
+	<Frame name="TenTonHammer_DatabaseEntry2" virtual="true" inherits="TenTonHammer_DatabaseEntry">
+		<Scripts>
+			<OnLoad>
+				<![CDATA[
+					local name = self:GetName();
+					_G[name.."_Text_Class"]:Hide();
+					--_G[name.."_Text_GearScore"]:Hide();
+					_G[name.."_Text_RaidScore"]:Hide();
+					_G[name.."_Text_PvEScore"]:Hide();
+					_G[name.."_Text_PvPScore"]:Hide();
+					_G[name.."_Text_ThumbsUp"]:SetPoint("CENTER", self, "LEFT", 170, 0);
+					_G[name.."_Text_ThumbsDown"]:SetPoint("CENTER", self, "LEFT", 220, 0);
+					_G[name.."_Text_GearScore"]:SetPoint("CENTER", self, "LEFT", 130, 0);
+										
+					function self:SetText(Name, Class, GearScore, RaidScore, PvEScore, PvPScore, ThumbsUp, ThumbsDown, ThumbStatus, Negative, Positive)
+						Negative = Negative or {};
+						Positive = Positive or {};
+						local r,g,b,hex;
+						local f = TenTonHammer;
+						_G[name.."_Text_Name"]:SetText(Name or "");
+						_G[name.."_Text_Class"]:SetText("");
+						_G[name.."_Text_GearScore"]:SetText(GearScore or "");
+						_G[name.."_Text_RaidScore"]:SetText("");
+						_G[name.."_Text_PvEScore"]:SetText("");
+						_G[name.."_Text_PvPScore"]:SetText("");
+						_G[name.."_Text_ThumbsUp"]:SetText("|cff00ff00"..(ThumbsUp or ""));
+						_G[name.."_Text_ThumbsDown"]:SetText("|cffff0000"..(ThumbsDown or ""));
+							_G[name.."_ThumbsDown"]:Show();
+							_G[name.."_ThumbsUp"]:Show();
+						if not ( ThumbStatus ) then
+							_G[name.."_ThumbsDown"]:Hide();
+							_G[name.."_ThumbsUp"]:Hide();
+						end;
+						if ( ThumbStatus == "1" ) then
+							_G[name.."_ThumbsDown"]:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsdown" });
+							_G[name.."_ThumbsUp"]:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsup_voted" });
+						elseif ( ThumbStatus == "-1" ) then
+							_G[name.."_ThumbsDown"]:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsdown_voted" });
+							_G[name.."_ThumbsUp"]:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsup" });
+						end;
+						
+						local Tooltip = "";
+						_G[name.."_Icon"]:SetBackdrop({ bgFile = nil});
+						if ( #Positive > 0 ) then
+							_G[name.."_Icon"]:SetBackdrop({ bgFile = "Interface\\Icons\\Spell_ChargePositive" });
+							for i,v in pairs(Positive) do
+								Tooltip = Tooltip.."|cff00ff00"..v[1].."\n";
+							end;
+						end;
+						if ( #Negative > 0 ) then
+							if ( Tooltip ~= "" ) then Tooltip = Tooltip.."\n"; end;
+							_G[name.."_Icon"]:SetBackdrop({ bgFile = "Interface\\Icons\\Spell_ChargeNegative"});
+							for i,v in pairs(Negative) do
+								Tooltip = Tooltip.."|cffff0000"..v[1].."\n";
+							end;
+						end;
+						_G[name.."_Icon"].TextLink = Tooltip;
+					end;
+					
+					local ThumbsUpIcon = CreateFrame("Frame", name.."_ThumbsUp", self, "TenTonHammer_Icon");
+					ThumbsUpIcon:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsup" });
+					ThumbsUpIcon:SetSize(24, 24);
+					ThumbsUpIcon:SetPoint("CENTER", self, "LEFT", 195, 0);
+					
+					local ThumbsDownIcon = CreateFrame("Frame", name.."_ThumbsDown", self, "TenTonHammer_Icon");
+					ThumbsDownIcon:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsdown" });
+					ThumbsDownIcon:SetSize(24, 24);
+					ThumbsDownIcon:SetPoint("CENTER", self, "LEFT", 245, 0);
+					
+					ThumbsUpIcon:SetScript("OnMouseUp", function(...)
+						local ThumbsUp, ThumbsDown = TenTonHammer:Vote(self.Player, self.Realm, 1);
+						ThumbsUpIcon:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsup_voted" });
+						ThumbsDownIcon:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsdown" });
+						_G[name.."_Text_ThumbsUp"]:SetText("|cff00ff00"..ThumbsUp);
+						_G[name.."_Text_ThumbsDown"]:SetText("|cffff0000"..ThumbsDown);
+						--f:SetMainThumbs(ThumbsUp, ThumbsDown);
+					end);
+					
+					ThumbsDownIcon:SetScript("OnMouseUp", function(...)
+						local ThumbsUp, ThumbsDown = TenTonHammer:Vote(self.Player, self.Realm, -1);
+						ThumbsDownIcon:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsdown_voted" });
+						ThumbsUpIcon:SetBackdrop({bgFile="Interface\\AddOns\\GearScore\\UI\\thumbsup" });
+						_G[name.."_Text_ThumbsUp"]:SetText("|cff00ff00"..ThumbsUp);
+						_G[name.."_Text_ThumbsDown"]:SetText("|cffff0000"..ThumbsDown);
+						--f:SetMainThumbs(ThumbsUp, ThumbsDown);
+					end);
+					
+					
+					
+				]]>
+			</OnLoad>
+		</Scripts>
+	</Frame>
 	<Frame name="TenTonHammer_OptionCheck" virtual="true" inherits="UICheckButtonTemplate">
 		<Scripts>
 			<OnLoad>
@@ -870,7 +963,7 @@
 								<Scripts>
 									<OnEnter>
 										GameTooltip:SetOwner(self, "ANCHOR_CURSOR");
-										GameTooltip:AddLine("GearScore™/PlayerScore™ 4.4.03 \n©2010 - Ten Ton Hammer™, All Rights Reserved.");
+										GameTooltip:AddLine("GearScore™/PlayerScore™ 4.5.02 \n©2010 - Ten Ton Hammer™, All Rights Reserved.");
 										GameTooltip:Show();
 										self:GetParent():SetBackdrop({ bgFile = "Interface\\Addons\\GearScore\\UI\\playerscore2" });
 									</OnEnter>
@@ -983,7 +1076,6 @@
 			<Button name="$parentTab3" inherits="TenTonHammer_Tab_Template" id="3" text="Talents"></Button>
 			<Button name="$parentTab4" inherits="TenTonHammer_Tab_Template" id="4" text="Experience"></Button>
 			<Button name="$parentTab5" inherits="TenTonHammer_Tab_Template" id="5" text="PvP"></Button>
-
 			<Button name="$parentTab6" inherits="TenTonHammer_RightTab_Template" id="6" text="Options">
 				<Scripts>
 					<OnLoad>
@@ -1899,6 +1991,7 @@
 								{ L["Enable Quick-Scan Mode"], "target_inspect1", L["When enbled, this mode will scan & score a characther when you target them.\n\nTo prevent lag, this mode will not function while you are in combat."], },
 								{ L["Verbose"], "verbose", L["When enabled with Quick-Scan mode, tooltips will display more detailed information."] },
 								{ L["Master Loot Mode"], "masterloot", L["When enabled loot items will display upgrade values of your raid members."] },
+								{ L["Quick Rate Mode"], "quickrate", L["When enabled, PlayerScore will display a small window for quickly rating party members in a 5-man dungeon."] },
 							};
 							
 							_G[name.."_Title"]:SetFont("Fonts\\FRIZQT__.TTF", 16);
@@ -2435,6 +2528,7 @@
 						["GroupTab"] = 0,
 						["ailOnTip"] = 0,
 						["addonMode"] = -1,
+						["quickrate"] = 0,
 						};
 						for i,v in pairs(updatedSettings) do
 						TenTonHammer_Settings[i] = v;
@@ -2488,6 +2582,7 @@
 						["GroupTab"] = 1,
 						["ailOnTip"] = 1,
 						["addonMode"] = 1,
+						["quickrate"] = 1,
 						};
 						for i,v in pairs(updatedSettings) do
 						TenTonHammer_Settings[i] = v;
@@ -2582,6 +2677,13 @@
 							L["Scan all members of your party or raid within inspection range. This will take about 30s"],
 							function(...)
 								TenTonHammer:ScanEntireParty();
+							end,
+						},
+						{ 
+							"Rate Group",
+							L["Allows you to quickly rate your current party. You must have scanned them at least once to rate them."],
+							function(...)
+								TenTonHammer_QuickRateFrame:Show();
 							end,
 						},
 						{ 
@@ -2704,8 +2806,6 @@
 			</Frame>		
 		</Frames>
 	</Frame>
-
-
 	<Frame name="TTH_InspectPVPFrame" enableMouse="true" parent="TenTonHammer_Frame5" hidden="false" useParentLevel="true" setAllPoints="true" id="2">
 		<Backdrop edgeFile="Interface\Addons\GearScore\UI\new-border" tile="false">
 			<BackgroundInsets>
@@ -3106,8 +3206,6 @@
 			</OnShow>
 		</Scripts>
 	</Frame>
-	
-	
 	<Button name="TenTonHammer_MinimapButton" parent="Minimap" toplevel="true" movable="true" hidden="false">
 		<Size>
 			<AbsDimension x="33" y="33"/>
@@ -3245,6 +3343,11 @@
 											notCheckable = 1,
 										},
 										{
+											text = "Rate Group",
+											func = function(...) TenTonHammer_QuickRateFrame:Show(); end,
+											notCheckable = 1,
+										},
+										{
 											text = "Help",
 											func = self.showTab,
 											arg1 = 7,
@@ -3379,5 +3482,114 @@
 		</Layers>
 		<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
 	</Button>
+
+	<Frame name="TenTonHammer_QuickRateFrame" hidden="true" parent="UIParent" clampedToScreen="true" enableMouse="true" movable="true" resizable="false">
+		<Size>
+			<AbsDimension x="300" y="460" />
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset x="0" y="0" />
+			</Anchor>
+		</Anchors>
+		<Scripts>
+			<OnShow>
+				<![CDATA[
+					--_G[self:GetParent():GetName().."_MainButton5"]:Show();
+					--_G[self:GetParent():GetName().."_MainButton3"]:Hide();
+					local name = self:GetName();
+					local f = TenTonHammer;
+					local height = 100;
+					
+					-- Real Setup
+					local loopCount = 0;
+					for i = 2,26 do 
+						_G[name.."_Data"..i]:SetText();
+					end;
+					for i,v in pairs(f.PartyData) do
+						if ( loopCount < 26 ) and ( i ~= UnitName("player") ) then
+							loopCount = loopCount + 1;	
+							if ( f.PartyData ) and ( f.PartyData[i] ) then
+								local p = f.PartyData[i];
+								--_G[name.."_Data"..loopCount+1]:SetText(p["Color"]..i, "", f:GetQuickColor(p["GearScore"]), "", "", "", p["ThumbsUp"], p["ThumbsDown"], p["Vote"], p["Negative"], p["Positive"]);
+								_G[name.."_Data"..loopCount+1]:SetText(p["Color"]..i, p["Color"]..p["Spec"].." "..p["ClassLocal"], f:GetQuickColor(p["GearScore"]), f:GetQuickColor(p["RaidScore"]), f:GetQuickColor(p["PVEScore"]), f:GetQuickColor(p["PVPScore"]), p["ThumbsUp"], p["ThumbsDown"], p["Vote"], p["Negative"], p["Positive"]);
+								_G[name.."_Data"..loopCount+1].Player = i;
+								_G[name.."_Data"..loopCount+1].Realm = p["Realm"];
+							end;
+						end;
+					end;
+					self:SetHeight(height + loopCount * 15);
+					if ( loopCount == 0 ) then
+						self:Hide();
+						print("There are no party members to rate...");
+					end;
+					]]>
+			</OnShow>
+			<OnLoad>
+				<![CDATA[
+				
+					-- Allows Users to move the main frame by dragging the title box.
+					self:EnableMouse(true);
+					self:SetMovable(true);
+					self:RegisterForDrag("LeftButton");
+					self:SetScript("OnDragStart", function() self:StartMoving() end);
+					self:SetScript("OnDragStop", function() self:StopMovingOrSizing() end);
+				
+					local name = self:GetName();
+						
+					local header = CreateFrame("Frame", name.."_HeaderText", self, "TenTonHammer_Info");
+					header:SetPoint("TOPLEFT", self, 0, -20);
+					header:SetText("Quickly Rate Your Party");
+					header:SetWidth(300);
+					header:Center();
+					header:SetColor(1,1,1,1);
+					
+					local footer = CreateFrame("Frame", name.."_FooterText", self, "TenTonHammer_Info");
+					footer:SetPoint("BOTTOMLEFT", self, 0, 25);
+					footer:SetText("Download the PlayerScore updater from \nPlayerScore.com to share your ratings.");
+					footer:Center();
+					footer:SetColor(1,1,1,1);
+					footer:SetWidth(300);
+						
+					for i = 2,26 do
+						local Text = CreateFrame("Frame", name.."_Data"..i, self, "TenTonHammer_DatabaseEntry2")
+						Text:SetPoint("TOPLEFT", self, 20, (i + 1) * -15 - 5);
+						if ( i == 1 ) then
+							Text:SetText("Name", "Class & Spec", "GearScore", "Raid", "PvE", "PvP", nil, nil, nil);
+							_G[name.."_Data1_Text_Name"]:SetJustifyH("CENTER");
+						end;
+						--Text:SetText("asdfasdf", "64");
+						--Text:SetColor(0,1,0,1);
+					end;
+				]]>
+			</OnLoad>
+		</Scripts>
+		<Frames>
+			<Button name="$parent_ExitButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="$parent" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-20" y="-20"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		</Frames>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parent_MainTexture">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$parent">
+							<Offset x="10" y="-10"></Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$parent">
+							<Offset x="-10" y="10"></Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="0" g="0" b="0" a="1.0"></Color>
+				</Texture>
+			</Layer>
+		</Layers>
+	</Frame>	
 </Ui>
 

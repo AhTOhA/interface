@@ -84,6 +84,7 @@ do
 
 	
 	local function UpdateThreatWheelWidget(frame, unit)
+		-- [[ Normal Mode
 		local unitid
 		if unit.reaction == "FRIENDLY" or (not InCombatLockdown()) then frame:Hide(); return end
 		if unit.isTarget and UnitExists("target") then unitid = "target"
@@ -106,6 +107,14 @@ do
 				frame:HideIn(frame.FadeTime)
 			else frame:Hide() end
 		elseif (GetTime() > frame.FadeTime) then frame:Hide() end
+		--]]
+		
+		--[[Test Mode:
+		frame.ThreatIcon:SetTexCoord(unpack(THREATWIDGET_SEGMENT_COORD["MEDIUMTANK"]))
+		frame.ThreatText:SetText(120)
+		frame.TargetText:SetText("Dog")
+		frame:Show()
+		--]]
 	end
 
 	local function CreateThreatWheelWidget(parent)

@@ -1,6 +1,6 @@
-## Interface: 40000
-## Title: Carbonite 4.034
-## Version: 4.034
+## Interface: 40100
+## Title: Carbonite 4.100001
+## Version: 4.100001
 ## Author: Carbon Based Creations, LLC
 ## Notes: Copyright 2007-2011 Carbon Based Creations, LLC
 ## DefaultState: Enabled

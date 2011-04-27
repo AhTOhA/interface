@@ -1,4 +1,4 @@
-﻿## Interface: 40000
+﻿## Interface: 40100
 ## Title: Recount
 ## Notes: Records Damage and Healing for Graph Based Display
 ## Notes-ruRU: Записывает урон и исцеления и отоброжает различные графики
@@ -9,7 +9,7 @@
 ## SavedVariables: RecountDB
 ## SavedVariablesPerCharacter: RecountPerCharDB
 ## X-Category: Combat
-## X-Curse-Packaged-Version: v4.0.1d release
+## X-Curse-Packaged-Version: v4.1.0a release
 ## X-Curse-Project-Name: Recount
 ## X-Curse-Project-ID: recount
 ## X-Curse-Repository-ID: wow/recount/mainline

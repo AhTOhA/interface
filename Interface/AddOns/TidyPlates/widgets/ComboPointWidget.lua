@@ -76,7 +76,7 @@ local function CreateWidgetFrame(parent)
 	
 	-- Required Widget Code
 	frame.UpdateContext = UpdateWidgetContext
-	frame.Update = UpdateWidgetContext
+	frame.Update = UpdateWidgetFrame
 	frame._Hide = frame.Hide
 	frame.Hide = function() ClearWidgetContext(frame); frame:_Hide() end
 	if not isEnabled then EnableWatcherFrame(true) end

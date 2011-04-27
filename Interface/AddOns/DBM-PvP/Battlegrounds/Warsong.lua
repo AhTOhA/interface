@@ -26,7 +26,7 @@ Warsong:RegisterEvents(
 	"UPDATE_BATTLEFIELD_SCORE"
 )
 
-local startTimer = Warsong:NewTimer(62, "TimerStart")
+local startTimer = Warsong:NewTimer(62, "TimerStart", 2457)
 local flagTimer = Warsong:NewTimer(23, "TimerFlag", "Interface\\Icons\\INV_Banner_02")
 
 Warsong:AddBoolOption("ShowFlagCarrier", true, nil, function()
@@ -45,10 +45,10 @@ do
 			if Warsong.Options.ShowFlagCarrier then
 				Warsong:ShowFlagCarrier()
 				Warsong:CreateFlagCarrierButton()
+				Warsong.FlagCarrierFrame1Text:SetText("")
+				Warsong.FlagCarrierFrame2Text:SetText("")
 			end
 
-			Warsong.FlagCarrierFrame1Text:SetText("")
-			Warsong.FlagCarrierFrame2Text:SetText("")
 			FlagCarrier[1] = nil
 			FlagCarrier[2] = nil
 

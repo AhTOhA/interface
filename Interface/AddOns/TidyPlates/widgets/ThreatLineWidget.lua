@@ -132,7 +132,7 @@ local testMode = false
 
 -- Graphics Update
 local function UpdateThreatLine(frame, unitid)
-
+	local maxwitdth = frame:GetWidth() / 2
 	local leaderThreat, leaderThreatDelta, leaderThreatPct	
 	local leaderThreatMax, leaderThreatMin = frame.ThreatMax, frame.ThreatMin
 	if testMode then 
@@ -160,27 +160,32 @@ local function UpdateThreatLine(frame, unitid)
 		-- Get Positions and Size
 		if leaderThreat > 100 then
 			-- While tanking
-			frame.Line:SetWidth( ceil((leaderThreat - 100)/2) )
+			frame.Line:SetWidth( maxwitdth * ((leaderThreat - 100)/100) )
 			threatcolor = frame._HighColor
 			frame.Line:SetPoint("LEFT", frame, "CENTER")
 			--frame.TargetText:SetPoint("TOP",frame.Line,"RIGHT", 0)
 		else 
 			-- While NOT tanking
-			frame.Line:SetWidth( ceil((100 - leaderThreat)/2) )
+			frame.Line:SetWidth( maxwitdth * ((100 - leaderThreat)/100) )
 			threatcolor = frame._LowColor
 			frame.Line:SetPoint("RIGHT", frame, "CENTER")
 			--frame.TargetText:SetPoint("CENTER",frame.Line,"LEFT", -3, 12)
 		end
 
 		if leaderUnitId and leaderUnitId ~= "player" then 
-			frame.TargetText:SetText(UnitName(leaderUnitId))
+			
 			
 			if UnitIsUnit(leaderUnitId, "pet")
 				or GetPartyAssignment("MAINTANK", leaderUnitId) 
 				or ("TANK" == UnitGroupRolesAssigned(leaderUnitId)) then
 					threatcolor = frame._TankedColor end
 			--if IsRaidTank(leaderUnitId) then threatcolor = frame._TankedColor end
-			frame.TargetText:SetTextColor(threatcolor.r, threatcolor.g, threatcolor.b)
+			
+			--if frame.ShowText then
+				frame.TargetText:SetText(UnitName(leaderUnitId))								-- TP 6.1
+				frame.TargetText:SetTextColor(threatcolor.r, threatcolor.g, threatcolor.b)		-- TP 6.1
+			--end
+			
 		else frame.TargetText:SetText("") end
 		-- Set Colors
 		frame.Left:SetVertexColor(threatcolor.r, threatcolor.g, threatcolor.b)
@@ -193,7 +198,14 @@ local function UpdateThreatLine(frame, unitid)
 	else frame:_Hide() end
 end
 
-	
+local function UpdateWidgetTarget(frame)
+	if UnitExists("target") then
+		UpdateThreatLine(frame, "target")
+	else
+		frame:Hide()
+	end
+end
+
 -- Context Update (mouseover, target change)
 local function UpdateWidgetContext(frame, unit)
 	-- Filter
@@ -321,10 +333,14 @@ local function CreateWidgetFrame(parent)
 		--frame.TargetText:SetShadowColor(0,0,0,1)
 		frame.TargetText:SetWidth(50)
 		frame.TargetText:SetHeight(20)
+		--[[ Text on top
 		frame.TargetText:SetJustifyH("CENTER")
-		frame.TargetText:SetPoint("CENTER",frame.Line,"LEFT", -3, 11)
-		--frame.TargetText:SetJustifyH("RIGHT")
-		--frame.TargetText:SetPoint("RIGHT",frame,"CENTER", 0, 11)
+		frame.TargetText:SetPoint("CENTER",frame.Line,"LEFT", -3, 7)	-- was y=11
+		--]]
+		-- [[ Text on side
+		frame.TargetText:SetJustifyH("RIGHT")
+		frame.TargetText:SetPoint("RIGHT",frame.Line,"LEFT", -5, 2)
+		--]]
 		-- Mechanics/Setup
 		frame.FadeLater = FadeLater
 		frame.FadeTime = 0
@@ -340,7 +356,7 @@ local function CreateWidgetFrame(parent)
 	
 	-- Required Widget Code
 	frame.UpdateContext = UpdateWidgetContext
-	frame.Update = UpdateWidgetContext
+	frame.Update = UpdateWidgetTarget
 	frame._Hide = frame.Hide
 	frame.Hide = function() ClearWidgetContext(frame); frame:_Hide() end
 	if not isEnabled then EnableWatcherFrame(true) end

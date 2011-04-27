@@ -17,6 +17,7 @@ local Postal_OpenAllMenuButton
 local skipFlag
 local invFull, invAlmostFull
 local openAllOverride
+local firstMailDaysLeft
 
 -- Frame to process opening mail
 local updateFrame = CreateFrame("Frame")
@@ -53,21 +54,27 @@ refreshFrame:SetScript("OnUpdate", function(self, elapsed)
 		if self.mode == nil then
 			self.time = 10
 			Postal:Print(L["Refreshing mailbox..."])
+			self:RegisterEvent("MAIL_INBOX_UPDATE")
 			CheckInbox()
-			local current, total = GetInboxNumItems()
-			if current == 50 or current == total then
-				-- If we're here, then mailbox contains a full fresh 50 or
-				-- we're showing all the mail we have. Continue OpenAll in
-				-- 3 seconds to allow for other addons to do stuff.
-				self.time = 3
-				self.mode = 1
-			end
+			refreshFrame:OnEvent()
 		else
 			self:Hide()
 			Postal_OpenAll:OpenAll(true)
 		end
 	end
 end)
+function refreshFrame:OnEvent(event)
+	local current, total = GetInboxNumItems()
+	if current == 50 or current == total then
+		-- If we're here, then mailbox contains a full fresh 50 or
+		-- we're showing all the mail we have. Continue OpenAll in
+		-- 3 seconds to allow for other addons to do stuff.
+		self.time = 3
+		self.mode = 1
+		self:UnregisterEvent("MAIL_INBOX_UPDATE")
+	end
+end
+refreshFrame:SetScript("OnEvent", refreshFrame.OnEvent)
 
 function Postal_OpenAll:OnEnable()
 	if not button then
@@ -139,6 +146,7 @@ function Postal_OpenAll:OpenAll(isRecursive)
 	if mailIndex == 0 then
 		return
 	end
+	firstMailDaysLeft = select(7, GetInboxHeaderInfo(1))
 
 	Postal:DisableInbox(1)
 	button:SetText(L["In Progress"])
@@ -148,6 +156,18 @@ function Postal_OpenAll:OpenAll(isRecursive)
 end
 
 function Postal_OpenAll:ProcessNext()
+	-- We need this because MAIL_INBOX_UPDATEs can now potentially
+	-- include mailbox refreshes since patch 4.0.3 (that is mail can
+	-- get inserted both at the back (old mail past 50) and at the front
+	-- (new mail received in the last 60 seconds))
+	local currentFirstMailDaysLeft = select(7, GetInboxHeaderInfo(1))
+	if currentFirstMailDaysLeft ~= firstMailDaysLeft then
+		-- First mail's daysLeft changed, indicating we have a 
+		-- fresh MAIL_INBOX_UPDATE that has new data from CheckInbox()
+		-- so we reopen from the last mail
+		return self:OpenAll(true) -- tail call
+	end
+
 	if mailIndex > 0 then
 		-- Check if we need to wait for the mailbox to change
 		if wait then

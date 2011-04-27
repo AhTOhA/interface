@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("LadyNazjar", "DBM-Party-Cataclysm", 9)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5275 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5372 $"):sub(12, -3))
 mod:SetCreatureID(40586)
 mod:SetZone()
 
@@ -18,22 +18,24 @@ mod:RegisterEvents(
 local warnWaterspout		= mod:NewSpellAnnounce(75863, 3)
 local warnWaterspoutSoon	= mod:NewSoonAnnounce(75863, 2)
 local warnShockBlast		= mod:NewSpellAnnounce(76008, 1, nil, false)
-local warnGeyser		= mod:NewSpellAnnounce(75722, 3)
+local warnGeyser			= mod:NewSpellAnnounce(75722, 3)
 local warnFungalSpores		= mod:NewTargetAnnounce(80564, 3)
 
 local timerWaterspout		= mod:NewBuffActiveTimer(60, 75863)
 local timerShockBlast		= mod:NewCastTimer(3, 76008)
 local timerShockBlastCD		= mod:NewCDTimer(13, 76008)
-local timerGeyser		= mod:NewCastTimer(5, 75722)
+local timerGeyser			= mod:NewCastTimer(5, 75722)
 local timerFungalSpores		= mod:NewBuffActiveTimer(15, 80564)
 
 local specWarnShockBlast	= mod:NewSpecialWarningInterrupt(76008)
 
 local sporeTargets = {}
+local sporeCount = 0
 local preWarnedWaterspout = false
 
 function mod:OnCombatStart()
 	table.wipe(sporeTargets)
+	sporeCount = 0
 	preWarnedWaterspout = false
 end
 
@@ -45,6 +47,7 @@ end
 
 function mod:SPELL_AURA_APPLIED(args)
 	if args:IsSpellID(80564, 91470) then
+		sporeCount = sporeCount + 1
 		sporeTargets[#sporeTargets + 1] = args.destName
 		self:Unschedule(showSporeWarning)
 		self:Schedule(0.3, showSporeWarning)
@@ -55,6 +58,11 @@ function mod:SPELL_AURA_REMOVED(args)
 	if args:IsSpellID(75690) then
 		timerWaterspout:Cancel()
 		timerShockBlastCD:Start(13)
+	elseif args:IsSpellID(80564, 91470) then
+		sporeCount = sporeCount - 1
+		if sporeCount == 0 then
+			timerFungalSpores:Cancel()
+		end	
 	end
 end
 
@@ -66,12 +74,11 @@ function mod:SPELL_CAST_START(args)
 	elseif args:IsSpellID(76008, 91477) then
 		warnShockBlast:Show()
 		specWarnShockBlast:Show()
+		timerShockBlastCD:Start()
 		if mod:IsDifficulty("heroic5") then
 			timerShockBlast:Start(2)
-			timerShockBlastCD:Start()	-- Seems like the CD on heroic is same as on normal, need confirmation tho
 		else
 			timerShockBlast:Start()
-			timerShockBlastCD:Start()
 		end
 	end
 end

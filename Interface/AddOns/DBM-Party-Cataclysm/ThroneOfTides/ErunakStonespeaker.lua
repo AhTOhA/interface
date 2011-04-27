@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("ErunakStonespeaker", "DBM-Party-Cataclysm", 9)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5216 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5572 $"):sub(12, -3))
 mod:SetCreatureID(40825, 40788)		-- 40788 = Mindbender Ghur'sha
 mod:SetZone()
 
@@ -15,29 +15,38 @@ mod:RegisterEvents(
 	"UNIT_DIED"
 )
 
-local warnLavaBolt		= mod:NewCastAnnounce(76171, 2)
+local warnLavaBolt			= mod:NewCastAnnounce(76171, 2)
 local warnMagmaSplash		= mod:NewTargetAnnounce(76170, 3)
 local warnEmberstrike		= mod:NewTargetAnnounce(76165, 3)
 local warnEarthShards		= mod:NewTargetAnnounce(84931, 2)
-local warnPhase2		= mod:NewPhaseAnnounce(2)
-local warnEnslave		= mod:NewTargetAnnounce(76207, 2)
+local warnPhase2			= mod:NewPhaseAnnounce(2)
+local warnEnslave			= mod:NewTargetAnnounce(76207, 2)
 local warnAbsorbMagic		= mod:NewSpellAnnounce(76307, 4)
-local warnMindFog		= mod:NewSpellAnnounce(76234, 3)
-local warnAgony			= mod:NewTargetAnnounce(76339, 3)
+local warnMindFog			= mod:NewSpellAnnounce(76234, 3)
+local warnAgony				= mod:NewSpellAnnounce(76339, 3)
 
-local timerLavaBolt		= mod:NewCastTimer(2, 76171)
-local timerMagmaSplash		= mod:NewTargetTimer(10, 76170)
+local timerLavaBolt			= mod:NewCastTimer(2, 76171)
+local timerMagmaSplash		= mod:NewBuffActiveTimer(10, 76170)
 local timerEmberstrike		= mod:NewTargetTimer(10, 76165)
 local timerAbsorbMagic		= mod:NewBuffActiveTimer(3, 76307)
-local timerMindFog		= mod:NewBuffActiveTimer(20, 76234)
-local timerAgony		= mod:NewTargetTimer(10, 76339)
+local timerMindFog			= mod:NewBuffActiveTimer(20, 76234)
+local timerAgony			= mod:NewBuffActiveTimer(10, 76339)
 
 local specWarnLavaBolt		= mod:NewSpecialWarningInterrupt(76171)
-local specWarnAbsorbMagic	= mod:NewSpecialWarningCast(76307)
+local specWarnAbsorbMagic	= mod:NewSpecialWarningCast(76307, nil, nil, nil, true)
 local specWarnEarthShards	= mod:NewSpecialWarningYou(84931)
 
+local magmaTargets = {}
+local magmaCount = 0
+
+local function showMagmaWarning()
+	warnMagmaSplash:Show(table.concat(magmaTargets, "<, >"))
+	table.wipe(magmaTargets)
+	timerMagmaSplash:Start()
+end
+
 function mod:EarthShardsTarget()
-	local targetname = self:GetBossTarget(40852)
+	local targetname = self:GetBossTarget(40825)
 	if not targetname then return end
 	warnEarthShards:Show(targetname)
 	if targetname == UnitName("player") then
@@ -45,10 +54,17 @@ function mod:EarthShardsTarget()
 	end
 end
 
+function mod:OnCombatStart(delay)
+	table.wipe(magmaTargets)
+	magmaCount = 0
+end
+
 function mod:SPELL_AURA_APPLIED(args)
 	if args:IsSpellID(76170) then
-		warnMagmaSplash:Show(args.destName)
-		timerMagmaSplash:Start(args.destName)
+		magmaCount = magmaCount + 1
+		magmaTargets[#magmaTargets + 1] = args.destName
+		self:Unschedule(showMagmaWarning)
+		self:Schedule(0.3, showMagmaWarning)
 	elseif args:IsSpellID(76165) then
 		warnEmberstrike:Show(args.destName)
 		timerMagmaSplash:Start(args.destName)
@@ -57,14 +73,17 @@ function mod:SPELL_AURA_APPLIED(args)
 	elseif args:IsSpellID(76307, 91492) then
 		timerAbsorbMagic:Start()
 	elseif args:IsSpellID(76339) then
-		warnAgony:Show(args.destName)
-		timerAgony:Start(args.destName)
+		warnAgony:Show()
+		timerAgony:Start()
 	end
 end
 
 function mod:SPELL_AURA_REMOVED(args)
 	if args:IsSpellID(76170) then
-		timerMagmaSplash:Cancel(args.destName)
+		magmaCount = magmaCount - 1
+		if magmaCount == 0 then
+			timerMagmaSplash:Cancel()
+		end
 	elseif args:IsSpellID(76165) then
 		timerMagmaSplash:Cancel(args.destName)
 	elseif args:IsSpellID(76339) then
@@ -82,7 +101,7 @@ function mod:SPELL_CAST_START(args)
 		timerLavaBolt:Start()
 		specWarnLavaBolt:Show()
 	elseif args:IsSpellID(84931) then
-		self:ScheduleMethod(0.1, "EarthShardsTarget")--This should work but doesnt, i need to actually log it and see why, invalid creatureid maybe? or too fast of a scan,invalid castID?
+		self:ScheduleMethod(0.1, "EarthShardsTarget")
 	elseif args:IsSpellID(76307, 91492) then
 		warnAbsorbMagic:Show(76307)
 		specWarnAbsorbMagic:Show()

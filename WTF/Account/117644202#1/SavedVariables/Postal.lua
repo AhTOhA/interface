@@ -32,7 +32,7 @@ Postal3DB = {
 				"Myyh|Tarren Mill|Alliance|85|HUNTER", -- [11]
 				"Tikytaka|Outland|Horde|41|DRUID", -- [12]
 				"Tikytaka|Tarren Mill|Horde|85|DRUID", -- [13]
-				"Zulrea|Tarren Mill|Horde|41|PRIEST", -- [14]
+				"Zulrea|Tarren Mill|Horde|47|PRIEST", -- [14]
 			},
 		},
 	},
@@ -40,12 +40,12 @@ Postal3DB = {
 		["Glasin - Tarren Mill"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Kraisus", -- [1]
-					"Tikytaka", -- [2]
-					"Zulrea", -- [3]
-					"Soofy", -- [4]
-					"Côntrôl", -- [5]
-					"Mylen", -- [6]
+					"Tikytaka", -- [1]
+					"Mylen", -- [2]
+					"Kraisus", -- [3]
+					"Zulrea", -- [4]
+					"Soofy", -- [5]
+					"Côntrôl", -- [6]
 				},
 			},
 		},
@@ -88,8 +88,8 @@ Postal3DB = {
 			["BlackBook"] = {
 				["recent"] = {
 					"Kraisus", -- [1]
-					"Zulrea", -- [2]
-					"Argwynn", -- [3]
+					"Argwynn", -- [2]
+					"Zulrea", -- [3]
 					"Glasin", -- [4]
 					"Côntrôl", -- [5]
 					"Mielikki", -- [6]

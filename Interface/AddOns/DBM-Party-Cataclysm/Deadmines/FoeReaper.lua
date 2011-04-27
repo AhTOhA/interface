@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("FoeReaper", "DBM-Party-Cataclysm", 2)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5214 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5590 $"):sub(12, -3))
 mod:SetCreatureID(43778)
 mod:SetZone()
 mod:SetUsedIcons(8)
@@ -39,7 +39,7 @@ function mod:HarvestTarget()
 	if targetname == UnitName("player") then
 		specWarnHarvest:Show()
 		soundHarvest:Play()
-	elseif targetname then
+	else
 		local uId = DBM:GetRaidUnitId(targetname)
 		if uId then
 			local inRange = CheckInteractDistance(uId, 2)

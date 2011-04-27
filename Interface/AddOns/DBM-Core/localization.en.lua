@@ -80,13 +80,15 @@ DBM_LFG_INVITE						= "LFG Invite"
 DBM_CORE_SLASHCMD_HELP				= {
 	"Available slash commands:",
 	"/dbm version: Performs a raid-wide version check (alias: ver).",
-	"/dbm version2: Performs a raid-wide version check and whispers members who are out of date (alias: ver2).",
+--	"/dbm version2: Performs a raid-wide version check and whispers members who are out of date (alias: ver2).",
 	"/dbm unlock: Shows a movable status bar timer (alias: move).",
 	"/dbm timer <x> <text>: Starts a <x> second DBM Timer with the name <text>.",
 	"/dbm broadcast timer <x> <text>: Broadcasts a <x> second DBM Timer with the name <text> to the raid (requires leader/promoted status).",
 	"/dbm break <min>: Starts a break timer for <min> minutes. Gives all raid members with DBM a break timer (requires leader/promoted status).",
 	"/dbm pull <sec>: Starts a pull timer for <sec> seconds. Gives all raid members with DBM a pull timer (requires leader/promoted status).",
-	"/dbm help: Shows slash command descriptions",
+	"/dbm arrow: shows the DBM arrow, see /dbm arrow help for details.",
+	"/dbm lockout: asks raid members for their current raid instance lockouts (aliases: lockouts, ids) (requires leader/promoted status).",
+	"/dbm help: Shows this message.",
 }
 
 DBM_ERROR_NO_PERMISSION				= "You don't have the required permission to do this."
@@ -112,41 +114,47 @@ DBM_CORE_ACHIEVEMENT_TIMER_SPEED_KILL = "Speed Kill"
 
 -- Auto-generated Timer Localizations
 DBM_CORE_AUTO_TIMER_TEXTS = {
-	target = "%s: %%s",
-	cast = "%s",
-	active = "%s",
-	cd = "%s CD",
-	next = "Next %s",
-	achievement = "%s",
+	target		= "%s: %%s",
+	cast		= "%s",
+	active		= "%s",
+	cd			= "%s CD",
+	next		= "Next %s",
+	achievement	= "%s",
 }
 
 DBM_CORE_AUTO_TIMER_OPTIONS = {
-	target = "Show timer for |cff71d5ff|Hspell:%d|h%s|h|r debuff",
-	cast = "Show timer for |cff71d5ff|Hspell:%d|h%s|h|r cast",
-	active = "Show timer for |cff71d5ff|Hspell:%d|h%s|h|r duration",
-	cd = "Show timer for |cff71d5ff|Hspell:%d|h%s|h|r cooldown",
-	next = "Show timer for next |cff71d5ff|Hspell:%d|h%s|h|r",
-	achievement = "Show timer for %s",
+	target		= "Show timer for |cff71d5ff|Hspell:%d|h%s|h|r debuff",
+	cast		= "Show timer for |cff71d5ff|Hspell:%d|h%s|h|r cast",
+	active		= "Show timer for |cff71d5ff|Hspell:%d|h%s|h|r duration",
+	cd			= "Show timer for |cff71d5ff|Hspell:%d|h%s|h|r cooldown",
+	next		= "Show timer for next |cff71d5ff|Hspell:%d|h%s|h|r",
+	achievement	= "Show timer for %s",
 }
 
 -- Auto-generated Warning Localizations
 DBM_CORE_AUTO_ANNOUNCE_TEXTS = {
-	target = "%s on >%%s<",
-	spell = "%s",
-	cast = "Casting %s: %.1f sec",
-	soon = "%s soon",
+	target	= "%s on >%%s<",
+	spell	= "%s",
+	cast	= "Casting %s: %.1f sec",
+	soon	= "%s soon",
 	prewarn = "%s in %s",
-	phase = "Phase %d",
+	phase	= "Phase %s",
+	prephase= "Phase %s soon",
+	count	= "%s (%%d)",
+	stack	= "%s on >%%s< (%%d)",
 }
 
 local prewarnOption = "Show pre-warning for |cff71d5ff|Hspell:%d|h%s|h|r"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS = {
-	target = "Announce |cff71d5ff|Hspell:%d|h%s|h|r targets",
-	spell = "Show warning for |cff71d5ff|Hspell:%d|h%s|h|r",
-	cast = "Show warning when |cff71d5ff|Hspell:%d|h%s|h|r is being cast",
-	soon = prewarnOption,
+	target	= "Announce |cff71d5ff|Hspell:%d|h%s|h|r targets",
+	spell	= "Show warning for |cff71d5ff|Hspell:%d|h%s|h|r",
+	cast	= "Show warning when |cff71d5ff|Hspell:%d|h%s|h|r is being cast",
+	soon	= prewarnOption,
 	prewarn = prewarnOption,
-	phase = "Announce Phase %d"
+	phase	= "Announce Phase %s",
+	prephase= "Show a prewarning for Phase %s",
+	count	= "Show warning for |cff71d5ff|Hspell:%d|h%s|h|r",
+	stack	= "Announce |cff71d5ff|Hspell:%d|h%s|h|r targets",
 }
 
 
@@ -179,7 +187,9 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS = {
 
 
 DBM_CORE_AUTO_ICONS_OPTION_TEXT		= "Set icons on $spell:%d targets"
-DBM_CORE_AUTO_SOUND_OPTION_TEXT		= "Play sound on $spell:%d"
+DBM_CORE_AUTO_SOUND_OPTION_TEXT		= "Play sound when you are affected by $spell:%d"
+DBM_CORE_AUTO_YELL_OPTION_TEXT		= "Yell when you are affected by $spell:%d"
+DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT	= "%s on me!"
 
 
 -- New special warnings
@@ -201,3 +211,16 @@ DBM_ARROW_ERROR_USAGE	= {
 
 DBM_SPEED_KILL_TIMER_TEXT	= "Record Kill"
 DBM_SPEED_KILL_TIMER_OPTION	= "Show a timer to beat your fastest kill"
+
+
+DBM_REQ_INSTANCE_ID_PERMISSION		= "%s requested to see your current instance IDs and progress.\nDo you want to send this information to %s? He or she will be able to request this information during your current session (i. e. until you relog)."
+DBM_ERROR_NO_RAID					= "You need to be in a raid group to use this feature."
+DBM_INSTANCE_INFO_REQUESTED			= "Sent request for raid lockout information to the raid group.\nPlease note that the users will be asked for permission before sending the data to you, so it might take a minute until we get all responses."
+DBM_INSTANCE_INFO_STATUS_UPDATE		= "Got responses from %d players of %d DBM users: %d sent data, %d denied the request. Waiting %d more seconds for responses..."
+DBM_INSTANCE_INFO_ALL_RESPONSES		= "Received responses from all raid members"
+DBM_INSTANCE_INFO_DETAIL_HEADER		= "%s (%d), difficulty %d:"
+DBM_INSTANCE_INFO_DETAIL_INSTANCE	= "    ID %s, progress %d: %s"
+DBM_INSTANCE_INFO_STATS_DENIED		= "Denied the request: %s"
+DBM_INSTANCE_INFO_STATS_AWAY		= "Away: %s"
+DBM_INSTANCE_INFO_STATS_NO_RESPONSE	= "No recent DBM version installed: %s"
+DMB_INSTANCE_INFO_RESULTS			= "Instance ID scan results. Note that instances might show up more than once if there are players with localized WoW clients in your raid."

@@ -1,5 +1,119 @@
-6.0
+6.1
 -------------
+
+6.1.13
+	- tweaked name color function
+
+6.1.12
+	- Fixed Hub/Tank NameTextColor errors
+	- Updated description of "Vertical Position of Frame" to "Vertical Position of Artwork"
+	
+6.1.11
+	NEW! Keyword filtering for the Debuff Widget
+	- See Demo on Youtube: http://www.youtube.com/watch?v=2KjGFd0TgvM
+	- By Prefix.. Mode for Debuff Widget
+		- ALL, MY, NO, OTHER, CC
+		- Using CC will eventually highlight the debuff on the widget, but for now it just acts as "ALL"
+		
+	- Fixed UnitChannelInfo interruptable spell argument bug
+	- Found a bug; The Editboxes contained in my ScrollFrames seem to invisibly extend past the bottom of the scrollframe, which can block underlying UI controls.  I've dropped the editboxes to a lower frame level, which is a hack method of preventing problems with it interferring with controls anchored to the bottom of the scrollframe.  Will attempt to figure out a better solution.
+	- Name text coloring modes
+	- By Raid Icon modes for Opacity and Scale
+	
+6.1.8 (r227)
+	- PTR bug fixes (Neon Threat Glow was turning green)
+	- Debuff widget will clear aurainstance tables when combat ends (regen returns)
+	- Added Health Text option: Approximate Health (will show 2 decimal places for thousands (k) and millions (M), with suffix)
+	- Added Text option, "Use Default Blizzard Font"; This will use the font defined by the global variable, 'NAMEPLATE_FONT'.  This should improve the situation for non-latin charcter sets (this is for you, Chinese, Russians, Taiwanese, and Koreans.. xoxo)	
+
+6.1.7
+	- Changed from thousand/million suffix for health text to using a thousands seperator
+	- Restored PTR support (last time I checked)
+	- Moved Quatre Raid Icon to similar position as Neon (to left side of health bar)
+
+6.1.6
+	- Added Events for UNIT_SPELLCAST_NOT_INTERRUPTIBLE, UNIT_SPELLCAST_INTERRUPTIBLE, (This hopefully improves the situation for spells that are uninterruptible being misrepresented)
+	- Added Threat Wheel to Hub
+	- Reverted to original health % mode (does not show % when full health)
+	- WoW 4.1 Compatibility (works on 4.0.x and 4.1)
+	
+r206
+	- The update function for debuff icons are now exposed via, widget.Poll 
+	- Added Events for UNIT_SPELLCAST_NOT_INTERRUPTIBLE, UNIT_SPELLCAST_INTERRUPTIBLE
+	- Added Threat Wheel to Hub/function set
+	- Reverted to original health % mode; ie. does not show % when full health.  if you like it the other way, edit TidyPlatesHub\functions.lua.  I like it this way, and dammit, it's my software ;-)
+	- WoW 4.1 Compatibility (should work on 4.0.x and 4.1, concurrently.  I have not tested on the PTR, though)
+	
+
+
+r199	- Raid Tank Coloring in Tank mode.  Automatically used when in "By Threat" Modes.  
+		- Theme list is now Alphabetized 
+		- Better handling when previous theme selection does not exist
+		- Debuffs of the same spell-id are now handled more securely
+		- Reset button in main panel will now reset variables on 'click', turn enemy plates ON and friendlies, OFF
+			- 'shift-clicking' will clear and restore the variables, and reload the ui
+		- Reset buttons in hub panels also now have a 'click' behavior to reset the variables without reloading the UI
+			- 'shift-clicking' will still clear the tables and reload the ui
+		- First-run config, turns off friendly nameplates by default
+		- Added a link to the Blizzard "Names" panel via the Tidy Plates theme chooser panel
+		
+r186	- Default Hub Values changed to more closely resemble 6.0.8 defaults  (Blue, Orange Scheme, Threat Warning Glow/Triangles turned On)  
+			- A variable reset may be required to revert to the defaults
+		- First-run config, "friendly unit bug" fix
+
+6.0	
+-------------	
+r104-108
+TidyPlatesWidgets:GetThreatCondition now sources its group data from the group info table
+unit.threatValue...
+	0 - player has less than 100% raw threat (default UI shows no indicator)
+	1 - player has 100% or higher raw threat but isn't mobUnit's primary target (default UI shows yellow indicator)
+	2 - player is mobUnit's primary target, and another unit has 100% or higher raw threat (default UI shows orange indicator)
+	3 - player is mobUnit's primary target, and no other unit has 100% or higher raw threat (default UI shows red indicator)
+			
+r101-103:
+- Created a group information watcher.
+TidyPlatesUtility.GroupMembers = {} a table
+Subtables/Values:
+.Names = {} Returns a name if you pass it a unitid
+.Tanks = {} If you pass it a name, it will tell you if the unit is a tank
+.Class = {} Returns a class if you pass it a name
+.Role = {} Returns a role if you pass it a name
+.UnitId = {} Returns a unitid if you pass it a name
+.Type = "solo" Returns the group type; "solo", "party", "raid"
+.Size = 1 Returns the size of the group
+TidyPlatesUtility:EnableGroupWatcher() a function
+TidyPlatesUtilityisableGroupWatcher() another function
+- Spell Cast Monitor will now catch channeled spell events (Note: Channeled spells do not animate in reverse. Bite me.)
+- Created a group member aggro watcher. (Gonna change this to be under TidyPlatesUtility)
+Pass it a name of a party membmer, and it'll tell you if that person has aggro
+TidyPlatesWidgets:EnableAggroWatch()
+TidyPlatesWidgetsisableAggroWatch()
+TidyPlatesWidgets:GetThreatCondition(name)
+- Removed the troubleshooting panel.
+- Changed "Notes" in TOC
+- Spell cast watcher now watches the combat log for casting associated with marked units (raid icons), and will display the cast warning on those units in lieu of a GUID or name.
+- Spell Cast events now trigger the SetAlpha functions (in addition to the scale and text functions)
+- Spell Cast events send this data to the delegate functions, in addition to normal unit information:
+unit.isCasting = true
+unit.spellName = spell
+unit.spellIsShielded = notInterruptible
+			
+r92-100:
+- The LoadTheme function is now accessible to external software, via: TidyPlates.LoadTheme("name").  
+- Removed the '.InterfacePanel' interface panel pointer variable.  Replaced with .ShowConfigPanel, which is a function that is called when the wrench icon is clicked
+- Threat Line (Tug) widget scales to frame width (default of 100)
+- Added Name text color delegate, SetNameColor
+- Sets a unique frame level for each plate (up to 125)
+- Raises frame level of current target to a high frame level (126), and return it to previous when done.
+
+
+r83-91:
+- bug fixes
+- layering tweaks
+- changed default hitbox size to match original
+- Grey and Neon tweaks
+
 r82:
 - fixed: highlight region used to occasionally turn on when the nameplates would show.
 - fixed: Selection box couldn't be turned off in Neon

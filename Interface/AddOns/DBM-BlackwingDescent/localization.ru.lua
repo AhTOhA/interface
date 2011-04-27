@@ -13,22 +13,20 @@ L:SetGeneralLocalization({
 
 L:SetWarningLocalization({
 	SpecWarnInferno	= "Появляется Пыляющее костяное создание! (~4сек)",
-	WarnPhase2Soon	= "Скоро 2-ая фаза"
 })
 
 L:SetTimerLocalization({
+})
+
+L:SetOptionLocalization({
+	SpecWarnInferno	= "Предупреждать заранее о $spell:92190 (~4сек)",
+	RangeFrame		= "Показывать окно проверки дистанции на второй фазе (5м)"
 })
 
 L:SetMiscLocalization({
 	Slump			= "%s внезапно падает, выставляя клешки!",
 	HeadExposed		= "%s насаживается на пику, обнажая голову!",
 	YellPhase2		= "Непостижимо! Вы, кажется, можете уничтожить моего лавового червяка! Пожалуй, я помогу ему."
-})
-
-L:SetOptionLocalization({
-	SpecWarnInferno	= "Предупреждать заранее о $spell:92190 (~4сек)",
-	WarnPhase2Soon	= "Предупреждать заранее о переходе во вторую фазу",
-	RangeFrame		= "Показывать окно проверки дистанции на второй фазе (5м)"
 })
 
 -------------------------------
@@ -41,29 +39,36 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
+	SpecWarnActivated			= "Смена цели на: %s!",
+	specWarnGenerator			= "Генератор энергии - Двигайтесь %s!"
 })
 
 L:SetTimerLocalization({
 	timerArcaneBlowbackCast		= "Чародейская обратная вспышка",
-	timerShadowConductorCast	= "Проводник тьмы"
+	timerShadowConductorCast	= "Проводник тьмы",
+	timerNefAblity				= "Восст. баффа", --Ability Buff CD
+	timerArcaneLockout			= "Волшебный уничтожитель"
 })
 
 L:SetOptionLocalization({
-	timerShadowConductorCast	= "Показывать таймер применения $spell:92053",
-	timerArcaneBlowbackCast		= "Показывать таймер применения $spell:91879",
-	YellBombTarget				= "Кричать, когда на вас $spell:80094",
+	timerShadowConductorCast	= "Отсчет времени применения заклинания $spell:92053",
+	timerArcaneBlowbackCast		= "Отсчет времени применения заклинания $spell:91879",
+	timerArcaneLockout			= "Отсчет времени блокировки $spell:91542",
+	timerNefAblity				= "Отсчет времени восстановления баффа (героический режим)",
+	SpecWarnActivated			= "Спец-предупреждение при активации нового босса",
+	specWarnGenerator			= "Спец-предупреждение, когда босс стоит в $spell:91557",
 	AcquiringTargetIcon			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79501),
 	ConductorIcon				= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79888),
-	BombTargetIcon				= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(80094),
-	ShadowConductorIcon			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92053)
+	ShadowConductorIcon			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92053),
+	SetIconOnActivated			= "Устанавливать метку на появившегося босса"
 })
 
 L:SetMiscLocalization({
-	Magmatron		= "Магматрон",
-	Electron		= "Электрон",
-	Toxitron		= "Токситрон",
-	Arcanotron		= "Чаротрон",
-	SayBomb			= "На МНЕ - Ядовитая бомба!"
+	Magmatron					= "Магматрон",
+	Electron					= "Электрон",
+	Toxitron					= "Токситрон",
+	Arcanotron					= "Чаротрон",
+	YellTargetLock				= "На МНЕ - Обрамляющие тени! Прочь от меня!"
 })
 
 ----------------
@@ -81,18 +86,7 @@ L:SetWarningLocalization({
 })
 
 L:SetTimerLocalization({
-	TimerPhase		= "Следующая фаза"
-})
-
-L:SetMiscLocalization({
-	YellRed			= "красный|r пузырек в котел!",--Partial matchs, no need for full strings unless you really want em, mod checks for both.
-	YellBlue		= "синий|r пузырек в котел!",
-	YellGreen		= "зеленый|r пузырек в котел!",
-	YellDark		= "магию на котле!",
-	Red		     	= "Огненная",
-	Blue			= "Ледяная",
-	Green			= "Кислотная",
-	Dark			= "Тёмная"
+	TimerPhase			= "Следующая фаза"
 })
 
 L:SetOptionLocalization({
@@ -100,9 +94,21 @@ L:SetOptionLocalization({
 	WarnRemainingAdds	= "Предупреждать об оставшемся количестве аберраций",
 	TimerPhase			= "Показывать таймер до следующей фазы",
 	RangeFrame			= "В ходе синей фазы, показывать окно проверки дистанции (6м)",
+	SetTextures			= "Автоматически отключить \"Проецирование текстур\" в темной фазе\n(включается обратно при выходе из фазы)",
 	FlashFreezeIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92979),
 	BitingChillIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77760),
 	ConsumingFlamesIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77786)
+})
+
+L:SetMiscLocalization({
+	YellRed				= "красный|r пузырек в котел!",--Partial matchs, no need for full strings unless you really want em, mod checks for both.
+	YellBlue			= "синий|r пузырек в котел!",
+	YellGreen			= "зеленый|r пузырек в котел!",
+	YellDark			= "магию на котле!",
+	Red		     		= "Огненная",
+	Blue				= "Ледяная",
+	Green				= "Кислотная",
+	Dark				= "Тёмная"
 })
 
 -----------------
@@ -115,23 +121,19 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
-	WarnPhase2Soon	= "Скоро 2-ая фаза",
-	WarnBreak	= "%s на >%s< (%d)"
 })
 
 L:SetTimerLocalization({
 })
 
-L:SetMiscLocalization({
-	HealthInfo	= "Инфо о здоровье"
-})
-
 L:SetOptionLocalization({
-	WarnPhase2Soon	= "Показывать предупреждение о начале 2-ой фазы",
 	RangeFrame		= "Показывать окно проверки дистанции (6м)",
-	WarnBreak		= DBM_CORE_AUTO_ANNOUNCE_OPTIONS.spell:format(82881, GetSpellInfo(82881) or "unknown"),
 	SetIconOnSlime	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(82935),
 	InfoFrame		= "Показывать информационное окно со здоровьем (<10к хп)"
+})
+
+L:SetMiscLocalization({
+	HealthInfo	= "Инфо о здоровье"
 })
 
 -----------------
@@ -144,28 +146,27 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
-	WarnAirphase		= "Воздушная фаза",
-	WarnGroundphase		= "Наземная фаза",
-	WarnShieldsLeft		= "Древний дворфийский щит - %d осталось",
+	WarnAirphase			= "Воздушная фаза",
+	WarnGroundphase			= "Наземная фаза",
+	WarnShieldsLeft			= "Древний дворфийский щит - %d осталось",
 	warnAddSoon				= "Призван Гнусный бес",
 	specWarnAddTargetable	= "%s - активен"
 })
 
 L:SetTimerLocalization({
-	TimerAirphase		= "Воздушная фаза",
-	TimerGroundphase	= "Наземная фаза"
+	TimerAirphase			= "Воздушная фаза",
+	TimerGroundphase		= "Наземная фаза"
 })
 
 L:SetOptionLocalization({
-	WarnAirphase			= "Показывать предупреждение, когда Атрамед взлетает",
-	WarnGroundphase			= "Показывать предупреждение, когда Атрамед приземляется",
-	WarnShieldsLeft			= "Показывать предупреждение, когда используется Древний дворфийский щит",
-	warnAddSoon				= "Показывать предупреждение, когда Нефариан призывает помощников",
-	specWarnAddTargetable	= "Показывать особое предупреждение, когда Гнусного беса можно взять в цель",
-	TimerAirphase			= "Показывать таймер до следующей воздушной фазы",
-	TimerGroundphase		= "Показывать таймер до следующей наземной фазы",
+	WarnAirphase			= "Предупреждение, когда Атрамед взлетает",
+	WarnGroundphase			= "Предупреждение, когда Атрамед приземляется",
+	WarnShieldsLeft			= "Предупреждение, когда используется Древний дворфийский щит",
+	warnAddSoon				= "Предупреждение, когда Нефариан призывает помощников",
+	specWarnAddTargetable	= "Спец-предупреждение, когда Гнусного беса можно взять в цель",
+	TimerAirphase			= "Отсчет времени до следующей воздушной фазы",
+	TimerGroundphase		= "Отсчет времени до следующей наземной фазы",
 	InfoFrame				= "Показывать информационное окно для уровня звуков",
-	YellOnPestered			= "Кричать, когда на вас $spell:92685",
 	TrackingIcon			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(78092)
 })
 
@@ -190,10 +191,12 @@ L:SetWarningLocalization({
 	OnyTailSwipe		= "Удар хвостом (Ониксия)",
 	NefTailSwipe		= "Удар хвостом (Нефариан)",
 	OnyBreath			= "Дыхание темного огня (Ониксия)",
-	NefBreath			= "Дыхание темного огня (Нефариан)"
+	NefBreath			= "Дыхание темного огня (Нефариан)",
+	specWarnShadowblazeSoon	= "Скоро Пламя тени (~5с)"
 })
 
 L:SetTimerLocalization({
+	timerNefLanding		= "Приземление Нефариана",
 	OnySwipeTimer		= "Удар хвостом - перезарядка (Ониксия)",
 	NefSwipeTimer		= "Удар хвостом - перезарядка (Нефариан)",
 	OnyBreathTimer		= "Дыхание темного огня (Ониксия)",
@@ -201,23 +204,49 @@ L:SetTimerLocalization({
 })
 
 L:SetOptionLocalization({
-	OnyTailSwipe		= "Показывать предупреждение для $spell:77827 Ониксии",
-	NefTailSwipe		= "Показывать предупреждение для $spell:77827 Нефариана",
-	OnyBreath			= "Показывать предупреждение для $spell:94124 Ониксии",
-	NefBreath			= "Показывать предупреждение для $spell:94124 Нефариана",
-	OnySwipeTimer		= "Показывать таймер перезарядки для $spell:77827 Ониксии",
-	NefSwipeTimer		= "Показывать таймер перезарядки для $spell:77827 Нефариана",
-	OnyBreathTimer		= "Показывать таймер перезарядки для $spell:94124 Ониксии",
-	NefBreathTimer		= "Показывать таймер перезарядки для $spell:94124 Нефариана",
-	YellOnCinder		= "Кричать, когда на вас $spell:79339",
-	RangeFrame			= "Показывать окно проверки дистанции (10м) когда на вас $spell:79339",
-	SetIconOnCinder		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79339)
+	OnyTailSwipe		= "Предупреждение для $spell:77827 Ониксии",
+	NefTailSwipe		= "Предупреждение для $spell:77827 Нефариана",
+	OnyBreath			= "Предупреждение для $spell:94124 Ониксии",
+	NefBreath			= "Предупреждение для $spell:94124 Нефариана",
+	specWarnShadowblazeSoon	= "Предупреждение для $spell:94085 (~5с)",
+	timerNefLanding		= "Отсчет времени до приземления Нефариана",
+	OnySwipeTimer		= "Отсчет времени до восстановления $spell:77827 Ониксии",
+	NefSwipeTimer		= "Отсчет времени до восстановления $spell:77827 Нефариана",
+	OnyBreathTimer		= "Отсчет времени до восстановления $spell:94124 Ониксии",
+	NefBreathTimer		= "Отсчет времени до восстановления $spell:94124 Нефариана",
+	InfoFrame			= "Показывать информационное окно для Электрического заряда Ониксии",
+	SetWater			= "Автоматически отключать настройку Брызги воды\n(Включается обратно при выходе из боя)",	
+	TankArrow			= "Показывать стрелку для кайтера Оживших костяных воинов\n(Работает только для стратегии с одним кайтером)",
+	SetIconOnCinder		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79339),
+	RangeFrame			= "Окно проверки дистанции (10м) для $spell:79339\n(Если на вас дебафф - показывает всех, иначе только игроков с метками)"
 })
 
 L:SetMiscLocalization({
 	NefAoe				= "В воздухе трещат электрические разряды!",
 	YellPhase2			= "Дерзкие смертные! Неуважение к чужой собственности нужно пресекать самым жестоким образом!",
-	YellPhase3			= "Я пытался следовать законам гостеприимства, но вы все никак не умрете! Придется отбросить условности и просто... УБИТЬ ВАС ВСЕХ!",
-	YellCinder			= "На МНЕ - Взрывчатая субстанция!",
-	Onyxia				= "Ониксия"
+	YellPhase3			= "Я пытался следовать законам гостеприимства, но вы всё никак не умрете!",
+	Nefarian			= "Нефариан",
+	Onyxia				= "Ониксия",
+	Charge				= "Электрический заряд"
+})
+
+--------------
+--  Blackwing Descent Trash  --
+--------------
+L = DBM:GetModLocalization("BWDTrash")
+
+L:SetGeneralLocalization({
+	name = "Существа Твердыни Крыла Тьмы"
+})
+
+L:SetWarningLocalization({
+})
+
+L:SetTimerLocalization({
+})
+
+L:SetOptionLocalization({
+})
+
+L:SetMiscLocalization({
 })

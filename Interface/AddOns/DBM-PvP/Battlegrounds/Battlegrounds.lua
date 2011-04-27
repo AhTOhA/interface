@@ -21,7 +21,7 @@ mod:RegisterEvents(
 	"PLAYER_DEAD"
 )
 
-local inviteTimer = mod:NewTimer(60, "TimerInvite", nil, nil, false)
+local inviteTimer = mod:NewTimer(60, "TimerInvite", "Interface\\Icons\\Spell_Holy_WeaponMastery", nil, false)
 local frameShow = RaidBossEmoteFrame.Show
 
 function mod:ZONE_CHANGED_NEW_AREA()
@@ -29,7 +29,9 @@ function mod:ZONE_CHANGED_NEW_AREA()
 		RaidBossEmoteFrame.Show = frameShow
 	end
 	if select(2, IsInInstance()) == "pvp" then
-		SendAddonMessage("DBMv4-Ver", "Hi!", "BATTLEGROUND")
+		-- hardcoded version sync as DBM only syncs if you join a raid and you technically don't join a new raid if you enter a battleground while you are already in a raid group
+		SendAddonMessage("H", "", "BATTLEGROUND")
+--		SendAddonMessage("DBMv4-Ver", "Hi!", "BATTLEGROUND") -- compatibility sync for 4.0 svn users, this can and should be removed as soon as the filter is live (old clients won't be able to see your sync after the patch hits so it's pointless)
 		self:Schedule(3, DBM.RequestTimers, DBM)
 		inviteTimer:Stop()
 		SetMapToCurrentZone() -- for GetMapLandmarkInfo()

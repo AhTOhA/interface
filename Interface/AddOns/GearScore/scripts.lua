@@ -8,13 +8,29 @@ GearScore™, PlayerScore™, and "Ten Ton Hammer™" are Trademarks of Master G
 --[[
 -- Change Log --
 
-* Stack of Misc Bug Fixes
-* Fixed multiple bugs involving concantenation of null values.
-* Fixed Bugs involving the Group Window / Scann All Function.
-* Fixed some Spelling Errors.
-* "√ Enchanted" Text will now also include which enchantment on the line.
-* "√ Reforged" Text will now appear below the enchanted check and will also display how the user reforged their items.
-* GearScore will now display as either "√ GearScore" or "X GearScore" Depending on rather or not the item is meant for your spec.
+--4.5.02--
+* Cataclysm Dungeon Stats will now appear on the 
+
+--4.5.01--
+* Updated addon for Wow 4.1.00
+* Fixed a bug with the new RegisterPrefix function.
+* Fixed a loophole that accidently caused the quick rate mode to appear even in lite mode.
+
+--4.5.00--
+* Renamed the tabs to make some more room. (For Future Planned Releases).
+* Template Engine Support added for Quick Rate Frame. (See Below)
+* Fixed a bug that was causing class color information gathered from quick-scan mode to populate the group(database) tab with table values instead of hex color values.
+* Fixed a bug that cuased redundent and usless database operations whenever a player entered/exited an instance of any kind. 
+* Masterloot mode will no longer display players from previous instance groups.
+* Character Claiming for 
+* Quick Rate Mode! In previous versions of the addon, it would become difficult to rate players at the end of a dungeon because they would quickly leave the party.
+	The new Quick Rate Mode attempts to remedy this by displaying a small window whenever the user exits a 5-man dungeon. There is now an option in the options menu
+	that can disable this feature. You can also type "/psrate" at any time to open the window and rate party members. Due to previous limits within addon, only players
+	who have been scanned by the addon at some point since the last login will appear in the quick rate frame. Finally, all players who join your party at some point 
+	during the instance will be listed in the Quick Rate Frame. This means players who join and are then vote-kicked or abandon the instance will appear for you to rate.
+	
+	The Quick Rate Mode will display each Player's Name (Colored by Class), their GearScore, and Thumbs Up/Down for rating. In addition an Icon will be displayed for 
+	viewing the negative and positive factors in a player's score.		
 
 ]]
 
@@ -44,7 +60,7 @@ f.PlayerName = UnitName("player");
 f.ScanQue = {};
 f.AIL_Info = {};
 f.data = {
-	["Version"] = 40403,
+	["Version"] = 40502,
 	["Beta"] = false,
 	["TemplateVersion"] = 100,
 	["EquipmentOrder"] = {1,2,3,15,5,9,10,6,7,8,11,12,13,14,16,17,18},
@@ -146,8 +162,17 @@ f.data = {
 			["ailOnTip"] = 1,
 			["verbose"] = 1,
 			["addonMode"] = 0,
+			["quickrate"] = 1,
 		};
 	["DungeonList"] = {
+		[L["Cataclysm"]]  = {
+			[15096] = {
+				[20] = "Blackwing Descent",
+				[33] = "Bastion of Twilight",
+				[42] = "Throne of the Four Winds",
+				[19] = "Baradin Hold",
+			},
+		},
 		[L["Wrath of the Lich King"]]  = {
 			[15062] = {
 				[20] = "Heroic Icecrown 25 player",
@@ -174,10 +199,6 @@ f.data = {
 				[41] = "Naxxramas 25 player",
 				[60] = "Wintergrasp 10 player",
 				[61] = "Wintergrasp 25 player",
-			},
-		},
-		[L["Cataclysm"]]  = {
-			[15068] = {
 			},
 		},
 	},
@@ -608,11 +629,13 @@ f:RegisterEvent("PLAYER_REGEN_ENABLED");
 f:RegisterEvent("PLAYER_REGEN_DISABLED");
 
 function f:PLAYER_ENTERING_WORLD()
-		if ( RegisterAddonMessagePrefix ) then
-			RegisterAddonMesssagePrefix("GSY_Version");
-		end;
+	if not ( f.Active ) then
+		f.Active = true;
 		if ( TenTonHammer_Settings["database"] == 0 ) then 
 			TenTonHammer_Database[f.Realm] = {};
+		end;
+		if ( RegisterAddonMessagePrefix ) and ( type(RegisterAddonMessagePrefix) == "function" ) then
+			RegisterAddonMessagePrefix("GSY_Version");
 		end;
 		local TodayCount = f:GetConvertedDays(f:GetTimeStamp());
 		local CleanCount = 0;
@@ -625,7 +648,18 @@ function f:PLAYER_ENTERING_WORLD()
 		if ( CleanCount > 0 ) then
 			print("|cffff0000PlayerScore: |rRemoved "..CleanCount.." outdated entries from your PlayerScore Database.");
 		end;
-	f:PLAYER_LOGOUT();
+		f:PLAYER_LOGOUT();
+	end;
+	local isInstance, instanceType = IsInInstance();
+	if ( isInstance ) and ( instanceType == "party" ) then
+		f.InInstance = true;
+		f.PartyData = {};
+	elseif not ( isInstance ) then
+		if ( f.InInstance ) and ( TenTonHammer_Settings["quickrate"] == 1 ) then
+			TenTonHammer_QuickRateFrame:Show();
+		end;
+		f.InInstance = false;
+	end;
 end;
 function f:PLAYER_LOGOUT()
 	if not ( TTHD ) then
@@ -1296,11 +1330,13 @@ function f:QuickScan(unit)
 				};	
 				]]--
 				ClassColor = RAID_CLASS_COLORS[Class];
+				ClassColor = f:GetHexColor(ClassColor["r"], ClassColor["g"], ClassColor["b"]);
+				--print("WARNING! DEBUG CODE ACTIVE");
 				if ( UnitInRaid(unit) ) or ( UnitInParty(unit) ) or ( UnitIsUnit(unit, "player") ) then
 					f.PartyData[PlayerName] = { 
 						["Realm"] = PlayerRealm,
 						["PlayerRole"] = PlayerRole,
-						["Color"] = ClassColor,
+						["Color"] = ClassColor or "|cff000000",
 						["Class"] = Class,
 						["CLASS"] = Class,
 						["ClassLocal"] = ClassLocal,
@@ -1427,6 +1463,7 @@ function f:QuickScan(unit)
 					["AverageItemLevel"] = AverageItemLevel;
 				};
 				
+				--print("DEBUG CODE ACTIVE");
 				if ( UnitInRaid(unit) ) or ( UnitInParty(unit) ) or ( UnitIsUnit(unit, "player") ) then
 					f.PartyData[PlayerName] = f.data.LiteScanData;
 				end;			
@@ -1927,6 +1964,7 @@ end;
 function f:Vote(PlayerName, PlayerRealm, Value)
 	if not ( PlayerRealm ) then PlayerRealm = f.Realm; end;
 	local PlayerData = TenTonHammer_Database[PlayerRealm][PlayerName];
+	if not ( PlayerData ) then return 0, 0; end;
 	local PlayerDataArray = {};
 	for v in string.gmatch(PlayerData, "[^:]+") do tinsert(PlayerDataArray, v); end;
 	local ThumbsUp, ThumbsDown, PreviousVote = PlayerDataArray[6], PlayerDataArray[7], PlayerDataArray[8];
@@ -2160,12 +2198,17 @@ function f:BuildRaidList()
 				
 				for v in string.gmatch(AchievementName, "[^\(*\)]+") do tinsert(AchievementString, v); end;
 				L[name] = AchievementString[2];
+				--print(AchievementID, AchievementString[2], Category, id)
 			end;
 		end;
 	end;
 	
 	f.data["RaidOrder"] = {
 		[L["Cataclysm"]] = {
+			L["Blackwing Descent"],
+			L["Bastion of Twilight"],
+			L["Throne of the Four Winds"],
+			L["Baradin Hold"],
 		},
 		[L["Wrath of the Lich King"]]  = {
 			L["Heroic Ruby Sanctum 25 player"],
@@ -2197,13 +2240,16 @@ function f:BuildExperience()
 	if ( not f.data["RaidOrder"] ) then
 		f:BuildRaidList();
 	end;
-	local ExpansionList = { L["Wrath of the Lich King"], L["Cataclysm"] };
+	local ExpansionList = { 
+		L["Cataclysm"], 
+		L["Wrath of the Lich King"],  
+	};
 	local index = 1;
 	local AchievementData = {};
 	local CategoryList = {
-		[L["Cataclysm"]]  =  {15068},
+		--[L["Cataclysm"]]  =  {15096},
+		[L["Cataclysm"]]  =  { 15096, },
 		[L["Wrath of the Lich King"]] = { 14823, 14963, 15021, 15062 },
-		
 	};
 	for ExpansionIndex,ExpansionName in pairs(ExpansionList) do
 		_G[fName.."_Frame4_Info"..index]:SetText(" - "..ExpansionName.." - ", "");
@@ -2217,10 +2263,11 @@ function f:BuildExperience()
 			if ( CategoryIndex ) then
 				for CurrentAchievement = 1, GetCategoryNumAchievements(CategoryIndex) do
 					local AchievementID, AchievementName = GetAchievementInfo(CategoryIndex, CurrentAchievement);
+					--print(AchievementID, AchievementName);
 					local AchievementString = {};
 					local AchievementCount = tonumber(GetComparisonStatistic(AchievementID)) or 0;
 					for v in string.gmatch(AchievementName, "[^\(*\)]+") do tinsert(AchievementString, v); end;
-					
+					--if ( AchievementString[2] ) and ( string.find(AchievementString[2], "%d") ) then print( AchievementString[2] ); end;
 					if ( AchievementID == 1394 ) then AchievementString[2] = L["Malygos 25 player"]; end;
 					if ( AchievementID == 1391 ) then AchievementString[2] = L["Malygos 10 player"]; end;
 					
@@ -2229,7 +2276,7 @@ function f:BuildExperience()
 					if ( AchievementID == 4046 ) then AchievementString[2] = L["Trial of the Crusader 25 player"]; AchievementString[1] = L["Anub'arak kills"]; end;
 					if ( AchievementID == 4047 ) then AchievementString[2] = L["Trial of the Grand Crusader 25 player"]; AchievementString[1] = L["Anub'arak kills"]; end;
 					
-					if ( AchievementString[2] ) and ( string.find(AchievementString[2], "%d") ) then
+					if ( AchievementString[2] ) then --and ( string.find(AchievementString[2], "%d") ) then
 						if not ( AchievementData[AchievementString[2]] ) then
 							AchievementData[AchievementString[2]] = {};
 						end;
@@ -2240,7 +2287,9 @@ function f:BuildExperience()
 		end;
 		
 		for DungeonIndex, DungeonName in pairs(f.data.RaidOrder[ExpansionName]) do
+			--print(DungeonIndex, DungeonName);
 			if ( AchievementData[DungeonName] ) then
+				--print("Doing Dungeon", DungeonName);
 				local Bosses, Progression = 0,0;
 				for BossIndex,BossData in pairs(AchievementData[DungeonName]) do
 					Bosses = Bosses + 1;
@@ -3574,6 +3623,12 @@ function CommandVerify()
 	print(L["Paste this URL into your browser window to Claim/Verify your character."]);
 end;
 
+function CommandRate()
+	if ( TenTonHammer_Settings["addonMode"] ~= -1 ) then
+		TenTonHammer_QuickRateFrame:Show();
+	end;
+end;
+
 SlashCmdList["GEARSCORE"] = CommandControl;
 SLASH_GEARSCORE1 = "/gs";
 SLASH_GEARSCORE2 = "/ps";
@@ -3584,6 +3639,8 @@ SLASH_GS_VERIFY1 = "/verify";
 SLASH_GS_VERIFY2 = "/claim";
 SlashCmdList["GS_RESET"] = CommandReset;
 SLASH_GS_RESET1 = "/psreset";
+SlashCmdList["GS_RATE"] = CommandRate;
+SLASH_GS_RATE1 = "/psrate";
 
 
 
@@ -3669,6 +3726,7 @@ function f:ActivateTemplate(Template, Color)
 		["Control"] = "TenTonHammer_ControlFrame";
 		["Wait"] = "TenTonHammer_WaitFrame";
 		["Alert"] = "TenTonHammer_PopupFrame2";
+		["QuickRate"] = "TenTonHammer_QuickRateFrame";
 	};
 	for i,v in pairs (FrameArray) do
 		local Background = {};

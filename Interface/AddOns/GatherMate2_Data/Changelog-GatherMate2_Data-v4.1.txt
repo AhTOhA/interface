@@ -1,0 +1,39 @@
+------------------------------------------------------------------------
+r71 | kagaro | 2011-04-24 06:09:59 +0000 (Sun, 24 Apr 2011) | 1 line
+Changed paths:
+   A /tags/v4.1 (from /trunk:70)
+
+GatherMate2_Data: Data update
+------------------------------------------------------------------------
+r70 | kagaro | 2011-04-24 06:09:57 +0000 (Sun, 24 Apr 2011) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+
+GatherMate2_Data: Data update
+------------------------------------------------------------------------
+r68 | kagaro | 2011-04-17 06:09:36 +0000 (Sun, 17 Apr 2011) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+
+GatherMate2_Data: Data update
+------------------------------------------------------------------------
+r65 | kagaro | 2011-04-03 06:08:44 +0000 (Sun, 03 Apr 2011) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+
+GatherMate2_Data: Data update
+------------------------------------------------------------------------
+r63 | kagaro | 2011-03-27 06:08:19 +0000 (Sun, 27 Mar 2011) | 1 line
+Changed paths:
+   M /trunk/HerbalismData.lua
+   M /trunk/MiningData.lua
+   M /trunk/TreasureData.lua
+
+GatherMate2_Data: Data update
+------------------------------------------------------------------------

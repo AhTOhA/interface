@@ -29,6 +29,7 @@ TradeSkillMaster_AuctioningDB = {
 	["profileKeys"] = {
 		["Glasin - Tarren Mill"] = "Default",
 		["Zulrea - Tarren Mill"] = "Default",
+		["Mylen - Tarren Mill"] = "Default",
 		["Kraisus - Tarren Mill"] = "Default",
 		["Myyh - Tarren Mill"] = "Default",
 		["Argwynn - Tarren Mill"] = "Default",
@@ -47,6 +48,7 @@ TradeSkillMaster_AuctioningDB = {
 		["Alliance - Tarren Mill"] = {
 			["player"] = {
 				["Myyh"] = true,
+				["Mylen"] = true,
 			},
 		},
 	},

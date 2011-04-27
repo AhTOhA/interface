@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("CommanderUlthok", "DBM-Party-Cataclysm", 9)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 4707 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5372 $"):sub(12, -3))
 mod:SetCreatureID(40765)
 mod:SetZone()
 
@@ -14,17 +14,17 @@ mod:RegisterEvents(
 )
 
 local warnDarkFissure		= mod:NewSpellAnnounce(76047, 4)
-local warnSqueeze		= mod:NewTargetAnnounce(76026, 3)
-local warnEnrage		= mod:NewSpellAnnounce(76100, 2)
-local warnCurse			= mod:NewTargetAnnounce(76094, 2)
+local warnSqueeze			= mod:NewTargetAnnounce(76026, 3)
+local warnEnrage			= mod:NewSpellAnnounce(76100, 2)
+local warnCurse				= mod:NewTargetAnnounce(76094, 2)
 
 local timerDarkFissure		= mod:NewCastTimer(2, 76047)
 local timerDarkFissureCD	= mod:NewCDTimer(20, 76047)
-local timerSqueeze		= mod:NewTargetTimer(6, 76026)
+local timerSqueeze			= mod:NewTargetTimer(6, 76026)
 local timerSqueezeCD		= mod:NewCDTimer(29, 76026)
-local timerEnrage		= mod:NewBuffActiveTimer(10, 76100)
+local timerEnrage			= mod:NewBuffActiveTimer(10, 76100)
 local timerEnrageCast		= mod:NewCastTimer(2.5, 76100)
-local timerCurse		= mod:NewTargetTimer(15, 76094)
+local timerCurse			= mod:NewTargetTimer(15, 76094)
 
 function mod:SPELL_AURA_APPLIED(args)
 	if args:IsSpellID(76094) then
@@ -46,7 +46,7 @@ function mod:SPELL_AURA_REMOVED(args)
 end
 
 function mod:SPELL_CAST_START(args)
-	if args:IsSpellID(76047) then
+	if args:IsSpellID(76047, 96311) then
 		warnDarkFissure:Show()
 		timerDarkFissure:Start()
 		timerDarkFissureCD:Start()

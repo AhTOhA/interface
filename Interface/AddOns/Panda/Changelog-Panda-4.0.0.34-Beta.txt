@@ -1,0 +1,16 @@
+tag 4.0.0.34-Beta
+10e0a5d44ceea7d88ccb93c831a96fbc2493c4dd
+tekkub :bear:  <tekkub@gmail.com>
+2011-04-03 05:01:03 -0600
+
+Weekly build
+
+
+--------------------
+
+tekkub :bear: :
+	- Weekly build 4.0.0.34-Beta
+	- Update changelog for 4.0.0.34-Beta
+tekkub:
+	- New gems
+	Closes #35

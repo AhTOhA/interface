@@ -44,8 +44,8 @@ L["PvP"] = true;
 L["PvE"] = true;
 L["Raid"] = true;
 L["PlayerScore"] = true;
-L["Equipment"] = true;
-L["Talents"] = true;
+L["Equipment"] = "Gear";
+L["Talents"] = "Spec";
 L["Experience"] = true;
 L["Group"] = true;
 L["Scan All"] = true;
@@ -362,3 +362,15 @@ L["Welcome to PlayerScore's Lite-Mode. Type '/ps' for options or to re-enable Fu
 
 --4.4.03
 L["Reforged"] = true;
+
+--4.5.00
+L["Quick Rate Mode"] = true;
+L["When enabled, PlayerScore will display a small window for quickly rating party members in a 5-man dungeon."] = true;
+L["Rate Group"] = true;
+L["Allows you to quickly rate your current party. You must have scanned them at least once to rate them."] = true;
+
+--4.5.02
+L["Baradin Hold"] = true;
+L["Blackwing Descent"] = true;
+L["Bastion of Twilight"] = true;
+L["Throne of the Four Winds"] = true;

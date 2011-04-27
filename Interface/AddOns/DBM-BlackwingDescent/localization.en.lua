@@ -10,23 +10,21 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
-	SpecWarnInferno	= "Blazing Bone Construct Soon (~4s)",
-	WarnPhase2Soon	= "Phase 2 soon"
+	SpecWarnInferno	= "Blazing Bone Construct Soon (~4s)"
 })
 
 L:SetTimerLocalization({
+})
+
+L:SetOptionLocalization({
+	SpecWarnInferno	= "Show pre-special warning for $spell:92190 (~4s)",
+	RangeFrame		= "Show range frame in Phase 2 (5)"
 })
 
 L:SetMiscLocalization({
 	Slump			= "%s slumps forward, exposing his pincers!",
 	HeadExposed		= "%s becomes impaled on the spike, exposing his head!",
 	YellPhase2		= "Inconceivable! You may actually defeat my lava worm! Perhaps I can help... tip the scales."
-})
-
-L:SetOptionLocalization({
-	SpecWarnInferno	= "Show pre-special warning for $spell:92190 (~4s)",
-	WarnPhase2Soon	= "Show a prewarning for Phase 2",
-	RangeFrame		= "Show range frame in Phase 2 (5)"
 })
 
 -------------------------------
@@ -39,29 +37,36 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
+	SpecWarnActivated			= "Change Target to %s!",
+	specWarnGenerator			= "Power Generator - Move %s!"
 })
 
 L:SetTimerLocalization({
 	timerArcaneBlowbackCast		= "Arcane Blowback",
-	timerShadowConductorCast	= "Shadow Conductor"
+	timerShadowConductorCast	= "Shadow Conductor",
+	timerNefAblity				= "Ability Buff CD",
+	timerArcaneLockout			= "Annihilator Lockout"
 })
 
 L:SetOptionLocalization({
-	timerShadowConductorCast= "Show timer for $spell:92053 cast",
-	timerArcaneBlowbackCast	= "Show timer for $spell:91879 cast",
-	YellBombTarget			= "Yell on $spell:80094",
-	AcquiringTargetIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79501),
-	ConductorIcon			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79888),
-	BombTargetIcon			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(80094),
-	ShadowConductorIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92053)
+	timerShadowConductorCast	= "Show timer for $spell:92048 cast",
+	timerArcaneBlowbackCast		= "Show timer for $spell:91879 cast",
+	timerArcaneLockout			= "Show timer for $spell:91542 spell lockout",
+	timerNefAblity				= "Show timer for heroic ability buff cooldown",
+	SpecWarnActivated			= "Show special warning when new boss activated",
+	specWarnGenerator			= "Show special warning when a boss gains $spell:91557",
+	AcquiringTargetIcon			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79501),
+	ConductorIcon				= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79888),
+	ShadowConductorIcon			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92053),
+	SetIconOnActivated			= "Set icon on last activated boss"
 })
 
 L:SetMiscLocalization({
-	Magmatron		= "Magmatron",
-	Electron		= "Electron",
-	Toxitron		= "Toxitron",
-	Arcanotron		= "Arcanotron",
-	SayBomb			= "Poison Bomb on me!"
+	Magmatron					= "Magmatron",
+	Electron					= "Electron",
+	Toxitron					= "Toxitron",
+	Arcanotron					= "Arcanotron",
+	YellTargetLock				= "Encasing Shadows! Away from me!"
 })
 
 ----------------
@@ -74,33 +79,34 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
-	WarnPhase		= "%s phase",
+	WarnPhase			= "%s phase",
 	WarnRemainingAdds	= "%d aberrations remaining"
 })
 
 L:SetTimerLocalization({
-	TimerPhase		= "Next phase"
-})
-
-L:SetMiscLocalization({
-	YellRed			= "red|r vial into the cauldron!",--Partial matchs, no need for full strings unless you really want em, mod checks for both.
-	YellBlue		= "blue|r vial into the cauldron!",
-	YellGreen		= "green|r vial into the cauldron!",
-	YellDark		= "dark|r magic into the cauldron!",
-	Red			= "Red",
-	Blue			= "Blue",
-	Green			= "Green",
-	Dark			= "Dark"
+	TimerPhase			= "Next phase"
 })
 
 L:SetOptionLocalization({
-	WarnPhase		= "Show warning which phase is incoming",
+	WarnPhase			= "Show warning which phase is incoming",
 	WarnRemainingAdds	= "Show warning how many aberrations remain",
-	TimerPhase		= "Show timer for next phase",
-	RangeFrame		= "Show range frame (6) during blue phase",
-	FlashFreezeIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92979),
-	BitingChillIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77760),
+	TimerPhase			= "Show timer for next phase",
+	RangeFrame			= "Show range frame (6) during blue phase",
+	SetTextures			= "Automatically disable projected textures in dark phase\n(returns it to enabled upon leaving phase)",
+	FlashFreezeIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(92979),
+	BitingChillIcon		= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77760),
 	ConsumingFlamesIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77786)
+})
+
+L:SetMiscLocalization({
+	YellRed				= "red|r vial into the cauldron!",--Partial matchs, no need for full strings unless you really want em, mod checks for both.
+	YellBlue			= "blue|r vial into the cauldron!",
+	YellGreen			= "green|r vial into the cauldron!",
+	YellDark			= "dark|r magic into the cauldron!",
+	Red					= "Red",
+	Blue				= "Blue",
+	Green				= "Green",
+	Dark				= "Dark"
 })
 
 -----------------
@@ -113,23 +119,19 @@ L:SetGeneralLocalization({
 })
 
 L:SetWarningLocalization({
-	WarnPhase2Soon	= "Phase 2 soon",
-	WarnBreak	= "%s on >%s< (%d)"
 })
 
 L:SetTimerLocalization({
 })
 
-L:SetMiscLocalization({
-	HealthInfo	= "Health Info"
+L:SetOptionLocalization({
+	RangeFrame		= "Show range frame (6)",
+	SetIconOnSlime	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(82935),
+	InfoFrame		= "Show info frame for health (<10k hp)"
 })
 
-L:SetOptionLocalization({
-	WarnPhase2Soon	= "Show a prewarning for Phase 2",
-	RangeFrame		= "Show range frame (6)",
-	WarnBreak		= DBM_CORE_AUTO_ANNOUNCE_OPTIONS.spell:format(82881, GetSpellInfo(82881) or "unknown"),
-	SetIconOnSlime	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(82935),
-	InfoFrame	= "Show info frame for health (<10k hp)"
+L:SetMiscLocalization({
+	HealthInfo	= "Health Info"
 })
 
 -----------------
@@ -163,7 +165,6 @@ L:SetOptionLocalization({
 	TimerAirphase			= "Show timer for next airphase",
 	TimerGroundphase		= "Show timer for next groundphase",
 	InfoFrame				= "Show info frame for sound levels",
-	YellOnPestered			= "Yell on $spell:92685",
 	TrackingIcon			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(78092)
 })
 
@@ -181,7 +182,7 @@ L:SetMiscLocalization({
 L = DBM:GetModLocalization("Nefarian-BD")	-- No conflict with BWL version :)
 
 L:SetGeneralLocalization({
-	name = "Nefarian"
+	name = "Nefarian's End"	-- No conflict with BWL version (probably also why blizzard calls the encounter "Nefarian's End"
 })
 
 L:SetWarningLocalization({
@@ -193,10 +194,11 @@ L:SetWarningLocalization({
 })
 
 L:SetTimerLocalization({
-	OnySwipeTimer		= "Tail Lash CD (Ony)",
-	NefSwipeTimer		= "Tail Lash CD (Nef)",
-	OnyBreathTimer		= "Breath CD (Ony)",
-	NefBreathTimer		= "Breath CD (Nef)"
+	timerNefLanding			= "Nefarian lands",
+	OnySwipeTimer			= "Tail Lash CD (Ony)",
+	NefSwipeTimer			= "Tail Lash CD (Nef)",
+	OnyBreathTimer			= "Breath CD (Ony)",
+	NefBreathTimer			= "Breath CD (Nef)"
 })
 
 L:SetOptionLocalization({
@@ -205,19 +207,44 @@ L:SetOptionLocalization({
 	OnyBreath				= "Show warning for Onyxia's $spell:94124",
 	NefBreath				= "Show warning for Nefarian's $spell:94124",
 	specWarnShadowblazeSoon	= "Show pre-special warning for $spell:94085 (~5s)",
+	timerNefLanding			= "Show timer for when Nefarian lands",
 	OnySwipeTimer			= "Show timer for Onyxia's $spell:77827 cooldown",
 	NefSwipeTimer			= "Show timer for Nefarian's $spell:77827 cooldown",
 	OnyBreathTimer			= "Show timer for Onyxia's $spell:94124 cooldown",
 	NefBreathTimer			= "Show timer for Nefarian's $spell:94124 cooldown",
-	YellOnCinder			= "Yell on $spell:79339",
-	RangeFrame				= "Show range frame (10) when you have $spell:79339",
-	SetIconOnCinder			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79339)
+	InfoFrame				= "Show info frame for Onyxia's Electric Charge",
+	SetWater				= "Automatically disable water collision on pull\n(returns it to enabled upon leaving combat)",
+	TankArrow				= "Show DBM arrow for Animated Bone Warrior kiter\n(designed for one kiter strategy)",--npc 41918
+	SetIconOnCinder			= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79339),
+	RangeFrame				= "Show range frame (10) for $spell:79339\n(Shows everyone if you have debuff, only players with icons if not)"
 })
 
 L:SetMiscLocalization({
-	NefAoe				= "The air crackles with electricity!",
-	YellPhase2			= "Curse you, mortals! Such a callous disregard for one's possessions must be met with extreme force!",
-	YellPhase3			= "I have tried to be an accommodating host, but you simply will not die! Time to throw all pretense aside and just... KILL YOU ALL!",
-	YellCinder			= "Explosive Cinders on me!",
-	Onyxia				= "Onyxia"
+	NefAoe					= "The air crackles with electricity!",
+	YellPhase2				= "Curse you, mortals! Such a callous disregard for one's possessions must be met with extreme force!",
+	YellPhase3				= "I have tried to be an accommodating host, but you simply will not die! Time to throw all pretense aside and just... KILL YOU ALL!",
+	Nefarian				= "Nefarian",
+	Onyxia					= "Onyxia",
+	Charge					= "Electric Charge"
+})
+
+--------------
+--  Blackwing Descent Trash  --
+--------------
+L = DBM:GetModLocalization("BWDTrash")
+
+L:SetGeneralLocalization({
+	name = "Blackwing Descent Trash"
+})
+
+L:SetWarningLocalization({
+})
+
+L:SetTimerLocalization({
+})
+
+L:SetOptionLocalization({
+})
+
+L:SetMiscLocalization({
 })

@@ -31,8 +31,8 @@ GridDB = {
 						},
 						["frameAlpha"] = {
 							["alert_range_100"] = false,
-							["alert_range_10"] = false,
 							["alert_offline"] = false,
+							["alert_range_10"] = false,
 							["unit_name"] = false,
 							["player_target"] = false,
 							["alert_range_30"] = false,
@@ -41,10 +41,10 @@ GridDB = {
 						},
 						["barcolor"] = {
 							["alert_offline"] = false,
-							["unit_name"] = false,
-							["unit_healthDeficit"] = false,
 							["player_target"] = false,
 							["debuff_ghost"] = true,
+							["unit_name"] = false,
+							["unit_healthDeficit"] = false,
 							["alert_death"] = false,
 							["alert_aggro"] = false,
 						},
@@ -161,23 +161,23 @@ GridDB = {
 						},
 						["border"] = {
 							["unit_name"] = false,
-							["alert_aggro"] = false,
-							["alert_lowHealth"] = false,
-							["alert_lowMana"] = false,
 							["unit_health"] = false,
+							["alert_lowMana"] = false,
+							["alert_lowHealth"] = false,
+							["alert_aggro"] = false,
 						},
 						["corner4"] = {
 							["alter_aggro"] = true,
 						},
 						["frameAlpha"] = {
-							["unit_health"] = false,
+							["alert_range_100"] = false,
 							["alert_range_10"] = false,
 							["player_target"] = false,
 							["unit_name"] = false,
 							["alert_offline"] = false,
 							["alert_range_30"] = false,
 							["alert_death"] = false,
-							["alert_range_100"] = false,
+							["unit_health"] = false,
 						},
 						["barcolor"] = {
 							["alert_offline"] = false,
@@ -188,29 +188,29 @@ GridDB = {
 							["alert_death"] = false,
 							["alert_aggro"] = false,
 						},
+						["icon"] = {
+							["debuff_poison"] = false,
+							["debuff_magic"] = false,
+							["debuff_disease"] = false,
+						},
 						["corner3"] = {
 							["debuff_curse"] = false,
 							["debuff_poison"] = false,
-							["debuff_disease"] = false,
 							["debuff_magic"] = false,
-						},
-						["icon"] = {
-							["debuff_poison"] = false,
 							["debuff_disease"] = false,
-							["debuff_magic"] = false,
 						},
 						["bar"] = {
 							["debuff_ghost"] = true,
 						},
 					},
-					["textlength"] = 8,
+					["frameWidth"] = 82,
 					["enableIconStackText"] = false,
 					["font"] = "vibroceb",
-					["iconSize"] = 17,
-					["showTooltip"] = "Always",
 					["orientation"] = "HORIZONTAL",
+					["showTooltip"] = "Always",
+					["iconSize"] = 17,
 					["enableBarColor"] = true,
-					["frameWidth"] = 82,
+					["textlength"] = 8,
 					["texture"] = "Minimalist",
 				},
 				["Fallens"] = {
@@ -285,16 +285,7 @@ GridDB = {
 				},
 				["Argwynn"] = {
 					["fontSize"] = 12,
-					["showTooltip"] = "Always",
-					["iconSize"] = 17,
-					["enableBarColor"] = true,
-					["textlength"] = 8,
-					["texture"] = "Minimalist",
-					["enableIconStackText"] = false,
 					["frameHeight"] = 37,
-					["font"] = "vibroceb",
-					["orientation"] = "HORIZONTAL",
-					["frameWidth"] = 82,
 					["statusmap"] = {
 						["healingBar"] = {
 							["alert_heals"] = false,
@@ -302,11 +293,11 @@ GridDB = {
 							["unit_health"] = false,
 						},
 						["text"] = {
+							["player_target"] = false,
 							["alert_voice"] = false,
 							["alert_heals"] = false,
-							["unit_health"] = false,
 							["unit_healthDeficit"] = false,
-							["player_target"] = false,
+							["unit_health"] = false,
 						},
 						["border"] = {
 							["unit_name"] = false,
@@ -319,14 +310,14 @@ GridDB = {
 							["alter_aggro"] = true,
 						},
 						["frameAlpha"] = {
+							["alert_range_100"] = false,
 							["alert_offline"] = false,
-							["unit_health"] = false,
-							["player_target"] = false,
 							["unit_name"] = false,
+							["player_target"] = false,
 							["alert_range_10"] = false,
 							["alert_range_30"] = false,
 							["alert_death"] = false,
-							["alert_range_100"] = false,
+							["unit_health"] = false,
 						},
 						["barcolor"] = {
 							["alert_offline"] = false,
@@ -345,13 +336,22 @@ GridDB = {
 						},
 						["icon"] = {
 							["debuff_poison"] = false,
-							["debuff_disease"] = false,
 							["debuff_magic"] = false,
+							["debuff_disease"] = false,
 						},
 						["bar"] = {
 							["debuff_ghost"] = true,
 						},
 					},
+					["frameWidth"] = 82,
+					["enableIconStackText"] = false,
+					["font"] = "vibroceb",
+					["orientation"] = "HORIZONTAL",
+					["showTooltip"] = "Always",
+					["iconSize"] = 17,
+					["enableBarColor"] = true,
+					["textlength"] = 8,
+					["texture"] = "Minimalist",
 				},
 				["Zulrea"] = {
 					["fontSize"] = 12,
@@ -382,9 +382,9 @@ GridDB = {
 						["frameAlpha"] = {
 							["alert_range_100"] = false,
 							["alert_offline"] = false,
+							["alert_range_10"] = false,
 							["player_target"] = false,
 							["unit_name"] = false,
-							["alert_range_10"] = false,
 							["alert_range_30"] = false,
 							["alert_death"] = false,
 							["unit_health"] = false,
@@ -425,7 +425,16 @@ GridDB = {
 				},
 				["Tikytaka"] = {
 					["fontSize"] = 12,
+					["showTooltip"] = "Always",
+					["iconSize"] = 17,
+					["enableBarColor"] = true,
+					["textlength"] = 8,
+					["texture"] = "Minimalist",
+					["enableIconStackText"] = false,
 					["frameHeight"] = 37,
+					["font"] = "vibroceb",
+					["orientation"] = "HORIZONTAL",
+					["frameWidth"] = 82,
 					["statusmap"] = {
 						["healingBar"] = {
 							["alert_heals"] = false,
@@ -433,11 +442,11 @@ GridDB = {
 							["unit_health"] = false,
 						},
 						["text"] = {
-							["player_target"] = false,
 							["alert_voice"] = false,
 							["alert_heals"] = false,
-							["unit_healthDeficit"] = false,
 							["unit_health"] = false,
+							["unit_healthDeficit"] = false,
+							["player_target"] = false,
 						},
 						["border"] = {
 							["unit_name"] = false,
@@ -450,21 +459,21 @@ GridDB = {
 							["alter_aggro"] = true,
 						},
 						["frameAlpha"] = {
+							["alert_offline"] = false,
 							["unit_health"] = false,
 							["alert_range_10"] = false,
 							["unit_name"] = false,
 							["player_target"] = false,
-							["alert_offline"] = false,
 							["alert_range_30"] = false,
 							["alert_death"] = false,
 							["alert_range_100"] = false,
 						},
 						["barcolor"] = {
 							["alert_offline"] = false,
-							["unit_name"] = false,
-							["unit_healthDeficit"] = false,
 							["player_target"] = false,
 							["debuff_ghost"] = true,
+							["unit_name"] = false,
+							["unit_healthDeficit"] = false,
 							["alert_death"] = false,
 							["alert_aggro"] = false,
 						},
@@ -483,15 +492,6 @@ GridDB = {
 							["debuff_ghost"] = true,
 						},
 					},
-					["textlength"] = 8,
-					["enableIconStackText"] = false,
-					["font"] = "vibroceb",
-					["iconSize"] = 17,
-					["showTooltip"] = "Always",
-					["orientation"] = "HORIZONTAL",
-					["enableBarColor"] = true,
-					["frameWidth"] = 82,
-					["texture"] = "Minimalist",
 				},
 				["Default"] = {
 					["showTooltip"] = true,
@@ -873,14 +873,14 @@ GridDB = {
 							["alter_aggro"] = true,
 						},
 						["frameAlpha"] = {
-							["alert_range_100"] = false,
+							["unit_health"] = false,
 							["alert_range_10"] = false,
 							["alert_offline"] = false,
-							["player_target"] = false,
 							["unit_name"] = false,
+							["player_target"] = false,
 							["alert_range_30"] = false,
 							["alert_death"] = false,
-							["unit_health"] = false,
+							["alert_range_100"] = false,
 						},
 						["barcolor"] = {
 							["alert_offline"] = false,
@@ -893,8 +893,8 @@ GridDB = {
 						},
 						["icon"] = {
 							["debuff_poison"] = false,
-							["debuff_magic"] = false,
 							["debuff_disease"] = false,
+							["debuff_magic"] = false,
 						},
 						["corner3"] = {
 							["debuff_curse"] = false,
@@ -906,14 +906,14 @@ GridDB = {
 							["debuff_ghost"] = true,
 						},
 					},
-					["frameWidth"] = 82,
-					["orientation"] = "HORIZONTAL",
-					["font"] = "vibroceb",
-					["enableIconStackText"] = false,
-					["showTooltip"] = "Always",
-					["iconSize"] = 17,
-					["enableBarColor"] = true,
 					["textlength"] = 8,
+					["enableIconStackText"] = false,
+					["font"] = "vibroceb",
+					["iconSize"] = 17,
+					["showTooltip"] = "Always",
+					["orientation"] = "HORIZONTAL",
+					["enableBarColor"] = true,
+					["frameWidth"] = 82,
 					["texture"] = "Minimalist",
 				},
 			},
@@ -921,6 +921,14 @@ GridDB = {
 		["GridStatusVehicle"] = {
 		},
 		["GridRoster"] = {
+			["profiles"] = {
+				["Glasin"] = {
+					["party_state"] = "party",
+				},
+				["Tikytaka"] = {
+					["party_state"] = "party",
+				},
+			},
 		},
 		["GridStatusName"] = {
 		},
@@ -1103,93 +1111,80 @@ GridDB = {
 				},
 				["Mylen"] = {
 					["alert_range_10"] = {
-						["color"] = {
-							["a"] = 0.8181818181818181,
-							["b"] = 0.3,
-							["g"] = 0.2,
-							["r"] = 0.1,
-						},
-						["priority"] = 81,
 						["enable"] = false,
 						["text"] = "10 yards",
+						["color"] = {
+							["a"] = 0.8181818181818181,
+							["r"] = 0.1,
+							["g"] = 0.2,
+							["b"] = 0.3,
+						},
+						["priority"] = 81,
 						["range"] = false,
 						["desc"] = "More than 10 yards away",
 					},
-					["alert_range_40"] = {
-						["color"] = {
-							["a"] = 0.2727272727272727,
-							["b"] = 0.2,
-							["g"] = 0.8,
-							["r"] = 0.4,
-						},
-						["priority"] = 84,
-						["enable"] = true,
-						["text"] = "40 yards",
-						["range"] = false,
-						["desc"] = "More than 40 yards away",
-					},
 					["alert_range_38"] = {
-						["color"] = {
-							["a"] = 0.3090909090909091,
-							["b"] = 0.14,
-							["g"] = 0.76,
-							["r"] = 0.38,
-						},
-						["priority"] = 84,
 						["enable"] = false,
 						["text"] = "38 yards",
+						["color"] = {
+							["a"] = 0.3090909090909091,
+							["r"] = 0.38,
+							["g"] = 0.76,
+							["b"] = 0.14,
+						},
+						["priority"] = 84,
 						["range"] = false,
 						["desc"] = "More than 38 yards away",
 					},
 					["alert_range_28"] = {
-						["color"] = {
-							["a"] = 0.490909090909091,
-							["b"] = 0.84,
-							["g"] = 0.5600000000000001,
-							["r"] = 0.28,
-						},
-						["priority"] = 83,
 						["enable"] = false,
 						["text"] = "28 yards",
+						["color"] = {
+							["a"] = 0.490909090909091,
+							["r"] = 0.28,
+							["g"] = 0.5600000000000001,
+							["b"] = 0.84,
+						},
+						["priority"] = 83,
 						["range"] = false,
 						["desc"] = "More than 28 yards away",
 					},
 					["alert_range_30"] = {
-						["color"] = {
-							["a"] = 0.4545454545454546,
-							["b"] = 0.9,
-							["g"] = 0.6,
-							["r"] = 0.3,
-						},
-						["priority"] = 83,
 						["enable"] = false,
 						["text"] = "30 yards",
+						["color"] = {
+							["a"] = 0.4545454545454546,
+							["r"] = 0.3,
+							["g"] = 0.6,
+							["b"] = 0.9,
+						},
+						["priority"] = 83,
 						["range"] = false,
 						["desc"] = "More than 30 yards away",
 					},
-					["alert_range_5"] = {
+					["alert_range_40"] = {
 						["enable"] = true,
-						["text"] = "5 yards",
+						["text"] = "40 yards",
 						["color"] = {
-							["a"] = 0.9090909090909091,
-							["r"] = 0.05,
-							["g"] = 0.1,
-							["b"] = 0.15,
+							["a"] = 0.2727272727272727,
+							["r"] = 0.4,
+							["g"] = 0.8,
+							["b"] = 0.2,
 						},
-						["priority"] = 80,
+						["priority"] = 84,
 						["range"] = false,
-						["desc"] = "More than 5 yards away",
+						["desc"] = "More than 40 yards away",
 					},
 					["alert_range_100"] = {
-						["color"] = {
-							["a"] = 0.1090909090909091,
-							["b"] = 0,
-							["g"] = 0,
-							["r"] = 0,
-						},
-						["priority"] = 90,
 						["enable"] = false,
 						["text"] = "100 yards",
+						["color"] = {
+							["a"] = 0.1090909090909091,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+						["priority"] = 90,
 						["range"] = false,
 						["desc"] = "More than 100 yards away",
 					},
@@ -1394,18 +1389,18 @@ GridDB = {
 						["range"] = false,
 						["desc"] = "More than 40 yards away",
 					},
-					["alert_range_35"] = {
+					["alert_range_30"] = {
 						["enable"] = false,
-						["text"] = "35 yards",
+						["text"] = "30 yards",
 						["color"] = {
-							["a"] = 0.3636363636363637,
-							["r"] = 0.35,
-							["g"] = 0.7,
-							["b"] = 0.05,
+							["a"] = 0.4545454545454546,
+							["r"] = 0.3,
+							["g"] = 0.6,
+							["b"] = 0.9,
 						},
 						["priority"] = 83,
 						["range"] = false,
-						["desc"] = "More than 35 yards away",
+						["desc"] = "More than 30 yards away",
 					},
 					["alert_range_28"] = {
 						["enable"] = false,
@@ -1420,18 +1415,18 @@ GridDB = {
 						["range"] = false,
 						["desc"] = "More than 28 yards away",
 					},
-					["alert_range_30"] = {
+					["alert_range_35"] = {
 						["enable"] = false,
-						["text"] = "30 yards",
+						["text"] = "35 yards",
 						["color"] = {
-							["a"] = 0.4545454545454546,
-							["r"] = 0.3,
-							["g"] = 0.6,
-							["b"] = 0.9,
+							["a"] = 0.3636363636363637,
+							["r"] = 0.35,
+							["g"] = 0.7,
+							["b"] = 0.05,
 						},
 						["priority"] = 83,
 						["range"] = false,
-						["desc"] = "More than 30 yards away",
+						["desc"] = "More than 35 yards away",
 					},
 					["alert_range_38"] = {
 						["enable"] = false,
@@ -2086,18 +2081,18 @@ GridDB = {
 						["range"] = false,
 						["desc"] = "More than 100 yards away",
 					},
-					["alert_range_40"] = {
-						["enable"] = true,
-						["text"] = "40 yards",
+					["alert_range_38"] = {
+						["enable"] = false,
+						["text"] = "38 yards",
 						["color"] = {
-							["a"] = 0.2727272727272727,
-							["r"] = 0.4,
-							["g"] = 0.8,
-							["b"] = 0.2,
+							["a"] = 0.3090909090909091,
+							["r"] = 0.38,
+							["g"] = 0.76,
+							["b"] = 0.14,
 						},
 						["priority"] = 84,
 						["range"] = false,
-						["desc"] = "More than 40 yards away",
+						["desc"] = "More than 38 yards away",
 					},
 					["alert_range_28"] = {
 						["enable"] = false,
@@ -2112,19 +2107,6 @@ GridDB = {
 						["range"] = false,
 						["desc"] = "More than 28 yards away",
 					},
-					["alert_range_38"] = {
-						["enable"] = false,
-						["text"] = "38 yards",
-						["color"] = {
-							["a"] = 0.3090909090909091,
-							["r"] = 0.38,
-							["g"] = 0.76,
-							["b"] = 0.14,
-						},
-						["priority"] = 84,
-						["range"] = false,
-						["desc"] = "More than 38 yards away",
-					},
 					["alert_range_30"] = {
 						["enable"] = false,
 						["text"] = "30 yards",
@@ -2137,6 +2119,19 @@ GridDB = {
 						["priority"] = 83,
 						["range"] = false,
 						["desc"] = "More than 30 yards away",
+					},
+					["alert_range_40"] = {
+						["enable"] = true,
+						["text"] = "40 yards",
+						["color"] = {
+							["a"] = 0.2727272727272727,
+							["r"] = 0.4,
+							["g"] = 0.8,
+							["b"] = 0.2,
+						},
+						["priority"] = 84,
+						["range"] = false,
+						["desc"] = "More than 40 yards away",
 					},
 					["alert_range_20"] = {
 						["enable"] = true,
@@ -2157,8 +2152,14 @@ GridDB = {
 		["GridStatusAuras"] = {
 			["profiles"] = {
 				["Tikytaka"] = {
+					["buff_Rejuvenation"] = {
+						["icon"] = "Interface\\Icons\\Spell_Nature_Rejuvenation",
+					},
 					["buff_EarthShield"] = {
 						["icon"] = "Interface\\Icons\\Spell_Nature_SkinofEarth",
+					},
+					["buff_Renew"] = {
+						["icon"] = "Interface\\Icons\\Spell_Holy_Renew",
 					},
 					["buff_Regrowth"] = {
 						["icon"] = "Interface\\Icons\\Spell_Nature_ResistNature",
@@ -2166,17 +2167,11 @@ GridDB = {
 					["buff_Riptide"] = {
 						["icon"] = "Interface\\Icons\\spell_nature_riptide",
 					},
-					["buff_Rejuvenation"] = {
-						["icon"] = "Interface\\Icons\\Spell_Nature_Rejuvenation",
-					},
 					["buff_PowerWord:Shield"] = {
 						["icon"] = "Interface\\Icons\\Spell_Holy_PowerWordShield",
 					},
 					["buff_Lifebloom"] = {
 						["icon"] = "Interface\\Icons\\INV_Misc_Herb_Felblossom",
-					},
-					["buff_Renew"] = {
-						["icon"] = "Interface\\Icons\\Spell_Holy_Renew",
 					},
 				},
 				["Glasin"] = {
@@ -2226,29 +2221,6 @@ GridDB = {
 					},
 				},
 				["Kraisus"] = {
-					["buff_Regrowth"] = {
-						["icon"] = "Interface\\Icons\\Spell_Nature_ResistNature",
-					},
-					["buff_Rejuvenation"] = {
-						["icon"] = "Interface\\Icons\\Spell_Nature_Rejuvenation",
-					},
-					["buff_PowerWord:Shield"] = {
-						["icon"] = "Interface\\Icons\\Spell_Holy_PowerWordShield",
-					},
-					["buff_Lifebloom"] = {
-						["icon"] = "Interface\\Icons\\INV_Misc_Herb_Felblossom",
-					},
-					["buff_Renew"] = {
-						["icon"] = "Interface\\Icons\\Spell_Holy_Renew",
-					},
-				},
-				["Argwynn"] = {
-					["buff_Rejuvenation"] = {
-						["icon"] = "Interface\\Icons\\Spell_Nature_Rejuvenation",
-					},
-					["buff_EarthShield"] = {
-						["icon"] = "Interface\\Icons\\Spell_Nature_SkinofEarth",
-					},
 					["buff_Renew"] = {
 						["icon"] = "Interface\\Icons\\Spell_Holy_Renew",
 					},
@@ -2258,11 +2230,57 @@ GridDB = {
 					["buff_Riptide"] = {
 						["icon"] = "Interface\\Icons\\spell_nature_riptide",
 					},
+					["buff_Rejuvenation"] = {
+						["icon"] = "Interface\\Icons\\Spell_Nature_Rejuvenation",
+					},
 					["buff_PowerWord:Shield"] = {
 						["icon"] = "Interface\\Icons\\Spell_Holy_PowerWordShield",
 					},
 					["buff_Lifebloom"] = {
 						["icon"] = "Interface\\Icons\\INV_Misc_Herb_Felblossom",
+					},
+					["buff_EarthShield"] = {
+						["icon"] = "Interface\\Icons\\Spell_Nature_SkinofEarth",
+					},
+				},
+				["Argwynn"] = {
+					["buff_EarthShield"] = {
+						["icon"] = "Interface\\Icons\\Spell_Nature_SkinofEarth",
+					},
+					["buff_Regrowth"] = {
+						["icon"] = "Interface\\Icons\\Spell_Nature_ResistNature",
+					},
+					["buff_Riptide"] = {
+						["icon"] = "Interface\\Icons\\spell_nature_riptide",
+					},
+					["buff_Rejuvenation"] = {
+						["icon"] = "Interface\\Icons\\Spell_Nature_Rejuvenation",
+					},
+					["buff_PowerWord:Shield"] = {
+						["icon"] = "Interface\\Icons\\Spell_Holy_PowerWordShield",
+					},
+					["buff_Lifebloom"] = {
+						["icon"] = "Interface\\Icons\\INV_Misc_Herb_Felblossom",
+					},
+					["buff_Renew"] = {
+						["icon"] = "Interface\\Icons\\Spell_Holy_Renew",
+					},
+				},
+				["Zulrea"] = {
+					["buff_Regrowth"] = {
+						["icon"] = "Interface\\Icons\\Spell_Nature_ResistNature",
+					},
+					["buff_Rejuvenation"] = {
+						["icon"] = "Interface\\Icons\\Spell_Nature_Rejuvenation",
+					},
+					["buff_Renew"] = {
+						["icon"] = "Interface\\Icons\\Spell_Holy_Renew",
+					},
+					["buff_PowerWord:Shield"] = {
+						["icon"] = "Interface\\Icons\\Spell_Holy_PowerWordShield",
+					},
+					["buff_EarthShield"] = {
+						["icon"] = "Interface\\Icons\\Spell_Nature_SkinofEarth",
 					},
 				},
 			},
@@ -2271,20 +2289,20 @@ GridDB = {
 			["profiles"] = {
 				["Myyh"] = {
 					["colors"] = {
-						["HUNTER"] = {
-							["b"] = 0.45,
-							["g"] = 0.83,
-							["r"] = 0.67,
+						["DEATHKNIGHT"] = {
+							["b"] = 0.23,
+							["g"] = 0.12,
+							["r"] = 0.77,
 						},
 						["WARRIOR"] = {
 							["b"] = 0.43,
 							["g"] = 0.61,
 							["r"] = 0.78,
 						},
-						["SHAMAN"] = {
-							["b"] = 0.87,
-							["g"] = 0.44,
-							["r"] = 0,
+						["ROGUE"] = {
+							["b"] = 0.41,
+							["g"] = 0.96,
+							["r"] = 1,
 						},
 						["MAGE"] = {
 							["b"] = 0.94,
@@ -2301,25 +2319,25 @@ GridDB = {
 							["g"] = 0.51,
 							["r"] = 0.58,
 						},
-						["PALADIN"] = {
-							["b"] = 0.73,
-							["g"] = 0.55,
-							["r"] = 0.96,
+						["SHAMAN"] = {
+							["b"] = 0.87,
+							["g"] = 0.44,
+							["r"] = 0,
 						},
 						["DRUID"] = {
 							["b"] = 0.04,
 							["g"] = 0.49,
 							["r"] = 1,
 						},
-						["ROGUE"] = {
-							["b"] = 0.41,
-							["g"] = 0.96,
-							["r"] = 1,
+						["PALADIN"] = {
+							["b"] = 0.73,
+							["g"] = 0.55,
+							["r"] = 0.96,
 						},
-						["DEATHKNIGHT"] = {
-							["b"] = 0.23,
-							["g"] = 0.12,
-							["r"] = 0.77,
+						["HUNTER"] = {
+							["b"] = 0.45,
+							["g"] = 0.83,
+							["r"] = 0.67,
 						},
 					},
 				},
@@ -2380,54 +2398,54 @@ GridDB = {
 				["Mylen"] = {
 					["colors"] = {
 						["HUNTER"] = {
-							["b"] = 0.45,
-							["g"] = 0.83,
 							["r"] = 0.67,
+							["g"] = 0.83,
+							["b"] = 0.45,
 						},
 						["WARRIOR"] = {
-							["b"] = 0.43,
-							["g"] = 0.61,
 							["r"] = 0.78,
-						},
-						["ROGUE"] = {
-							["b"] = 0.41,
-							["g"] = 0.96,
-							["r"] = 1,
-						},
-						["MAGE"] = {
-							["b"] = 0.94,
-							["g"] = 0.8,
-							["r"] = 0.41,
-						},
-						["PRIEST"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-						["WARLOCK"] = {
-							["b"] = 0.79,
-							["g"] = 0.51,
-							["r"] = 0.58,
-						},
-						["DEATHKNIGHT"] = {
-							["b"] = 0.23,
-							["g"] = 0.12,
-							["r"] = 0.77,
-						},
-						["DRUID"] = {
-							["b"] = 0.04,
-							["g"] = 0.49,
-							["r"] = 1,
+							["g"] = 0.61,
+							["b"] = 0.43,
 						},
 						["SHAMAN"] = {
-							["b"] = 0.87,
-							["g"] = 0.44,
 							["r"] = 0,
+							["g"] = 0.44,
+							["b"] = 0.87,
+						},
+						["MAGE"] = {
+							["r"] = 0.41,
+							["g"] = 0.8,
+							["b"] = 0.94,
+						},
+						["PRIEST"] = {
+							["r"] = 1,
+							["g"] = 1,
+							["b"] = 1,
+						},
+						["WARLOCK"] = {
+							["r"] = 0.58,
+							["g"] = 0.51,
+							["b"] = 0.79,
+						},
+						["ROGUE"] = {
+							["r"] = 1,
+							["g"] = 0.96,
+							["b"] = 0.41,
+						},
+						["DRUID"] = {
+							["r"] = 1,
+							["g"] = 0.49,
+							["b"] = 0.04,
 						},
 						["PALADIN"] = {
-							["b"] = 0.73,
-							["g"] = 0.55,
 							["r"] = 0.96,
+							["g"] = 0.55,
+							["b"] = 0.73,
+						},
+						["DEATHKNIGHT"] = {
+							["r"] = 0.77,
+							["g"] = 0.12,
+							["b"] = 0.23,
 						},
 					},
 				},
@@ -2487,40 +2505,10 @@ GridDB = {
 				},
 				["Argwynn"] = {
 					["colors"] = {
-						["ROGUE"] = {
-							["b"] = 0.41,
-							["g"] = 0.96,
-							["r"] = 1,
-						},
-						["MAGE"] = {
-							["b"] = 0.94,
-							["g"] = 0.8,
-							["r"] = 0.41,
-						},
-						["DRUID"] = {
-							["b"] = 0.04,
-							["g"] = 0.49,
-							["r"] = 1,
-						},
 						["DEATHKNIGHT"] = {
 							["b"] = 0.23,
 							["g"] = 0.12,
 							["r"] = 0.77,
-						},
-						["PRIEST"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-						["WARLOCK"] = {
-							["b"] = 0.79,
-							["g"] = 0.51,
-							["r"] = 0.58,
-						},
-						["HUNTER"] = {
-							["b"] = 0.45,
-							["g"] = 0.83,
-							["r"] = 0.67,
 						},
 						["WARRIOR"] = {
 							["b"] = 0.43,
@@ -2532,10 +2520,40 @@ GridDB = {
 							["g"] = 0.44,
 							["r"] = 0,
 						},
+						["MAGE"] = {
+							["b"] = 0.94,
+							["g"] = 0.8,
+							["r"] = 0.41,
+						},
+						["PRIEST"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+						["WARLOCK"] = {
+							["b"] = 0.79,
+							["g"] = 0.51,
+							["r"] = 0.58,
+						},
 						["PALADIN"] = {
 							["b"] = 0.73,
 							["g"] = 0.55,
 							["r"] = 0.96,
+						},
+						["DRUID"] = {
+							["b"] = 0.04,
+							["g"] = 0.49,
+							["r"] = 1,
+						},
+						["ROGUE"] = {
+							["b"] = 0.41,
+							["g"] = 0.96,
+							["r"] = 1,
+						},
+						["HUNTER"] = {
+							["b"] = 0.45,
+							["g"] = 0.83,
+							["r"] = 0.67,
 						},
 					},
 				},
@@ -2595,16 +2613,6 @@ GridDB = {
 				},
 				["Tikytaka"] = {
 					["colors"] = {
-						["HUNTER"] = {
-							["r"] = 0.67,
-							["g"] = 0.83,
-							["b"] = 0.45,
-						},
-						["WARRIOR"] = {
-							["r"] = 0.78,
-							["g"] = 0.61,
-							["b"] = 0.43,
-						},
 						["ROGUE"] = {
 							["r"] = 1,
 							["g"] = 0.96,
@@ -2614,6 +2622,16 @@ GridDB = {
 							["r"] = 0.41,
 							["g"] = 0.8,
 							["b"] = 0.94,
+						},
+						["DRUID"] = {
+							["r"] = 1,
+							["g"] = 0.49,
+							["b"] = 0.04,
+						},
+						["DEATHKNIGHT"] = {
+							["r"] = 0.77,
+							["g"] = 0.12,
+							["b"] = 0.23,
 						},
 						["PRIEST"] = {
 							["r"] = 1,
@@ -2625,15 +2643,15 @@ GridDB = {
 							["g"] = 0.51,
 							["b"] = 0.79,
 						},
-						["DEATHKNIGHT"] = {
-							["r"] = 0.77,
-							["g"] = 0.12,
-							["b"] = 0.23,
+						["HUNTER"] = {
+							["r"] = 0.67,
+							["g"] = 0.83,
+							["b"] = 0.45,
 						},
-						["DRUID"] = {
-							["r"] = 1,
-							["g"] = 0.49,
-							["b"] = 0.04,
+						["WARRIOR"] = {
+							["r"] = 0.78,
+							["g"] = 0.61,
+							["b"] = 0.43,
 						},
 						["PALADIN"] = {
 							["r"] = 0.96,
@@ -2713,10 +2731,10 @@ GridDB = {
 							["g"] = 0.61,
 							["r"] = 0.78,
 						},
-						["ROGUE"] = {
-							["b"] = 0.41,
-							["g"] = 0.96,
-							["r"] = 1,
+						["SHAMAN"] = {
+							["b"] = 0.87,
+							["g"] = 0.44,
+							["r"] = 0,
 						},
 						["MAGE"] = {
 							["b"] = 0.94,
@@ -2733,20 +2751,20 @@ GridDB = {
 							["g"] = 0.51,
 							["r"] = 0.58,
 						},
-						["SHAMAN"] = {
-							["b"] = 0.87,
-							["g"] = 0.44,
-							["r"] = 0,
+						["PALADIN"] = {
+							["b"] = 0.73,
+							["g"] = 0.55,
+							["r"] = 0.96,
 						},
 						["DRUID"] = {
 							["b"] = 0.04,
 							["g"] = 0.49,
 							["r"] = 1,
 						},
-						["PALADIN"] = {
-							["b"] = 0.73,
-							["g"] = 0.55,
-							["r"] = 0.96,
+						["ROGUE"] = {
+							["b"] = 0.41,
+							["g"] = 0.96,
+							["r"] = 1,
 						},
 						["DEATHKNIGHT"] = {
 							["b"] = 0.23,
@@ -2983,10 +3001,10 @@ GridDB = {
 							["g"] = 0.61,
 							["b"] = 0.43,
 						},
-						["SHAMAN"] = {
-							["r"] = 0,
-							["g"] = 0.44,
-							["b"] = 0.87,
+						["PALADIN"] = {
+							["r"] = 0.96,
+							["g"] = 0.55,
+							["b"] = 0.73,
 						},
 						["MAGE"] = {
 							["r"] = 0.41,
@@ -3003,25 +3021,25 @@ GridDB = {
 							["g"] = 0.51,
 							["b"] = 0.79,
 						},
-						["ROGUE"] = {
-							["r"] = 1,
-							["g"] = 0.96,
-							["b"] = 0.41,
+						["DEATHKNIGHT"] = {
+							["r"] = 0.77,
+							["g"] = 0.12,
+							["b"] = 0.23,
 						},
 						["DRUID"] = {
 							["r"] = 1,
 							["g"] = 0.49,
 							["b"] = 0.04,
 						},
-						["PALADIN"] = {
-							["r"] = 0.96,
-							["g"] = 0.55,
-							["b"] = 0.73,
+						["SHAMAN"] = {
+							["r"] = 0,
+							["g"] = 0.44,
+							["b"] = 0.87,
 						},
-						["DEATHKNIGHT"] = {
-							["r"] = 0.77,
-							["g"] = 0.12,
-							["b"] = 0.23,
+						["ROGUE"] = {
+							["r"] = 1,
+							["g"] = 0.96,
+							["b"] = 0.41,
 						},
 					},
 				},
@@ -3041,7 +3059,7 @@ GridDB = {
 					["BackgroundG"] = 0.3294117647058824,
 					["anchorRel"] = "TOPLEFT",
 					["BorderB"] = 0.2470588235294118,
-					["BackgroundB"] = 0.3294117647058824,
+					["BackgroundR"] = 0.3294117647058824,
 					["layouts"] = {
 						["party"] = "By Group 25",
 						["solo"] = "By Group 25",
@@ -3050,15 +3068,15 @@ GridDB = {
 						["raid"] = "By Group 25",
 					},
 					["layout"] = "By Group 25",
-					["BackgroundR"] = 0.3294117647058824,
+					["BackgroundB"] = 0.3294117647058824,
 					["PosX"] = 939.721672815782,
 					["FrameLock"] = true,
-					["BackgroundA"] = 0,
+					["BorderA"] = 0,
 					["BorderR"] = 0.2470588235294118,
 					["Spacing"] = 3,
 					["BorderG"] = 0.2470588235294118,
 					["Padding"] = 0,
-					["BorderA"] = 0,
+					["BackgroundA"] = 0,
 					["PosY"] = -601.9189602992251,
 				},
 				["Belfrogue"] = {
@@ -3089,7 +3107,7 @@ GridDB = {
 					["BackgroundG"] = 0.3294117647058824,
 					["anchorRel"] = "TOPLEFT",
 					["BorderB"] = 0.2470588235294118,
-					["PosY"] = -601.9189602992251,
+					["BackgroundB"] = 0.3294117647058824,
 					["layouts"] = {
 						["party"] = "By Group 25",
 						["solo"] = "By Group 25",
@@ -3099,15 +3117,15 @@ GridDB = {
 					},
 					["layout"] = "By Group 25",
 					["BackgroundR"] = 0.3294117647058824,
-					["BorderA"] = 0,
-					["FrameLock"] = true,
-					["BackgroundA"] = 0,
-					["BorderR"] = 0.2470588235294118,
 					["PosX"] = 939.721672815782,
+					["FrameLock"] = true,
+					["BorderA"] = 0,
+					["BorderR"] = 0.2470588235294118,
+					["Spacing"] = 3,
 					["BorderG"] = 0.2470588235294118,
 					["Padding"] = 0,
-					["Spacing"] = 3,
-					["BackgroundB"] = 0.3294117647058824,
+					["BackgroundA"] = 0,
+					["PosY"] = -601.9189602992251,
 				},
 				["Fallens"] = {
 					["BackgroundG"] = 0.3294117647058824,
@@ -3134,8 +3152,10 @@ GridDB = {
 					["BackgroundB"] = 0.3294117647058824,
 				},
 				["Argwynn"] = {
+					["BackgroundG"] = 0.3294117647058824,
 					["anchorRel"] = "TOPLEFT",
 					["BorderB"] = 0.2470588235294118,
+					["BackgroundB"] = 0.3294117647058824,
 					["layouts"] = {
 						["party"] = "By Group 25",
 						["solo"] = "By Group 25",
@@ -3143,19 +3163,17 @@ GridDB = {
 						["bg"] = "By Group 25",
 						["raid"] = "By Group 25",
 					},
-					["BackgroundR"] = 0.3294117647058824,
-					["FrameLock"] = true,
-					["BorderA"] = 0,
-					["BorderR"] = 0.2470588235294118,
-					["Spacing"] = 3,
-					["BackgroundG"] = 0.3294117647058824,
-					["PosY"] = -601.9189602992251,
 					["layout"] = "By Group 25",
+					["BackgroundR"] = 0.3294117647058824,
+					["Spacing"] = 3,
+					["FrameLock"] = true,
 					["BackgroundA"] = 0,
+					["BorderR"] = 0.2470588235294118,
+					["PosX"] = 939.721672815782,
 					["BorderG"] = 0.2470588235294118,
 					["Padding"] = 0,
-					["BackgroundB"] = 0.3294117647058824,
-					["PosX"] = 939.721672815782,
+					["BorderA"] = 0,
+					["PosY"] = -601.9189602992251,
 				},
 				["Zulrea"] = {
 					["BackgroundG"] = 0.3294117647058824,
@@ -3171,21 +3189,19 @@ GridDB = {
 					},
 					["layout"] = "By Group 25",
 					["BackgroundB"] = 0.3294117647058824,
-					["PosX"] = 939.721672815782,
+					["Spacing"] = 3,
 					["FrameLock"] = true,
 					["BackgroundA"] = 0,
 					["BorderR"] = 0.2470588235294118,
-					["Spacing"] = 3,
+					["PosX"] = 939.721672815782,
 					["BorderG"] = 0.2470588235294118,
 					["Padding"] = 0,
 					["BorderA"] = 0,
 					["PosY"] = -601.9189602992251,
 				},
 				["Tikytaka"] = {
-					["BackgroundG"] = 0.3294117647058824,
 					["anchorRel"] = "TOPLEFT",
 					["BorderB"] = 0.2470588235294118,
-					["PosY"] = -601.9189602992251,
 					["layouts"] = {
 						["party"] = "By Group 25",
 						["solo"] = "By Group 25",
@@ -3193,17 +3209,19 @@ GridDB = {
 						["bg"] = "By Group 25",
 						["raid"] = "By Group 25",
 					},
-					["layout"] = "By Group 25",
-					["BackgroundR"] = 0.3294117647058824,
-					["BackgroundA"] = 0,
+					["BackgroundB"] = 0.3294117647058824,
 					["FrameLock"] = true,
 					["BorderA"] = 0,
 					["BorderR"] = 0.2470588235294118,
-					["Spacing"] = 3,
+					["PosX"] = 939.721672815782,
+					["BackgroundG"] = 0.3294117647058824,
+					["PosY"] = -601.9189602992251,
+					["layout"] = "By Group 25",
+					["BackgroundA"] = 0,
 					["BorderG"] = 0.2470588235294118,
 					["Padding"] = 0,
-					["PosX"] = 939.721672815782,
-					["BackgroundB"] = 0.3294117647058824,
+					["BackgroundR"] = 0.3294117647058824,
+					["Spacing"] = 3,
 				},
 				["Default"] = {
 					["layout"] = "By Group 5",
@@ -3227,12 +3245,12 @@ GridDB = {
 					["BackgroundR"] = 0.3294117647058824,
 					["Spacing"] = 3,
 					["FrameLock"] = true,
-					["BackgroundA"] = 0,
+					["BorderA"] = 0,
 					["BorderR"] = 0.2470588235294118,
 					["PosX"] = 939.721672815782,
 					["BorderG"] = 0.2470588235294118,
 					["Padding"] = 0,
-					["BorderA"] = 0,
+					["BackgroundA"] = 0,
 					["PosY"] = -601.9189602992251,
 				},
 				["Gobifrost"] = {
@@ -3335,7 +3353,7 @@ GridDB = {
 					["BackgroundG"] = 0.3294117647058824,
 					["anchorRel"] = "TOPLEFT",
 					["BorderB"] = 0.2470588235294118,
-					["PosX"] = 939.721672815782,
+					["PosY"] = -601.9189602992251,
 					["layouts"] = {
 						["party"] = "By Group 25",
 						["solo"] = "By Group 25",
@@ -3344,16 +3362,16 @@ GridDB = {
 						["raid"] = "By Group 25",
 					},
 					["layout"] = "By Group 25",
-					["BackgroundB"] = 0.3294117647058824,
 					["BackgroundR"] = 0.3294117647058824,
-					["FrameLock"] = true,
 					["BorderA"] = 0,
+					["FrameLock"] = true,
+					["BackgroundA"] = 0,
 					["BorderR"] = 0.2470588235294118,
 					["Spacing"] = 3,
 					["BorderG"] = 0.2470588235294118,
 					["Padding"] = 0,
-					["BackgroundA"] = 0,
-					["PosY"] = -601.9189602992251,
+					["PosX"] = 939.721672815782,
+					["BackgroundB"] = 0.3294117647058824,
 				},
 			},
 		},
@@ -3366,8 +3384,8 @@ GridDB = {
 							["g"] = 0.5019607843137255,
 							["r"] = 0.5019607843137255,
 						},
-						["useClassColors"] = false,
 						["deadAsFullHealth"] = false,
+						["useClassColors"] = false,
 						["priority"] = 99,
 					},
 					["alert_lowHealth"] = {
@@ -3422,34 +3440,34 @@ GridDB = {
 					},
 				},
 				["Mylen"] = {
-					["unit_healthDeficit"] = {
-						["threshold"] = 59,
-						["useClassColors"] = false,
+					["unit_health"] = {
 						["color"] = {
-							["b"] = 0.5,
-							["g"] = 0.5,
-							["r"] = 0.5,
+							["r"] = 0.5019607843137255,
+							["g"] = 0.5019607843137255,
+							["b"] = 0.5019607843137255,
 						},
-						["text"] = "TG",
-						["icon"] = "Interface\\Icons\\Ability_Rogue_FeignDeath",
+						["useClassColors"] = false,
+						["deadAsFullHealth"] = false,
+						["priority"] = 99,
+					},
+					["alert_death"] = {
 						["priority"] = 99,
 					},
 					["alert_lowHealth"] = {
 						["enable"] = false,
 						["text"] = "Less HP",
 					},
-					["alert_death"] = {
-						["priority"] = 99,
-					},
-					["unit_health"] = {
-						["color"] = {
-							["b"] = 0.5019607843137255,
-							["g"] = 0.5019607843137255,
-							["r"] = 0.5019607843137255,
-						},
+					["unit_healthDeficit"] = {
+						["threshold"] = 59,
 						["useClassColors"] = false,
+						["color"] = {
+							["r"] = 0.5,
+							["g"] = 0.5,
+							["b"] = 0.5,
+						},
+						["text"] = "TG",
+						["icon"] = "Interface\\Icons\\Ability_Rogue_FeignDeath",
 						["priority"] = 99,
-						["deadAsFullHealth"] = false,
 					},
 				},
 				["Fallens"] = {
@@ -3484,6 +3502,23 @@ GridDB = {
 					},
 				},
 				["Argwynn"] = {
+					["unit_health"] = {
+						["color"] = {
+							["b"] = 0.5019607843137255,
+							["g"] = 0.5019607843137255,
+							["r"] = 0.5019607843137255,
+						},
+						["deadAsFullHealth"] = false,
+						["useClassColors"] = false,
+						["priority"] = 99,
+					},
+					["alert_lowHealth"] = {
+						["enable"] = false,
+						["text"] = "Less HP",
+					},
+					["alert_death"] = {
+						["priority"] = 99,
+					},
 					["unit_healthDeficit"] = {
 						["threshold"] = 59,
 						["useClassColors"] = false,
@@ -3495,23 +3530,6 @@ GridDB = {
 						["text"] = "TG",
 						["icon"] = "Interface\\Icons\\Ability_Rogue_FeignDeath",
 						["priority"] = 99,
-					},
-					["alert_lowHealth"] = {
-						["enable"] = false,
-						["text"] = "Less HP",
-					},
-					["alert_death"] = {
-						["priority"] = 99,
-					},
-					["unit_health"] = {
-						["deadAsFullHealth"] = false,
-						["color"] = {
-							["b"] = 0.5019607843137255,
-							["g"] = 0.5019607843137255,
-							["r"] = 0.5019607843137255,
-						},
-						["priority"] = 99,
-						["useClassColors"] = false,
 					},
 				},
 				["Zulrea"] = {
@@ -3566,14 +3584,14 @@ GridDB = {
 						["text"] = "Less HP",
 					},
 					["unit_health"] = {
+						["deadAsFullHealth"] = false,
 						["color"] = {
 							["r"] = 0.5019607843137255,
 							["g"] = 0.5019607843137255,
 							["b"] = 0.5019607843137255,
 						},
-						["useClassColors"] = false,
 						["priority"] = 99,
-						["deadAsFullHealth"] = false,
+						["useClassColors"] = false,
 					},
 				},
 				["Default"] = {
@@ -3737,23 +3755,6 @@ GridDB = {
 					},
 				},
 				["Kraisus"] = {
-					["unit_health"] = {
-						["color"] = {
-							["r"] = 0.5019607843137255,
-							["g"] = 0.5019607843137255,
-							["b"] = 0.5019607843137255,
-						},
-						["useClassColors"] = false,
-						["deadAsFullHealth"] = false,
-						["priority"] = 99,
-					},
-					["alert_death"] = {
-						["priority"] = 99,
-					},
-					["alert_lowHealth"] = {
-						["enable"] = false,
-						["text"] = "Less HP",
-					},
 					["unit_healthDeficit"] = {
 						["threshold"] = 59,
 						["useClassColors"] = false,
@@ -3765,6 +3766,23 @@ GridDB = {
 						["text"] = "TG",
 						["icon"] = "Interface\\Icons\\Ability_Rogue_FeignDeath",
 						["priority"] = 99,
+					},
+					["alert_death"] = {
+						["priority"] = 99,
+					},
+					["alert_lowHealth"] = {
+						["enable"] = false,
+						["text"] = "Less HP",
+					},
+					["unit_health"] = {
+						["color"] = {
+							["r"] = 0.5019607843137255,
+							["g"] = 0.5019607843137255,
+							["b"] = 0.5019607843137255,
+						},
+						["useClassColors"] = false,
+						["priority"] = 99,
+						["deadAsFullHealth"] = false,
 					},
 				},
 			},
@@ -3794,9 +3812,9 @@ GridDB = {
 	},
 	["profiles"] = {
 		["Myyh"] = {
-			["showText"] = false,
-			["hidden"] = true,
 			["showIcon"] = false,
+			["hidden"] = true,
+			["showText"] = false,
 			["minimap"] = {
 				["hide"] = true,
 			},
@@ -3810,9 +3828,9 @@ GridDB = {
 			},
 		},
 		["Mylen"] = {
-			["showIcon"] = false,
 			["showText"] = false,
 			["hidden"] = true,
+			["showIcon"] = false,
 			["minimap"] = {
 				["hide"] = true,
 			},
@@ -3826,24 +3844,24 @@ GridDB = {
 			},
 		},
 		["Argwynn"] = {
-			["showText"] = false,
 			["showIcon"] = false,
 			["hidden"] = true,
+			["showText"] = false,
 			["minimap"] = {
 				["hide"] = true,
 			},
 		},
 		["Zulrea"] = {
 			["hidden"] = true,
-			["showIcon"] = false,
 			["showText"] = false,
+			["showIcon"] = false,
 			["minimap"] = {
 				["hide"] = true,
 			},
 		},
 		["Tikytaka"] = {
-			["showText"] = false,
 			["showIcon"] = false,
+			["showText"] = false,
 			["hidden"] = true,
 			["minimap"] = {
 				["hide"] = true,
@@ -3855,8 +3873,8 @@ GridDB = {
 		},
 		["Glasin"] = {
 			["showIcon"] = false,
-			["showText"] = false,
 			["hidden"] = true,
+			["showText"] = false,
 			["minimap"] = {
 				["hide"] = true,
 			},
@@ -3895,8 +3913,8 @@ GridDB = {
 		},
 		["Kraisus"] = {
 			["showText"] = false,
-			["hidden"] = true,
 			["showIcon"] = false,
+			["hidden"] = true,
 			["minimap"] = {
 				["hide"] = true,
 			},

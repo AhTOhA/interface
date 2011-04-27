@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("Ashbury", "DBM-Party-Cataclysm", 6)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5145 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5378 $"):sub(12, -3))
 mod:SetCreatureID(46962)
 mod:SetZone()
 
@@ -18,10 +18,10 @@ local warnWracking			= mod:NewSpellAnnounce(93720, 2)
 local warnArchangel			= mod:NewSpellAnnounce(93757, 4)
 
 
-local timerAsphyxiate		= mod:NewCDTimer(40, 93710)
+local timerAsphyxiate		= mod:NewCDTimer(45, 93710)
 
 function mod:OnCombatStart(delay)
-	timerAsphyxiate:Start(15-delay)
+	timerAsphyxiate:Start(18-delay)
 end
 
 function mod:SPELL_AURA_APPLIED(args)

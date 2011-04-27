@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("Helix", "DBM-Party-Cataclysm", 2)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 5216 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 5372 $"):sub(12, -3))
 mod:SetCreatureID(47296, 47297)
 mod:SetZone()
 
@@ -12,7 +12,7 @@ mod:RegisterEvents(
 	"SPELL_CAST_SUCCESS"
 )
 
-local warnChestBomb		= mod:NewTargetAnnounce(88352, 4)
+local warnChestBomb			= mod:NewTargetAnnounce(88352, 4)
 local warnSpiritStrike		= mod:NewSpellAnnounce(59304, 3)
 
 local timerChestBomb		= mod:NewTargetTimer(10, 88352)

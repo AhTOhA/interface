@@ -19,20 +19,33 @@ local ClassIconTable = {
 --]]
 
 
-local function UpdateClassWidget(self, unit)
-		if unit.class and unit.class ~= "UNKNOWN" then
-			self.Icon:SetTexture(classWidgetPath..unit.class) 
+local function UpdateClassWidget(self, unit, showFriendly)
+	local class
+	if unit then
+
+
+		if showFriendly and unit.reaction == "FRIENDLY" and unit.type == "PLAYER" then
+			class = TidyPlatesUtility.GroupMembers.Class[unit.name]
+		elseif unit.type == "PLAYER" then class = unit.class end
+
+		if class and class ~= "UNKNOWN" then
+			self.Icon:SetTexture(classWidgetPath..class) 
 			self:Show()
 		else self:Hide() end
+	end
+	
+	--[[ Testing
+	self.Icon:SetTexture(classWidgetPath.."WARRIOR") 
+	self:Show()
+	--]]
 end
 
 local function CreateClassWidget(parent)
 	local frame = CreateFrame("Frame", nil, parent)
-	frame:SetWidth(16); frame:SetHeight(16)
+	frame:SetWidth(24); frame:SetHeight(24)
 	frame.Icon = frame:CreateTexture(nil, "OVERLAY")
 	frame.Icon:SetPoint("CENTER",frame)
-	frame.Icon:SetWidth(24)
-	frame.Icon:SetHeight(24)
+	frame.Icon:SetAllPoints(frame)
 	frame:Hide()
 	frame.Update = UpdateClassWidget
 	return frame

@@ -12,24 +12,22 @@ L:SetGeneralLocalization({
 
 L:SetWarningLocalization({
 	SpecWarnInferno	= "Blazing Bone Construct Soon (~4s)",--translate
-	WarnPhase2Soon	= "Phase 2 bald"
 
 })
 
 L:SetTimerLocalization({
 })
 
+L:SetOptionLocalization({
+	SpecWarnInferno	= "Zeige Spezialvorwarnung für $spell:92190 (~4s)",
+	RangeFrame		= "Zeige Abstandsfenster in Phase 2 (5)"
+
+})
+
 L:SetMiscLocalization({
 	Slump			= "%s schlittert nach vorne und entblößt seine Zangen!",
 	HeadExposed		= "%s spießt sich selbst auf, was seinen Kopf freilegt!",
 	YellPhase2		= "Inconceivable! You may actually defeat my lava worm! Perhaps I can help... tip the scales." --translate
-})
-
-L:SetOptionLocalization({
-	SpecWarnInferno	= "Zeige Spezialvorwarnung für $spell:92190 (~4s)",
-	WarnPhase2Soon	= "Zeige Vorwarnung für Phase 2",
-	RangeFrame		= "Zeige Abstandsfenster in Phase 2 (5)"
-
 })
 
 -------------------------------
@@ -52,7 +50,6 @@ L:SetTimerLocalization({
 L:SetOptionLocalization({
 	timerShadowConductorCast	= "Zeige Timer für das Wirken von $spell:92053",
 	timerArcaneBlowbackCast	= "Zeige Timer für das Wirken von $spell:91879",
-	YellBombTarget		= "Schreie bei $spell:80094",
 	AcquiringTargetIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79501),
 	ConductorIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(79888),
 	BombTargetIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(80094),
@@ -63,8 +60,7 @@ L:SetMiscLocalization({
 	Magmatron		= "Magmatron",
 	Electron		= "Elektron",
 	Toxitron		= "Toxitron",
-	Arcanotron		= "Arkanotron",
-	SayBomb			= "Poisen Bomb on me!"
+	Arcanotron		= "Arkanotron"
 })
 
 ----------------
@@ -85,17 +81,6 @@ L:SetTimerLocalization({
 	TimerPhase		= "Nächste Phase"
 })
 
-L:SetMiscLocalization({
-	YellRed			= "wirft eine |cFFFF0000rote|r Phiole in den Kessel!",
-	YellBlue		= "wirft eine |cFFFF0000blaue|r Phiole in den Kessel!",
-	YellGreen		= "wirft eine |cFFFF0000grüne|r Phiole in den Kessel!",
-	YellDark		= "dark|r vial into the cauldron!",--guesswork, this isn't confirmed but if it's consistent with other strings is probably right.
-	Red				= "rot",
-	Blue			= "blau",
-	Green			= "grün",
-	Dark			= "dunkel" --most likely not
-})
-
 L:SetOptionLocalization({
 	WarnPhase		= "Zeige Warnung, welche Phase kommt",
 	WarnRemainingAdds	= "Zeige Warnung, wieviele Entartungen verbleiben",
@@ -106,33 +91,39 @@ L:SetOptionLocalization({
 	ConsumingFlamesIcon	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(77786)
 })
 
+L:SetMiscLocalization({
+	YellRed			= "wirft eine |cFFFF0000rote|r Phiole in den Kessel!",
+	YellBlue		= "wirft eine |cFFFF0000blaue|r Phiole in den Kessel!",
+	YellGreen		= "wirft eine |cFFFF0000grüne|r Phiole in den Kessel!",
+	YellDark		= "dark|r vial into the cauldron!",--guesswork, this isn't confirmed but if it's consistent with other strings is probably right.
+	Red				= "Rote",
+	Blue			= "Blaue",
+	Green			= "Grüne",
+	Dark			= "Dunkle" --most likely not
+})
+
 -----------------
 --  Chimaeron  --
 -----------------
 L = DBM:GetModLocalization("Chimaeron")
 
 L:SetGeneralLocalization({
-	name = "Chimaeron"
+	name = "Schimaeron"
 })
 
 L:SetWarningLocalization({
-	WarnPhase2Soon	= "Phase 2 bald",
-	WarnBreak	= "%s auf >%s< (%d)"
 })
 
 L:SetTimerLocalization({
 })
 
-L:SetMiscLocalization({
-})
-
 L:SetOptionLocalization({
-	WarnPhase2Soon	= "Zeige Vorwarnung für Phase 2",
 	RangeFrame		= "Zeige Abstandsfenster(6)",
-	WarnBreak	= DBM_CORE_AUTO_ANNOUNCE_OPTIONS.spell:format(82881, GetSpellInfo(82881) or "unknown"),
 	SetIconOnSlime	= DBM_CORE_AUTO_ICONS_OPTION_TEXT:format(82935),
 	InfoFrame	= "Zeige Infofenst4er für Gesundheit (<10k hp)"
+})
 
+L:SetMiscLocalization({
 })
 
 -----------------
@@ -213,4 +204,25 @@ L:SetMiscLocalization({
 	YellPhase2			= "Verfluchte Sterbliche! Ein solcher Umgang mit dem Eigentum anderer verlangt nach Gewalt!",
 	YellPhase3			= "Ich habe versucht, ein guter Gastgeber zu sein, aber ihr wollt einfach nicht sterben! Genug der Spielchen! Ich werde euch einfach... ALLE TÖTEN!",
 	YellCinder			= "Explodierende Asche auf mir!"
+})
+
+--------------
+--  Blackwing Descent Trash  --
+--------------
+L = DBM:GetModLocalization("BWDTrash")
+
+L:SetGeneralLocalization({
+	name = "Pechschwingenabstieg Trash"
+})
+
+L:SetWarningLocalization({
+})
+
+L:SetTimerLocalization({
+})
+
+L:SetOptionLocalization({
+})
+
+L:SetMiscLocalization({
 })
